@@ -4,7 +4,7 @@
 /*!**********************************************!*\
   !*** ./dist/uiigateway/pilar/fesm5/pilar.js ***!
   \**********************************************/
-/*! exports provided: AccordionComponent, AccordionGroupComponent, AccordionService, Alert, ChipsComponent, ConfirmdialogComponent, FileSizePipe, IMAGES_ROOT, IMAGE_PDF_PLACEHOLDER, IMAGE_PLACEHOLDER, ImageService, InfoBoxComponent, InformationComponent, LoadingBarEvent, LoadingBarEventType, LoadingBarService, MODAL, ModalDialogComponent, Paginate, PaginationComponent, PhotoUploadComponent, PilarComponent, PilarModule, PilarService, SwitchComponent, TablePageService, TableSkeletonComponent, TabsetComponent, TabsetDirective, ToastComponent, ToastDirective, ToastService, UiiImageUploadComponent, WizardComponent, WizardStepComponent, fadeIn, fadeOut, isPresent, ɵa, ɵb, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm */
+/*! exports provided: AccordionComponent, AccordionGroupComponent, AccordionService, Alert, ChipsComponent, ConfirmdialogComponent, FileSizePipe, IMAGES_ROOT, IMAGE_PDF_PLACEHOLDER, IMAGE_PLACEHOLDER, ImageService, InfoBoxComponent, InformationComponent, LoadingBarEvent, LoadingBarEventType, LoadingBarService, MODAL, ModalDialogComponent, Paginate, PaginationComponent, PhotoUploadComponent, PilarComponent, PilarModule, PilarService, SwitchComponent, TablePageService, TableSkeletonComponent, TabsetComponent, TabsetDirective, ToastComponent, ToastDirective, ToastService, UiiImageUploadComponent, WizardComponent, WizardStepComponent, fadeIn, fadeOut, isPresent, ɵa, ɵb, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60,6 +60,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵk", function() { return CollapseDirective; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵl", function() { return TooltipComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵm", function() { return TooltipDirective; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵn", function() { return PilarFontComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵo", function() { return FilterPipe; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
@@ -70,9 +72,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_lazy_load_images__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(ngx_lazy_load_images__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
-/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+
 
 
 
@@ -450,6 +455,7 @@ var ClientTableComponent = /** @class */ (function () {
         this._tablePageSvc = _tablePageSvc;
         this.editClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.commentClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.auditClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.deleteClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.detailClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.exportClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -460,6 +466,7 @@ var ClientTableComponent = /** @class */ (function () {
         this.publishClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.radioSelect = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.reloadClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.rejectClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.selectedRows = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.switchChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.syncClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -542,7 +549,7 @@ var ClientTableComponent = /** @class */ (function () {
              * @return {?}
              */
             function (column) {
-                column.sort = '';
+                column._sort = '';
             }));
             this._columns = data;
         },
@@ -559,7 +566,14 @@ var ClientTableComponent = /** @class */ (function () {
             this._rowsTemp = data;
             this.page.totalElements = data.length;
             this._isAllRowsSelected = false;
-            this._selectedRows = [];
+            this._selectedRows = data.map((/**
+             * @param {?} row
+             * @return {?}
+             */
+            function (row) { return ({
+                isSelected: false,
+                data: row
+            }); }));
             this._rows = this.getDataOfCurrentPage(data);
         },
         enumerable: true,
@@ -576,15 +590,6 @@ var ClientTableComponent = /** @class */ (function () {
         this.page.totalElements = this._rowsCollection.length;
         this._rows = this.getDataOfCurrentPage(this._rowsCollection);
         this._tablePageSvc.setTablePage(this.page);
-    };
-    /**
-     * @return {?}
-     */
-    ClientTableComponent.prototype.ngOnDestroy = /**
-     * @return {?}
-     */
-    function () {
-        clearInterval(this.sortTimerInterval);
     };
     /**
      * @param {?} collection
@@ -682,6 +687,9 @@ var ClientTableComponent = /** @class */ (function () {
             case 'comment':
                 this.commentClicked.emit(data);
                 break;
+            case 'audit':
+                this.auditClicked.emit(data);
+                break;
             case 'export':
                 this.exportClicked.emit(data);
                 break;
@@ -693,6 +701,9 @@ var ClientTableComponent = /** @class */ (function () {
                 break;
             case 'activate':
                 this.switchChanged.emit({ value: prop.$event, data: data });
+                break;
+            case 'reject':
+                this.rejectClicked.emit(data);
                 break;
         }
     };
@@ -707,7 +718,7 @@ var ClientTableComponent = /** @class */ (function () {
     function (limit) {
         this.page.size = Number(limit);
         this.page.pageNumber = 0;
-        this._rows = this.getDataOfCurrentPage(this._rowsCollection);
+        this._rows = this.getDataOfCurrentPage(this._rowsTemp);
         this._tablePageSvc.setTablePage(this.page);
     };
     /**
@@ -760,9 +771,8 @@ var ClientTableComponent = /** @class */ (function () {
      */
     function ($event) {
         if (this.isAllCheckbox === false) {
-            this._isAllRowsSelected = false;
-            this._selectedRows = [];
-            this.selectedRows.emit(this._selectedRows);
+            this.resetSelectedRows();
+            this.emitSelectedRows();
             this.page.pageNumber = $event.page;
             this._rows = this.getDataOfCurrentPage(this._rowsTemp);
             this._tablePageSvc.setTablePage(this.page);
@@ -797,50 +807,58 @@ var ClientTableComponent = /** @class */ (function () {
      * @return {?}
      */
     function (type, $event, data) {
+        var _this = this;
         if ($event.target.checked) {
-            type === 'single'
-                ? this._selectedRows.push(data)
-                : this._selectedRows = this.getDataOfCurrentPage(this._rowsTemp);
-        }
-        else {
-            this._selectedRows = type === 'single'
-                ? this._selectedRows.filter((/**
-                 * @param {?} item
+            if (type === 'single') {
+                this._selectedRows[data.number - 1].isSelected = true;
+                /** @type {?} */
+                var countSelected = this._selectedRows.filter((/**
+                 * @param {?} row
                  * @return {?}
                  */
-                function (item) { return item.number !== data.number; }))
-                : [];
-        }
-        this.selectedRows.emit(this._selectedRows);
-    };
-    /**
-     * @param {?} type
-     * @param {?} $event
-     * @param {?=} data
-     * @return {?}
-     */
-    ClientTableComponent.prototype.onRowSelectAll = /**
-     * @param {?} type
-     * @param {?} $event
-     * @param {?=} data
-     * @return {?}
-     */
-    function (type, $event, data) {
-        if ($event.target.checked) {
-            type === 'single'
-                ? this._selectedRows.push(data)
-                : this._selectedRows = this._rowsCollection;
+                function (row) { return row.isSelected; })).length;
+                if ((countSelected === this._selectedRows.length && this.isAllCheckbox) ||
+                    (countSelected === this.getDataOfCurrentPage(this._rowsTemp).length && !this.isAllCheckbox)) {
+                    this._isAllRowsSelected = true;
+                }
+            }
+            else {
+                this._isAllRowsSelected = true;
+                this.isAllCheckbox
+                    ? this._selectedRows.forEach((/**
+                     * @param {?} row
+                     * @return {?}
+                     */
+                    function (row) {
+                        row.isSelected = true;
+                    }))
+                    : this.getDataOfCurrentPage(this._rowsTemp).forEach((/**
+                     * @param {?} row
+                     * @return {?}
+                     */
+                    function (row) {
+                        _this._selectedRows[row.number - 1].isSelected = true;
+                    }));
+            }
         }
         else {
-            this._selectedRows = type === 'single'
-                ? this._selectedRows.filter((/**
-                 * @param {?} item
-                 * @return {?}
-                 */
-                function (item) { return item.number !== data.number; }))
-                : [];
+            this._isAllRowsSelected = false;
+            if (type === 'single') {
+                this._selectedRows[data.number - 1].isSelected = false;
+            }
+            else {
+                this.isAllCheckbox
+                    ? this.resetSelectedRows()
+                    : this.getDataOfCurrentPage(this._rowsTemp).forEach((/**
+                     * @param {?} row
+                     * @return {?}
+                     */
+                    function (row) {
+                        _this._selectedRows[row.number - 1].isSelected = false;
+                    }));
+            }
         }
-        this.selectedRows.emit(this._selectedRows);
+        this.emitSelectedRows();
     };
     /**
      * @param {?} $event
@@ -851,15 +869,39 @@ var ClientTableComponent = /** @class */ (function () {
      * @return {?}
      */
     function ($event) {
+        var _this = this;
+        // on mobile, this method only used for all rows checkbox.
+        // for individual checkbox, in desktop & mobile use onRowSelect.
+        this._isAllRowsSelected = !this._isAllRowsSelected;
         if ($event.target.checked) {
-            this._isAllRowsSelected = true;
-            this._selectedRows = this.getDataOfCurrentPage(this._rowsTemp);
+            this.isAllCheckbox
+                ? this._selectedRows.forEach((/**
+                 * @param {?} row
+                 * @return {?}
+                 */
+                function (row) {
+                    row.isSelected = true;
+                }))
+                : this.getDataOfCurrentPage(this._rowsTemp).forEach((/**
+                 * @param {?} row
+                 * @return {?}
+                 */
+                function (row) {
+                    _this._selectedRows[row.number - 1].isSelected = true;
+                }));
         }
         else {
-            this._isAllRowsSelected = false;
-            this._selectedRows = [];
+            this.isAllCheckbox
+                ? this.resetSelectedRows()
+                : this.getDataOfCurrentPage(this._rowsTemp).forEach((/**
+                 * @param {?} row
+                 * @return {?}
+                 */
+                function (row) {
+                    _this._selectedRows[row.number - 1].isSelected = false;
+                }));
         }
-        this.selectedRows.emit(this._selectedRows);
+        this.emitSelectedRows();
     };
     /**
      * @param {?} keyword
@@ -901,37 +943,9 @@ var ClientTableComponent = /** @class */ (function () {
         this.page.pageNumber = 0;
         this.page.totalElements = this._rowsTemp.length;
         this._tablePageSvc.setTablePage(this.page);
+        this.resetSelectedRows();
+        this.emitSelectedRows();
         this._rows = this.getDataOfCurrentPage(this._rowsTemp);
-    };
-    /**
-     * @param {?} column
-     * @param {?} index
-     * @return {?}
-     */
-    ClientTableComponent.prototype.setColumnSortDirection = /**
-     * @param {?} column
-     * @param {?} index
-     * @return {?}
-     */
-    function (column, index) {
-        clearInterval(this.sortTimerInterval);
-        this._columns.forEach((/**
-         * @param {?} item
-         * @param {?} idx
-         * @return {?}
-         */
-        function (item, idx) {
-            if (idx !== index) {
-                item.sort = '';
-            }
-        }));
-        column.sort = (column.sort === 'asc') ? 'desc' : 'asc';
-        this.sortTimerInterval = setTimeout((/**
-         * @return {?}
-         */
-        function () {
-            column.sort = '';
-        }), 2000);
     };
     /**
      * @param {?} auth
@@ -955,18 +969,21 @@ var ClientTableComponent = /** @class */ (function () {
     };
     /**
      * @param {?} column
-     * @param {?} index
      * @return {?}
      */
     ClientTableComponent.prototype.sortTableColumn = /**
      * @param {?} column
-     * @param {?} index
      * @return {?}
      */
-    function (column, index) {
-        this.setColumnSortDirection(column, index);
+    function (column) {
+        if (this.getColumnOrderable(column) === false) {
+            return;
+        }
+        this.setColumnSortDirection(column);
         this._rowsTemp.sort(this.sortColumnValue(column));
         this.page.pageNumber = 0; // reset page number on sort
+        this.resetSelectedRows(); // reset selected rows on sort
+        this.emitSelectedRows();
         this._rows = this.getDataOfCurrentPage(this._rowsTemp);
         this._tablePageSvc.setTablePage(this.page);
     };
@@ -974,16 +991,60 @@ var ClientTableComponent = /** @class */ (function () {
      * @param {?} column
      * @return {?}
      */
-    ClientTableComponent.prototype.sortTableColumnMobile = /**
+    ClientTableComponent.prototype.setColumnSortDirection = /**
      * @param {?} column
      * @return {?}
      */
     function (column) {
-        this._rowsTemp.sort(this.sortColumnValue(column));
-        this.page.pageNumber = 0;
-        this._rows = this.getDataOfCurrentPage(this._rowsTemp);
-        this._tablePageSvc.setTablePage(this.page);
-        column.sort = '';
+        this._columns.forEach((/**
+         * @param {?} _column
+         * @return {?}
+         */
+        function (_column) {
+            if (_column.prop !== column.prop) {
+                _column._sort = '';
+            }
+        }));
+        column._sort = (column._sort === 'asc') ? 'desc' : 'asc';
+    };
+    /**
+     * @private
+     * @return {?}
+     */
+    ClientTableComponent.prototype.resetSelectedRows = /**
+     * @private
+     * @return {?}
+     */
+    function () {
+        this._isAllRowsSelected = false;
+        this._selectedRows = this._rowsTemp.map((/**
+         * @param {?} row
+         * @return {?}
+         */
+        function (row) { return ({
+            isSelected: false,
+            data: row
+        }); }));
+    };
+    /**
+     * @private
+     * @return {?}
+     */
+    ClientTableComponent.prototype.emitSelectedRows = /**
+     * @private
+     * @return {?}
+     */
+    function () {
+        this.selectedRows.emit(this._selectedRows.filter((/**
+         * @param {?} row
+         * @return {?}
+         */
+        function (row) { return row.isSelected; }))
+            .map((/**
+         * @param {?} row
+         * @return {?}
+         */
+        function (row) { return row.data; })));
     };
     /**
      * @param {?} data
@@ -994,6 +1055,7 @@ var ClientTableComponent = /** @class */ (function () {
      * @return {?}
      */
     function (data) {
+        var _this = this;
         /** @type {?} */
         var sortOrder = 1;
         if (data.prop[0] === '-') {
@@ -1001,26 +1063,70 @@ var ClientTableComponent = /** @class */ (function () {
             data.prop = data.prop.substr(1);
         }
         return (/**
-         * @param {?} currentValue
-         * @param {?} nextValue
+         * @param {?} current
+         * @param {?} next
          * @return {?}
          */
-        function (currentValue, nextValue) {
+        function (current, next) {
+            /** @type {?} */
+            var currentValue = current[data.prop];
+            /** @type {?} */
+            var nextValue = next[data.prop];
             /** @type {?} */
             var result;
-            if (data.sort === 'asc') {
-                result = (currentValue[data.prop] < nextValue[data.prop]) ? -1 : (currentValue[data.prop] > nextValue[data.prop]) ? 1 : 0;
+            if (Object(lodash__WEBPACK_IMPORTED_MODULE_9__["get"])(data, 'type') === 'labelv2') {
+                currentValue = _this.getValueFromItem(currentValue);
+                nextValue = _this.getValueFromItem(nextValue);
+            }
+            if (data._sort === 'asc') {
+                result = (currentValue < nextValue) ? -1 : (currentValue > nextValue) ? 1 : 0;
             }
             else {
-                result = (currentValue[data.prop] > nextValue[data.prop]) ? -1 : (currentValue[data.prop] < nextValue[data.prop]) ? 1 : 0;
+                result = (currentValue > nextValue) ? -1 : (currentValue < nextValue) ? 1 : 0;
             }
             return result * sortOrder;
         });
     };
+    /**
+     * @param {?} column
+     * @return {?}
+     */
+    ClientTableComponent.prototype.getColumnOrderable = /**
+     * @param {?} column
+     * @return {?}
+     */
+    function (column) {
+        return Object(lodash__WEBPACK_IMPORTED_MODULE_9__["get"])(column, 'orderable', true);
+    };
+    /**
+     * @param {?} item
+     * @return {?}
+     */
+    ClientTableComponent.prototype.getClassFromItem = /**
+     * @param {?} item
+     * @return {?}
+     */
+    function (item) {
+        return Object(lodash__WEBPACK_IMPORTED_MODULE_9__["get"])(item, 'class', '');
+    };
+    /**
+     * @param {?} item
+     * @return {?}
+     */
+    ClientTableComponent.prototype.getValueFromItem = /**
+     * @param {?} item
+     * @return {?}
+     */
+    function (item) {
+        if (!Object(lodash__WEBPACK_IMPORTED_MODULE_9__["isObject"])(item)) {
+            return item;
+        }
+        return Object(lodash__WEBPACK_IMPORTED_MODULE_9__["get"])(item, 'value');
+    };
     ClientTableComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-client-table',
-                    template: "<uii-table-filter\n  *ngIf=\"_limitOptions || searchOptions\"\n  [limitOptions]=\"_limitOptions\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\" *ngIf=\"isAllCheckbox === true\">\n        <input\n          type=\"checkbox\"\n          id=\"aba\"\n          class=\"gateway-rcb-select\"\n          [checked]=\"_isAllRowsSelected\"\n          (change)=\"_isAllRowsSelected = !_isAllRowsSelected; onRowSelectAll('multiple', $event)\"/>\n        <label for=\"aba\" class=\"gateway-rcb-label\"></label>\n      </div>\n      <div class=\"gateway-rcb\" *ngIf=\"isAllCheckbox === false\">\n        <input\n          type=\"checkbox\"\n          id=\"aba\"\n          class=\"gateway-rcb-select\"\n          [checked]=\"_isAllRowsSelected\"\n          (change)=\"_isAllRowsSelected = !_isAllRowsSelected; onRowSelect('multiple', $event)\"/>\n        <label for=\"aba\" class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div\n      *ngFor=\"let column of _columns; let idx = index;\"\n      class=\"header-cell\"\n      [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"column.prop === 'number'; else notNumber\"\n        class=\"cell\">{{ column.name }}</span>\n      <ng-template #notNumber>\n        <span\n          *ngIf=\"!column.hasOwnProperty('header-type')\"\n          class=\"cell order-able\"\n          (click)=\"sortTableColumn(column, idx)\"\n          [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\"\n        >{{ column.name }}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell order-able\"\n          (click)=\"sortTableColumn(column, idx)\"\n          [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\"\n          [innerHTML]=\"column.name\"></span>\n      </ng-template>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{ actionTitle }}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"_limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumnMobile($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let item of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"_isAllRowsSelected\"\n          (change)=\"onRowSelect('single', $event, item)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"radio\"\n          name=\"mtable-radio-item\"\n          [attr.id]=\"'mitem-'+ i\"\n          [checked]=\"item.flag_aktif === '1'\"\n          (change)=\"onRadioSelect(item)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label radio-label\"></label>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"checkbox\"\n            [checked]=\"_isAllRowsSelected\"\n            (change)=\"onRowSelect('single', $event, item)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label\"></label>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"radio\"\n            name=\"table-radio-item\"\n            [attr.id]=\"'item-'+ i\"\n            [checked]=\"item.flag_aktif === '1'\"\n            (change)=\"onRadioSelect(item)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label radio-label\"></label>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div\n          class=\"data-cell\"\n          [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\"\n          [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') &&\n            column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{ column.name }}</span>\n            <span\n              *ngIf=\"column.hasOwnProperty('header-type') &&\n                column['header-type'] === 'html'\"\n              [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span\n                *ngIf=\"column.type === 'label'\"\n                class=\"cell-label\"\n                [ngClass]=\"item.class\"\n              >{{ item[column.prop.toString()] }}</span>\n              <span\n                *ngIf=\"column.type === 'html'\"\n                class=\"cell-html\"\n                [innerHTML]=\"item[column.prop.toString()]\"></span>\n              <span\n                *ngIf=\"column.type === 'date' && !column.format\"\n              >{{ item[column.prop.toString()] | date: 'dd MMMM y' }}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input\n                  [type]=\"column.inputType\"\n                  [maxlength]=\"column.inputMaxLength\"\n                  class=\"table-input-text\"\n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"item[column.prop.toString()]\"\n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <div class=\"gateway-rcb\">\n                  <input\n                    type=\"radio\"\n                    [attr.name]=\"'radio-' + i\"\n                    [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                    [checked]=\"item[column.prop] === 1\"\n                    (change)=\"onInputRadioChange(i, column.prop)\"\n                    class=\"gateway-rcb-select\"/>\n                  <label class=\"gateway-rcb-label radio-label\"></label>\n                </div>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span class=\"cell\">{{ item[column.prop.toString()] }}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div\n        class=\"data-cell data-cell-action\"\n        [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\"\n        *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{ actionTitle }}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"item\"\n              [auth]=\"item.auth\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div\n  class=\"gateway-empty-data\"\n  *ngIf=\"_rows.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"_footerInfo\"\n  [paginationOptions]=\"_paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>\n"
+                    template: "<uii-table-filter\n  *ngIf=\"_limitOptions || searchOptions\"\n  [limitOptions]=\"_limitOptions\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          id=\"aba\"\n          class=\"gateway-rcb-select\"\n          [checked]=\"_isAllRowsSelected\"\n          (change)=\"onRowSelect('multiple', $event)\"/>\n        <label for=\"aba\" class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div\n      *ngFor=\"let column of _columns; let idx = index;\"\n      class=\"header-cell\"\n      [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"column.prop === 'number'; else notNumber\"\n        class=\"cell\">{{ column.name }}</span>\n      <ng-template #notNumber>\n        <span\n          *ngIf=\"!column.hasOwnProperty('header-type')\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n        >{{ column.name }}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n          [innerHTML]=\"column.name\"></span>\n      </ng-template>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{ actionTitle }}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"_limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumn($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let row of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"_selectedRows[row.number - 1].isSelected\"\n          (change)=\"onRowSelect('single', $event, row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"radio\"\n          name=\"mtable-radio-item\"\n          [attr.id]=\"'mitem-'+ i\"\n          [checked]=\"row.flag_aktif === '1'\"\n          (change)=\"onRadioSelect(row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label radio-label\"></label>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"checkbox\"\n            [checked]=\"_selectedRows[row.number - 1].isSelected\"\n            (change)=\"onRowSelect('single', $event, row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label\"></label>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"radio\"\n            name=\"table-radio-item\"\n            [attr.id]=\"'item-'+ i\"\n            [checked]=\"row.flag_aktif === '1'\"\n            (change)=\"onRadioSelect(row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label radio-label\"></label>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div\n          class=\"data-cell\"\n          [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n          [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') &&\n            column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{ column.name }}</span>\n            <span\n              *ngIf=\"column.hasOwnProperty('header-type') &&\n                column['header-type'] === 'html'\"\n              [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span\n                *ngIf=\"column.type === 'label'\"\n                class=\"cell-label\"\n                [ngClass]=\"row.class\"\n              >{{ row[column.prop.toString()] }}</span>\n              <span\n                *ngIf=\"column.type === 'labelv2'\"\n                class=\"cell-label\"\n                [ngClass]=\"getClassFromItem(row[column.prop.toString()])\"\n              >{{ getValueFromItem(row[column.prop.toString()]) }}</span>\n              <span\n                *ngIf=\"column.type === 'html'\"\n                class=\"cell-html\"\n                [innerHTML]=\"row[column.prop.toString()]\"></span>\n              <span\n                *ngIf=\"column.type === 'date' && !column.format\"\n              >{{ row[column.prop.toString()] | date: 'dd MMMM y' }}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input\n                  [type]=\"column.inputType\"\n                  [maxlength]=\"column.inputMaxLength\"\n                  class=\"table-input-text\"\n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"row[column.prop.toString()]\"\n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <div class=\"gateway-rcb\">\n                  <input\n                    type=\"radio\"\n                    [attr.name]=\"'radio-' + i\"\n                    [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                    [checked]=\"row[column.prop] === 1\"\n                    (change)=\"onInputRadioChange(i, column.prop)\"\n                    class=\"gateway-rcb-select\"/>\n                  <label class=\"gateway-rcb-label radio-label\"></label>\n                </div>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span class=\"cell\">{{ row[column.prop.toString()] }}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div\n        class=\"data-cell data-cell-action\"\n        [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n        *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{ actionTitle }}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"row\"\n              [auth]=\"row.auth\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div\n  class=\"gateway-empty-data\"\n  *ngIf=\"_rows.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"_footerInfo\"\n  [paginationOptions]=\"_paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>\n"
                 }] }
     ];
     /** @nocollapse */
@@ -1043,6 +1149,7 @@ var ClientTableComponent = /** @class */ (function () {
         rows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         editClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         commentClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+        auditClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         deleteClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         detailClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         exportClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -1053,6 +1160,7 @@ var ClientTableComponent = /** @class */ (function () {
         publishClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         radioSelect: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         reloadClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+        rejectClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         selectedRows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         switchChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         syncClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -1149,7 +1257,7 @@ var ConfirmdialogComponent = /** @class */ (function () {
     ];
     /** @nocollapse */
     ConfirmdialogComponent.ctorParameters = function () { return [
-        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_9__["BsModalRef"] }
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_10__["BsModalRef"] }
     ]; };
     return ConfirmdialogComponent;
 }());
@@ -1872,6 +1980,22 @@ var MobileFilterComponent = /** @class */ (function () {
         this.isSortAsc = true;
         this.toggleSort = false;
     }
+    Object.defineProperty(MobileFilterComponent.prototype, "orderableColumns", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            return this.columns.filter((/**
+             * @param {?} column
+             * @return {?}
+             */
+            function (column) {
+                return column.orderable !== false;
+            }));
+        },
+        enumerable: true,
+        configurable: true
+    });
     /**
      * @return {?}
      */
@@ -1952,7 +2076,7 @@ var MobileFilterComponent = /** @class */ (function () {
     MobileFilterComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-mobile-filter',
-                    template: "<div *ngIf=\"limitOptions || searchOptions || checkboxColumn\" class=\"mobile-filter-container\">\n  <div class=\"limit-check-container\">\n    <ul>\n      <li class=\"mobile-checkbox-container\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input type=\"checkbox\" [checked]=\"isAllRowsSelected\" class=\"gateway-rcb-select\" (change)=\"onRowSelect($event)\" />\n          <label class=\"gateway-rcb-label\"></label>\n          <p>&nbsp;Semua &nbsp;&nbsp;</p>\n        </div>\n      </li>\n      <li *ngIf=\"limitOptions\" class=\"mobile-limit-container\">\n        <div class=\"limiting\">\n          <span class=\"filter-select\" (click)=\"toggleLimit = !toggleLimit; toogleSearch = false; toggleSort = false;\">{{selectedLimit}} ditampilkan</span>\n        </div>\n      </li>\n    </ul>\n  </div>\n  <div *ngIf=\"searchOptions\" class=\"mobile-search-container\">\n    <ul>\n      <li (click)=\"toggleSort = true; toggleLimit = false; toogleSearch = false\">\n        <span class=\"ikon fa fa-sort\"></span>\n        <span>&nbsp;urutkan &nbsp;</span>\n      </li>\n      <li (click)=\"toogleSearch = !toogleSearch; toggleLimit = false; toggleSort = false\">\n        <span class=\"ikon fa\" [ngClass]=\"toogleSearch ? 'fa-times' : 'fa-search'\" ></span>\n      </li>\n    </ul>\n  </div>\n  <div class=\"mobile-limit-overlay\" [ngClass]=\"toggleLimit ? '' : 'hide-limit-select'\">\n    <ol class=\"limit-item\">\n      <li *ngFor=\"let limit of limitOpts\" (click)=\"onLimitChange(limit.value) ;toggleLimit = !toggleLimit\" >{{limit.label}}</li>\n    </ol>\n  </div>\n</div>\n<div class=\"mobile-searching\" [ngClass]=\"toogleSearch ? '' : 'hide-search'\">\n  <input #searchKeyword type=\"text\" placeholder=\"Cari...\" (keyup.enter)=\"onSearchChange(searchKeyword.value)\" />\n  <div class=\"erase-keyword\" (click)=\"onSearchChange(''); searchKeyword.value = ''\" >\n    <p *ngIf=\"searchKeyword.value !== ''\">&times;</p>\n  </div>\n</div>\n<div class=\"mobile-sorting\" [ngClass]=\"toggleSort ? '' : 'hide-sort'\">\n  <div class=\"close-sort-container\" (click)=\"toggleSort = false;\">\n    <span class=\"fa fa-times\" ></span>\n  </div>\n  <div class=\"sort-type-container\">\n    <p><b>Jenis urutan</b></p>\n    <input type=\"checkbox\" id=\"sort-toggle\" (change)=\"onSortTypeChange()\" />\n    <label for=\"sort-toggle\">\n      <span class=\"fa\" [ngClass]=\"isSortAsc ? 'fa-sort-amount-desc' : 'fa-sort-amount-asc'\"></span>&nbsp;\n      Urut {{isSortAsc ? 'naik' : 'turun'}}\n    </label>\n  </div>\n  <div class=\"column-container\">\n    <p><b>Pilih kolom</b></p>\n    <ul class=\"column-list\">\n      <li *ngFor=\"let item of columns; let i = index\">\n        <input type=\"radio\" [attr.id]=\"'item-' + i\" name=\"radio-culoumn-filter\" (change)=\"onColumnSelect(item)\" />\n        <label class=\"radio-col\" [attr.for]=\"'item-' + i\" for>{{item.name}}</label>\n      </li>\n    </ul>\n  </div>\n</div>",
+                    template: "<div *ngIf=\"limitOptions || searchOptions || checkboxColumn\" class=\"mobile-filter-container\">\n  <div class=\"limit-check-container\">\n    <ul>\n      <li class=\"mobile-checkbox-container\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"checkbox\"\n            [checked]=\"isAllRowsSelected\"\n            class=\"gateway-rcb-select\"\n            (change)=\"onRowSelect($event)\"/>\n          <label class=\"gateway-rcb-label\"></label>\n          <p>&nbsp;Semua &nbsp;&nbsp;</p>\n        </div>\n      </li>\n      <li *ngIf=\"limitOptions\" class=\"mobile-limit-container\">\n        <div class=\"limiting\">\n          <span\n            class=\"filter-select\"\n            (click)=\"toggleLimit = !toggleLimit; toogleSearch = false; toggleSort = false;\"\n          >{{ selectedLimit }} ditampilkan</span>\n        </div>\n      </li>\n    </ul>\n  </div>\n  <div *ngIf=\"searchOptions\" class=\"mobile-search-container\">\n    <ul>\n      <li (click)=\"toggleSort = true; toggleLimit = false; toogleSearch = false\">\n        <span class=\"ikon fa fa-sort\"></span>\n        <span>&nbsp;urutkan &nbsp;</span>\n      </li>\n      <li (click)=\"toogleSearch = !toogleSearch; toggleLimit = false; toggleSort = false\">\n        <span class=\"ikon fa\" [ngClass]=\"toogleSearch ? 'fa-times' : 'fa-search'\"></span>\n      </li>\n    </ul>\n  </div>\n  <div class=\"mobile-limit-overlay\" [ngClass]=\"toggleLimit ? '' : 'hide-limit-select'\">\n    <ol class=\"limit-item\">\n      <li\n        *ngFor=\"let limit of limitOpts\"\n        (click)=\"onLimitChange(limit.value) ;toggleLimit = !toggleLimit\"\n      >{{ limit.label }}</li>\n    </ol>\n  </div>\n</div>\n<div class=\"mobile-searching\" [ngClass]=\"toogleSearch ? '' : 'hide-search'\">\n  <input\n    #searchKeyword\n    type=\"text\"\n    placeholder=\"Cari...\"\n    (keyup.enter)=\"onSearchChange(searchKeyword.value)\"/>\n  <div class=\"erase-keyword\" (click)=\"onSearchChange(''); searchKeyword.value = ''\">\n    <p *ngIf=\"searchKeyword.value !== ''\">&times;</p>\n  </div>\n</div>\n<div class=\"mobile-sorting\" [ngClass]=\"toggleSort ? '' : 'hide-sort'\">\n  <div class=\"close-sort-container\" (click)=\"toggleSort = false;\">\n    <span class=\"fa fa-times\"></span>\n  </div>\n  <div class=\"sort-type-container\">\n    <p><b>Jenis urutan</b></p>\n    <input type=\"checkbox\" id=\"sort-toggle\" (change)=\"onSortTypeChange()\"/>\n    <label for=\"sort-toggle\">\n      <span class=\"fa\" [ngClass]=\"isSortAsc ? 'fa-sort-amount-desc' : 'fa-sort-amount-asc'\"></span>&nbsp;\n      Urut {{ isSortAsc ? 'naik' : 'turun' }}\n    </label>\n  </div>\n  <div class=\"column-container\">\n    <p><b>Pilih kolom</b></p>\n    <ul class=\"column-list\">\n      <li *ngFor=\"let item of orderableColumns; let i = index\">\n        <input\n          type=\"radio\" [attr.id]=\"'item-' + i\"\n          name=\"radio-culoumn-filter\"\n          (change)=\"onColumnSelect(item)\"/>\n        <label class=\"radio-col\" [attr.for]=\"'item-' + i\" for>{{ item.name }}</label>\n      </li>\n    </ul>\n  </div>\n</div>\n",
                     styles: [".gateway-rcb{height:15px!important;position:relative;display:flex;align-items:center}.gateway-rcb .gateway-rcb-select{position:absolute;top:0;opacity:0}.gateway-rcb .gateway-rcb-select:checked+.gateway-rcb-label:before{content:\"\\f00c\";display:flex;justify-content:space-around;background:#4db6ac;border-color:#4db6ac}.gateway-rcb .gateway-rcb-label::before{content:\"\";margin:5px 0 0;padding:0;display:block;width:15px;height:15px;color:#fff;font-size:10px!important;font-family:FontAwesome;text-rendering:auto;border:1px solid #bdbdbd}.gateway-rcb .radio-label::before{border-radius:50%}.gateway-rcb p{font-size:13px;padding:0;margin:0}.mobile-filter-container,.mobile-searching,.mobile-sorting{display:none}@media screen and (max-width:770px){.mobile-filter-container{position:relative;display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;border-bottom:1px solid #ccc}.mobile-filter-container ul{list-style:none;padding:0;margin:0;display:flex;align-items:center}.mobile-filter-container ul li{height:35px;display:flex;align-items:center;justify-content:space-around;cursor:pointer}.mobile-filter-container .mobile-limit-container .filter-select{cursor:pointer}.mobile-filter-container .mobile-limit-container .filter-select::after{content:\"\\f078\";margin-left:5px;font-family:FontAwesome;text-rendering:auto;font-size:10px}.mobile-filter-container .mobile-search-container{width:auto}.mobile-filter-container .mobile-search-container ul .ikon{font-size:18px}.mobile-filter-container .mobile-search-container ul li:last-child{width:35px}.mobile-filter-container .mobile-search-overlay{position:absolute;left:0;top:35px;z-index:100;display:flex;align-items:center;width:100%}.mobile-filter-container .mobile-search-overlay input{height:35px;padding-left:5px;width:100%;outline:0;border-width:1px 1px 0;border-style:solid;border-color:#ccc}.mobile-filter-container .mobile-search-overlay button{width:35px;height:35px;font-size:18px;background:#093697;color:#fff;outline:0;border:none}.mobile-filter-container .mobile-search-overlay.hide-search{display:none!important}.mobile-filter-container .mobile-limit-overlay{position:absolute;display:block;left:0;top:35px;z-index:100;background:#fff;width:100%;border:1px solid #ccc}.mobile-filter-container .mobile-limit-overlay ol.limit-item{list-style:none;padding:0;margin:0}.mobile-filter-container .mobile-limit-overlay li{cursor:pointer;line-height:35px;padding-left:5px}.mobile-filter-container .mobile-limit-overlay li:hover{color:#fff;background:#093697}.mobile-filter-container .mobile-limit-overlay.hide-limit-select{display:none!important}.mobile-searching{position:relative;display:flex;align-items:center;width:100%;margin:-12px 0 15px}.mobile-searching input{height:35px;padding-left:5px;width:100%;outline:0;border-width:0 0 1px;border-style:solid;border-color:#ccc}.mobile-searching .erase-keyword{position:absolute;z-index:20;top:0;right:0;font-size:30px;cursor:pointer;color:#bdbdbd;background:#fff;height:33px;width:21px}.mobile-searching .erase-keyword p{margin:-4px 0 0;padding:0}.mobile-searching.hide-search{display:none!important}.mobile-sorting{padding:.75rem .75rem 0;width:100%;border:1px solid #bdbdbd;margin:-16px 0 15px;position:relative;display:block}.mobile-sorting div.close-sort-container{position:absolute;z-index:10;top:4px;right:0;font-size:14px;height:20px;width:20px;color:#bdbdbd}.mobile-sorting .sort-type-container{position:relative}.mobile-sorting .sort-type-container label{cursor:pointer;font-weight:400;border:2px solid #bdbdbd;padding:4px 0;width:90px;text-align:center}.mobile-sorting .sort-type-container input{position:absolute;opacity:0}.mobile-sorting .column-container{margin-top:5px}.mobile-sorting .column-container ul.column-list{list-style:none;padding:0}.mobile-sorting .column-container ul.column-list li{display:inline-block;position:relative}.mobile-sorting .column-container ul.column-list li .radio-col{cursor:pointer;border:2px solid #bdbdbd;padding:4px 7px;border-radius:10px;margin:3px 5px 3px 0;font-weight:400}.mobile-sorting .column-container ul.column-list li input{position:absolute;opacity:0;width:100%}.mobile-sorting .column-container ul.column-list li input:checked+.radio-col{background:#093697;border-color:#093697;color:#fff}.mobile-sorting.hide-sort{display:none}}"]
                 }] }
     ];
@@ -1991,7 +2115,7 @@ var ModalDialogComponent = /** @class */ (function () {
     ];
     /** @nocollapse */
     ModalDialogComponent.ctorParameters = function () { return [
-        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_9__["BsModalRef"] }
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_10__["BsModalRef"] }
     ]; };
     return ModalDialogComponent;
 }());
@@ -2213,6 +2337,7 @@ var ServerTableComponent = /** @class */ (function () {
         this._tablePageSvc = _tablePageSvc;
         this.editClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.commentClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.auditClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.deleteClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.detailClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.exportClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -2223,6 +2348,7 @@ var ServerTableComponent = /** @class */ (function () {
         this.publishClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.radioChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.reloadClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.rejectClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.selectedRows = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.switchChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.syncClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -2361,6 +2487,9 @@ var ServerTableComponent = /** @class */ (function () {
             case 'comment':
                 this.commentClicked.emit(data);
                 break;
+            case 'audit':
+                this.auditClicked.emit(data);
+                break;
             case 'export':
                 this.exportClicked.emit(data);
                 break;
@@ -2372,6 +2501,9 @@ var ServerTableComponent = /** @class */ (function () {
                 break;
             case 'activate':
                 this.switchChanged.emit({ value: prop.$event, data: data });
+                break;
+            case 'reject':
+                this.rejectClicked.emit(data);
                 break;
         }
     };
@@ -2661,6 +2793,7 @@ var ServerTableComponent = /** @class */ (function () {
         rows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         editClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         commentClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+        auditClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         deleteClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         detailClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         exportClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -2671,6 +2804,7 @@ var ServerTableComponent = /** @class */ (function () {
         publishClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         radioChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         reloadClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+        rejectClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         selectedRows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         switchChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         syncClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -2799,6 +2933,9 @@ var TableComponent = /** @class */ (function () {
         this.searchOptions = true;
         this.serverMode = false;
         this.commentClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.auditClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.importClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.exportClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.deleteClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.detailClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.editClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -2809,6 +2946,7 @@ var TableComponent = /** @class */ (function () {
         this.publishClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.radioChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.reloadClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.rejectClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.searchChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.selectedRow = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.switchChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -2838,6 +2976,39 @@ var TableComponent = /** @class */ (function () {
      */
     function (data) {
         this.commentClicked.emit(data);
+    };
+    /**
+     * @param {?} data
+     * @return {?}
+     */
+    TableComponent.prototype.onAuditClick = /**
+     * @param {?} data
+     * @return {?}
+     */
+    function (data) {
+        this.auditClicked.emit(data);
+    };
+    /**
+     * @param {?} data
+     * @return {?}
+     */
+    TableComponent.prototype.onExportClick = /**
+     * @param {?} data
+     * @return {?}
+     */
+    function (data) {
+        this.exportClicked.emit(data);
+    };
+    /**
+     * @param {?} data
+     * @return {?}
+     */
+    TableComponent.prototype.onImportClick = /**
+     * @param {?} data
+     * @return {?}
+     */
+    function (data) {
+        this.importClicked.emit(data);
     };
     /**
      * @param {?} data
@@ -2993,10 +3164,21 @@ var TableComponent = /** @class */ (function () {
     function (data) {
         this.verifyClicked.emit(data);
     };
+    /**
+     * @param {?} data
+     * @return {?}
+     */
+    TableComponent.prototype.onRejectClick = /**
+     * @param {?} data
+     * @return {?}
+     */
+    function (data) {
+        this.rejectClicked.emit(data);
+    };
     TableComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-table',
-                    template: "\n    <uii-server-table\n      *ngIf=\"serverMode; else clientMode\"\n      [actionColumn]=\"actionColumn\"\n      [actionTitle]=\"actionTitle\"\n      [checkboxColumn]=\"checkboxColumn\"\n      [columns]=\"columns\"\n      [footerInfo]=\"footerInfo\"\n      [limitOptions]=\"limitOptions\"\n      [paginationOptions]=\"paginationOptions\"\n      [radioColumn]=\"radioColumn\"\n      [rows]=\"rows\"\n      [searchOptions]=\"searchOptions\"\n      [searchOptions]=\"searchOptions\"\n      (limitChanged)=\"onLimitChange($event)\"\n      (pageChanged)=\"onPageChange($event)\"\n      (editClicked)=\"onEditClick($event)\"\n      (commentClicked)=\"onCommentClick($event)\"\n      (deleteClicked)=\"onDeleteClick($event)\"\n      (detailClicked)=\"onDetailClick($event)\"\n      (inValidateClicked)=\"onInValidateClick($event)\"\n      (printClicked)=\"onPrintClick($event)\"\n      (publishClicked)=\"onPublishClick($event)\"\n      (reloadClicked)=\"onReloadClick($event)\"\n      (searchChanged)=\"onSearchChange($event)\"\n      (switchChanged)=\"onSwitchChange($event)\"\n      (validateClicked)=\"onValidateClick($event)\"\n      (verifyClicked)=\"onVerifyClick($event)\"\n      (selectedRows)=\"onRowSelect($event)\"\n      (inputTextValueChange)=\"inputTextValueChange.emit($event)\"\n      (inputRadioValueChange)=\"inputRadioValueChange.emit($event)\">\n    </uii-server-table>\n    <ng-template #clientMode>\n      <uii-client-table\n        [actionColumn]=\"actionColumn\"\n        [actionInValidation]=\"actionInValidation\"\n        [actionTitle]=\"actionTitle\"\n        [checkboxColumn]=\"checkboxColumn\"\n        [isAllCheckbox]=\"isAllCheckbox\"\n        [columns]=\"columns\"\n        [footerInfo]=\"footerInfo\"\n        [forceLimitOptions]=\"forceLimitOptions\"\n        [limitOptions]=\"limitOptions\"\n        [paginationOptions]=\"paginationOptions\"\n        [radioColumn]=\"radioColumn\"\n        [rows]=\"rows\"\n        [searchOptions]=\"searchOptions\"\n        (editClicked)=\"onEditClick($event)\"\n        (commentClicked)=\"onCommentClick($event)\"\n        (deleteClicked)=\"onDeleteClick($event)\"\n        (detailClicked)=\"onDetailClick($event)\"\n        (inValidateClicked)=\"onInValidateClick($event)\"\n        (printClicked)=\"onPrintClick($event)\"\n        (publishClicked)=\"onPublishClick($event)\"\n        (radioSelect)=\"onRadioSelect($event)\"\n        (reloadClicked)=\"onReloadClick($event)\"\n        (switchChanged)=\"onSwitchChange($event)\"\n        (validateClicked)=\"onValidateClick($event)\"\n        (verifyClicked)=\"onVerifyClick($event)\"\n        (selectedRows)=\"onRowSelect($event)\"\n        (inputTextValueChange)=\"inputTextValueChange.emit($event)\"\n        (inputRadioValueChange)=\"inputRadioValueChange.emit($event)\">\n      </uii-client-table>\n    </ng-template>"
+                    template: "\n    <uii-server-table\n      *ngIf=\"serverMode; else clientMode\"\n      [actionColumn]=\"actionColumn\"\n      [actionTitle]=\"actionTitle\"\n      [checkboxColumn]=\"checkboxColumn\"\n      [columns]=\"columns\"\n      [footerInfo]=\"footerInfo\"\n      [limitOptions]=\"limitOptions\"\n      [paginationOptions]=\"paginationOptions\"\n      [radioColumn]=\"radioColumn\"\n      [rows]=\"rows\"\n      [searchOptions]=\"searchOptions\"\n      [searchOptions]=\"searchOptions\"\n      (limitChanged)=\"onLimitChange($event)\"\n      (pageChanged)=\"onPageChange($event)\"\n      (editClicked)=\"onEditClick($event)\"\n      (commentClicked)=\"onCommentClick($event)\"\n      (auditClicked)=\"onAuditClick($event)\"\n      (importClicked)=\"onImportClick($event)\"\n      (exportClicked)=\"onExportClick($event)\"\n      (deleteClicked)=\"onDeleteClick($event)\"\n      (detailClicked)=\"onDetailClick($event)\"\n      (inValidateClicked)=\"onInValidateClick($event)\"\n      (printClicked)=\"onPrintClick($event)\"\n      (publishClicked)=\"onPublishClick($event)\"\n      (reloadClicked)=\"onReloadClick($event)\"\n      (rejectClicked)=\"onRejectClick($event)\"\n      (searchChanged)=\"onSearchChange($event)\"\n      (switchChanged)=\"onSwitchChange($event)\"\n      (validateClicked)=\"onValidateClick($event)\"\n      (verifyClicked)=\"onVerifyClick($event)\"\n      (selectedRows)=\"onRowSelect($event)\"\n      (inputTextValueChange)=\"inputTextValueChange.emit($event)\"\n      (inputRadioValueChange)=\"inputRadioValueChange.emit($event)\">\n    </uii-server-table>\n    <ng-template #clientMode>\n      <uii-client-table\n        [actionColumn]=\"actionColumn\"\n        [actionInValidation]=\"actionInValidation\"\n        [actionTitle]=\"actionTitle\"\n        [checkboxColumn]=\"checkboxColumn\"\n        [isAllCheckbox]=\"isAllCheckbox\"\n        [columns]=\"columns\"\n        [footerInfo]=\"footerInfo\"\n        [forceLimitOptions]=\"forceLimitOptions\"\n        [limitOptions]=\"limitOptions\"\n        [paginationOptions]=\"paginationOptions\"\n        [radioColumn]=\"radioColumn\"\n        [rows]=\"rows\"\n        [searchOptions]=\"searchOptions\"\n        (editClicked)=\"onEditClick($event)\"\n        (commentClicked)=\"onCommentClick($event)\"\n        (auditClicked)=\"onAuditClick($event)\"\n        (importClicked)=\"onImportClick($event)\"\n        (exportClicked)=\"onExportClick($event)\"\n        (deleteClicked)=\"onDeleteClick($event)\"\n        (detailClicked)=\"onDetailClick($event)\"\n        (inValidateClicked)=\"onInValidateClick($event)\"\n        (printClicked)=\"onPrintClick($event)\"\n        (publishClicked)=\"onPublishClick($event)\"\n        (radioSelect)=\"onRadioSelect($event)\"\n        (reloadClicked)=\"onReloadClick($event)\"\n        (rejectClicked)=\"onRejectClick($event)\"\n        (switchChanged)=\"onSwitchChange($event)\"\n        (validateClicked)=\"onValidateClick($event)\"\n        (verifyClicked)=\"onVerifyClick($event)\"\n        (selectedRows)=\"onRowSelect($event)\"\n        (inputTextValueChange)=\"inputTextValueChange.emit($event)\"\n        (inputRadioValueChange)=\"inputRadioValueChange.emit($event)\">\n      </uii-client-table>\n    </ng-template>"
                 }] }
     ];
     TableComponent.propDecorators = {
@@ -3015,6 +3197,9 @@ var TableComponent = /** @class */ (function () {
         searchOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         serverMode: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         commentClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+        auditClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+        importClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+        exportClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         deleteClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         detailClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         editClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -3025,6 +3210,7 @@ var TableComponent = /** @class */ (function () {
         publishClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         radioChange: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         reloadClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
+        rejectClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         searchChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         selectedRow: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         switchChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -3048,7 +3234,7 @@ var TableActionComponent = /** @class */ (function () {
     TableActionComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-table-action',
-                    template: "\n    <div class=\"cell-action\">\n      <span *ngIf=\"auth && auth.canPublish\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'publish'})\" uiiTooltip=\"Terbit\">\n        <span class=\"fa fa-arrow-circle-up\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canUpdate\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'update'})\" uiiTooltip=\"Edit\">\n        <span class=\"fa fa-pencil\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canRead\" class=\"action-icon i-mat icon-primary \" (click)=\"emitAction.emit({index: index, type: 'detail'})\" uiiTooltip=\"Detail\">\n        <span class=\"material-icons\">visibility</span>\n      </span>\n        <span *ngIf=\"auth && auth.canVerify\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'verify'})\" uiiTooltip=\"Verifikasi\">\n        <span class=\"fa fa-check-square-o\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canValidate\" class=\"action-icon i-mat icon-primary \" (click)=\"emitAction.emit({index: index, type: 'validate'})\" uiiTooltip=\"Validasi\">\n        <span class=\"material-icons\">playlist_add_check</span>\n      </span>\n        <span *ngIf=\"auth && auth.canPrint\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'print'})\" uiiTooltip=\"Cetak\">\n        <span class=\"fa fa-print\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canReload\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'reload'})\" uiiTooltip=\"Muat ulang\">\n        <span class=\"fa fa-repeat\"></span>\n      </span>\n        <span *ngIf=\"actionInValidation === true\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'invalidate'})\" uiiTooltip=\"Batalkan validasi\">\n        <span class=\"fa fa-lock\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canDelete\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'delete'})\" uiiTooltip=\"Hapus\">\n        <span class=\"fa fa-trash\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canComment\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'comment'})\" uiiTooltip=\"Komentar\">\n        <span class=\"fa fa-comment\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canExport\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'export'})\" uiiTooltip=\"ekspor\">\n        <span class=\"fa fa-cloud-upload\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canImport\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'import'})\" uiiTooltip=\"Impor\">\n        <span class=\"fa fa-cloud-download\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canSync\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'sync'})\" uiiTooltip=\"Sinkron\">\n        <span class=\"fa fa-exchange\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canActivate\" class=\"action-icon i-on-off icon-primary\" uiiTooltip=\"Aktivasi\">\n        <uii-switch\n          [useOverlay]=\"true\"\n          [checked]=\"item.is_active === 1 || item.flag_aktif === 1 ? true : false\"\n          (changeEvent)=\"emitAction.emit({$event: $event, index: index, type: 'activate'})\">\n        </uii-switch>\n      </span>\n    </div>\n  ",
+                    template: "\n    <div class=\"cell-action\">\n      <span *ngIf=\"auth && auth.canPublish\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'publish'})\" uiiTooltip=\"Terbit\">\n        <span class=\"fa fa-arrow-circle-up\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canUpdate\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'update'})\" uiiTooltip=\"Edit\">\n        <span class=\"fa fa-pencil\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canAudit\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'audit'})\" uiiTooltip=\"Audit\">\n        <span class=\"pf-clipboard-list\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canRead\" class=\"action-icon i-mat icon-primary \" (click)=\"emitAction.emit({index: index, type: 'detail'})\" uiiTooltip=\"Detail\">\n        <span class=\"material-icons\">visibility</span>\n      </span>\n        <span *ngIf=\"auth && auth.canVerify\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'verify'})\" uiiTooltip=\"Verifikasi\">\n        <span class=\"fa fa-check-square-o\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canValidate\" class=\"action-icon i-mat icon-primary \" (click)=\"emitAction.emit({index: index, type: 'validate'})\" uiiTooltip=\"Validasi\">\n        <span class=\"material-icons\">playlist_add_check</span>\n      </span>\n        <span *ngIf=\"auth && auth.canPrint\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'print'})\" uiiTooltip=\"Cetak\">\n        <span class=\"fa fa-print\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canReload\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'reload'})\" uiiTooltip=\"Muat ulang\">\n        <span class=\"fa fa-repeat\"></span>\n      </span>\n        <span *ngIf=\"actionInValidation === true\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'invalidate'})\" uiiTooltip=\"Batalkan validasi\">\n        <span class=\"fa fa-lock\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canDelete\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'delete'})\" uiiTooltip=\"Hapus\">\n        <span class=\"fa fa-trash\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canComment\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'comment'})\" uiiTooltip=\"Komentar\">\n        <span class=\"fa fa-comment\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canExport\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'export'})\" uiiTooltip=\"ekspor\">\n        <span class=\"fa fa-cloud-upload\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canImport\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'import'})\" uiiTooltip=\"Impor\">\n        <span class=\"fa fa-cloud-download\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canSync\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'sync'})\" uiiTooltip=\"Sinkron\">\n        <span class=\"fa fa-exchange\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canActivate\" class=\"action-icon i-on-off icon-primary\" uiiTooltip=\"Aktivasi\">\n        <uii-switch\n          [useOverlay]=\"true\"\n          [checked]=\"item.is_active === 1 || item.flag_aktif === 1 ? true : false\"\n          (changeEvent)=\"emitAction.emit({$event: $event, index: index, type: 'activate'})\">\n        </uii-switch>\n      </span>\n      <span *ngIf=\"auth && auth.canReject\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'reject'})\" uiiTooltip=\"Tolak\">\n        <span class=\"fa fa-times\"></span>\n      </span>\n    </div>\n  ",
                     styles: [".cell-action{font-size:20px;width:100%}.cell-action .action-icon{cursor:pointer;margin:0 5px;vertical-align:middle;display:inline}.cell-action .action-icon.i-mat,.cell-action .action-icon.i-on-off{position:relative;top:5px}"]
                 }] }
     ];
@@ -3216,10 +3402,10 @@ if (false) {}
  */
 function fadeIn() {
     return [
-        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["state"])('in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["style"])({ opacity: 1 })),
-        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["transition"])(':enter', [
-            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["style"])({ opacity: 0 }),
-            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["animate"])(400)
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["state"])('in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["style"])({ opacity: 1 })),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["transition"])(':enter', [
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["style"])({ opacity: 0 }),
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["animate"])(400)
         ])
     ];
 }
@@ -3228,10 +3414,10 @@ function fadeIn() {
  */
 function fadeOut() {
     return [
-        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["state"])('out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["style"])({ opacity: 0 })),
-        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["transition"])(':leave', [
-            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["style"])({ opacity: 1 }),
-            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["animate"])(400)
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["state"])('out', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["style"])({ opacity: 0 })),
+        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["transition"])(':leave', [
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["style"])({ opacity: 1 }),
+            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["animate"])(400)
         ])
     ];
 }
@@ -3261,8 +3447,8 @@ var TableSkeletonComponent = /** @class */ (function () {
                     selector: 'uii-table-skeleton',
                     template: "<div [@fadeIn]=\"'in'\">\n  <div *ngIf=\"showButtonCreate\" class=\"button-action-right\">\n      <button class=\"btn btn-skeleton\"></button>\n  </div>\n  <div *ngIf=\"showMobileLimitOptions\" class=\"search-limit-mobile-options\"></div>\n  <div class=\"mobile-skeleton-container\">\n    <div *ngFor=\"let row of rows(rowCount)\" class=\"table-skeleton-mobile\">\n      <div class=\"cell-left\">\n          <ul class=\"mobile-cell-container\">\n            <li *ngIf=\"showNumberColumn\"></li>\n            <li *ngFor=\"let colum of columns(columnCount)\"></li>\n          </ul>\n        </div>\n      <div class=\"cell-right\">\n          <ul class=\"mobile-cell-container\">\n            <li *ngIf=\"showNumberColumn\"></li>\n            <li *ngFor=\"let colum of columns(columnCount)\"></li>\n          </ul>\n        </div>\n    </div>\n  </div>\n  <div class=\"row search-limit-options\" *ngIf=\"showSearchOptions || showLimitOptions\">\n      <div class=\"col-sm-6 skeleton\">\n        <div *ngIf=\"showLimitOptions\" class=\"linear-lg pull-left\"></div>\n      </div>\n      <div class=\"col-sm-6 skeleton\">\n        <div *ngIf=\"showSearchOptions\" class=\"linear-xl pull-right\"></div>\n      </div>\n  </div>\n  <table class=\"table table-skeleton table-striped\">\n    <thead>\n      <tr>\n        <th *ngIf=\"showNumberColumn\" width=\"40\"><label class=\"header-number\"></label></th>\n        <th *ngIf=\"showCheckButton || showRadioButton\" width=\"40\"><label class=\"header-number\"></label></th>\n        <th *ngFor=\"let colum of columns(columnCount)\"><label></label></th>\n        <th *ngIf=\"showActionColumn\" class=\"header-action\"><label></label></th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr *ngFor=\"let row of rows(rowCount)\">\n        <td *ngIf=\"showNumberColumn\"><label class=\"body-number\"></label></td>\n        <td *ngIf=\"showCheckButton || showRadioButton\"><label class=\"body-number\"></label></td>\n        <td *ngFor=\"let colum of columns(columnCount)\"><label class=\"body-label\"></label></td>\n        <td *ngIf=\"showActionColumn\" class=\"body-action\"><label class=\"body-label\"></label></td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
                     animations: [
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["trigger"])('fadeIn', fadeIn()),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_10__["trigger"])('fadeOut', fadeOut())
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["trigger"])('fadeIn', fadeIn()),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_11__["trigger"])('fadeOut', fadeOut())
                     ]
                 }] }
     ];
@@ -3493,7 +3679,7 @@ var ImageService = /** @class */ (function () {
     ];
     /** @nocollapse */
     ImageService.ctorParameters = function () { return [
-        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_11__["DomSanitizer"] }
+        { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_12__["DomSanitizer"] }
     ]; };
     return ImageService;
 }());
@@ -5532,6 +5718,966 @@ if (false) {}
  * @fileoverview added by tsickle
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+var PilarFontComponent = /** @class */ (function () {
+    function PilarFontComponent() {
+        this.searchIcon = '';
+        this.iconPilarFont = [
+            {
+                nameClass: 'pf-wallet',
+                contentCode: '\e900'
+            },
+            {
+                nameClass: 'pf-weight-hanging',
+                contentCode: '\e901'
+            },
+            {
+                nameClass: 'pf-weight',
+                contentCode: '\e902'
+            },
+            {
+                nameClass: 'pf-wheelchair',
+                contentCode: '\e903'
+            },
+            {
+                nameClass: 'pf-wifi',
+                contentCode: '\e904'
+            },
+            {
+                nameClass: 'pf-wrench',
+                contentCode: '\e905'
+            },
+            {
+                nameClass: 'pf-volume-down',
+                contentCode: '\e906'
+            },
+            {
+                nameClass: 'pf-volume-mute',
+                contentCode: '\e907'
+            },
+            {
+                nameClass: 'pf-volume-off',
+                contentCode: '\e908'
+            },
+            {
+                nameClass: 'pf-volume-up',
+                contentCode: '\e909'
+            },
+            {
+                nameClass: 'pf-undo-alt',
+                contentCode: '\e90a'
+            },
+            {
+                nameClass: 'pf-undo',
+                contentCode: '\e90b'
+            },
+            {
+                nameClass: 'pf-university',
+                contentCode: '\e90c'
+            },
+            {
+                nameClass: 'pf-unlock-alt',
+                contentCode: '\e90d'
+            },
+            {
+                nameClass: 'pf-unlock',
+                contentCode: '\e90e'
+            },
+            {
+                nameClass: 'pf-user-alt',
+                contentCode: '\e90f'
+            },
+            {
+                nameClass: 'pf-user-check',
+                contentCode: '\e910'
+            },
+            {
+                nameClass: 'pf-user-circle',
+                contentCode: '\e911'
+            },
+            {
+                nameClass: 'pf-user-clock',
+                contentCode: '\e912'
+            },
+            {
+                nameClass: 'pf-user-cog',
+                contentCode: '\e913'
+            },
+            {
+                nameClass: 'pf-user-friends',
+                contentCode: '\e914'
+            },
+            {
+                nameClass: 'pf-user-graduate',
+                contentCode: '\e915'
+            },
+            {
+                nameClass: 'pf-user-injured',
+                contentCode: '\e916'
+            },
+            {
+                nameClass: 'pf-user-lock',
+                contentCode: '\e917'
+            },
+            {
+                nameClass: 'pf-user-md',
+                contentCode: '\e918'
+            },
+            {
+                nameClass: 'pf-user-minus',
+                contentCode: '\e919'
+            },
+            {
+                nameClass: 'pf-user-ninja',
+                contentCode: '\e91a'
+            },
+            {
+                nameClass: 'pf-user-nurse',
+                contentCode: '\e91b'
+            },
+            {
+                nameClass: 'pf-user-plus',
+                contentCode: '\e91c'
+            },
+            {
+                nameClass: 'pf-user-secret',
+                contentCode: '\e91d'
+            },
+            {
+                nameClass: 'pf-user-shield',
+                contentCode: '\e91e'
+            },
+            {
+                nameClass: 'pf-user-slash',
+                contentCode: '\e91f'
+            },
+            {
+                nameClass: 'pf-user-tag',
+                contentCode: '\e920'
+            },
+            {
+                nameClass: 'pf-user-tie',
+                contentCode: '\e921'
+            },
+            {
+                nameClass: 'pf-user-times',
+                contentCode: '\e922'
+            },
+            {
+                nameClass: 'pf-user',
+                contentCode: '\e923'
+            },
+            {
+                nameClass: 'pf-users-cog',
+                contentCode: '\e924'
+            },
+            {
+                nameClass: 'pf-users',
+                contentCode: '\e925'
+            },
+            {
+                nameClass: 'pf-utensil-spoon',
+                contentCode: '\e926'
+            },
+            {
+                nameClass: 'pf-utensils',
+                contentCode: '\e927'
+            },
+            {
+                nameClass: 'pf-table-tennis',
+                contentCode: '\e928'
+            },
+            {
+                nameClass: 'pf-table',
+                contentCode: '\e929'
+            },
+            {
+                nameClass: 'pf-tag',
+                contentCode: '\e92a'
+            },
+            {
+                nameClass: 'pf-tags',
+                contentCode: '\e92b'
+            },
+            {
+                nameClass: 'pf-tasks',
+                contentCode: '\e92c'
+            },
+            {
+                nameClass: 'pf-taxi',
+                contentCode: '\e92d'
+            },
+            {
+                nameClass: 'pf-temperature-low',
+                contentCode: '\e92e'
+            },
+            {
+                nameClass: 'pf-th-large',
+                contentCode: '\e92f'
+            },
+            {
+                nameClass: 'pf-th-list',
+                contentCode: '\e930'
+            },
+            {
+                nameClass: 'pf-th',
+                contentCode: '\e931'
+            },
+            {
+                nameClass: 'pf-thumbs-up',
+                contentCode: '\e932'
+            },
+            {
+                nameClass: 'pf-train',
+                contentCode: '\e933'
+            },
+            {
+                nameClass: 'pf-trash-alt',
+                contentCode: '\e934'
+            },
+            {
+                nameClass: 'pf-share-square',
+                contentCode: '\e935'
+            },
+            {
+                nameClass: 'pf-share',
+                contentCode: '\e936'
+            },
+            {
+                nameClass: 'pf-sign-in-alt',
+                contentCode: '\e937'
+            },
+            {
+                nameClass: 'pf-solar-panel',
+                contentCode: '\e938'
+            },
+            {
+                nameClass: 'pf-sort-alpha-down-alt',
+                contentCode: '\e939'
+            },
+            {
+                nameClass: 'pf-sort-alpha-down',
+                contentCode: '\e93a'
+            },
+            {
+                nameClass: 'pf-sort-alpha-up-alt',
+                contentCode: '\e93b'
+            },
+            {
+                nameClass: 'pf-sort-alpha-up',
+                contentCode: '\e93c'
+            },
+            {
+                nameClass: 'pf-sort-amount-up-alt',
+                contentCode: '\e93d'
+            },
+            {
+                nameClass: 'pf-sort-amount-up',
+                contentCode: '\e93e'
+            },
+            {
+                nameClass: 'pf-spell-check',
+                contentCode: '\e93f'
+            },
+            {
+                nameClass: 'pf-stamp',
+                contentCode: '\e940'
+            },
+            {
+                nameClass: 'pf-star-and-crescent',
+                contentCode: '\e941'
+            },
+            {
+                nameClass: 'pf-stethoscope',
+                contentCode: '\e942'
+            },
+            {
+                nameClass: 'pf-stopwatch',
+                contentCode: '\e943'
+            },
+            {
+                nameClass: 'pf-store',
+                contentCode: '\e944'
+            },
+            {
+                nameClass: 'pf-subway',
+                contentCode: '\e945'
+            },
+            {
+                nameClass: 'pf-suitcase-rolling',
+                contentCode: '\e946'
+            },
+            {
+                nameClass: 'pf-sync-alt',
+                contentCode: '\e947'
+            },
+            {
+                nameClass: 'pf-sync',
+                contentCode: '\e948'
+            },
+            {
+                nameClass: 'pf-redo-alt',
+                contentCode: '\e949'
+            },
+            {
+                nameClass: 'pf-redo-alt',
+                contentCode: '\e949'
+            },
+            {
+                nameClass: 'pf-redo',
+                contentCode: '\e94a'
+            },
+            {
+                nameClass: 'pf-reply-all',
+                contentCode: '\e94b'
+            },
+            {
+                nameClass: 'pf-reply',
+                contentCode: '\e94c'
+            },
+            {
+                nameClass: 'pf-quran',
+                contentCode: '\e94d'
+            },
+            {
+                nameClass: 'pf-paperclip',
+                contentCode: '\e94e'
+            },
+            {
+                nameClass: 'pf-parking',
+                contentCode: '\e94f'
+            },
+            {
+                nameClass: 'pf-passport',
+                contentCode: '\e950'
+            },
+            {
+                nameClass: 'pf-paste',
+                contentCode: '\e951'
+            },
+            {
+                nameClass: 'pf-pen-square',
+                contentCode: '\e952'
+            },
+            {
+                nameClass: 'pf-phone',
+                contentCode: '\e953'
+            },
+            {
+                nameClass: 'pf-play-circle',
+                contentCode: '\e954'
+            },
+            {
+                nameClass: 'pf-plug',
+                contentCode: '\e955'
+            },
+            {
+                nameClass: 'pf-poll-h',
+                contentCode: '\e956'
+            },
+            {
+                nameClass: 'pf-male',
+                contentCode: '\e957'
+            },
+            {
+                nameClass: 'pf-map-marked-alt',
+                contentCode: '\e958'
+            },
+            {
+                nameClass: 'pf-map-marked',
+                contentCode: '\e959'
+            },
+            {
+                nameClass: 'pf-map-marker-alt',
+                contentCode: '\e95a'
+            },
+            {
+                nameClass: 'pf-map',
+                contentCode: '\e95b'
+            },
+            {
+                nameClass: 'pf-money-bill-wave',
+                contentCode: '\e95c'
+            },
+            {
+                nameClass: 'pf-money-bill',
+                contentCode: '\e95d'
+            },
+            {
+                nameClass: 'pf-mosque',
+                contentCode: '\e95e'
+            },
+            {
+                nameClass: 'pf-mouse-pointer',
+                contentCode: '\e95f'
+            },
+            {
+                nameClass: 'pf-landmark',
+                contentCode: '\e960'
+            },
+            {
+                nameClass: 'pf-layer-group',
+                contentCode: '\e961'
+            },
+            {
+                nameClass: 'pf-leaf',
+                contentCode: '\e962'
+            },
+            {
+                nameClass: 'pf-list-alt',
+                contentCode: '\e963'
+            },
+            {
+                nameClass: 'pf-list-ol',
+                contentCode: '\e964'
+            },
+            {
+                nameClass: 'pf-list-ul',
+                contentCode: '\e965'
+            },
+            {
+                nameClass: 'pf-list',
+                contentCode: '\e966'
+            },
+            {
+                nameClass: 'pf-long-arrow-alt-up',
+                contentCode: '\e967'
+            },
+            {
+                nameClass: 'pf-kaaba',
+                contentCode: '\e968'
+            },
+            {
+                nameClass: 'pf-id-card',
+                contentCode: '\e969'
+            },
+            {
+                nameClass: 'pf-image',
+                contentCode: '\e96a'
+            },
+            {
+                nameClass: 'pf-images',
+                contentCode: '\e96b'
+            },
+            {
+                nameClass: 'pf-inbox',
+                contentCode: '\e96c'
+            },
+            {
+                nameClass: 'pf-home',
+                contentCode: '\e96d'
+            },
+            {
+                nameClass: 'pf-hospital',
+                contentCode: '\e96e'
+            },
+            {
+                nameClass: 'pf-hourglass-end',
+                contentCode: '\e96f'
+            },
+            {
+                nameClass: 'pf-hourglass-half',
+                contentCode: '\e970'
+            },
+            {
+                nameClass: 'pf-hourglass-start',
+                contentCode: '\e971'
+            },
+            {
+                nameClass: 'pf-hourglass',
+                contentCode: '\e972'
+            },
+            {
+                nameClass: 'pf-globe-americas',
+                contentCode: '\e973'
+            },
+            {
+                nameClass: 'pf-globe-europe',
+                contentCode: '\e974'
+            },
+            {
+                nameClass: 'pf-globe',
+                contentCode: '\e975'
+            },
+            {
+                nameClass: 'pf-graduation-cap',
+                contentCode: '\e976'
+            },
+            {
+                nameClass: 'pf-grip-horizontal',
+                contentCode: '\e977'
+            },
+            {
+                nameClass: 'pf-file-code',
+                contentCode: '\e978'
+            },
+            {
+                nameClass: 'pf-file-csv',
+                contentCode: '\e979'
+            },
+            {
+                nameClass: 'pf-file-download',
+                contentCode: '\e97a'
+            },
+            {
+                nameClass: 'pf-file-excel',
+                contentCode: '\e97b'
+            },
+            {
+                nameClass: 'pf-file-export',
+                contentCode: '\e97c'
+            },
+            {
+                nameClass: 'pf-file-image',
+                contentCode: '\e97d'
+            },
+            {
+                nameClass: 'pf-file-import',
+                contentCode: '\e97e'
+            },
+            {
+                nameClass: 'pf-file-pdf',
+                contentCode: '\e97f'
+            },
+            {
+                nameClass: 'pf-file-powerpoint',
+                contentCode: '\e97g'
+            },
+            {
+                nameClass: 'pf-file-prescription',
+                contentCode: '\e981'
+            },
+            {
+                nameClass: 'pf-file-signature',
+                contentCode: '\e982'
+            },
+            {
+                nameClass: 'pf-file-upload',
+                contentCode: '\e983'
+            },
+            {
+                nameClass: 'pf-file-video',
+                contentCode: '\e984'
+            },
+            {
+                nameClass: 'pf-file-word',
+                contentCode: '\e985'
+            },
+            {
+                nameClass: 'pf-file',
+                contentCode: '\e986'
+            },
+            {
+                nameClass: 'pf-fingerprint',
+                contentCode: '\e987'
+            },
+            {
+                nameClass: 'pf-folder-open',
+                contentCode: '\e988'
+            },
+            {
+                nameClass: 'pf-folder-plus',
+                contentCode: '\e989'
+            },
+            {
+                nameClass: 'pf-folder',
+                contentCode: '\e98a'
+            },
+            {
+                nameClass: 'pf-forward',
+                contentCode: '\e98b'
+            },
+            {
+                nameClass: 'pf-envelope',
+                contentCode: '\e98c'
+            },
+            {
+                nameClass: 'pf-door-closed',
+                contentCode: '\e98d'
+            },
+            {
+                nameClass: 'pf-door-open',
+                contentCode: '\e98e'
+            },
+            {
+                nameClass: 'pf-calculator',
+                contentCode: '\e98f'
+            },
+            {
+                nameClass: 'pf-calendar-alt',
+                contentCode: '\e990'
+            },
+            {
+                nameClass: 'pf-calendar-check',
+                contentCode: '\e991'
+            },
+            {
+                nameClass: 'pf-calendar-day',
+                contentCode: '\e992'
+            },
+            {
+                nameClass: 'pf-calendar-minus',
+                contentCode: '\e993'
+            },
+            {
+                nameClass: 'pf-calendar-plus',
+                contentCode: '\e994'
+            },
+            {
+                nameClass: 'pf-calendar-times',
+                contentCode: '\e995'
+            },
+            {
+                nameClass: 'pf-calendar',
+                contentCode: '\e996'
+            },
+            {
+                nameClass: 'pf-camera',
+                contentCode: '\e997'
+            },
+            {
+                nameClass: 'pf-caret-down',
+                contentCode: '\e998'
+            },
+            {
+                nameClass: 'pf-caret-left',
+                contentCode: '\e999'
+            },
+            {
+                nameClass: 'pf-caret-right',
+                contentCode: '\e99a'
+            },
+            {
+                nameClass: 'pf-caret-up',
+                contentCode: '\e99b'
+            },
+            {
+                nameClass: 'pf-chart-area',
+                contentCode: '\e99c'
+            },
+            {
+                nameClass: 'pf-chart-bar',
+                contentCode: '\e99d'
+            },
+            {
+                nameClass: 'pf-chart-line',
+                contentCode: '\e99e'
+            },
+            {
+                nameClass: 'pf-chart-pie',
+                contentCode: '\e99f'
+            },
+            {
+                nameClass: 'pf-check-double',
+                contentCode: '\e9a0'
+            },
+            {
+                nameClass: 'pf-check-square',
+                contentCode: '\e9a1'
+            },
+            {
+                nameClass: 'pf-check',
+                contentCode: '\e9a2'
+            },
+            {
+                nameClass: 'pf-chevron-circle-down',
+                contentCode: '\e9a3'
+            },
+            {
+                nameClass: 'pf-chevron-circle-left',
+                contentCode: '\e9a4'
+            },
+            {
+                nameClass: 'pf-chevron-circle-right',
+                contentCode: '\e9a5'
+            },
+            {
+                nameClass: 'pf-chevron-circle-up',
+                contentCode: '\e9a6'
+            },
+            {
+                nameClass: 'pf-chevron-down',
+                contentCode: '\e9a7'
+            },
+            {
+                nameClass: 'pf-chevron-left',
+                contentCode: '\e9a8'
+            },
+            {
+                nameClass: 'pf-chevron-right',
+                contentCode: '\e9a9'
+            },
+            {
+                nameClass: 'pf-chevron-up',
+                contentCode: '\e9aa'
+            },
+            {
+                nameClass: 'pf-clipboard-check',
+                contentCode: '\e9ab'
+            },
+            {
+                nameClass: 'pf-clipboard-list',
+                contentCode: '\e9ac'
+            },
+            {
+                nameClass: 'pf-clipboard',
+                contentCode: '\e9ad'
+            },
+            {
+                nameClass: 'pf-clock',
+                contentCode: '\e9ae'
+            },
+            {
+                nameClass: 'pf-clone',
+                contentCode: '\e9af'
+            },
+            {
+                nameClass: 'pf-cloud-download-alt',
+                contentCode: '\e9b0'
+            },
+            {
+                nameClass: 'pf-cloud-upload-alt',
+                contentCode: '\e9b1'
+            },
+            {
+                nameClass: 'pf-cloud',
+                contentCode: '\e9b2'
+            },
+            {
+                nameClass: 'pf-code',
+                contentCode: '\e9b3'
+            },
+            {
+                nameClass: 'pf-cog',
+                contentCode: '\e9b4'
+            },
+            {
+                nameClass: 'pf-coins',
+                contentCode: '\e9b5'
+            },
+            {
+                nameClass: 'pf-columns',
+                contentCode: '\e9b6'
+            },
+            {
+                nameClass: 'pf-comment-alt',
+                contentCode: '\e9b7'
+            },
+            {
+                nameClass: 'pf-comment-dots',
+                contentCode: '\e9b8'
+            },
+            {
+                nameClass: 'pf-comment',
+                contentCode: '\e9b9'
+            },
+            {
+                nameClass: 'pf-comments',
+                contentCode: '\e9ba'
+            },
+            {
+                nameClass: 'pf-copy',
+                contentCode: '\e9bb'
+            },
+            {
+                nameClass: 'pf-backward',
+                contentCode: '\e9bc'
+            },
+            {
+                nameClass: 'pf-balance-scale-right',
+                contentCode: '\e9bd'
+            },
+            {
+                nameClass: 'pf-balance-scale',
+                contentCode: '\e9be'
+            },
+            {
+                nameClass: 'pf-bed',
+                contentCode: '\e9bf'
+            },
+            {
+                nameClass: 'pf-bell-slash',
+                contentCode: '\e9c0'
+            },
+            {
+                nameClass: 'pf-bell',
+                contentCode: '\e9c1'
+            },
+            {
+                nameClass: 'pf-book-open',
+                contentCode: '\e9c2'
+            },
+            {
+                nameClass: 'pf-book',
+                contentCode: '\e9c3'
+            },
+            {
+                nameClass: 'pf-address-book',
+                contentCode: '\e9c4'
+            },
+            {
+                nameClass: 'pf-address-card',
+                contentCode: '\e9c5'
+            },
+            {
+                nameClass: 'pf-adjust',
+                contentCode: '\e9c6'
+            },
+            {
+                nameClass: 'pf-align-center',
+                contentCode: '\e9c7'
+            },
+            {
+                nameClass: 'pf-align-justify',
+                contentCode: '\e9c8'
+            },
+            {
+                nameClass: 'pf-align-left',
+                contentCode: '\e9c9'
+            },
+            {
+                nameClass: 'pf-align-right',
+                contentCode: '\e9ca'
+            },
+            {
+                nameClass: 'pf-angle-double-down',
+                contentCode: '\e9cb'
+            },
+            {
+                nameClass: 'pf-angle-double-left',
+                contentCode: '\e9cc'
+            },
+            {
+                nameClass: 'pf-angle-double-right',
+                contentCode: '\e9cd'
+            },
+            {
+                nameClass: 'pf-angle-double-up',
+                contentCode: '\e9ce'
+            },
+            {
+                nameClass: 'pf-angle-down',
+                contentCode: '\e9cf'
+            },
+            {
+                nameClass: 'pf-angle-left',
+                contentCode: '\e9d0'
+            },
+            {
+                nameClass: 'pf-angle-right',
+                contentCode: '\e9d1'
+            },
+            {
+                nameClass: 'pf-angle-up',
+                contentCode: '\e9d2'
+            },
+            {
+                nameClass: 'pf-arrow-alt-circle-down',
+                contentCode: '\e9d3'
+            },
+            {
+                nameClass: 'pf-arrow-alt-circle-left',
+                contentCode: '\e9d4'
+            },
+            {
+                nameClass: 'pf-arrow-alt-circle-right',
+                contentCode: '\e9d5'
+            },
+            {
+                nameClass: 'pf-arrow-alt-circle-up',
+                contentCode: '\e9d6'
+            },
+            {
+                nameClass: 'pf-arrow-circle-down',
+                contentCode: '\e9d7'
+            },
+            {
+                nameClass: 'pf-arrow-circle-left',
+                contentCode: '\e9d8'
+            },
+            {
+                nameClass: 'pf-arrow-circle-right',
+                contentCode: '\e9d9'
+            },
+            {
+                nameClass: 'pf-arrow-circle-up',
+                contentCode: '\e9da'
+            },
+            {
+                nameClass: 'pf-arrow-down',
+                contentCode: '\e9db'
+            },
+            {
+                nameClass: 'pf-atlas',
+                contentCode: '\e9dc'
+            },
+        ];
+    }
+    /**
+     * @return {?}
+     */
+    PilarFontComponent.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+    };
+    PilarFontComponent.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
+                    selector: 'uii-pilar-font',
+                    template: "<div class=\"row\">\n    <div class=\"col\">\n    <label for=\"search-icon\">Search Pilar Icon</label>\n    <input type=\"text\" class=\"form-control\" id=\"search-icon\"\n    [(ngModel)]=\"searchIcon\" placeholder=\"Enter text to search icon\" autofocus>\n    </div>\n</div>\n<div class=\"row\" style=\"text-align: center;\">\n    <div *ngFor=\"let icon of iconPilarFont | filter: searchIcon\" class=\"col-lg-3 col-md-3 col-sm-3 col-xl-3\" style=\"padding: 20px 10px 20px 10px;\">\n        <span [class]=\"icon.nameClass\" style=\"font-size: 30px\"></span>\n        <p class=\"font-size: 12px; margin:0\">{{icon.nameClass}}</p>\n        <p class=\"font-size: 12px; margin:0\">{{icon.contentCode}}</p>\n    </div>\n</div>",
+                    styles: [""]
+                }] }
+    ];
+    /** @nocollapse */
+    PilarFontComponent.ctorParameters = function () { return []; };
+    return PilarFontComponent;
+}());
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var FilterPipe = /** @class */ (function () {
+    function FilterPipe() {
+    }
+    /**
+     * @param {?} items
+     * @param {?} searchText
+     * @return {?}
+     */
+    FilterPipe.prototype.transform = /**
+     * @param {?} items
+     * @param {?} searchText
+     * @return {?}
+     */
+    function (items, searchText) {
+        if (!items) {
+            return [];
+        }
+        if (!searchText) {
+            return items;
+        }
+        searchText = searchText.toLocaleLowerCase();
+        return items.filter((/**
+         * @param {?} it
+         * @return {?}
+         */
+        function (it) {
+            return it.nameClass.toLocaleLowerCase().includes(searchText);
+        }));
+    };
+    FilterPipe.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"], args: [{
+                    name: 'filter'
+                },] }
+    ];
+    return FilterPipe;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 var PilarModule = /** @class */ (function () {
     function PilarModule() {
     }
@@ -5592,7 +6738,9 @@ var PilarModule = /** @class */ (function () {
                         CollapseDirective,
                         TooltipComponent,
                         TooltipDirective,
-                        ChipsComponent
+                        ChipsComponent,
+                        PilarFontComponent,
+                        FilterPipe
                     ],
                     imports: [
                         _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
@@ -5657,7 +6805,8 @@ var PilarModule = /** @class */ (function () {
                         ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["TabsModule"],
                         ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["TimepickerModule"],
                         ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["TypeaheadModule"],
-                        ChipsComponent
+                        ChipsComponent,
+                        PilarFontComponent
                     ],
                     entryComponents: [
                         ConfirmdialogComponent,
@@ -6455,6 +7604,28 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts ***!
+  \*******************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-table-with-checkbox',\n  templateUrl: './column-definitions-table.component.html',\n  styleUrls: ['./column-definitions-table.component.scss']\n})\nexport class ColumnDefinitionsTableComponent implements OnInit {\n\n  rows: Array<any> = [];\n  columns: Array<any> = [];\n\n  constructor() { }\n\n  ngOnInit() {\n    this.columns = [\n      {\n        name: 'No',\n        prop: 'number'\n      },\n      {\n        name: 'Name',\n        prop: 'name',\n      },\n      {\n        name: 'Age',\n        prop: 'age'\n      },\n      {\n        name: 'Marriage Status',\n        prop: 'marriage_status',\n        type: 'labelv2'\n      },\n      {\n        name: 'Alive',\n        prop: 'is_alive',\n        type: 'html',\n        orderable: false\n      }\n    ];\n\n    this.rows = [\n      {\n        name: 'Marta Mccoy',\n        age: 31,\n        marriage_status: 1,\n        is_alive: 1\n      },\n      {\n        name: 'Fanny Holman',\n        age: 23,\n        marriage_status: 1,\n        is_alive: 1\n      },\n      {\n        name: 'Latonya Gibson',\n        age: 22,\n        marriage_status: 3,\n        is_alive: 1\n      },\n      {\n        name: 'Ines Wiggins',\n        age: 35,\n        marriage_status: 2,\n        is_alive: 1\n      },\n      {\n        name: 'Kathrine Irwin',\n        age: 38,\n        marriage_status: 2,\n        is_alive: 1\n      },\n      {\n        name: 'Higgins Oneal',\n        age: 35,\n        marriage_status: 1,\n        is_alive: 0\n      },\n      {\n        name: 'Russell Duke',\n        age: 37,\n        marriage_status: 1,\n        is_alive: 1\n      },\n      {\n        name: 'Sara Quinn',\n        age: 23,\n        marriage_status: 5,\n        is_alive: 1\n      },\n      {\n        name: 'Dona Patterson',\n        age: 32,\n        marriage_status: 4,\n        is_alive: 0\n      },\n      {\n        name: 'Clarice Keith',\n        age: 22,\n        marriage_status: 2,\n        is_alive: 0\n      },\n      {\n        name: 'Petersen Maldonado',\n        age: 20,\n        marriage_status: 2,\n        is_alive: 1\n      },\n      {\n        name: 'Tonya Colon',\n        age: 38,\n        marriage_status: 2,\n        is_alive: 1\n      },\n      {\n        name: 'Ann Bass',\n        age: 30,\n        marriage_status: 3,\n        is_alive: 1\n      },\n      {\n        name: 'Cherie Pickett',\n        age: 21,\n        marriage_status: 3,\n        is_alive: 1\n      },\n      {\n        name: 'Holland Mcdonald',\n        age: 28,\n        marriage_status: 2,\n        is_alive: 1\n      },\n      {\n        name: 'Casey Dudley',\n        age: 23,\n        marriage_status: 1,\n        is_alive: 0\n      },\n      {\n        name: 'Sophie Slater',\n        age: 33,\n        marriage_status: 5,\n        is_alive: 1\n      },\n      {\n        name: 'Rhoda Kent',\n        age: 32,\n        marriage_status: 4,\n        is_alive: 1\n      },\n      {\n        name: 'Bennett Sheppard',\n        age: 32,\n        marriage_status: 4,\n        is_alive: 0\n      },\n      {\n        name: 'Foreman Hood',\n        age: 25,\n        marriage_status: 3,\n        is_alive: 0\n      }\n    ];\n\n    // transforming the rows\n    this.rows.forEach((row) => {\n      // marriage status\n      const marriageStatuses = {\n        '1': 'single',\n        '2': 'married',\n        '3': 'widowed',\n        '4': 'divorced',\n        '5': 'separated'\n      };\n\n      row.marriage_status = {\n        class: 'marriage-status ' + marriageStatuses[row.marriage_status],\n        value: this.upperFirst(marriageStatuses[row.marriage_status])\n      };\n\n      // is alive\n      if (row.is_alive) {\n        row.is_alive = '<label class=\"is-alive alive\">Alive</label>';\n      } else {\n        row.is_alive = '<label class=\"is-alive died\">Died</label>';\n      }\n    });\n  }\n\n  private upperFirst(value: string) {\n    return value.charAt(0).toUpperCase() + value.slice(1);\n  }\n\n}\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html":
+/*!*****************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html ***!
+  \*****************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [checkboxColumn]=\"true\"\n  [actionTitle]=\"'Action'\"></uii-table>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts":
 /*!***************************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts ***!
@@ -6780,7 +7951,7 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -6897,7 +8068,7 @@ var DemoFooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"demo-nav\" [class.scroled]=\"isTop\" [class.header-mobile]=\"_showSidebar\">\n  <div id=\"demo-humberger\" (click)=\"onHumbergerButtonClick()\">\n    <div [class.anim-plus]=\"_showSidebar\"></div>\n    <div [style.display]=\"_showSidebar ? 'none' : 'block'\"></div>\n    <div [class.anim-minus]=\"_showSidebar\"></div>\n  </div>\n  <div id=\"demo-brand\">\n    <a [routerLink]=\"['/']\">\n      <img src=\"assets/images/pilar-logo.png\" [class.scroled]=\"isTop\"/>\n    </a>\n  </div>\n  <div id=\"demo-icon\">\n    <ul>\n      <li>\n        <a href=\"https://stackoverflow.com/\" target=\"_blank\">\n          <i class=\"fa fa-stack-overflow\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>\n        <a href=\"https://gitlab-cloud.uii.ac.id/uii-gateway/frontend/lib-uii-gateway-pilar-angular\" target=\"_blank\">\n          <i class=\"fa fa-gitlab\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>v1.11.11</li>\n    </ul>\n  </div>\n</div>"
+module.exports = "<div class=\"demo-nav\" [class.scroled]=\"isTop\" [class.header-mobile]=\"_showSidebar\">\n  <div id=\"demo-humberger\" (click)=\"onHumbergerButtonClick()\">\n    <div [class.anim-plus]=\"_showSidebar\"></div>\n    <div [style.display]=\"_showSidebar ? 'none' : 'block'\"></div>\n    <div [class.anim-minus]=\"_showSidebar\"></div>\n  </div>\n  <div id=\"demo-brand\">\n    <a [routerLink]=\"['/']\">\n      <img src=\"assets/images/pilar-logo.png\" [class.scroled]=\"isTop\"/>\n    </a>\n  </div>\n  <div id=\"demo-icon\">\n    <ul>\n      <li>\n        <a href=\"https://stackoverflow.com/\" target=\"_blank\">\n          <i class=\"fa fa-stack-overflow\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>\n        <a href=\"https://gitlab-cloud.uii.ac.id/uii-gateway/frontend/lib-uii-gateway-pilar-angular\" target=\"_blank\">\n          <i class=\"fa fa-gitlab\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>v1.11.12</li>\n    </ul>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -11546,6 +12717,182 @@ var SetPageComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.html":
+/*!**********************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.html ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ugw-component-header [title]=\"title\" [description]=\"description\"></ugw-component-header>\n<ugw-section [sections]=\"pilarFont\" [apiDocSections]=\"apiDocSection\"></ugw-section>\n"
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.scss":
+/*!**********************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.scss ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.ts":
+/*!********************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.ts ***!
+  \********************************************************************************/
+/*! exports provided: DocPilarFontComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocPilarFontComponent", function() { return DocPilarFontComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _showcase_right_nav_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../showcase-right-nav.service */ "./src/app/showcase/showcase-right-nav.service.ts");
+/* harmony import */ var _sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sections/information-pilar-font/information-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DocPilarFontComponent = /** @class */ (function () {
+    function DocPilarFontComponent(rightMenuSvc) {
+        this.rightMenuSvc = rightMenuSvc;
+        this.initializeMetaData();
+        this.initializeApiDocumentation();
+        this.initializeSection();
+        this.setRightMenu();
+    }
+    DocPilarFontComponent.prototype.initializeApiDocumentation = function () {
+        // For API on Bottom
+        this.apiDocSection = {
+            title: this.title.toLowerCase(),
+            selector: 'pilar-font',
+            properties: [
+                {
+                    name: 'pf-nameIcon',
+                    type: 'className',
+                    default: 'style',
+                    description: 'Call the className to use an icon'
+                },
+            ],
+        };
+    };
+    DocPilarFontComponent.prototype.initializeMetaData = function () {
+        this.title = 'Pilar Font';
+        this.description = 'Pilar font created with <3';
+    };
+    DocPilarFontComponent.prototype.initializeSection = function () {
+        this.pilarFont = [
+            {
+                anchor: 'information',
+                title: 'Information',
+                desc: 'How to use pilar fonts',
+                component: _sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_2__["InformationPilarFontComponent"],
+                markup: '<i class="pf-className"></i>',
+                typescript: 'Does not require typescript'
+            },
+        ];
+    };
+    DocPilarFontComponent.prototype.setRightMenu = function () {
+        var apiDocs = [{
+                anchor: 'pilar-font',
+                title: 'How to use',
+                desc: null,
+                component: null,
+                markup: null,
+                typescript: null
+            }];
+        var customRightMenu = this.pilarFont.concat(apiDocs);
+        this.rightMenuSvc.setRightMenu(customRightMenu);
+    };
+    DocPilarFontComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'ugw-doc-pilar-font',
+            template: __webpack_require__(/*! ./doc-pilar-font.component.html */ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.html"),
+            styles: [__webpack_require__(/*! ./doc-pilar-font.component.scss */ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_showcase_right_nav_service__WEBPACK_IMPORTED_MODULE_1__["ShowcaseRightNavService"]])
+    ], DocPilarFontComponent);
+    return DocPilarFontComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.html":
+/*!**************************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.html ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-pilar-font></uii-pilar-font>"
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.scss":
+/*!**************************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.scss ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.ts":
+/*!************************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.ts ***!
+  \************************************************************************************************************************/
+/*! exports provided: InformationPilarFontComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InformationPilarFontComponent", function() { return InformationPilarFontComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var InformationPilarFontComponent = /** @class */ (function () {
+    function InformationPilarFontComponent() {
+    }
+    InformationPilarFontComponent.prototype.ngOnInit = function () {
+    };
+    InformationPilarFontComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'ugw-information-pilar-font',
+            template: __webpack_require__(/*! ./information-pilar-font.component.html */ "./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.html"),
+            styles: [__webpack_require__(/*! ./information-pilar-font.component.scss */ "./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], InformationPilarFontComponent);
+    return InformationPilarFontComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/showcase/components/doc-switch/doc-switch.component.html":
 /*!**************************************************************************!*\
   !*** ./src/app/showcase/components/doc-switch/doc-switch.component.html ***!
@@ -12009,6 +13356,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sections/basic-table/basic-table.component */ "./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.ts");
 /* harmony import */ var _showcase_right_nav_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../showcase-right-nav.service */ "./src/app/showcase/showcase-right-nav.service.ts");
 /* harmony import */ var _sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sections/table-with-checkbox/table-with-checkbox.component */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts");
+/* harmony import */ var _sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/column-definitions/column-definitions-table.component */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -12018,6 +13366,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -12081,11 +13430,19 @@ var DocTableComponent = /** @class */ (function () {
                 typescript: __webpack_require__(/*! !raw-loader!./sections/basic-table/basic-table.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.ts")
             },
             {
+                anchor: 'column-definitions',
+                title: 'Column Definitions',
+                desc: 'Available column definitions of the table.',
+                component: _sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_4__["ColumnDefinitionsTableComponent"],
+                markup: __webpack_require__(/*! !raw-loader!./sections/column-definitions/column-definitions-table.component.html */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html"),
+                typescript: __webpack_require__(/*! !raw-loader!./sections/column-definitions/column-definitions-table.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts")
+            },
+            {
                 anchor: 'table-with-checkbox',
                 title: 'Table with checkbox',
                 desc: 'Display the checkbox in the table.',
                 component: _sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_3__["TableWithCheckboxComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-checkbox/table-with-checkbox.component.html */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-checkbox/table-with-checkbox.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/table-with-checkbox/table-with-checkbox.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts")
             },
         ];
@@ -12267,14 +13624,241 @@ var BasicTableComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html":
-/*!***************************************************************************************************************!*\
-  !*** ./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html ***!
-  \***************************************************************************************************************/
+/***/ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html":
+/*!*******************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [checkboxColumn]=\"true\"\n  [actionTitle]=\"'Action'\"></uii-table>\n"
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionTitle]=\"'Action'\"></uii-table>\n"
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.scss":
+/*!*******************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.scss ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "::ng-deep .gateway-table .cell-label.marriage-status {\n  padding: 5px;\n  font-weight: 600;\n  font-size: 11px;\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 5px;\n}\n::ng-deep .gateway-table .cell-label.marriage-status.single {\n  border-color: #78716C;\n  color: #78716C;\n}\n::ng-deep .gateway-table .cell-label.marriage-status.married {\n  border-color: #4CAF50;\n  color: #4CAF50;\n}\n::ng-deep .gateway-table .cell-label.marriage-status.widowed {\n  border-color: #8B5CF6;\n  color: #8B5CF6;\n}\n::ng-deep .gateway-table .cell-label.marriage-status.divorced {\n  border-color: #EF4444;\n  color: #EF4444;\n}\n::ng-deep .gateway-table .cell-label.marriage-status.separated {\n  border-color: #EC4899;\n  color: #EC4899;\n}\n::ng-deep .gateway-table .cell-html .is-alive {\n  display: initial;\n  padding: 6px 10px;\n  font-weight: 600;\n  font-size: 11px;\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 5px;\n}\n::ng-deep .gateway-table .cell-html .is-alive.alive {\n  background-color: #4CAF50;\n  color: #FFFFFF;\n}\n::ng-deep .gateway-table .cell-html .is-alive.died {\n  background-color: #EF4444;\n  color: #FFFFFF;\n}"
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts":
+/*!*****************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts ***!
+  \*****************************************************************************************************************/
+/*! exports provided: ColumnDefinitionsTableComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ColumnDefinitionsTableComponent", function() { return ColumnDefinitionsTableComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ColumnDefinitionsTableComponent = /** @class */ (function () {
+    function ColumnDefinitionsTableComponent() {
+        this.rows = [];
+        this.columns = [];
+    }
+    ColumnDefinitionsTableComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.columns = [
+            {
+                name: 'No',
+                prop: 'number'
+            },
+            {
+                name: 'Name',
+                prop: 'name',
+            },
+            {
+                name: 'Age',
+                prop: 'age'
+            },
+            {
+                name: 'Marriage Status',
+                prop: 'marriage_status',
+                type: 'labelv2'
+            },
+            {
+                name: 'Alive',
+                prop: 'is_alive',
+                type: 'html',
+                orderable: false
+            }
+        ];
+        this.rows = [
+            {
+                name: 'Marta Mccoy',
+                age: 31,
+                marriage_status: 1,
+                is_alive: 1
+            },
+            {
+                name: 'Fanny Holman',
+                age: 23,
+                marriage_status: 1,
+                is_alive: 1
+            },
+            {
+                name: 'Latonya Gibson',
+                age: 22,
+                marriage_status: 3,
+                is_alive: 1
+            },
+            {
+                name: 'Ines Wiggins',
+                age: 35,
+                marriage_status: 2,
+                is_alive: 1
+            },
+            {
+                name: 'Kathrine Irwin',
+                age: 38,
+                marriage_status: 2,
+                is_alive: 1
+            },
+            {
+                name: 'Higgins Oneal',
+                age: 35,
+                marriage_status: 1,
+                is_alive: 0
+            },
+            {
+                name: 'Russell Duke',
+                age: 37,
+                marriage_status: 1,
+                is_alive: 1
+            },
+            {
+                name: 'Sara Quinn',
+                age: 23,
+                marriage_status: 5,
+                is_alive: 1
+            },
+            {
+                name: 'Dona Patterson',
+                age: 32,
+                marriage_status: 4,
+                is_alive: 0
+            },
+            {
+                name: 'Clarice Keith',
+                age: 22,
+                marriage_status: 2,
+                is_alive: 0
+            },
+            {
+                name: 'Petersen Maldonado',
+                age: 20,
+                marriage_status: 2,
+                is_alive: 1
+            },
+            {
+                name: 'Tonya Colon',
+                age: 38,
+                marriage_status: 2,
+                is_alive: 1
+            },
+            {
+                name: 'Ann Bass',
+                age: 30,
+                marriage_status: 3,
+                is_alive: 1
+            },
+            {
+                name: 'Cherie Pickett',
+                age: 21,
+                marriage_status: 3,
+                is_alive: 1
+            },
+            {
+                name: 'Holland Mcdonald',
+                age: 28,
+                marriage_status: 2,
+                is_alive: 1
+            },
+            {
+                name: 'Casey Dudley',
+                age: 23,
+                marriage_status: 1,
+                is_alive: 0
+            },
+            {
+                name: 'Sophie Slater',
+                age: 33,
+                marriage_status: 5,
+                is_alive: 1
+            },
+            {
+                name: 'Rhoda Kent',
+                age: 32,
+                marriage_status: 4,
+                is_alive: 1
+            },
+            {
+                name: 'Bennett Sheppard',
+                age: 32,
+                marriage_status: 4,
+                is_alive: 0
+            },
+            {
+                name: 'Foreman Hood',
+                age: 25,
+                marriage_status: 3,
+                is_alive: 0
+            }
+        ];
+        // transforming the rows
+        this.rows.forEach(function (row) {
+            // marriage status
+            var marriageStatuses = {
+                '1': 'single',
+                '2': 'married',
+                '3': 'widowed',
+                '4': 'divorced',
+                '5': 'separated'
+            };
+            row.marriage_status = {
+                class: 'marriage-status ' + marriageStatuses[row.marriage_status],
+                value: _this.upperFirst(marriageStatuses[row.marriage_status])
+            };
+            // is alive
+            if (row.is_alive) {
+                row.is_alive = '<label class="is-alive alive">Alive</label>';
+            }
+            else {
+                row.is_alive = '<label class="is-alive died">Died</label>';
+            }
+        });
+    };
+    ColumnDefinitionsTableComponent.prototype.upperFirst = function (value) {
+        return value.charAt(0).toUpperCase() + value.slice(1);
+    };
+    ColumnDefinitionsTableComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'ugw-table-with-checkbox',
+            template: __webpack_require__(/*! ./column-definitions-table.component.html */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html"),
+            styles: [__webpack_require__(/*! ./column-definitions-table.component.scss */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ColumnDefinitionsTableComponent);
+    return ColumnDefinitionsTableComponent;
+}());
+
+
 
 /***/ }),
 
@@ -12416,7 +14000,7 @@ var TableWithCheckboxComponent = /** @class */ (function () {
     TableWithCheckboxComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-table-with-checkbox',
-            template: __webpack_require__(/*! ./table-with-checkbox.component.html */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html"),
+            template: __webpack_require__(/*! ./table-with-checkbox.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html"),
             styles: [__webpack_require__(/*! ./table-with-checkbox.component.scss */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -14159,19 +15743,24 @@ var MENU = [
         url: 'pagination'
     },
     {
+        label: 'Pilar Font',
+        active: false,
+        url: 'pilar-font'
+    },
+    {
         label: 'Switch',
         active: false,
         url: 'switch'
     },
     {
-        label: 'Tabset',
-        active: false,
-        url: 'tabset'
-    },
-    {
         label: 'Table',
         active: false,
         url: 'table'
+    },
+    {
+        label: 'Tabset',
+        active: false,
+        url: 'tabset'
     },
     {
         label: 'Toast',
@@ -14518,9 +16107,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_doc_button_sections_basic_button_basic_button_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./components/doc-button/sections/basic-button/basic-button.component */ "./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.ts");
 /* harmony import */ var _components_doc_button_doc_button_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./components/doc-button/doc-button.component */ "./src/app/showcase/components/doc-button/doc-button.component.ts");
 /* harmony import */ var _components_doc_image_upload_sections_labeling_button_image_upload_labeling_button_image_upload_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./components/doc-image-upload/sections/labeling-button-image-upload/labeling-button-image-upload.component */ "./src/app/showcase/components/doc-image-upload/sections/labeling-button-image-upload/labeling-button-image-upload.component.ts");
-/* harmony import */ var _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./components/doc-table/doc-table.component */ "./src/app/showcase/components/doc-table/doc-table.component.ts");
-/* harmony import */ var _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./components/doc-table/sections/basic-table/basic-table.component */ "./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.ts");
-/* harmony import */ var _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./components/doc-table/sections/table-with-checkbox/table-with-checkbox.component */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts");
+/* harmony import */ var _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./components/doc-pilar-font/doc-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.ts");
+/* harmony import */ var _components_doc_pilar_font_sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.ts");
+/* harmony import */ var _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./components/doc-table/doc-table.component */ "./src/app/showcase/components/doc-table/doc-table.component.ts");
+/* harmony import */ var _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./components/doc-table/sections/basic-table/basic-table.component */ "./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.ts");
+/* harmony import */ var _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./components/doc-table/sections/table-with-checkbox/table-with-checkbox.component */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts");
+/* harmony import */ var _components_doc_table_sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./components/doc-table/sections/column-definitions/column-definitions-table.component */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -14542,6 +16134,9 @@ function hljsLanguages() {
         { name: 'xml', func: highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_6___default.a }
     ];
 }
+
+
+
 
 
 
@@ -14743,9 +16338,12 @@ var ShowcaseModule = /** @class */ (function () {
                 _components_doc_chips_sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_91__["DisableChipComponent"],
                 _components_doc_chips_sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_92__["VerticalChipComponent"],
                 _components_doc_chips_sections_horizontal_chip_horizontal_chip_component__WEBPACK_IMPORTED_MODULE_93__["HorizontalChipComponent"],
-                _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_104__["DocTableComponent"],
-                _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_105__["BasicTableComponent"],
-                _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_106__["TableWithCheckboxComponent"]
+                _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_104__["DocPilarFontComponent"],
+                _components_doc_pilar_font_sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_105__["InformationPilarFontComponent"],
+                _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_106__["DocTableComponent"],
+                _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_107__["BasicTableComponent"],
+                _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_108__["TableWithCheckboxComponent"],
+                _components_doc_table_sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_109__["ColumnDefinitionsTableComponent"]
             ],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
@@ -14825,9 +16423,11 @@ var ShowcaseModule = /** @class */ (function () {
                 _components_doc_chips_sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_91__["DisableChipComponent"],
                 _components_doc_chips_sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_92__["VerticalChipComponent"],
                 _components_doc_chips_sections_horizontal_chip_horizontal_chip_component__WEBPACK_IMPORTED_MODULE_93__["HorizontalChipComponent"],
-                _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_104__["DocTableComponent"],
-                _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_105__["BasicTableComponent"],
-                _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_106__["TableWithCheckboxComponent"]
+                _components_doc_pilar_font_sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_105__["InformationPilarFontComponent"],
+                _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_106__["DocTableComponent"],
+                _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_107__["BasicTableComponent"],
+                _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_108__["TableWithCheckboxComponent"],
+                _components_doc_table_sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_109__["ColumnDefinitionsTableComponent"]
             ],
         })
     ], ShowcaseModule);
@@ -14864,8 +16464,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_under_development_under_development_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/under-development/under-development.component */ "./src/app/showcase/components/under-development/under-development.component.ts");
 /* harmony import */ var _components_doc_file_upload_doc_file_upload_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/doc-file-upload/doc-file-upload.component */ "./src/app/showcase/components/doc-file-upload/doc-file-upload.component.ts");
 /* harmony import */ var _components_doc_switch_doc_switch_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/doc-switch/doc-switch.component */ "./src/app/showcase/components/doc-switch/doc-switch.component.ts");
-/* harmony import */ var _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/doc-tooltip/doc-tooltip.component */ "./src/app/showcase/components/doc-tooltip/doc-tooltip.component.ts");
-/* harmony import */ var _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/doc-table/doc-table.component */ "./src/app/showcase/components/doc-table/doc-table.component.ts");
+/* harmony import */ var _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/doc-pilar-font/doc-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.ts");
+/* harmony import */ var _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/doc-tooltip/doc-tooltip.component */ "./src/app/showcase/components/doc-tooltip/doc-tooltip.component.ts");
+/* harmony import */ var _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/doc-table/doc-table.component */ "./src/app/showcase/components/doc-table/doc-table.component.ts");
+
 
 
 
@@ -14938,16 +16540,20 @@ var routes = [
                 component: _components_doc_pagination_doc_pagination_component__WEBPACK_IMPORTED_MODULE_7__["DocPaginationComponent"]
             },
             {
+                path: 'pilar-font',
+                component: _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_16__["DocPilarFontComponent"]
+            },
+            {
                 path: 'tabset',
                 component: _components_doc_tabset_doc_tabset_component__WEBPACK_IMPORTED_MODULE_8__["DocTabsetComponent"]
             },
             {
                 path: 'table',
-                component: _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_17__["DocTableComponent"]
+                component: _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_18__["DocTableComponent"]
             },
             {
                 path: 'tooltip',
-                component: _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_16__["DocTooltipComponent"]
+                component: _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_17__["DocTooltipComponent"]
             },
             {
                 path: 'chips',
@@ -14973,7 +16579,7 @@ var ShowcaseRoutes = _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"code-sample-box\">\n  <tabset *ngIf=\"typescript && markup; else typescriptCode\">\n    <tab heading=\"Typescript\">\n    <pre class=\"pre-pilar\"><code [highlight]=\"typescript\"></code></pre>\n    </tab>\n    <tab heading='Markup'>\n      <pre class=\"pre-pilar\"><code [highlight]=\"markup\"></code></pre>\n    </tab>\n    <tab *ngIf=\"style\" heading='Css'>\n      <pre class=\"pre-pilar lang-bash\">{{style}}</pre>\n    </tab>\n  </tabset>\n  <ng-template #typescriptCode>\n    <pre class=\"pre-pilar\"><code [highlight]=\"typescript\"></code></pre>\n  </ng-template>\n</div>"
+module.exports = "<div>\n  <span class=\"toggle-wrapper\" (click)=\"showSourceCode = !showSourceCode\">\n    <span style=\"font-weight: bold;\" class=\"fa fa-code\"></span> Source\n  </span>\n</div>\n<div *ngIf=\"showSourceCode\" class=\"code-sample-box\">\n  <tabset *ngIf=\"typescript && markup; else typescriptCode\">\n    <tab heading=\"Typescript\">\n    <pre class=\"pre-pilar\"><code [highlight]=\"typescript\"></code></pre>\n    </tab>\n    <tab heading='Markup'>\n      <pre class=\"pre-pilar\"><code [highlight]=\"markup\"></code></pre>\n    </tab>\n    <tab *ngIf=\"style\" heading='Css'>\n      <pre class=\"pre-pilar lang-bash\">{{style}}</pre>\n    </tab>\n  </tabset>\n  <ng-template #typescriptCode>\n    <pre class=\"pre-pilar\"><code [highlight]=\"typescript\"></code></pre>\n  </ng-template>\n</div>"
 
 /***/ }),
 
@@ -14984,7 +16590,7 @@ module.exports = "<div class=\"code-sample-box\">\n  <tabset *ngIf=\"typescript 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".code-sample-box {\n  margin-top: 10px;\n}"
+module.exports = ".toggle-wrapper {\n  cursor: pointer;\n  padding: 5px;\n  border-radius: 6px;\n  border-width: 1px;\n  border-style: solid;\n  border-color: transparent;\n  transition: border-color 0.5s;\n}\n.toggle-wrapper:hover {\n  border-color: #b9b9b9;\n}\n.code-sample-box {\n  margin-top: 10px;\n}"
 
 /***/ }),
 
@@ -15011,6 +16617,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var CodeSectionComponent = /** @class */ (function () {
     function CodeSectionComponent() {
+        this.showSourceCode = false;
     }
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -15241,7 +16848,7 @@ var DocsSectionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section *ngFor=\"let section of sections\" id=\"{{section.anchor}}\">\n  <h3 class=\"section-title\" #sectionTitleRef>{{section.title}}</h3>\n  <p class=\"section-desc\">{{section.desc}}</p>\n  <ugw-docs-section [demoComponent]=\"section.component\"></ugw-docs-section>\n  <ugw-code-section [markup]=\"section.markup\" [typescript]=\"section.typescript\"></ugw-code-section>\n</section>\n<section #sectionTitleRef id=\"{{_apiDocSections.title}}-api-docs\">\n  <ugw-docs-api [apiData]=\"_apiDocSections\"></ugw-docs-api>\n</section>"
+module.exports = "<section *ngFor=\"let section of sections\" id=\"{{section.anchor}}\">\n  <h3 class=\"section-title\" #sectionTitleRef>{{section.title}}</h3>\n  <p class=\"section-desc\">{{section.desc}}</p>\n  <ugw-docs-section [demoComponent]=\"section.component\"></ugw-docs-section>\n  <ugw-code-section *ngIf=\"section.useCodeSection !== false\" [markup]=\"section.markup\" [typescript]=\"section.typescript\"></ugw-code-section>\n</section>\n<section #sectionTitleRef id=\"{{_apiDocSections.title}}-api-docs\">\n  <ugw-docs-api [apiData]=\"_apiDocSections\"></ugw-docs-api>\n</section>"
 
 /***/ }),
 
@@ -15368,7 +16975,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/bsi-luthfianggy/lib-uii-gateway-pilar-angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/bsi-luthfianggy/pilar/src/main.ts */"./src/main.ts");
 
 
 /***/ })
