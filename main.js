@@ -4,7 +4,7 @@
 /*!**********************************************!*\
   !*** ./dist/uiigateway/pilar/fesm5/pilar.js ***!
   \**********************************************/
-/*! exports provided: AccordionComponent, AccordionGroupComponent, AccordionService, Alert, ChipsComponent, ConfirmdialogComponent, FileSizePipe, IMAGES_ROOT, IMAGE_PDF_PLACEHOLDER, IMAGE_PLACEHOLDER, ImageService, InfoBoxComponent, InformationComponent, LoadingBarEvent, LoadingBarEventType, LoadingBarService, MODAL, ModalDialogComponent, Paginate, PaginationComponent, PhotoUploadComponent, PilarComponent, PilarModule, PilarService, SwitchComponent, TablePageService, TableSkeletonComponent, TabsetComponent, TabsetDirective, ToastComponent, ToastDirective, ToastService, UiiImageUploadComponent, WizardComponent, WizardStepComponent, fadeIn, fadeOut, isPresent, ɵa, ɵb, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo */
+/*! exports provided: AccordionComponent, AccordionGroupComponent, AccordionService, Alert, ChipsComponent, Confirmdialog2Component, ConfirmdialogComponent, Dangerdialog2Component, FileSizePipe, IMAGES_ROOT, IMAGE_PDF_PLACEHOLDER, IMAGE_PLACEHOLDER, ImageService, InfoBoxComponent, InformationComponent, LoadingBarEvent, LoadingBarEventType, LoadingBarService, MODAL, ModalDialogComponent, Paginate, PaginationComponent, PhotoUploadComponent, PilarComponent, PilarModule, PilarService, Successdialog2Component, SwitchComponent, TableSkeletonComponent, TabsetComponent, TabsetDirective, ToastComponent, ToastDirective, ToastService, UiiImageUploadComponent, Warningdialog2Component, WizardComponent, WizardStepComponent, fadeIn, fadeOut, isPresent, ɵa, ɵb, ɵc, ɵd, ɵe, ɵf, ɵg, ɵh, ɵi, ɵj, ɵk, ɵl, ɵm, ɵn, ɵo */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccordionService", function() { return AccordionService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Alert", function() { return Alert; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChipsComponent", function() { return ChipsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Confirmdialog2Component", function() { return Confirmdialog2Component; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmdialogComponent", function() { return ConfirmdialogComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Dangerdialog2Component", function() { return Dangerdialog2Component; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FileSizePipe", function() { return FileSizePipe; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IMAGES_ROOT", function() { return IMAGES_ROOT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IMAGE_PDF_PLACEHOLDER", function() { return IMAGE_PDF_PLACEHOLDER; });
@@ -33,8 +35,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PilarComponent", function() { return PilarComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PilarModule", function() { return PilarModule; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PilarService", function() { return PilarService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Successdialog2Component", function() { return Successdialog2Component; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwitchComponent", function() { return SwitchComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TablePageService", function() { return TablePageService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableSkeletonComponent", function() { return TableSkeletonComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsetComponent", function() { return TabsetComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsetDirective", function() { return TabsetDirective; });
@@ -42,6 +44,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToastDirective", function() { return ToastDirective; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToastService", function() { return ToastService; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UiiImageUploadComponent", function() { return UiiImageUploadComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Warningdialog2Component", function() { return Warningdialog2Component; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WizardComponent", function() { return WizardComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WizardStepComponent", function() { return WizardStepComponent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fadeIn", function() { return fadeIn; });
@@ -410,49 +413,9 @@ if (false) {}
  * @fileoverview added by tsickle
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-var TablePageService = /** @class */ (function () {
-    function TablePageService() {
-        this.page = new rxjs__WEBPACK_IMPORTED_MODULE_8__["BehaviorSubject"]({});
-    }
-    /**
-     * @param {?} page
-     * @return {?}
-     */
-    TablePageService.prototype.setTablePage = /**
-     * @param {?} page
-     * @return {?}
-     */
-    function (page) {
-        this.page.next(page);
-    };
-    /**
-     * @return {?}
-     */
-    TablePageService.prototype.getTablePage = /**
-     * @return {?}
-     */
-    function () {
-        return this.page.asObservable();
-    };
-    TablePageService.decorators = [
-        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"], args: [{
-                    providedIn: 'root'
-                },] }
-    ];
-    /** @nocollapse */
-    TablePageService.ctorParameters = function () { return []; };
-    /** @nocollapse */ TablePageService.ngInjectableDef = Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["defineInjectable"])({ factory: function TablePageService_Factory() { return new TablePageService(); }, token: TablePageService, providedIn: "root" });
-    return TablePageService;
-}());
-if (false) {}
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
 var ClientTableComponent = /** @class */ (function () {
-    function ClientTableComponent(_tablePageSvc) {
-        this._tablePageSvc = _tablePageSvc;
+    function ClientTableComponent() {
+        this.rowsChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.editClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.commentClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.auditClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -482,7 +445,21 @@ var ClientTableComponent = /** @class */ (function () {
         this._rowsCollection = [];
         this._rowsTemp = [];
         this._selectedRows = [];
+        this._summaryRows = {};
     }
+    Object.defineProperty(ClientTableComponent.prototype, "summaryRows", {
+        set: /**
+         * @param {?} summary
+         * @return {?}
+         */
+        function (summary) {
+            if (summary) {
+                this._summaryRows = summary;
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(ClientTableComponent.prototype, "forceLimitOptions", {
         set: /**
          * @param {?} force
@@ -575,6 +552,7 @@ var ClientTableComponent = /** @class */ (function () {
                 data: row
             }); }));
             this._rows = this.getDataOfCurrentPage(data);
+            this.rowsChanged.emit(this._rows);
         },
         enumerable: true,
         configurable: true
@@ -586,10 +564,10 @@ var ClientTableComponent = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        this.page.size = 10;
+        this.page.size = this.selectedLimit;
         this.page.totalElements = this._rowsCollection.length;
         this._rows = this.getDataOfCurrentPage(this._rowsCollection);
-        this._tablePageSvc.setTablePage(this.page);
+        this.rowsChanged.emit(this._rows);
     };
     /**
      * @param {?} collection
@@ -719,7 +697,7 @@ var ClientTableComponent = /** @class */ (function () {
         this.page.size = Number(limit);
         this.page.pageNumber = 0;
         this._rows = this.getDataOfCurrentPage(this._rowsTemp);
-        this._tablePageSvc.setTablePage(this.page);
+        this.rowsChanged.emit(this._rows);
     };
     /**
      * @param {?} rowIndex
@@ -775,12 +753,12 @@ var ClientTableComponent = /** @class */ (function () {
             this.emitSelectedRows();
             this.page.pageNumber = $event.page;
             this._rows = this.getDataOfCurrentPage(this._rowsTemp);
-            this._tablePageSvc.setTablePage(this.page);
+            this.rowsChanged.emit(this._rows);
         }
         else {
             this.page.pageNumber = $event.page;
             this._rows = this.getDataOfCurrentPage(this._rowsTemp);
-            this._tablePageSvc.setTablePage(this.page);
+            this.rowsChanged.emit(this._rows);
         }
     };
     /**
@@ -942,10 +920,10 @@ var ClientTableComponent = /** @class */ (function () {
         this._rowsTemp = tempFiltered;
         this.page.pageNumber = 0;
         this.page.totalElements = this._rowsTemp.length;
-        this._tablePageSvc.setTablePage(this.page);
         this.resetSelectedRows();
         this.emitSelectedRows();
         this._rows = this.getDataOfCurrentPage(this._rowsTemp);
+        this.rowsChanged.emit(this._rows);
     };
     /**
      * @param {?} auth
@@ -985,7 +963,22 @@ var ClientTableComponent = /** @class */ (function () {
         this.resetSelectedRows(); // reset selected rows on sort
         this.emitSelectedRows();
         this._rows = this.getDataOfCurrentPage(this._rowsTemp);
-        this._tablePageSvc.setTablePage(this.page);
+    };
+    /**
+     * @param {?} column
+     * @return {?}
+     */
+    ClientTableComponent.prototype.sortTableColumnMobile = /**
+     * @param {?} column
+     * @return {?}
+     */
+    function (column) {
+        this._rowsTemp.sort(this.sortColumnValue(column));
+        this.page.pageNumber = 0;
+        this.resetSelectedRows();
+        this.emitSelectedRows();
+        this._rows = this.getDataOfCurrentPage(this._rowsTemp);
+        column.sort = '';
     };
     /**
      * @param {?} column
@@ -1126,13 +1119,11 @@ var ClientTableComponent = /** @class */ (function () {
     ClientTableComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-client-table',
-                    template: "<uii-table-filter\n  *ngIf=\"_limitOptions || searchOptions\"\n  [limitOptions]=\"_limitOptions\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          id=\"aba\"\n          class=\"gateway-rcb-select\"\n          [checked]=\"_isAllRowsSelected\"\n          (change)=\"onRowSelect('multiple', $event)\"/>\n        <label for=\"aba\" class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div\n      *ngFor=\"let column of _columns; let idx = index;\"\n      class=\"header-cell\"\n      [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"column.prop === 'number'; else notNumber\"\n        class=\"cell\">{{ column.name }}</span>\n      <ng-template #notNumber>\n        <span\n          *ngIf=\"!column.hasOwnProperty('header-type')\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n        >{{ column.name }}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n          [innerHTML]=\"column.name\"></span>\n      </ng-template>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{ actionTitle }}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"_limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumn($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let row of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"_selectedRows[row.number - 1].isSelected\"\n          (change)=\"onRowSelect('single', $event, row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"radio\"\n          name=\"mtable-radio-item\"\n          [attr.id]=\"'mitem-'+ i\"\n          [checked]=\"row.flag_aktif === '1'\"\n          (change)=\"onRadioSelect(row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label radio-label\"></label>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"checkbox\"\n            [checked]=\"_selectedRows[row.number - 1].isSelected\"\n            (change)=\"onRowSelect('single', $event, row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label\"></label>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"radio\"\n            name=\"table-radio-item\"\n            [attr.id]=\"'item-'+ i\"\n            [checked]=\"row.flag_aktif === '1'\"\n            (change)=\"onRadioSelect(row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label radio-label\"></label>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div\n          class=\"data-cell\"\n          [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n          [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') &&\n            column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{ column.name }}</span>\n            <span\n              *ngIf=\"column.hasOwnProperty('header-type') &&\n                column['header-type'] === 'html'\"\n              [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span\n                *ngIf=\"column.type === 'label'\"\n                class=\"cell-label\"\n                [ngClass]=\"row.class\"\n              >{{ row[column.prop.toString()] }}</span>\n              <span\n                *ngIf=\"column.type === 'labelv2'\"\n                class=\"cell-label\"\n                [ngClass]=\"getClassFromItem(row[column.prop.toString()])\"\n              >{{ getValueFromItem(row[column.prop.toString()]) }}</span>\n              <span\n                *ngIf=\"column.type === 'html'\"\n                class=\"cell-html\"\n                [innerHTML]=\"row[column.prop.toString()]\"></span>\n              <span\n                *ngIf=\"column.type === 'date' && !column.format\"\n              >{{ row[column.prop.toString()] | date: 'dd MMMM y' }}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input\n                  [type]=\"column.inputType\"\n                  [maxlength]=\"column.inputMaxLength\"\n                  class=\"table-input-text\"\n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"row[column.prop.toString()]\"\n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <div class=\"gateway-rcb\">\n                  <input\n                    type=\"radio\"\n                    [attr.name]=\"'radio-' + i\"\n                    [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                    [checked]=\"row[column.prop] === 1\"\n                    (change)=\"onInputRadioChange(i, column.prop)\"\n                    class=\"gateway-rcb-select\"/>\n                  <label class=\"gateway-rcb-label radio-label\"></label>\n                </div>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span class=\"cell\">{{ row[column.prop.toString()] }}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div\n        class=\"data-cell data-cell-action\"\n        [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n        *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{ actionTitle }}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"row\"\n              [auth]=\"row.auth\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div\n  class=\"gateway-empty-data\"\n  *ngIf=\"_rows.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"_footerInfo\"\n  [paginationOptions]=\"_paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>\n"
+                    template: "<uii-table-filter\n  *ngIf=\"_limitOptions || searchOptions\"\n  [limitOptions]=\"_limitOptions\"\n  [selectedLimit]=\"selectedLimit\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          id=\"aba\"\n          class=\"gateway-rcb-select\"\n          [checked]=\"_isAllRowsSelected\"\n          (change)=\"onRowSelect('multiple', $event)\"/>\n        <label for=\"aba\" class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div\n      *ngFor=\"let column of _columns; let idx = index;\"\n      class=\"header-cell\"\n      [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"column.prop === 'number'; else notNumber\"\n        class=\"cell\">{{ column.name }}</span>\n      <ng-template #notNumber>\n        <span\n          *ngIf=\"!column.hasOwnProperty('header-type')\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n        >{{ column.name }}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n          [innerHTML]=\"column.name\"></span>\n      </ng-template>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{ actionTitle }}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"_limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    [selectedLimit]=\"selectedLimit\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumn($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let row of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"_selectedRows[row.number - 1].isSelected\"\n          (change)=\"onRowSelect('single', $event, row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"radio\"\n          name=\"mtable-radio-item\"\n          [attr.id]=\"'mitem-'+ i\"\n          [checked]=\"row.flag_aktif === '1'\"\n          (change)=\"onRadioSelect(row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label radio-label\"></label>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"checkbox\"\n            [checked]=\"_selectedRows[row.number - 1].isSelected\"\n            (change)=\"onRowSelect('single', $event, row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label\"></label>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"radio\"\n            name=\"table-radio-item\"\n            [attr.id]=\"'item-'+ i\"\n            [checked]=\"row.flag_aktif === '1'\"\n            (change)=\"onRadioSelect(row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label radio-label\"></label>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div\n          class=\"data-cell\"\n          [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n          [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') &&\n            column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{ column.name }}</span>\n            <span\n              *ngIf=\"column.hasOwnProperty('header-type') &&\n                column['header-type'] === 'html'\"\n              [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span\n                *ngIf=\"column.type === 'label'\"\n                class=\"cell-label\"\n                [ngClass]=\"row.class\"\n              >{{ row[column.prop.toString()] }}</span>\n              <span\n                *ngIf=\"column.type === 'labelv2'\"\n                class=\"cell-label\"\n                [ngClass]=\"getClassFromItem(row[column.prop.toString()])\"\n              >{{ getValueFromItem(row[column.prop.toString()]) }}</span>\n              <span\n                *ngIf=\"column.type === 'html'\"\n                class=\"cell-html\"\n                [innerHTML]=\"row[column.prop.toString()]\"></span>\n              <span\n                *ngIf=\"column.type === 'date' && !column.format\"\n              >{{ row[column.prop.toString()] | date: 'dd MMMM y' }}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input\n                  [type]=\"column.inputType\"\n                  [maxlength]=\"column.inputMaxLength\"\n                  class=\"table-input-text\"\n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"row[column.prop.toString()]\"\n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <div class=\"gateway-rcb\">\n                  <input\n                    type=\"radio\"\n                    [attr.name]=\"'radio-' + i\"\n                    [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                    [checked]=\"row[column.prop] === 1\"\n                    (change)=\"onInputRadioChange(i, column.prop)\"\n                    class=\"gateway-rcb-select\"/>\n                  <label class=\"gateway-rcb-label radio-label\"></label>\n                </div>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span class=\"cell\">{{ row[column.prop.toString()] }}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div\n        class=\"data-cell data-cell-action\"\n        [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n        *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{ actionTitle }}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"row\"\n              [auth]=\"row.auth\"\n              [additionalAction]=\"row.additional_action\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row-container\" *ngIf=\"showSummary && _summaryRows && !(_rowsTemp === undefined || _rowsTemp.length === 0)\">\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\"></div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" *ngIf=\"colIdx === 0\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header summary-total-header\" *ngIf=\"colIdx === 0\"></div>\n          <div class=\"table-small-content\" *ngIf=\"colIdx === 0\">\n            <span class=\"cell\">\n              <strong>Total</strong>\n            </span>\n          </div>\n        </div>\n        <div class=\"data-cell\" *ngIf=\"column.prop.toString() !== 'number'\" [class.hide-in-mobile]=\"!{}.hasOwnProperty.call(_summaryRows, column.prop.toString())\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header\" *ngIf=\"{}.hasOwnProperty.call(_summaryRows, column.prop.toString())\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\" *ngIf=\"{}.hasOwnProperty.call(_summaryRows, column.prop.toString())\">\n            <span class=\"cell\">\n              <strong>{{ _summaryRows[column.prop.toString()] }}</strong>\n            </span>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span></span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <div class=\"cell-action\"></div>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div\n  class=\"gateway-empty-data\"\n  *ngIf=\"_rows.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"_footerInfo\"\n  [paginationOptions]=\"_paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [page]=\"page\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>\n"
                 }] }
     ];
     /** @nocollapse */
-    ClientTableComponent.ctorParameters = function () { return [
-        { type: TablePageService }
-    ]; };
+    ClientTableComponent.ctorParameters = function () { return []; };
     ClientTableComponent.propDecorators = {
         actionColumn: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         actionTitle: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
@@ -1141,12 +1132,16 @@ var ClientTableComponent = /** @class */ (function () {
         checkboxColumn: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         radioColumn: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         searchOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        selectedLimit: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        showSummary: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        summaryRows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         forceLimitOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         limitOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         footerInfo: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         paginationOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         columns: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         rows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        rowsChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         editClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         commentClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         auditClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -2003,7 +1998,7 @@ var MobileFilterComponent = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        this.selectedLimit = this.limitOpts[0].value;
+        // this.selectedLimit = this.limitOpts[0].value;
     };
     /**
      * @return {?}
@@ -2087,6 +2082,7 @@ var MobileFilterComponent = /** @class */ (function () {
         columns: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         limitOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         searchOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        selectedLimit: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         isAllRowsSelected: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         limitChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         allRowsOnMobileSelected: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -2333,8 +2329,8 @@ if (false) {}
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var ServerTableComponent = /** @class */ (function () {
-    function ServerTableComponent(_tablePageSvc) {
-        this._tablePageSvc = _tablePageSvc;
+    function ServerTableComponent() {
+        this.rowsChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.editClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.commentClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.auditClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -2392,10 +2388,10 @@ var ServerTableComponent = /** @class */ (function () {
             if (data) {
                 this._rows = this.setDataNumber(data);
                 this._rowsCollection = data;
-                this._tablePageSvc.setTablePage(this.page);
             }
             this._selectedRows = [];
             this._isAllRowsSelected = false;
+            this.rowsChanged.emit(this._rows);
         },
         enumerable: true,
         configurable: true
@@ -2407,9 +2403,10 @@ var ServerTableComponent = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        this.page.size = 10;
+        this.page.size = this.selectedLimit;
         this.page.page = 0;
         this.onPageChange(this.page);
+        this.rowsChanged.emit(this._rows);
     };
     /**
      * @return {?}
@@ -2519,6 +2516,7 @@ var ServerTableComponent = /** @class */ (function () {
         this.page.size = Number(limit);
         this.page.pageNumber = 0;
         this.limitChanged.emit(this.page);
+        this.rowsChanged.emit(this._rows);
     };
     /**
      * @param {?} rowIndex
@@ -2571,6 +2569,7 @@ var ServerTableComponent = /** @class */ (function () {
     function (page) {
         this.page.pageNumber = page.page;
         this.pageChanged.emit(this.page);
+        this.rowsChanged.emit(this._rows);
     };
     /**
      * @param {?} data
@@ -2639,6 +2638,7 @@ var ServerTableComponent = /** @class */ (function () {
         this.page.pageNumber = 0;
         this.page.keyword = keyword.toLowerCase();
         this.searchChanged.emit(this.page);
+        this.rowsChanged.emit(this._rows);
     };
     /**
      * @param {?} column
@@ -2772,13 +2772,11 @@ var ServerTableComponent = /** @class */ (function () {
     ServerTableComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-server-table',
-                    template: "<uii-table-filter\n  *ngIf=\"limitOptions || searchOptions\"\n  [limitOptions]=\"limitOptions\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"checkbox\" id=\"aba\" class=\"gateway-rcb-select\" [checked]=\"_isAllRowsSelected\" (change)=\"_isAllRowsSelected = !_isAllRowsSelected; onRowSelect('multiple', $event)\"/>\n        <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div *ngFor=\"let column of _columns; let idx = index;\" class=\"header-cell\" [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"!column.hasOwnProperty('header-type')\"\n        class=\"cell order-able\"\n        (click)=\"sortTableColumn(column, idx)\"\n        [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\">{{column.name}}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell order-able\"\n          (click)=\"sortTableColumn(column, idx)\"\n          [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\" [innerHTML]=\"column.name\"></span>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{actionTitle}}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumnMobile($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let item of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"checkbox\" [checked]=\"_isAllRowsSelected\" (change)=\"onRowSelect('single', $event, item)\" class=\"gateway-rcb-select\" />\n        <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"radio\" name=\"mtable-radio-item\" [attr.id]=\"'mitem-'+ i\" [checked]=\"item.flag_aktif === '1'\" (change)=\"onRadioSelect(item)\" class=\"gateway-rcb-select\" />\n        <p class=\"gateway-rcb-label radio-label\"></p>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input type=\"checkbox\" [checked]=\"_isAllRowsSelected\" (change)=\"onRowSelect('single', $event, item)\" class=\"gateway-rcb-select\" />\n          <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input type=\"radio\" name=\"table-radio-item\" [attr.id]=\"'item-'+ i\" [checked]=\"item.flag_aktif === '1'\" (change)=\"onRadioSelect(item)\" class=\"gateway-rcb-select\" />\n          <p class=\"gateway-rcb-label radio-label\"></p>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\" [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') && column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span *ngIf=\"column.type === 'label'\" class=\"cell-label\" [ngClass]=\"item.class\">{{item[column.prop.toString()]}}</span>\n              <span *ngIf=\"column.type === 'html'\" class=\"cell-html\" [innerHTML]=\"item[column.prop.toString()]\"></span>\n              <span *ngIf=\"column.type === 'date' && !column.format\">{{item[column.prop.toString()] | date: 'dd MMMM y'}}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input \n                  type=\"{{column.inputType}}\"\n                  maxlength=\"{{column.inputMaxLength}}\"\n                  class=\"table-input-text\" \n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"item[column.prop.toString()]\" \n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <form>\n                  <div class=\"gateway-rcb\">\n                    <input type=\"radio\" \n                      [attr.name]=\"'radio-' + i\"\n                      [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                      [checked]=\"item[column.prop] === 1\"\n                      (change)=\"onInputRadioChange(i, column.prop)\"\n                      class=\"gateway-rcb-select\" />\n                    <p class=\"gateway-rcb-label radio-label\"></p>\n                  </div>\n                </form>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span>{{item[column.prop.toString()]}}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{actionTitle}}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"item\"\n              [auth]=\"item.auth\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"gateway-empty-data\" *ngIf=\"_rowsCollection === undefined || _rowsCollection.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"footerInfo\"\n  [paginationOptions]=\"paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>"
+                    template: "<uii-table-filter\n  *ngIf=\"limitOptions || searchOptions\"\n  [limitOptions]=\"limitOptions\"\n  [selectedLimit]=\"selectedLimit\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"checkbox\" id=\"aba\" class=\"gateway-rcb-select\" [checked]=\"_isAllRowsSelected\" (change)=\"_isAllRowsSelected = !_isAllRowsSelected; onRowSelect('multiple', $event)\"/>\n        <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div *ngFor=\"let column of _columns; let idx = index;\" class=\"header-cell\" [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"!column.hasOwnProperty('header-type')\"\n        class=\"cell order-able\"\n        (click)=\"sortTableColumn(column, idx)\"\n        [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\">{{column.name}}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell order-able\"\n          (click)=\"sortTableColumn(column, idx)\"\n          [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\" [innerHTML]=\"column.name\"></span>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{actionTitle}}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    [selectedLimit]=\"selectedLimit\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumnMobile($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let item of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"checkbox\" [checked]=\"_isAllRowsSelected\" (change)=\"onRowSelect('single', $event, item)\" class=\"gateway-rcb-select\" />\n        <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"radio\" name=\"mtable-radio-item\" [attr.id]=\"'mitem-'+ i\" [checked]=\"item.flag_aktif === '1'\" (change)=\"onRadioSelect(item)\" class=\"gateway-rcb-select\" />\n        <p class=\"gateway-rcb-label radio-label\"></p>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input type=\"checkbox\" [checked]=\"_isAllRowsSelected\" (change)=\"onRowSelect('single', $event, item)\" class=\"gateway-rcb-select\" />\n          <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input type=\"radio\" name=\"table-radio-item\" [attr.id]=\"'item-'+ i\" [checked]=\"item.flag_aktif === '1'\" (change)=\"onRadioSelect(item)\" class=\"gateway-rcb-select\" />\n          <p class=\"gateway-rcb-label radio-label\"></p>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\" [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') && column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span *ngIf=\"column.type === 'label'\" class=\"cell-label\" [ngClass]=\"item.class\">{{item[column.prop.toString()]}}</span>\n              <span *ngIf=\"column.type === 'html'\" class=\"cell-html\" [innerHTML]=\"item[column.prop.toString()]\"></span>\n              <span *ngIf=\"column.type === 'date' && !column.format\">{{item[column.prop.toString()] | date: 'dd MMMM y'}}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input \n                  type=\"{{column.inputType}}\"\n                  maxlength=\"{{column.inputMaxLength}}\"\n                  class=\"table-input-text\" \n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"item[column.prop.toString()]\" \n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <form>\n                  <div class=\"gateway-rcb\">\n                    <input type=\"radio\" \n                      [attr.name]=\"'radio-' + i\"\n                      [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                      [checked]=\"item[column.prop] === 1\"\n                      (change)=\"onInputRadioChange(i, column.prop)\"\n                      class=\"gateway-rcb-select\" />\n                    <p class=\"gateway-rcb-label radio-label\"></p>\n                  </div>\n                </form>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span>{{item[column.prop.toString()]}}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{actionTitle}}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"item\"\n              [auth]=\"item.auth\"\n              [additionalAction]=\"item.additional_action\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row-container\" *ngIf=\"showSummary\">\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\"></div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" *ngIf=\"colIdx === 0\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header summary-total-header\" *ngIf=\"colIdx === 0\"></div>\n          <div class=\"table-small-content\" *ngIf=\"colIdx === 0\">\n            <span class=\"cell\">\n              <strong>Total</strong>\n            </span>\n          </div>\n        </div>\n        <div class=\"data-cell\" *ngIf=\"column.prop.toString() !== 'number'\" [class.hide-in-mobile]=\"!summaryRows.hasOwnProperty(column.prop.toString())\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header\" *ngIf=\"summaryRows.hasOwnProperty(column.prop.toString())\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\" *ngIf=\"summaryRows.hasOwnProperty(column.prop.toString())\">\n            <span class=\"cell\">\n              <strong>{{ summaryRows[column.prop.toString()] }}</strong>\n            </span>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span></span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <div class=\"cell-action\"></div>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"gateway-empty-data\" *ngIf=\"_rowsCollection === undefined || _rowsCollection.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"footerInfo\"\n  [paginationOptions]=\"paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [page]=\"page\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>"
                 }] }
     ];
     /** @nocollapse */
-    ServerTableComponent.ctorParameters = function () { return [
-        { type: TablePageService }
-    ]; };
+    ServerTableComponent.ctorParameters = function () { return []; };
     ServerTableComponent.propDecorators = {
         actionColumn: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         actionTitle: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
@@ -2789,8 +2787,12 @@ var ServerTableComponent = /** @class */ (function () {
         paginationOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         radioColumn: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         searchOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        selectedLimit: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        showSummary: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        summaryRows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         columns: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         rows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        rowsChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         editClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         commentClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         auditClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -2927,11 +2929,15 @@ var TableComponent = /** @class */ (function () {
         this.footerInfo = true;
         this.forceLimitOptions = false;
         this.limitOptions = true;
+        this.selectedLimit = 10;
         this.paginationOptions = true;
         this.radioColumn = false;
         this.rows = [];
         this.searchOptions = true;
         this.serverMode = false;
+        this.summaryRows = {};
+        this.showSummary = false;
+        this.rowsChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.commentClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.auditClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.importClicked = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
@@ -2955,6 +2961,17 @@ var TableComponent = /** @class */ (function () {
         this.inputTextValueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.inputRadioValueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
+    /**
+     * @param {?} data
+     * @return {?}
+     */
+    TableComponent.prototype.onRowsChanged = /**
+     * @param {?} data
+     * @return {?}
+     */
+    function (data) {
+        this.rowsChanged.emit(data);
+    };
     /**
      * @param {?} data
      * @return {?}
@@ -3178,7 +3195,7 @@ var TableComponent = /** @class */ (function () {
     TableComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-table',
-                    template: "\n    <uii-server-table\n      *ngIf=\"serverMode; else clientMode\"\n      [actionColumn]=\"actionColumn\"\n      [actionTitle]=\"actionTitle\"\n      [checkboxColumn]=\"checkboxColumn\"\n      [columns]=\"columns\"\n      [footerInfo]=\"footerInfo\"\n      [limitOptions]=\"limitOptions\"\n      [paginationOptions]=\"paginationOptions\"\n      [radioColumn]=\"radioColumn\"\n      [rows]=\"rows\"\n      [searchOptions]=\"searchOptions\"\n      [searchOptions]=\"searchOptions\"\n      (limitChanged)=\"onLimitChange($event)\"\n      (pageChanged)=\"onPageChange($event)\"\n      (editClicked)=\"onEditClick($event)\"\n      (commentClicked)=\"onCommentClick($event)\"\n      (auditClicked)=\"onAuditClick($event)\"\n      (importClicked)=\"onImportClick($event)\"\n      (exportClicked)=\"onExportClick($event)\"\n      (deleteClicked)=\"onDeleteClick($event)\"\n      (detailClicked)=\"onDetailClick($event)\"\n      (inValidateClicked)=\"onInValidateClick($event)\"\n      (printClicked)=\"onPrintClick($event)\"\n      (publishClicked)=\"onPublishClick($event)\"\n      (reloadClicked)=\"onReloadClick($event)\"\n      (rejectClicked)=\"onRejectClick($event)\"\n      (searchChanged)=\"onSearchChange($event)\"\n      (switchChanged)=\"onSwitchChange($event)\"\n      (validateClicked)=\"onValidateClick($event)\"\n      (verifyClicked)=\"onVerifyClick($event)\"\n      (selectedRows)=\"onRowSelect($event)\"\n      (inputTextValueChange)=\"inputTextValueChange.emit($event)\"\n      (inputRadioValueChange)=\"inputRadioValueChange.emit($event)\">\n    </uii-server-table>\n    <ng-template #clientMode>\n      <uii-client-table\n        [actionColumn]=\"actionColumn\"\n        [actionInValidation]=\"actionInValidation\"\n        [actionTitle]=\"actionTitle\"\n        [checkboxColumn]=\"checkboxColumn\"\n        [isAllCheckbox]=\"isAllCheckbox\"\n        [columns]=\"columns\"\n        [footerInfo]=\"footerInfo\"\n        [forceLimitOptions]=\"forceLimitOptions\"\n        [limitOptions]=\"limitOptions\"\n        [paginationOptions]=\"paginationOptions\"\n        [radioColumn]=\"radioColumn\"\n        [rows]=\"rows\"\n        [searchOptions]=\"searchOptions\"\n        (editClicked)=\"onEditClick($event)\"\n        (commentClicked)=\"onCommentClick($event)\"\n        (auditClicked)=\"onAuditClick($event)\"\n        (importClicked)=\"onImportClick($event)\"\n        (exportClicked)=\"onExportClick($event)\"\n        (deleteClicked)=\"onDeleteClick($event)\"\n        (detailClicked)=\"onDetailClick($event)\"\n        (inValidateClicked)=\"onInValidateClick($event)\"\n        (printClicked)=\"onPrintClick($event)\"\n        (publishClicked)=\"onPublishClick($event)\"\n        (radioSelect)=\"onRadioSelect($event)\"\n        (reloadClicked)=\"onReloadClick($event)\"\n        (rejectClicked)=\"onRejectClick($event)\"\n        (switchChanged)=\"onSwitchChange($event)\"\n        (validateClicked)=\"onValidateClick($event)\"\n        (verifyClicked)=\"onVerifyClick($event)\"\n        (selectedRows)=\"onRowSelect($event)\"\n        (inputTextValueChange)=\"inputTextValueChange.emit($event)\"\n        (inputRadioValueChange)=\"inputRadioValueChange.emit($event)\">\n      </uii-client-table>\n    </ng-template>"
+                    template: "\n    <uii-server-table\n      *ngIf=\"serverMode; else clientMode\"\n      [actionColumn]=\"actionColumn\"\n      [actionTitle]=\"actionTitle\"\n      [checkboxColumn]=\"checkboxColumn\"\n      [columns]=\"columns\"\n      [footerInfo]=\"footerInfo\"\n      [limitOptions]=\"limitOptions\"\n      [paginationOptions]=\"paginationOptions\"\n      [radioColumn]=\"radioColumn\"\n      [rows]=\"rows\"\n      [searchOptions]=\"searchOptions\"\n      [selectedLimit]=\"selectedLimit\"\n      [showSummary]=\"showSummary\"\n      [summaryRows]=\"summaryRows\"\n      (rowsChanged)=\"onRowsChanged($event)\"\n      (limitChanged)=\"onLimitChange($event)\"\n      (pageChanged)=\"onPageChange($event)\"\n      (editClicked)=\"onEditClick($event)\"\n      (commentClicked)=\"onCommentClick($event)\"\n      (auditClicked)=\"onAuditClick($event)\"\n      (importClicked)=\"onImportClick($event)\"\n      (exportClicked)=\"onExportClick($event)\"\n      (deleteClicked)=\"onDeleteClick($event)\"\n      (detailClicked)=\"onDetailClick($event)\"\n      (inValidateClicked)=\"onInValidateClick($event)\"\n      (printClicked)=\"onPrintClick($event)\"\n      (publishClicked)=\"onPublishClick($event)\"\n      (reloadClicked)=\"onReloadClick($event)\"\n      (rejectClicked)=\"onRejectClick($event)\"\n      (searchChanged)=\"onSearchChange($event)\"\n      (switchChanged)=\"onSwitchChange($event)\"\n      (validateClicked)=\"onValidateClick($event)\"\n      (verifyClicked)=\"onVerifyClick($event)\"\n      (selectedRows)=\"onRowSelect($event)\"\n      (inputTextValueChange)=\"inputTextValueChange.emit($event)\"\n      (inputRadioValueChange)=\"inputRadioValueChange.emit($event)\">\n    </uii-server-table>\n    <ng-template #clientMode>\n      <uii-client-table\n        [actionColumn]=\"actionColumn\"\n        [actionInValidation]=\"actionInValidation\"\n        [actionTitle]=\"actionTitle\"\n        [checkboxColumn]=\"checkboxColumn\"\n        [isAllCheckbox]=\"isAllCheckbox\"\n        [columns]=\"columns\"\n        [footerInfo]=\"footerInfo\"\n        [forceLimitOptions]=\"forceLimitOptions\"\n        [limitOptions]=\"limitOptions\"\n        [paginationOptions]=\"paginationOptions\"\n        [radioColumn]=\"radioColumn\"\n        [rows]=\"rows\"\n        [searchOptions]=\"searchOptions\"\n        [selectedLimit]=\"selectedLimit\"\n        [showSummary]=\"showSummary\"\n        [summaryRows]=\"summaryRows\"\n        (rowsChanged)=\"onRowsChanged($event)\"\n        (editClicked)=\"onEditClick($event)\"\n        (commentClicked)=\"onCommentClick($event)\"\n        (auditClicked)=\"onAuditClick($event)\"\n        (importClicked)=\"onImportClick($event)\"\n        (exportClicked)=\"onExportClick($event)\"\n        (deleteClicked)=\"onDeleteClick($event)\"\n        (detailClicked)=\"onDetailClick($event)\"\n        (inValidateClicked)=\"onInValidateClick($event)\"\n        (printClicked)=\"onPrintClick($event)\"\n        (publishClicked)=\"onPublishClick($event)\"\n        (radioSelect)=\"onRadioSelect($event)\"\n        (reloadClicked)=\"onReloadClick($event)\"\n        (rejectClicked)=\"onRejectClick($event)\"\n        (switchChanged)=\"onSwitchChange($event)\"\n        (validateClicked)=\"onValidateClick($event)\"\n        (verifyClicked)=\"onVerifyClick($event)\"\n        (selectedRows)=\"onRowSelect($event)\"\n        (inputTextValueChange)=\"inputTextValueChange.emit($event)\"\n        (inputRadioValueChange)=\"inputRadioValueChange.emit($event)\">\n      </uii-client-table>\n    </ng-template>"
                 }] }
     ];
     TableComponent.propDecorators = {
@@ -3191,11 +3208,15 @@ var TableComponent = /** @class */ (function () {
         footerInfo: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         forceLimitOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         limitOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        selectedLimit: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         paginationOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         radioColumn: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         rows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         searchOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         serverMode: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        summaryRows: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        showSummary: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        rowsChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         commentClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         auditClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         importClicked: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
@@ -3234,12 +3255,13 @@ var TableActionComponent = /** @class */ (function () {
     TableActionComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-table-action',
-                    template: "\n    <div class=\"cell-action\">\n      <span *ngIf=\"auth && auth.canPublish\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'publish'})\" uiiTooltip=\"Terbit\">\n        <span class=\"fa fa-arrow-circle-up\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canUpdate\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'update'})\" uiiTooltip=\"Edit\">\n        <span class=\"fa fa-pencil\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canAudit\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'audit'})\" uiiTooltip=\"Audit\">\n        <span class=\"pf-clipboard-list\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canRead\" class=\"action-icon i-mat icon-primary \" (click)=\"emitAction.emit({index: index, type: 'detail'})\" uiiTooltip=\"Detail\">\n        <span class=\"material-icons\">visibility</span>\n      </span>\n        <span *ngIf=\"auth && auth.canVerify\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'verify'})\" uiiTooltip=\"Verifikasi\">\n        <span class=\"fa fa-check-square-o\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canValidate\" class=\"action-icon i-mat icon-primary \" (click)=\"emitAction.emit({index: index, type: 'validate'})\" uiiTooltip=\"Validasi\">\n        <span class=\"material-icons\">playlist_add_check</span>\n      </span>\n        <span *ngIf=\"auth && auth.canPrint\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'print'})\" uiiTooltip=\"Cetak\">\n        <span class=\"fa fa-print\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canReload\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'reload'})\" uiiTooltip=\"Muat ulang\">\n        <span class=\"fa fa-repeat\"></span>\n      </span>\n        <span *ngIf=\"actionInValidation === true\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'invalidate'})\" uiiTooltip=\"Batalkan validasi\">\n        <span class=\"fa fa-lock\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canDelete\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'delete'})\" uiiTooltip=\"Hapus\">\n        <span class=\"fa fa-trash\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canComment\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'comment'})\" uiiTooltip=\"Komentar\">\n        <span class=\"fa fa-comment\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canExport\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'export'})\" uiiTooltip=\"ekspor\">\n        <span class=\"fa fa-cloud-upload\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canImport\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'import'})\" uiiTooltip=\"Impor\">\n        <span class=\"fa fa-cloud-download\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canSync\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'sync'})\" uiiTooltip=\"Sinkron\">\n        <span class=\"fa fa-exchange\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canActivate\" class=\"action-icon i-on-off icon-primary\" uiiTooltip=\"Aktivasi\">\n        <uii-switch\n          [useOverlay]=\"true\"\n          [checked]=\"item.is_active === 1 || item.flag_aktif === 1 ? true : false\"\n          (changeEvent)=\"emitAction.emit({$event: $event, index: index, type: 'activate'})\">\n        </uii-switch>\n      </span>\n      <span *ngIf=\"auth && auth.canReject\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'reject'})\" uiiTooltip=\"Tolak\">\n        <span class=\"fa fa-times\"></span>\n      </span>\n    </div>\n  ",
+                    template: "\n    <div class=\"cell-action\">\n      <span *ngIf=\"auth && auth.canPublish\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'publish'})\" uiiTooltip=\"Terbit\">\n        <span class=\"fa fa-arrow-circle-up\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canUpdate\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'update'})\" uiiTooltip=\"Edit\">\n        <span class=\"fa fa-pencil\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canAudit\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'audit'})\" uiiTooltip=\"Audit\">\n        <span class=\"pf-clipboard-list\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canRead\" class=\"action-icon i-mat icon-primary \" (click)=\"emitAction.emit({index: index, type: 'detail'})\" uiiTooltip=\"Detail\">\n        <span class=\"material-icons\">visibility</span>\n      </span>\n        <span *ngIf=\"auth && auth.canVerify\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'verify'})\" uiiTooltip=\"Verifikasi\">\n        <span class=\"fa fa-check-square-o\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canValidate\" class=\"action-icon i-mat icon-primary \" (click)=\"emitAction.emit({index: index, type: 'validate'})\" uiiTooltip=\"Validasi\">\n        <span class=\"material-icons\">playlist_add_check</span>\n      </span>\n        <span *ngIf=\"auth && auth.canPrint\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'print'})\" uiiTooltip=\"Cetak\">\n        <span class=\"fa fa-print\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canReload\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'reload'})\" uiiTooltip=\"Muat ulang\">\n        <span class=\"fa fa-repeat\"></span>\n      </span>\n        <span *ngIf=\"actionInValidation === true\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'invalidate'})\" uiiTooltip=\"Batalkan validasi\">\n        <span class=\"fa fa-lock\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canDelete\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'delete'})\" uiiTooltip=\"Hapus\">\n        <span class=\"fa fa-trash\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canComment\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'comment'})\" uiiTooltip=\"Komentar\">\n        <span class=\"fa fa-comment\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canExport\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'export'})\" uiiTooltip=\"ekspor\">\n        <span class=\"fa fa-cloud-upload\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canImport\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'import'})\" uiiTooltip=\"Impor\">\n        <span class=\"fa fa-cloud-download\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canSync\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'sync'})\" uiiTooltip=\"Sinkron\">\n        <span class=\"fa fa-exchange\"></span>\n      </span>\n        <span *ngIf=\"auth && auth.canActivate\" class=\"action-icon i-on-off icon-primary\" uiiTooltip=\"Aktivasi\">\n        <uii-switch\n          [useOverlay]=\"true\"\n          [checked]=\"item.is_active === 1 || item.flag_aktif === 1 ? true : false\"\n          (changeEvent)=\"emitAction.emit({$event: $event, index: index, type: 'activate'})\">\n        </uii-switch>\n      </span>\n      <span *ngIf=\"auth && auth.canReject\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'reject'})\" uiiTooltip=\"Tolak\">\n        <span class=\"fa fa-times\"></span>\n      </span>\n      <span *ngIf=\"auth && auth.canReturn\" class=\"action-icon icon-primary \" (click)=\"emitAction.emit({index: index, type: 'return'})\" uiiTooltip=\"Setujui Kembali\">\n        <span class=\"fa fa-repeat\"></span>\n      </span>\n      <ng-container *ngFor=\"let action of additionalAction; let i = index\">\n        <span class=\"action-icon icon-primary\" [uiiTooltip]=\"action.tooltip\">\n          <span [ngClass]=\"action.icon_class\" (click)=\"action.click(item)\"></span>\n        </span>\n      </ng-container>\n    </div>\n  ",
                     styles: [".cell-action{font-size:20px;width:100%}.cell-action .action-icon{cursor:pointer;margin:0 5px;vertical-align:middle;display:inline}.cell-action .action-icon.i-mat,.cell-action .action-icon.i-on-off{position:relative;top:5px}"]
                 }] }
     ];
     TableActionComponent.propDecorators = {
         actionInValidation: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        additionalAction: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         item: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         auth: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         index: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
@@ -3309,7 +3331,7 @@ var TableFilterComponent = /** @class */ (function () {
     TableFilterComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-table-filter',
-                    template: "<div class=\"filter-options\">\n  <div class=\"limit-options\" *ngIf=\"limitOptions\">\n    <span>\n      Tampilkan\n      <select (change)=\"onLimitChange($event.target.value)\">\n        <option *ngFor=\"let option of limitOpts\" [value]=\"option.value\">{{ option.label }}</option>\n      </select>\n      data\n    </span>\n  </div>\n  <div class=\"search-options\" *ngIf=\"searchOptions\">\n    <div class=\"input-container\">\n        <input #searchInput class=\"search-input\" type=\"text\" placeholder=\"Cari...\" (keyup.enter)=\"onSearchChange(searchInput.value)\"/>\n        <button><span class=\"fa fa-search\" (click)=\"onSearchChange(searchInput.value)\"></span></button>\n      </div>\n  </div>\n</div>",
+                    template: "<div class=\"filter-options\">\n  <div class=\"limit-options\" *ngIf=\"limitOptions\">\n    <span>\n      Tampilkan\n      <select (change)=\"onLimitChange($event.target.value)\">\n        <option *ngFor=\"let option of limitOpts\" [value]=\"option.value\" [selected]=\"selectedLimit === option.value\">{{ option.label }}</option>\n      </select>\n      data\n    </span>\n  </div>\n  <div class=\"search-options\" *ngIf=\"searchOptions\">\n    <div class=\"input-container\">\n        <input #searchInput class=\"search-input\" type=\"text\" placeholder=\"Cari...\" (keyup.enter)=\"onSearchChange(searchInput.value)\"/>\n        <button><span class=\"fa fa-search\" (click)=\"onSearchChange(searchInput.value)\"></span></button>\n      </div>\n  </div>\n</div>",
                     styles: [".filter-options{width:100%;height:40px;position:relative;margin-bottom:15px}.filter-options .limit-options{font-size:12px}.filter-options .limit-options select{width:55px;height:40px;font-size:13px;background:#fff;outline:0}.filter-options .search-options{position:absolute;top:0;right:0;z-index:20}.filter-options .search-options .input-container{display:flex;align-items:center}.filter-options .search-options .search-input{height:40px;width:384px;margin:0;padding:0 10px;border:1px solid #ccc;outline:0}.filter-options .search-options button{background:#093697;box-shadow:none;color:#fff;height:40px;width:40px;border:none;outline:0;margin:0;font-size:20px}@media screen and (max-width:770px){.filter-options{display:none}}"]
                 }] }
     ];
@@ -3317,6 +3339,7 @@ var TableFilterComponent = /** @class */ (function () {
     TableFilterComponent.ctorParameters = function () { return []; };
     TableFilterComponent.propDecorators = {
         limitOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        selectedLimit: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         searchOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         limitChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }],
         searchChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }]
@@ -3330,8 +3353,7 @@ if (false) {}
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var TableFooterComponent = /** @class */ (function () {
-    function TableFooterComponent(_tablePageSvc) {
-        this._tablePageSvc = _tablePageSvc;
+    function TableFooterComponent() {
         this.pageChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     /**
@@ -3341,23 +3363,6 @@ var TableFooterComponent = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        this.setPageInfo();
-    };
-    /**
-     * @return {?}
-     */
-    TableFooterComponent.prototype.setPageInfo = /**
-     * @return {?}
-     */
-    function () {
-        var _this = this;
-        this._tablePageSvc.getTablePage().subscribe((/**
-         * @param {?} page
-         * @return {?}
-         */
-        function (page) {
-            _this._page = page;
-        }));
     };
     /**
      * @param {?} $event
@@ -3373,18 +3378,17 @@ var TableFooterComponent = /** @class */ (function () {
     TableFooterComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-table-footer',
-                    template: "\n    <div class=\"table-footer\" *ngIf=\"footerInfo && totalElements > 0\">\n      <span>Menampilkan {{startPage}} sampai {{endPage}} dari {{totalElements}} data</span>\n    </div>\n    <ng-container *ngIf=\"paginationOptions\">\n      <uii-pagination\n        [currentPage]=\"(_page.pageNumber + 1)\"\n        [dataPerPage]=\"_page.size\"\n        [amountOfData]=\"totalElements\"\n        (pageChanged)=\"selectedPageChange($event)\">\n      </uii-pagination>\n    </ng-container>",
+                    template: "\n    <div class=\"table-footer\" *ngIf=\"footerInfo && totalElements > 0\">\n      <span>Menampilkan {{startPage}} sampai {{endPage}} dari {{totalElements}} data</span>\n    </div>\n    <ng-container *ngIf=\"paginationOptions\">\n      <uii-pagination\n        [currentPage]=\"(page.pageNumber + 1)\"\n        [dataPerPage]=\"page.size\"\n        [amountOfData]=\"totalElements\"\n        (pageChanged)=\"selectedPageChange($event)\">\n      </uii-pagination>\n    </ng-container>",
                     styles: ["\n    .table-footer {\n      font-size: 12px;\n      margin: 20px 0;\n    }"]
                 }] }
     ];
     /** @nocollapse */
-    TableFooterComponent.ctorParameters = function () { return [
-        { type: TablePageService }
-    ]; };
+    TableFooterComponent.ctorParameters = function () { return []; };
     TableFooterComponent.propDecorators = {
         footerInfo: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         paginationOptions: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         totalElements: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
+        page: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         startPage: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         endPage: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"] }],
         pageChanged: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"] }]
@@ -6678,6 +6682,303 @@ var FilterPipe = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+var Confirmdialog2Component = /** @class */ (function () {
+    function Confirmdialog2Component(_activeModal) {
+        this._activeModal = _activeModal;
+        this.active = false;
+    }
+    /**
+     * @return {?}
+     */
+    Confirmdialog2Component.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_8__["Subject"]();
+    };
+    /**
+     * @return {?}
+     */
+    Confirmdialog2Component.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
+        this.onCancel();
+    };
+    /**
+     * @param {?} config
+     * @return {?}
+     */
+    Confirmdialog2Component.prototype.showConfirmationModal = /**
+     * @param {?} config
+     * @return {?}
+     */
+    function (config) {
+        this.title = config.title ? config.title : "";
+        this.message = config.message ? config.message : "";
+        this.confirmBtnlabel = config.confirmBtnlabel ? config.confirmBtnlabel : "";
+        this.cancelBtnLabel = config.cancelBtnLabel ? config.cancelBtnLabel : "";
+        this.active = true;
+    };
+    /**
+     * @return {?}
+     */
+    Confirmdialog2Component.prototype.onConfirm = /**
+     * @return {?}
+     */
+    function () {
+        this.active = false;
+        this.onClose.next(true);
+        this._activeModal.hide();
+    };
+    /**
+     * @return {?}
+     */
+    Confirmdialog2Component.prototype.onCancel = /**
+     * @return {?}
+     */
+    function () {
+        this.active = false;
+        this.onClose.next(false);
+        this._activeModal.hide();
+    };
+    /**
+     * @return {?}
+     */
+    Confirmdialog2Component.prototype.hideConfirmationModal = /**
+     * @return {?}
+     */
+    function () {
+        this.active = false;
+        this.onClose.next(null);
+        this._activeModal.hide();
+    };
+    Confirmdialog2Component.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
+                    selector: "uii-confirmdialog",
+                    template: "<div class=\"modal-body\">\n  <div class=\"row\">\n    <img class=\"confirm-image\" src=\"assets/images/icons/konf_icon.png\" alt=\"\" />\n  </div>\n  <div class=\"row margin-top-50 margin-bottom-20\">\n    <div class=\"modal-message\">\n      <p>{{ message }}</p>\n    </div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"onCancel()\">\n    {{ cancelBtnLabel || \"Tidak, batalkan\" }}\n  </button>\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"onConfirm()\">\n    {{ confirmBtnlabel || \"Ya, lanjutkan\" }}\n  </button>\n</div>\n",
+                    styles: [".confirm-image{width:100px;display:block;margin-left:auto;margin-right:auto;margin-top:-60px}::ng-deep .modal-dialog.modal-alert.modal-confirm2{margin-top:100px}"]
+                }] }
+    ];
+    /** @nocollapse */
+    Confirmdialog2Component.ctorParameters = function () { return [
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_10__["BsModalRef"] }
+    ]; };
+    return Confirmdialog2Component;
+}());
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var Warningdialog2Component = /** @class */ (function () {
+    function Warningdialog2Component(_activeModal) {
+        this._activeModal = _activeModal;
+        this.active = false;
+    }
+    /**
+     * @return {?}
+     */
+    Warningdialog2Component.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_8__["Subject"]();
+    };
+    /**
+     * @param {?} config
+     * @return {?}
+     */
+    Warningdialog2Component.prototype.showConfirmationModal = /**
+     * @param {?} config
+     * @return {?}
+     */
+    function (config) {
+        this.title = config.title ? config.title : "";
+        this.message = config.message ? config.message : "";
+        this.confirmBtnlabel = config.confirmBtnlabel ? config.confirmBtnlabel : "";
+        this.active = true;
+    };
+    /**
+     * @return {?}
+     */
+    Warningdialog2Component.prototype.onConfirm = /**
+     * @return {?}
+     */
+    function () {
+        this.active = false;
+        this.onClose.next(true);
+        this._activeModal.hide();
+    };
+    /**
+     * @return {?}
+     */
+    Warningdialog2Component.prototype.hideConfirmationModal = /**
+     * @return {?}
+     */
+    function () {
+        this.active = false;
+        this.onClose.next(null);
+        this._activeModal.hide();
+    };
+    Warningdialog2Component.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
+                    selector: "uii-warning-dialog2",
+                    template: "<div class=\"modal-body\">\n  <div class=\"row\">\n    <img\n      class=\"confirm-image\"\n      src=\"assets/images/icons/warning_icon.png\"\n      alt=\"\"\n    />\n  </div>\n  <div class=\"row margin-top-40 margin-bottom-20\">\n    <div class=\"modal-message\">\n      <h5>{{ title }}</h5>\n      <p>{{ message }}</p>\n    </div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"onConfirm()\">\n    {{ confirmBtnlabel || \"Keluar\" }}\n  </button>\n</div>\n",
+                    styles: [".confirm-image{width:100px;display:block;margin-left:auto;margin-right:auto;margin-top:-60px}::ng-deep .modal-dialog.modal-alert.modal-warning2{margin-top:100px}"]
+                }] }
+    ];
+    /** @nocollapse */
+    Warningdialog2Component.ctorParameters = function () { return [
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_10__["BsModalRef"] }
+    ]; };
+    return Warningdialog2Component;
+}());
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var Successdialog2Component = /** @class */ (function () {
+    function Successdialog2Component(_activeModal) {
+        this._activeModal = _activeModal;
+        this.active = false;
+    }
+    /**
+     * @return {?}
+     */
+    Successdialog2Component.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_8__["Subject"]();
+    };
+    /**
+     * @param {?} config
+     * @return {?}
+     */
+    Successdialog2Component.prototype.showConfirmationModal = /**
+     * @param {?} config
+     * @return {?}
+     */
+    function (config) {
+        this.title = config.title ? config.title : "";
+        this.message = config.message ? config.message : "";
+        this.confirmBtnlabel = config.confirmBtnlabel ? config.confirmBtnlabel : "";
+        this.active = true;
+    };
+    /**
+     * @return {?}
+     */
+    Successdialog2Component.prototype.onConfirm = /**
+     * @return {?}
+     */
+    function () {
+        this.active = false;
+        this.onClose.next(true);
+        this._activeModal.hide();
+    };
+    /**
+     * @return {?}
+     */
+    Successdialog2Component.prototype.hideConfirmationModal = /**
+     * @return {?}
+     */
+    function () {
+        this.active = false;
+        this.onClose.next(null);
+        this._activeModal.hide();
+    };
+    Successdialog2Component.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
+                    selector: "uii-success-dialog2",
+                    template: "<div class=\"modal-body\">\n  <div class=\"row\">\n    <img\n      class=\"confirm-image\"\n      src=\"assets/images/icons/check_icon.png\"\n      alt=\"\"\n    />\n  </div>\n  <div class=\"row margin-top-40 margin-bottom-20\">\n    <div class=\"modal-message\">\n      <h5>{{ title }}</h5>\n      <p>{{ message }}</p>\n    </div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"onConfirm()\">\n    {{ confirmBtnlabel || \"Keluar\" }}\n  </button>\n</div>\n",
+                    styles: [".confirm-image{width:100px;display:block;margin-left:auto;margin-right:auto;margin-top:-60px}::ng-deep .modal-dialog.modal-alert.modal-success2{margin-top:100px}"]
+                }] }
+    ];
+    /** @nocollapse */
+    Successdialog2Component.ctorParameters = function () { return [
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_10__["BsModalRef"] }
+    ]; };
+    return Successdialog2Component;
+}());
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+var Dangerdialog2Component = /** @class */ (function () {
+    function Dangerdialog2Component(_activeModal) {
+        this._activeModal = _activeModal;
+        this.active = false;
+    }
+    /**
+     * @return {?}
+     */
+    Dangerdialog2Component.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_8__["Subject"]();
+    };
+    /**
+     * @param {?} config
+     * @return {?}
+     */
+    Dangerdialog2Component.prototype.showConfirmationModal = /**
+     * @param {?} config
+     * @return {?}
+     */
+    function (config) {
+        this.title = config.title ? config.title : "";
+        this.message = config.message ? config.message : "";
+        this.confirmBtnlabel = config.confirmBtnlabel ? config.confirmBtnlabel : "";
+        this.active = true;
+    };
+    /**
+     * @return {?}
+     */
+    Dangerdialog2Component.prototype.onConfirm = /**
+     * @return {?}
+     */
+    function () {
+        this.active = false;
+        this.onClose.next(true);
+        this._activeModal.hide();
+    };
+    /**
+     * @return {?}
+     */
+    Dangerdialog2Component.prototype.hideConfirmationModal = /**
+     * @return {?}
+     */
+    function () {
+        this.active = false;
+        this.onClose.next(null);
+        this._activeModal.hide();
+    };
+    Dangerdialog2Component.decorators = [
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
+                    selector: 'uii-danger-dialog2',
+                    template: "<div class=\"modal-body\">\n  <div class=\"row\">\n    <img class=\"confirm-image\" src=\"assets/images/icons/danger_icon.png\" alt=\"\" />\n  </div>\n  <div class=\"row margin-top-40 margin-bottom-20\">\n    <div class=\"modal-message\">\n      <h5>{{ title }}</h5>\n      <p>{{ message }}</p>\n    </div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"onConfirm()\">\n    {{ confirmBtnlabel || \"Ya, lanjutkan\" }}\n  </button>\n</div>\n",
+                    styles: [".confirm-image{width:100px;display:block;margin-left:auto;margin-right:auto;margin-top:-60px}::ng-deep .modal-dialog.modal-alert.modal-danger2{margin-top:100px}"]
+                }] }
+    ];
+    /** @nocollapse */
+    Dangerdialog2Component.ctorParameters = function () { return [
+        { type: ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_10__["BsModalRef"] }
+    ]; };
+    return Dangerdialog2Component;
+}());
+if (false) {}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 var PilarModule = /** @class */ (function () {
     function PilarModule() {
     }
@@ -6694,7 +6995,6 @@ var PilarModule = /** @class */ (function () {
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["DatePipe"],
                 ImageService,
                 LoadingBarService,
-                TablePageService,
                 ToastService
             ]
         };
@@ -6740,7 +7040,11 @@ var PilarModule = /** @class */ (function () {
                         TooltipDirective,
                         ChipsComponent,
                         PilarFontComponent,
-                        FilterPipe
+                        FilterPipe,
+                        Confirmdialog2Component,
+                        Warningdialog2Component,
+                        Successdialog2Component,
+                        Dangerdialog2Component,
                     ],
                     imports: [
                         _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
@@ -6756,7 +7060,7 @@ var PilarModule = /** @class */ (function () {
                         ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["ProgressbarModule"].forRoot(),
                         ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["TabsModule"].forRoot(),
                         ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["TimepickerModule"].forRoot(),
-                        ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["TypeaheadModule"].forRoot()
+                        ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["TypeaheadModule"].forRoot(),
                     ],
                     exports: [
                         /* components */
@@ -6806,13 +7110,13 @@ var PilarModule = /** @class */ (function () {
                         ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["TimepickerModule"],
                         ngx_bootstrap__WEBPACK_IMPORTED_MODULE_7__["TypeaheadModule"],
                         ChipsComponent,
-                        PilarFontComponent
+                        PilarFontComponent,
+                        Confirmdialog2Component,
+                        Warningdialog2Component,
+                        Successdialog2Component,
+                        Dangerdialog2Component
                     ],
-                    entryComponents: [
-                        ConfirmdialogComponent,
-                        ToastComponent,
-                        TooltipComponent
-                    ],
+                    entryComponents: [ConfirmdialogComponent, Confirmdialog2Component, Warningdialog2Component, Successdialog2Component, Dangerdialog2Component, ToastComponent, TooltipComponent],
                 },] }
     ];
     return PilarModule;
@@ -6988,17 +7292,6 @@ module.exports = "import { Component } from '@angular/core';\n\n@Component({\n  
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/active-button/active-button.component.html":
-/*!******************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/active-button/active-button.component.html ***!
-  \******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button class=\"btn btn-primary active\">primary</button>\n&nbsp;\n<button class=\"btn btn-secondary active\">secondary</button>\n&nbsp;\n<button class=\"btn btn-tertiary active\">tertiary</button>\n&nbsp;\n<button class=\"btn btn-success active\">success</button>\n&nbsp;\n<button class=\"btn btn-info active\">info</button>\n&nbsp;\n<button class=\"btn btn-warning active\">warning</button>\n&nbsp;\n<button class=\"btn btn-danger active\">danger</button>"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/active-button/active-button.component.ts":
 /*!****************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/active-button/active-button.component.ts ***!
@@ -7007,17 +7300,6 @@ module.exports = "<button class=\"btn btn-primary active\">primary</button>\n&nb
 /***/ (function(module, exports) {
 
 module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-active-button',\n  templateUrl: './active-button.component.html'\n})\nexport class ActiveButtonComponent {\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.html":
-/*!****************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.html ***!
-  \****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button class=\"btn btn-primary\">primary</button>\n&nbsp;\n<button class=\"btn btn-default\">default</button>\n&nbsp;\n<button class=\"btn btn-secondary\">secondary</button>\n&nbsp;\n<button class=\"btn btn-tertiary\">tertiary</button>\n&nbsp;\n<button class=\"btn btn-success\">success</button>\n&nbsp;\n<button class=\"btn btn-info\">info</button>\n&nbsp;\n<button class=\"btn btn-warning\">warning</button>\n&nbsp;\n<button class=\"btn btn-danger\">danger</button>&nbsp;"
 
 /***/ }),
 
@@ -7032,17 +7314,6 @@ module.exports = "import { Component } from '@angular/core';\n\n@Component({\n  
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html":
-/*!****************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html ***!
-  \****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button class=\"btn btn-primary  btn-block\"> primary</button>\n<button class=\"btn btn-secondary  btn-block\"> secondary</button>\n<button class=\"btn btn-tertiary btn-block\"> tertiary</button>\n<button class=\"btn btn-success btn-block\"> success</button>\n<button class=\"btn btn-info btn-block\"> info</button>\n<button class=\"btn btn-warning btn-block\"> warning</button> \n<button class=\"btn btn-danger btn-block\"> danger</button>\n"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts":
 /*!**************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts ***!
@@ -7051,17 +7322,6 @@ module.exports = "<button class=\"btn btn-primary  btn-block\"> primary</button>
 /***/ (function(module, exports) {
 
 module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-block-button',\n  templateUrl: './block-button.component.html',\n})\nexport class BlockButtonComponent {\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.html":
-/*!**************************************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.html ***!
-  \**************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button class=\"btn btn-primary\"> \n  primary <span class=\"fa fa-plus\"></span> \n</button> &nbsp;\n\n<button class=\"btn btn-secondary\"> \n <span class=\"fa fa-caret-down\"></span> secondary\n</button> &nbsp;\n\n<button class=\"btn btn-success\">\n  success <span class=\"fa fa-arrow-circle-right\"></span>\n</button> &nbsp;\n\n<button class=\"btn btn-info\"> \n  info <span class=\"fa fa-search\"></span>\n</button> &nbsp;\n\n<button class=\"btn btn-warning\">\n  warning <span class=\"fa fa-expand\"></span>\n</button> &nbsp;\n\n<button class=\"btn btn-danger\"> \n <span class=\"fa fa-star\"></span>danger\n</button> &nbsp;"
 
 /***/ }),
 
@@ -7076,17 +7336,6 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.html":
-/*!**********************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.html ***!
-  \**********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button class=\"btn btn-primary\"  >primary</button>\n&nbsp;\n<button class=\"btn btn-secondary\" disabled>secondary</button>\n&nbsp;\n<button class=\"btn btn-tertiary\" disabled>tertiary</button>\n&nbsp;\n<button class=\"btn btn-success\" disabled>success</button>\n&nbsp;\n<button class=\"btn btn-info\" disabled>info</button>\n&nbsp;\n<button class=\"btn btn-warning\" disabled>warning</button>\n&nbsp;\n<button class=\"btn btn-danger\" disabled>danger</button>\n"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.ts":
 /*!********************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.ts ***!
@@ -7095,17 +7344,6 @@ module.exports = "<button class=\"btn btn-primary\"  >primary</button>\n&nbsp;\n
 /***/ (function(module, exports) {
 
 module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-disabled-button',\n  templateUrl: './disabled-button.component.html'\n})\nexport class DisabledButtonComponent  {\n\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.html":
-/*!**************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.html ***!
-  \**************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button class=\"btn btn-primary\"> \n   <span class=\"fa fa-plus\"></span> \n</button>\n&nbsp;\n<button class=\"btn btn-secondary\"> \n  <span class=\"fa fa-caret-down\"></span> \n</button>\n&nbsp;\n<button class=\"btn btn-tertiary\">\n  <span class=\"fa fa-chevron-down\"></span>\n</button>\n&nbsp;\n<button class=\"btn btn-success\">\n  <span class=\"fa fa-arrow-circle-right\"></span>\n</button>\n&nbsp;\n<button class=\"btn btn-info\"> \n  <span class=\"fa fa-search\"></span>\n</button>\n&nbsp;\n<button class=\"btn btn-warning\">\n  <span class=\"fa fa-expand\"></span>\n</button>\n&nbsp;\n<button class=\"btn btn-danger\"> \n  <span class=\"fa fa-star\"></span>\n</button>"
 
 /***/ }),
 
@@ -7120,17 +7358,6 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.html":
-/*!******************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.html ***!
-  \******************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n  <button class=\"btn btn-primary\" [class.loading]=\"primaryPropetyLoading\" (click)=\"primaryPropetyLoading = !primaryPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-secondary\" [class.loading]=\"secondaryPropetyLoading\" (click)=\"secondaryPropetyLoading = !secondaryPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-success\" [class.loading]=\"successPropetyLoading\" (click)=\"successPropetyLoading = !successPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-info\" [class.loading]=\"infoPropetyLoading\" (click)=\"infoPropetyLoading = !infoPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-warning\" [class.loading]=\"warningPropetyLoading\" (click)=\"warningPropetyLoading = !warningPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-danger\" [class.loading]=\"dangerPropetyLoading\" (click)=\"dangerPropetyLoading = !dangerPropetyLoading;\">\n    loading\n  </button>\n"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.ts":
 /*!****************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.ts ***!
@@ -7139,17 +7366,6 @@ module.exports = "\n  <button class=\"btn btn-primary\" [class.loading]=\"primar
 /***/ (function(module, exports) {
 
 module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-loader-button',\n  templateUrl: './loader-button.component.html',\n  styleUrls: ['./loader-button.component.scss']\n})\nexport class LoaderButtonComponent {\n  primaryPropetyLoading = false;\n  secondaryPropetyLoading = false;\n  successPropetyLoading = false;\n  infoPropetyLoading = false;\n  warningPropetyLoading = false;\n  dangerPropetyLoading = false;\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/size-button/size-button.component.html":
-/*!**************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/size-button/size-button.component.html ***!
-  \**************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button class=\"btn btn-primary btn-lg\">Large</button>\n&nbsp;\n<button class=\"btn btn-primary\">Medium</button>\n&nbsp;\n<button class=\"btn btn-primary btn-sm\">Small</button>\n&nbsp;\n<button class=\"btn btn-primary btn-xs\">Extra small</button>"
 
 /***/ }),
 
@@ -7164,17 +7380,6 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html":
-/*!***********************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html ***!
-  \***********************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<uii-chips [items]=\"dataDummy\" (sendData)=\"onGetData($event)\"></uii-chips>\n"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.ts":
 /*!*********************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.ts ***!
@@ -7183,17 +7388,6 @@ module.exports = "<uii-chips [items]=\"dataDummy\" (sendData)=\"onGetData($event
 /***/ (function(module, exports) {
 
 module.exports = "import { Component, OnInit, EventEmitter, Output } from '@angular/core';\n\n@Component({\n  selector: 'ugw-basic-chip',\n  templateUrl: './basic-chip.component.html',\n  styleUrls: ['./basic-chip.component.scss']\n})\nexport class BasicChipComponent implements OnInit {\n\n  dataDummy: Array<any> = [\n    {\n      label: 'Item 1 & Item 2',\n      value: 'item1_and_item2'\n    },\n    {\n      label: 'Item 2',\n      value: 'item_2'\n    },\n    {\n      label: 'Item 3',\n      value: 'item_3'\n    },\n    {\n      label: 'Item 4',\n      value: 'item_4'\n    },\n    {\n      label: 'Item 5',\n      value: 'item_5'\n    },\n  ];\n  constructor() {\n  }\n\n  ngOnInit() {\n  }\n\n  onGetData($event) {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html":
-/*!***************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html ***!
-  \***************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<uii-chips [disabled]=\"true\" [items]=\"dataDummy\"></uii-chips>\n"
 
 /***/ }),
 
@@ -7227,17 +7421,6 @@ module.exports = "<uii-chips [items]=\"dataDummy\" position=\"horizontal\" (send
 /***/ (function(module, exports) {
 
 module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-horizontal-chip',\n  templateUrl: './horizontal-chip.component.html',\n  styleUrls: ['./horizontal-chip.component.scss']\n})\nexport class HorizontalChipComponent implements OnInit {\n\n  dataDummy: Array<any> = [\n    {\n      label: 'Item 1',\n      value: 'item_1'\n    },\n    {\n      label: 'Item 2',\n      value: 'item_2'\n    }\n  ];\n  constructor() {\n  }\n\n  ngOnInit() {\n  }\n\n  onGetData($event) {\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html":
-/*!*****************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html ***!
-  \*****************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<uii-chips [items]=\"dataDummy\"  position=\"vertical\" (sendData)=\"onGetData($event)\"></uii-chips>\n"
 
 /***/ }),
 
@@ -7494,6 +7677,72 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.html":
+/*!*************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.html ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary\" (click)=\"displayModal()\">Show Modal</button>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.ts":
+/*!***********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.ts ***!
+  \***********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "import { Component, OnInit } from \"@angular/core\";\nimport { BsModalRef, BsModalService } from \"ngx-bootstrap\";\n\n@Component({\n  selector: \"ugw-basic-modal\",\n  templateUrl: \"./basic-modal.component.html\",\n  styleUrls: [\"./basic-modal.component.scss\"],\n})\nexport class BasicModalComponent implements OnInit {\n  modalRef: any;\n\n  constructor(private modalSvc: BsModalService) {}\n\n  ngOnInit() {}\n\n  displayModal() {\n    const initialState = {};\n\n    this.modalRef = this.modalSvc.show(BasicModalExampleComponent, {\n      initialState,\n      class: \"modal-md\",\n    });\n  }\n}\n@Component({\n  selector: \"ugw-basic-modal-example\",\n  template: `\n    <div class=\"modal-header\">\n      <button\n        type=\"button\"\n        class=\"close\"\n        aria-label=\"Close\"\n        (click)=\"activeModal.hide()\"\n      >\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n      <h5 class=\"\">Modal Title</h5>\n    </div>\n    <div class=\"modal-body\">Modal Content</div>\n    <div class=\"modal-footer\">\n      <div class=\"button-action-center\">\n        <button\n          (click)=\"onCloseModal()\"\n          type=\"button\"\n          class=\"btn btn-default\"\n          style=\"margin-bottom: 0px\"\n        >\n          Close\n        </button>\n      </div>\n    </div>\n  `,\n})\nexport class BasicModalExampleComponent implements OnInit {\n  constructor(public activeModal: BsModalRef) {}\n\n  ngOnInit() {}\n\n  onCloseModal() {\n    this.activeModal.hide();\n  }\n}\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.html":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.html ***!
+  \*******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary\" (click)=\"displayModal()\">\n  Show Confirm Dialog\n</button>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.ts":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.ts ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "import { Component, OnInit } from \"@angular/core\";\nimport { BsModalService } from \"ngx-bootstrap\";\nimport { ConfirmdialogComponent } from \"projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component\";\n\n@Component({\n  selector: \"ugw-confirm-dialog\",\n  templateUrl: \"./confirm-dialog.component.html\",\n  styleUrls: [\"./confirm-dialog.component.scss\"],\n})\nexport class ConfirmDialogComponent implements OnInit {\n  constructor(private modalSvc: BsModalService) {}\n\n  ngOnInit() {}\n\n  displayModal() {\n    const modalDialog = this.modalSvc.show(ConfirmdialogComponent, {\n      class: \"modal-alert modal-warning modal-content\",\n    });\n\n    (<ConfirmdialogComponent>modalDialog.content).showConfirmationModal({\n      title: \"Save\",\n      message: \"Are you sure to confirm this action?\",\n      cancelBtnLabel: \"No\",\n      confirmBtnlabel: \"Yes\",\n    });\n\n    (<ConfirmdialogComponent>modalDialog.content).onClose.subscribe(\n      (result) => {}\n    );\n  }\n}\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.html":
+/*!*********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.html ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-3 padding-right-20\">\n    <button class=\"btn btn-primary\" (click)=\"displaySuccessDialog()\">\n      Show Success Dialog 2\n    </button>\n  </div>\n  <div class=\"col-md-3 padding-right-20\">\n    <button class=\"btn btn-primary\" (click)=\"displayConfirmDialog()\">\n      Show Confirm Dialog 2\n    </button>\n  </div>\n  <div class=\"col-md-3 padding-right-20\">\n    <button class=\"btn btn-primary\" (click)=\"displayWarningDialog()\">\n      Show Warning Dialog 2\n    </button>\n  </div>\n  <div class=\"col-md-3 padding-right-20\">\n    <button class=\"btn btn-primary\" (click)=\"displayDangerDialog()\">\n      Show Danger Dialog 2\n    </button>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.ts":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.ts ***!
+  \*******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "import { Dangerdialog2Component } from './../../../../../../../projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component';\nimport { Component, OnInit } from \"@angular/core\";\nimport { BsModalService } from \"ngx-bootstrap\";\nimport { Confirmdialog2Component } from \"projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component\";\nimport { Warningdialog2Component } from \"projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component\";\nimport { Successdialog2Component } from \"projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component\";\n\n@Component({\n  selector: \"ugw-confirm-dialog\",\n  templateUrl: \"./confirm-dialog2.component.html\",\n  styleUrls: [\"./confirm-dialog2.component.scss\"],\n})\nexport class ConfirmDialog2Component implements OnInit {\n  constructor(private modalSvc: BsModalService) {}\n\n  ngOnInit() {}\n\n  displaySuccessDialog() {\n    const modalDialog = this.modalSvc.show(Successdialog2Component, {\n      class: \"modal-alert modal-success2 modal-content\",\n    });\n\n    (<Successdialog2Component>modalDialog.content).showConfirmationModal({\n      title: \"File Successfully Uploaded\",\n      message: \"Please check status menu to view submission detail updates\",\n      confirmBtnlabel: \"OK\",\n    });\n\n    (<Successdialog2Component>modalDialog.content).onClose.subscribe(\n      (result) => {\n        \n      }\n    );\n  }\n\n  displayConfirmDialog() {\n    const modalDialog = this.modalSvc.show(Confirmdialog2Component, {\n      class: \"modal-alert modal-confirm2 modal-content\",\n    });\n\n    (<Confirmdialog2Component>modalDialog.content).showConfirmationModal({\n      title: \"Save\",\n      message: \"Are you sure to confirm this action?\",\n      cancelBtnLabel: \"No\",\n      confirmBtnlabel: \"Yes\",\n    });\n\n    (<Confirmdialog2Component>modalDialog.content).onClose.subscribe(\n      (result) => {\n        \n      }\n    );\n  }\n\n  displayWarningDialog() {\n    const modalDialog = this.modalSvc.show(Warningdialog2Component, {\n      class: \"modal-alert modal-warning2 modal-content\",\n    });\n\n    (<Warningdialog2Component>modalDialog.content).showConfirmationModal({\n      title: \"An Error Occured\",\n      message: \"Please check your input again\",\n      confirmBtnlabel: \"OK\",\n    });\n\n    (<Warningdialog2Component>modalDialog.content).onClose.subscribe(\n      (result) => {\n        if (result === true) {\n        } else {\n        }\n      }\n    );\n  }\n\n  displayDangerDialog() {\n    const modalDialog = this.modalSvc.show(Dangerdialog2Component, {\n      class: \"modal-alert modal-danger2 modal-content\",\n    });\n\n    (<Dangerdialog2Component>modalDialog.content).showConfirmationModal({\n      title: \"This Action is Forbidden\",\n      message: \"Please contact your administrator for further guidance\",\n      confirmBtnlabel: \"OK\",\n    });\n\n    (<Dangerdialog2Component>modalDialog.content).onClose.subscribe(\n      (result) => {\n       \n      }\n    );\n  }\n}\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-pagination/sections/basic-pagination/basic-pagination.component.ts":
 /*!**************************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-pagination/sections/basic-pagination/basic-pagination.component.ts ***!
@@ -7604,6 +7853,17 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html":
+/*!*********************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html ***!
+  \*********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionTitle]=\"'Action'\"></uii-table>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts":
 /*!*******************************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts ***!
@@ -7615,14 +7875,36 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html":
-/*!*****************************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html ***!
-  \*****************************************************************************************************************************************/
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.ts":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.ts ***!
+  \***********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [checkboxColumn]=\"true\"\n  [actionTitle]=\"'Action'\"></uii-table>\n"
+module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-summary-row-table',\n  templateUrl: './summary-row-table.component.html',\n  styleUrls: ['./summary-row-table.component.scss']\n})\nexport class SummaryRowTableComponent implements OnInit {\n\n  rows: Array<any> = [];\n  summaryRows = {\n    salary: 0,\n    gender: ''\n  };\n  columns: Array<any> = [];\n\n  constructor() { }\n\n  ngOnInit() {\n    this.columns = [\n      {\n        name: 'No',\n        prop: 'number'\n      },\n      {\n        name: 'Name',\n        prop: 'name'\n      },\n      {\n        name: 'Salary',\n        prop: 'salary'\n      },\n      {\n        name: 'Gender',\n        prop: 'gender'\n      },\n    ];\n\n    this.rows = [\n      {\n        name: 'Marta Mccoy',\n        salary: 31000,\n        gender: 'M'\n      },\n      {\n        name: 'Fanny Holman',\n        salary: 23000,\n        gender: 'F'\n      },\n      {\n        name: 'Latonya Gibson',\n        salary: 22000,\n        gender: 'F'\n      },\n      {\n        name: 'Ines Wiggins',\n        salary: 35000,\n        gender: 'F'\n      },\n      {\n        name: 'Kathrine Irwin',\n        salary: 38000,\n        gender: 'F'\n      },\n      {\n        name: 'Higgins Oneal',\n        salary: 3500,\n        gender: 'M'\n      },\n      {\n        name: 'Russell Duke',\n        salary: 370000,\n        gender: 'M'\n      },\n      {\n        name: 'Sara Quinn',\n        salary: 23000,\n        gender: 'F'\n      },\n      {\n        name: 'Dona Patterson',\n        salary: 32000,\n        gender: 'F'\n      },\n      {\n        name: 'Clarice Keith',\n        salary: 220,\n        gender: 'F'\n      },\n      {\n        name: 'Petersen Maldonado',\n        salary: 200000,\n        gender: 'M'\n      },\n      {\n        name: 'Tonya Colon',\n        salary: 3800,\n        gender: 'M'\n      },\n      {\n        name: 'Ann Bass',\n        salary: 3000,\n        gender: 'F'\n      },\n      {\n        name: 'Cherie Pickett',\n        salary: 2100,\n        gender: 'F'\n      },\n      {\n        name: 'Holland Mcdonald',\n        salary: 28000,\n        gender: 'M'\n      },\n      {\n        name: 'Casey Dudley',\n        salary: 230,\n        gender: 'F'\n      },\n      {\n        name: 'Sophie Slater',\n        salary: 330,\n        gender: 'F'\n      },\n      {\n        name: 'Rhoda Kent',\n        salary: 3200,\n        gender: 'M'\n      },\n      {\n        name: 'Bennett Sheppard',\n        salary: 3200,\n        gender: 'M'\n      },\n      {\n        name: 'Foreman Hood',\n        salary: 250,\n        gender: 'M'\n      }\n    ];\n  }\n\n  onRowsChanged(rows: Array<any>) {\n    this.summaryRows = {\n      salary: rows.reduce(((total, number) => total + number.salary), 0),\n      gender: 'Male: ' + rows.filter(r => r.gender === 'M').length + ', Female: ' + rows.filter(r => r.gender === 'F').length\n    };\n  }\n\n  onSelectedRowChange(rows) {\n    console.log(rows);\n  }\n\n}\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html":
+/*!*************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html ***!
+  \*************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionTitle]=\"'Action'\"\n  (detailClicked)=\"onDetailClicked($event)\"\n  (editClicked)=\"onEditClicked($event)\"\n  (printClicked)=\"onPrintClicked($event)\"\n  (deleteClicked)=\"onDeleteClicked($event)\"\n  (switchChanged)=\"onSwitchClicked($event)\"\n  (publishClicked)=\"onPublishClicked($event)\"\n  (validateClicked)=\"onValidateClicked($event)\"\n  (exportClicked)=\"onExportClicked($event)\"\n  (importClicked)=\"onImportClicked($event)\"\n  ></uii-table>\n\n  Action clicked : {{ actionSelected }}<br>\n  Row selected : {{ rowSelected | json }}<br>\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts ***!
+  \***********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-table-with-action',\n  templateUrl: './table-with-action.component.html',\n  styleUrls: ['./table-with-action.component.scss']\n})\nexport class TableWithActionComponent implements OnInit {\n\n  rows: Array<any> = [];\n  columns: Array<any> = [];\n  actionSelected: string;\n  rowSelected: string;\n\n  constructor() { }\n\n  ngOnInit() {\n    this.columns = [\n      {\n        name: 'No',\n        prop: 'number'\n      },\n      {\n        name: 'Name',\n        prop: 'name'\n      },\n      {\n        name: 'Age',\n        prop: 'age'\n      },\n    ];\n\n    this.rows = [\n      {\n        name: 'Marta Mccoy',\n        age: 31,\n        auth: {\n          canRead: true,\n          canUpdate: true,\n          canPrint: true,\n        }\n      },\n      {\n        name: 'Fanny Holman',\n        age: 23,\n        auth: {\n          canDelete: true,\n          canActivate: true,\n        }\n      },\n      {\n        name: 'Latonya Gibson',\n        age: 22,\n        auth: {\n          canPublish: true,\n          canValidate: true,\n        }\n      },\n      {\n        name: 'Ines Wiggins',\n        age: 35,\n        auth: {\n          canExport: true,\n          canImport: true,\n        }\n      },\n    ];\n  }\n\n  onDetailClicked(row) {\n    this.actionSelected = 'detail';\n    this.rowSelected = row;\n  }\n\n  onEditClicked(row) {\n    this.actionSelected = 'edit';\n    this.rowSelected = row;\n  }\n\n  onPrintClicked(row) {\n    this.actionSelected = 'print';\n    this.rowSelected = row;\n  }\n\n  onDeleteClicked(row) {\n    this.actionSelected = 'delete';\n    this.rowSelected = row;\n  }\n\n  onSwitchClicked(row) {\n    this.actionSelected = 'switch';\n    this.rowSelected = row;\n  }\n\n  onPublishClicked(row) {\n    this.actionSelected = 'publish';\n    this.rowSelected = row;\n  }\n\n  onValidateClicked(row) {\n    this.actionSelected = 'validate';\n    this.rowSelected = row;\n  }\n\n  onExportClicked(row) {\n    this.actionSelected = 'export';\n    this.rowSelected = row;\n  }\n\n  onImportClicked(row) {\n    this.actionSelected = 'import';\n    this.rowSelected = row;\n  }\n\n}\n"
 
 /***/ }),
 
@@ -7634,6 +7916,28 @@ module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [che
 /***/ (function(module, exports) {
 
 module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-table-with-checkbox',\n  templateUrl: './table-with-checkbox.component.html',\n  styleUrls: ['./table-with-checkbox.component.scss']\n})\nexport class TableWithCheckboxComponent implements OnInit {\n\n  rows: Array<any> = [];\n  columns: Array<any> = [];\n\n  constructor() { }\n\n  ngOnInit() {\n    this.columns = [\n      {\n        name: 'No',\n        prop: 'number'\n      },\n      {\n        name: 'Name',\n        prop: 'name'\n      },\n      {\n        name: 'Age',\n        prop: 'age'\n      },\n    ];\n\n    this.rows = [\n      {\n        name: 'Marta Mccoy',\n        age: 31\n      },\n      {\n        name: 'Fanny Holman',\n        age: 23\n      },\n      {\n        name: 'Latonya Gibson',\n        age: 22\n      },\n      {\n        name: 'Ines Wiggins',\n        age: 35\n      },\n      {\n        name: 'Kathrine Irwin',\n        age: 38\n      },\n      {\n        name: 'Higgins Oneal',\n        age: 35\n      },\n      {\n        name: 'Russell Duke',\n        age: 37\n      },\n      {\n        name: 'Sara Quinn',\n        age: 23\n      },\n      {\n        name: 'Dona Patterson',\n        age: 32\n      },\n      {\n        name: 'Clarice Keith',\n        age: 22\n      },\n      {\n        name: 'Petersen Maldonado',\n        age: 20\n      },\n      {\n        name: 'Tonya Colon',\n        age: 38\n      },\n      {\n        name: 'Ann Bass',\n        age: 30\n      },\n      {\n        name: 'Cherie Pickett',\n        age: 21\n      },\n      {\n        name: 'Holland Mcdonald',\n        age: 28\n      },\n      {\n        name: 'Casey Dudley',\n        age: 23\n      },\n      {\n        name: 'Sophie Slater',\n        age: 33\n      },\n      {\n        name: 'Rhoda Kent',\n        age: 32\n      },\n      {\n        name: 'Bennett Sheppard',\n        age: 32\n      },\n      {\n        name: 'Foreman Hood',\n        age: 25\n      }\n    ];\n  }\n\n}\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html":
+/*!***************************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html ***!
+  \***************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionTitle]=\"'Action'\"></uii-table>\n\n  Action clicked : {{ actionSelected }}<br>\n  Row selected : {{ rowSelected | json }}<br>\n  \n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.ts":
+/*!*************************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.ts ***!
+  \*************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-table-with-custom-action',\n  templateUrl: './table-with-custom-action.component.html',\n  styleUrls: ['./table-with-custom-action.component.scss']\n})\nexport class TableWithCustomActionComponent implements OnInit {\n\n  rows: Array<any> = [];\n  columns: Array<any> = [];\n  actionSelected: string;\n  rowSelected: string;\n\n  constructor() { }\n\n  ngOnInit() {\n    this.columns = [\n      {\n        name: 'No',\n        prop: 'number'\n      },\n      {\n        name: 'Name',\n        prop: 'name'\n      },\n      {\n        name: 'Age',\n        prop: 'age'\n      },\n    ];\n\n    this.rows = [\n      {\n        name: 'Marta Mccoy',\n        age: 31,\n        additional_action: [\n          {\n            icon_class: 'fa fa-file',\n            tooltip: 'File',\n            click: (row) => {\n              this.actionSelected = 'file';\n              this.rowSelected = row;\n            }\n          },\n          {\n            icon_class: 'fa fa-folder',\n            tooltip: 'Archive',\n            click: (row) => {\n              this.actionSelected = 'archive';\n              this.rowSelected = row;\n            }\n          },\n        ]\n      },\n      {\n        name: 'Fanny Holman',\n        age: 23,\n        additional_action: [\n          {\n            icon_class: 'fa fa-folder',\n            tooltip: 'Archive',\n            click: (row) => {\n              this.actionSelected = 'archive';\n              this.rowSelected = row;\n            }\n          },\n        ]\n      },\n    ];\n  }\n\n}\n"
 
 /***/ }),
 
@@ -7736,6 +8040,17 @@ module.exports = "import { Component, OnInit } from '@angular/core';\nimport { T
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.html":
+/*!*******************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.html ***!
+  \*******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary\" uiiTooltip=\"Hi! I am default tooltip\">Tooltip default</button>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.ts":
 /*!*****************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.ts ***!
@@ -7791,6 +8106,17 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.html":
+/*!***************************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.html ***!
+  \***************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"panel panel-default\">\n  <div class=\"panel-body\">\n    <p class=\"text-justify\">\n      It is a long established <span uiiTooltip=\"Hello fact!\"><b>fact</b></span> that a reader will be distracted by the readable content of a page when looking at its layout.\n      The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.\n      <br>\n      <span uiiTooltip=\"many, but not all\" tooltipPlacement=\"top\"><b>Many desktop</b></span> publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.\n      <span uiiTooltip=\"various, but not all\" tooltipPlacement=\"left\"><b>Various versions</b></span> have evolved over the years, sometimes by accident, <span uiiTooltip=\"another hint\" tooltipPlacement=\"right\"><b>sometimes on purpose</b></span> (injected humour and the like)\n    </p>\n  </div>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.ts":
 /*!*************************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.ts ***!
@@ -7821,6 +8147,442 @@ module.exports = "<button class=\"btn btn-primary\" uiiTooltip=\"Hi! I am toolti
 /***/ (function(module, exports) {
 
 module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-placement-tooltip',\n  templateUrl: './placement-tooltip.component.html',\n  styleUrls: ['./placement-tooltip.component.scss']\n})\nexport class PlacementTooltipComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component.html ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-header\">\n</div>\n<div class=\"modal-body\">\n    <div class=\"modal-icon\">\n        <span class=\"fa fa-info icon-modal-info\" aria-hidden=\"true\"></span>\n        <span class=\"fa fa-check icon-modal-success\" aria-hidden=\"true\"></span>\n        <span class=\"material-icons icon-modal-warning\">priority_high</span>\n        <span class=\"fa fa-times icon-modal-danger\" aria-hidden=\"true\"></span>\n    </div>\n    <h3 class=\"modal-title\">{{ title || 'Konfirmasi' }}</h3>\n    <div class=\"modal-message\">\n        <p>{{ message }}</p>\n    </div>\n</div>\n<div class=\"modal-footer\">\n    <button type=\"button\" class=\"btn btn-default\" (click)=\"onCancel()\">{{ cancelBtnLabel || 'Tidak, batalkan' }}</button>\n    <button type=\"button\" class=\"btn btn-confirm\" (click)=\"onConfirm()\">{{ confirmBtnlabel || 'Ya, lanjutkan' }}</button>\n</div>"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component.ts":
+/*!************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component.ts ***!
+  \************************************************************************************************************/
+/*! exports provided: ConfirmdialogComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmdialogComponent", function() { return ConfirmdialogComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ConfirmdialogComponent = /** @class */ (function () {
+    function ConfirmdialogComponent(_activeModal) {
+        this._activeModal = _activeModal;
+        this.active = false;
+    }
+    ConfirmdialogComponent.prototype.ngOnInit = function () {
+        this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+    };
+    ConfirmdialogComponent.prototype.ngOnDestroy = function () {
+        this.onCancel();
+    };
+    ConfirmdialogComponent.prototype.showConfirmationModal = function (config) {
+        this.title = config.title ? config.title : '';
+        this.message = config.message ? config.message : '';
+        this.confirmBtnlabel = config.confirmBtnlabel ? config.confirmBtnlabel : '';
+        this.cancelBtnLabel = config.cancelBtnLabel ? config.cancelBtnLabel : '';
+        this.active = true;
+    };
+    ConfirmdialogComponent.prototype.onConfirm = function () {
+        this.active = false;
+        this.onClose.next(true);
+        this._activeModal.hide();
+    };
+    ConfirmdialogComponent.prototype.onCancel = function () {
+        this.active = false;
+        this.onClose.next(false);
+        this._activeModal.hide();
+    };
+    ConfirmdialogComponent.prototype.hideConfirmationModal = function () {
+        this.active = false;
+        this.onClose.next(null);
+        this._activeModal.hide();
+    };
+    ConfirmdialogComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'uii-confirmdialog',
+            template: __webpack_require__(/*! ./confirm-dialog.component.html */ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component.html")
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], ConfirmdialogComponent);
+    return ConfirmdialogComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.html ***!
+  \****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-body\">\n  <div class=\"row\">\n    <img class=\"confirm-image\" src=\"assets/images/icons/konf_icon.png\" alt=\"\" />\n  </div>\n  <div class=\"row margin-top-50 margin-bottom-20\">\n    <div class=\"modal-message\">\n      <p>{{ message }}</p>\n    </div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-default\" (click)=\"onCancel()\">\n    {{ cancelBtnLabel || \"Tidak, batalkan\" }}\n  </button>\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"onConfirm()\">\n    {{ confirmBtnlabel || \"Ya, lanjutkan\" }}\n  </button>\n</div>\n"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.scss":
+/*!****************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.scss ***!
+  \****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".confirm-image {\n  width: 100px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: -60px;\n}\n\n::ng-deep .modal-dialog.modal-alert.modal-confirm2 {\n  margin-top: 100px;\n}"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.ts":
+/*!**************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.ts ***!
+  \**************************************************************************************************************/
+/*! exports provided: Confirmdialog2Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Confirmdialog2Component", function() { return Confirmdialog2Component; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var Confirmdialog2Component = /** @class */ (function () {
+    function Confirmdialog2Component(_activeModal) {
+        this._activeModal = _activeModal;
+        this.active = false;
+    }
+    Confirmdialog2Component.prototype.ngOnInit = function () {
+        this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+    };
+    Confirmdialog2Component.prototype.ngOnDestroy = function () {
+        this.onCancel();
+    };
+    Confirmdialog2Component.prototype.showConfirmationModal = function (config) {
+        this.title = config.title ? config.title : "";
+        this.message = config.message ? config.message : "";
+        this.confirmBtnlabel = config.confirmBtnlabel ? config.confirmBtnlabel : "";
+        this.cancelBtnLabel = config.cancelBtnLabel ? config.cancelBtnLabel : "";
+        this.active = true;
+    };
+    Confirmdialog2Component.prototype.onConfirm = function () {
+        this.active = false;
+        this.onClose.next(true);
+        this._activeModal.hide();
+    };
+    Confirmdialog2Component.prototype.onCancel = function () {
+        this.active = false;
+        this.onClose.next(false);
+        this._activeModal.hide();
+    };
+    Confirmdialog2Component.prototype.hideConfirmationModal = function () {
+        this.active = false;
+        this.onClose.next(null);
+        this._activeModal.hide();
+    };
+    Confirmdialog2Component = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "uii-confirmdialog",
+            template: __webpack_require__(/*! ./confirm-dialog2.component.html */ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.html"),
+            styles: [__webpack_require__(/*! ./confirm-dialog2.component.scss */ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.scss")],
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], Confirmdialog2Component);
+    return Confirmdialog2Component;
+}());
+
+
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.html ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-body\">\n  <div class=\"row\">\n    <img class=\"confirm-image\" src=\"assets/images/icons/danger_icon.png\" alt=\"\" />\n  </div>\n  <div class=\"row margin-top-40 margin-bottom-20\">\n    <div class=\"modal-message\">\n      <h5>{{ title }}</h5>\n      <p>{{ message }}</p>\n    </div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"onConfirm()\">\n    {{ confirmBtnlabel || \"Ya, lanjutkan\" }}\n  </button>\n</div>\n"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.scss":
+/*!**************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.scss ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".confirm-image {\n  width: 100px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: -60px;\n}\n\n::ng-deep .modal-dialog.modal-alert.modal-danger2 {\n  margin-top: 100px;\n}"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.ts":
+/*!************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.ts ***!
+  \************************************************************************************************************/
+/*! exports provided: Dangerdialog2Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Dangerdialog2Component", function() { return Dangerdialog2Component; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var Dangerdialog2Component = /** @class */ (function () {
+    function Dangerdialog2Component(_activeModal) {
+        this._activeModal = _activeModal;
+        this.active = false;
+    }
+    Dangerdialog2Component.prototype.ngOnInit = function () {
+        this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+    };
+    Dangerdialog2Component.prototype.showConfirmationModal = function (config) {
+        this.title = config.title ? config.title : "";
+        this.message = config.message ? config.message : "";
+        this.confirmBtnlabel = config.confirmBtnlabel ? config.confirmBtnlabel : "";
+        this.active = true;
+    };
+    Dangerdialog2Component.prototype.onConfirm = function () {
+        this.active = false;
+        this.onClose.next(true);
+        this._activeModal.hide();
+    };
+    Dangerdialog2Component.prototype.hideConfirmationModal = function () {
+        this.active = false;
+        this.onClose.next(null);
+        this._activeModal.hide();
+    };
+    Dangerdialog2Component = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'uii-danger-dialog2',
+            template: __webpack_require__(/*! ./danger-dialog2.component.html */ "./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.html"),
+            styles: [__webpack_require__(/*! ./danger-dialog2.component.scss */ "./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.scss")]
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], Dangerdialog2Component);
+    return Dangerdialog2Component;
+}());
+
+
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.html ***!
+  \****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-body\">\n  <div class=\"row\">\n    <img\n      class=\"confirm-image\"\n      src=\"assets/images/icons/check_icon.png\"\n      alt=\"\"\n    />\n  </div>\n  <div class=\"row margin-top-40 margin-bottom-20\">\n    <div class=\"modal-message\">\n      <h5>{{ title }}</h5>\n      <p>{{ message }}</p>\n    </div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"onConfirm()\">\n    {{ confirmBtnlabel || \"Keluar\" }}\n  </button>\n</div>\n"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.scss":
+/*!****************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.scss ***!
+  \****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".confirm-image {\n  width: 100px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: -60px;\n}\n\n::ng-deep .modal-dialog.modal-alert.modal-success2 {\n  margin-top: 100px;\n}"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.ts":
+/*!**************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.ts ***!
+  \**************************************************************************************************************/
+/*! exports provided: Successdialog2Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Successdialog2Component", function() { return Successdialog2Component; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var Successdialog2Component = /** @class */ (function () {
+    function Successdialog2Component(_activeModal) {
+        this._activeModal = _activeModal;
+        this.active = false;
+    }
+    Successdialog2Component.prototype.ngOnInit = function () {
+        this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+    };
+    Successdialog2Component.prototype.showConfirmationModal = function (config) {
+        this.title = config.title ? config.title : "";
+        this.message = config.message ? config.message : "";
+        this.confirmBtnlabel = config.confirmBtnlabel ? config.confirmBtnlabel : "";
+        this.active = true;
+    };
+    Successdialog2Component.prototype.onConfirm = function () {
+        this.active = false;
+        this.onClose.next(true);
+        this._activeModal.hide();
+    };
+    Successdialog2Component.prototype.hideConfirmationModal = function () {
+        this.active = false;
+        this.onClose.next(null);
+        this._activeModal.hide();
+    };
+    Successdialog2Component = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "uii-success-dialog2",
+            template: __webpack_require__(/*! ./success-dialog2.component.html */ "./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.html"),
+            styles: [__webpack_require__(/*! ./success-dialog2.component.scss */ "./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.scss")],
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], Successdialog2Component);
+    return Successdialog2Component;
+}());
+
+
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.html ***!
+  \****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal-body\">\n  <div class=\"row\">\n    <img\n      class=\"confirm-image\"\n      src=\"assets/images/icons/warning_icon.png\"\n      alt=\"\"\n    />\n  </div>\n  <div class=\"row margin-top-40 margin-bottom-20\">\n    <div class=\"modal-message\">\n      <h5>{{ title }}</h5>\n      <p>{{ message }}</p>\n    </div>\n  </div>\n</div>\n<div class=\"modal-footer\">\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"onConfirm()\">\n    {{ confirmBtnlabel || \"Keluar\" }}\n  </button>\n</div>\n"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.scss":
+/*!****************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.scss ***!
+  \****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".confirm-image {\n  width: 100px;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: -60px;\n}\n\n::ng-deep .modal-dialog.modal-alert.modal-warning2 {\n  margin-top: 100px;\n}"
+
+/***/ }),
+
+/***/ "./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.ts":
+/*!**************************************************************************************************************!*\
+  !*** ./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.ts ***!
+  \**************************************************************************************************************/
+/*! exports provided: Warningdialog2Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Warningdialog2Component", function() { return Warningdialog2Component; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var Warningdialog2Component = /** @class */ (function () {
+    function Warningdialog2Component(_activeModal) {
+        this._activeModal = _activeModal;
+        this.active = false;
+    }
+    Warningdialog2Component.prototype.ngOnInit = function () {
+        this.onClose = new rxjs__WEBPACK_IMPORTED_MODULE_2__["Subject"]();
+    };
+    Warningdialog2Component.prototype.showConfirmationModal = function (config) {
+        this.title = config.title ? config.title : "";
+        this.message = config.message ? config.message : "";
+        this.confirmBtnlabel = config.confirmBtnlabel ? config.confirmBtnlabel : "";
+        this.active = true;
+    };
+    Warningdialog2Component.prototype.onConfirm = function () {
+        this.active = false;
+        this.onClose.next(true);
+        this._activeModal.hide();
+    };
+    Warningdialog2Component.prototype.hideConfirmationModal = function () {
+        this.active = false;
+        this.onClose.next(null);
+        this._activeModal.hide();
+    };
+    Warningdialog2Component = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "uii-warning-dialog2",
+            template: __webpack_require__(/*! ./warning-dialog2.component.html */ "./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.html"),
+            styles: [__webpack_require__(/*! ./warning-dialog2.component.scss */ "./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.scss")],
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], Warningdialog2Component);
+    return Warningdialog2Component;
+}());
+
+
 
 /***/ }),
 
@@ -7950,21 +8712,17 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-            declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-            ],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
                 _app_routing__WEBPACK_IMPORTED_MODULE_4__["AppRoutes"],
                 pilar__WEBPACK_IMPORTED_MODULE_3__["PilarModule"].forRoot(),
-                _showcase_showcase_module__WEBPACK_IMPORTED_MODULE_6__["ShowcaseModule"]
+                _showcase_showcase_module__WEBPACK_IMPORTED_MODULE_6__["ShowcaseModule"],
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]],
-            exports: [
-                pilar__WEBPACK_IMPORTED_MODULE_3__["PilarModule"]
-            ]
+            exports: [pilar__WEBPACK_IMPORTED_MODULE_3__["PilarModule"]],
         })
     ], AppModule);
     return AppModule;
@@ -8068,7 +8826,7 @@ var DemoFooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"demo-nav\" [class.scroled]=\"isTop\" [class.header-mobile]=\"_showSidebar\">\n  <div id=\"demo-humberger\" (click)=\"onHumbergerButtonClick()\">\n    <div [class.anim-plus]=\"_showSidebar\"></div>\n    <div [style.display]=\"_showSidebar ? 'none' : 'block'\"></div>\n    <div [class.anim-minus]=\"_showSidebar\"></div>\n  </div>\n  <div id=\"demo-brand\">\n    <a [routerLink]=\"['/']\">\n      <img src=\"assets/images/pilar-logo.png\" [class.scroled]=\"isTop\"/>\n    </a>\n  </div>\n  <div id=\"demo-icon\">\n    <ul>\n      <li>\n        <a href=\"https://stackoverflow.com/\" target=\"_blank\">\n          <i class=\"fa fa-stack-overflow\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>\n        <a href=\"https://gitlab-cloud.uii.ac.id/uii-gateway/frontend/lib-uii-gateway-pilar-angular\" target=\"_blank\">\n          <i class=\"fa fa-gitlab\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>v1.11.12</li>\n    </ul>\n  </div>\n</div>\n"
+module.exports = "<div class=\"demo-nav\" [class.scroled]=\"isTop\" [class.header-mobile]=\"_showSidebar\">\n  <div id=\"demo-humberger\" (click)=\"onHumbergerButtonClick()\">\n    <div [class.anim-plus]=\"_showSidebar\"></div>\n    <div [style.display]=\"_showSidebar ? 'none' : 'block'\"></div>\n    <div [class.anim-minus]=\"_showSidebar\"></div>\n  </div>\n  <div id=\"demo-brand\">\n    <a [routerLink]=\"['/']\">\n      <img src=\"assets/images/pilar-logo.png\" [class.scroled]=\"isTop\"/>\n    </a>\n  </div>\n  <div id=\"demo-icon\">\n    <ul>\n      <li>\n        <a href=\"https://stackoverflow.com/\" target=\"_blank\">\n          <i class=\"fa fa-stack-overflow\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>\n        <a href=\"https://gitlab-cloud.uii.ac.id/uii-gateway/frontend/lib-uii-gateway-pilar-angular\" target=\"_blank\">\n          <i class=\"fa fa-gitlab\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>v1.11.15</li>\n    </ul>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -9330,7 +10088,7 @@ var DocButtonComponent = /** @class */ (function () {
                 title: 'Basic',
                 desc: 'This is the most basic element in the component, you can quickly create a styled button.',
                 component: _sections_basic_button_basic_button_component__WEBPACK_IMPORTED_MODULE_3__["BasicButtonComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/basic-button/basic-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/basic-button/basic-button.component.html */ "./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/basic-button/basic-button.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.ts")
             },
             {
@@ -9338,7 +10096,7 @@ var DocButtonComponent = /** @class */ (function () {
                 title: 'Active',
                 desc: 'When the button is active.',
                 component: _sections_active_button_active_button_component__WEBPACK_IMPORTED_MODULE_5__["ActiveButtonComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/active-button/active-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/active-button/active-button.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/active-button/active-button.component.html */ "./src/app/showcase/components/doc-button/sections/active-button/active-button.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/active-button/active-button.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/active-button/active-button.component.ts")
             },
             {
@@ -9346,7 +10104,7 @@ var DocButtonComponent = /** @class */ (function () {
                 title: 'Disable',
                 desc: 'When the button is disable.',
                 component: _sections_disabled_button_disabled_button_component__WEBPACK_IMPORTED_MODULE_9__["DisabledButtonComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/disabled-button/disabled-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/disabled-button/disabled-button.component.html */ "./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/disabled-button/disabled-button.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.ts")
             },
             {
@@ -9354,7 +10112,7 @@ var DocButtonComponent = /** @class */ (function () {
                 title: 'Icon',
                 desc: 'icon button.',
                 component: _sections_icon_button_icon_button_component__WEBPACK_IMPORTED_MODULE_6__["IconButtonComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/icon-button/icon-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/icon-button/icon-button.component.html */ "./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/icon-button/icon-button.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.ts")
             },
             {
@@ -9362,7 +10120,7 @@ var DocButtonComponent = /** @class */ (function () {
                 title: 'combination icon',
                 desc: 'Combination icon and text button.',
                 component: _sections_combination_icon_button_combination_icon_button_component__WEBPACK_IMPORTED_MODULE_7__["CombinationIconButtonComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/combination-icon-button/combination-icon-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/combination-icon-button/combination-icon-button.component.html */ "./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/combination-icon-button/combination-icon-button.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.ts")
             },
             {
@@ -9370,7 +10128,7 @@ var DocButtonComponent = /** @class */ (function () {
                 title: 'Loader',
                 desc: 'Loader button.',
                 component: _sections_loader_button_loader_button_component__WEBPACK_IMPORTED_MODULE_8__["LoaderButtonComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/loader-button/loader-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/loader-button/loader-button.component.html */ "./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/loader-button/loader-button.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.ts")
             },
             {
@@ -9378,7 +10136,7 @@ var DocButtonComponent = /** @class */ (function () {
                 title: 'Size',
                 desc: 'Property to set the button size.',
                 component: _sections_size_button_size_button_component__WEBPACK_IMPORTED_MODULE_0__["SizeButtonComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/size-button/size-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/size-button/size-button.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/size-button/size-button.component.html */ "./src/app/showcase/components/doc-button/sections/size-button/size-button.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/size-button/size-button.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/size-button/size-button.component.ts")
             },
             {
@@ -9386,7 +10144,7 @@ var DocButtonComponent = /** @class */ (function () {
                 title: 'Block',
                 desc: 'Block buttom.',
                 component: _sections_block_button_block_button_component__WEBPACK_IMPORTED_MODULE_4__["BlockButtonComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/block-button/block-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/block-button/block-button.component.html */ "./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/block-button/block-button.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts")
             }
         ];
@@ -9418,6 +10176,17 @@ var DocButtonComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/showcase/components/doc-button/sections/active-button/active-button.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-button/sections/active-button/active-button.component.html ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary active\">primary</button>\n&nbsp;\n<button class=\"btn btn-secondary active\">secondary</button>\n&nbsp;\n<button class=\"btn btn-tertiary active\">tertiary</button>\n&nbsp;\n<button class=\"btn btn-success active\">success</button>\n&nbsp;\n<button class=\"btn btn-info active\">info</button>\n&nbsp;\n<button class=\"btn btn-warning active\">warning</button>\n&nbsp;\n<button class=\"btn btn-danger active\">danger</button>"
+
+/***/ }),
+
 /***/ "./src/app/showcase/components/doc-button/sections/active-button/active-button.component.ts":
 /*!**************************************************************************************************!*\
   !*** ./src/app/showcase/components/doc-button/sections/active-button/active-button.component.ts ***!
@@ -9442,13 +10211,24 @@ var ActiveButtonComponent = /** @class */ (function () {
     ActiveButtonComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-active-button',
-            template: __webpack_require__(/*! ./active-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/active-button/active-button.component.html")
+            template: __webpack_require__(/*! ./active-button.component.html */ "./src/app/showcase/components/doc-button/sections/active-button/active-button.component.html")
         })
     ], ActiveButtonComponent);
     return ActiveButtonComponent;
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.html ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary\">primary</button>\n&nbsp;\n<button class=\"btn btn-default\">default</button>\n&nbsp;\n<button class=\"btn btn-secondary\">secondary</button>\n&nbsp;\n<button class=\"btn btn-tertiary\">tertiary</button>\n&nbsp;\n<button class=\"btn btn-success\">success</button>\n&nbsp;\n<button class=\"btn btn-info\">info</button>\n&nbsp;\n<button class=\"btn btn-warning\">warning</button>\n&nbsp;\n<button class=\"btn btn-danger\">danger</button>&nbsp;"
 
 /***/ }),
 
@@ -9476,13 +10256,24 @@ var BasicButtonComponent = /** @class */ (function () {
     BasicButtonComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-basic-button',
-            template: __webpack_require__(/*! ./basic-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.html")
+            template: __webpack_require__(/*! ./basic-button.component.html */ "./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.html")
         })
     ], BasicButtonComponent);
     return BasicButtonComponent;
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary  btn-block\"> primary</button>\n<button class=\"btn btn-secondary  btn-block\"> secondary</button>\n<button class=\"btn btn-tertiary btn-block\"> tertiary</button>\n<button class=\"btn btn-success btn-block\"> success</button>\n<button class=\"btn btn-info btn-block\"> info</button>\n<button class=\"btn btn-warning btn-block\"> warning</button> \n<button class=\"btn btn-danger btn-block\"> danger</button>\n"
 
 /***/ }),
 
@@ -9510,13 +10301,24 @@ var BlockButtonComponent = /** @class */ (function () {
     BlockButtonComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-block-button',
-            template: __webpack_require__(/*! ./block-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html"),
+            template: __webpack_require__(/*! ./block-button.component.html */ "./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html"),
         })
     ], BlockButtonComponent);
     return BlockButtonComponent;
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.html":
+/*!************************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.html ***!
+  \************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary\"> \n  primary <span class=\"fa fa-plus\"></span> \n</button> &nbsp;\n\n<button class=\"btn btn-secondary\"> \n <span class=\"fa fa-caret-down\"></span> secondary\n</button> &nbsp;\n\n<button class=\"btn btn-success\">\n  success <span class=\"fa fa-arrow-circle-right\"></span>\n</button> &nbsp;\n\n<button class=\"btn btn-info\"> \n  info <span class=\"fa fa-search\"></span>\n</button> &nbsp;\n\n<button class=\"btn btn-warning\">\n  warning <span class=\"fa fa-expand\"></span>\n</button> &nbsp;\n\n<button class=\"btn btn-danger\"> \n <span class=\"fa fa-star\"></span>danger\n</button> &nbsp;"
 
 /***/ }),
 
@@ -9544,13 +10346,24 @@ var CombinationIconButtonComponent = /** @class */ (function () {
     CombinationIconButtonComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-combination-icon-button',
-            template: __webpack_require__(/*! ./combination-icon-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.html")
+            template: __webpack_require__(/*! ./combination-icon-button.component.html */ "./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.html")
         })
     ], CombinationIconButtonComponent);
     return CombinationIconButtonComponent;
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.html ***!
+  \********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary\"  >primary</button>\n&nbsp;\n<button class=\"btn btn-secondary\" disabled>secondary</button>\n&nbsp;\n<button class=\"btn btn-tertiary\" disabled>tertiary</button>\n&nbsp;\n<button class=\"btn btn-success\" disabled>success</button>\n&nbsp;\n<button class=\"btn btn-info\" disabled>info</button>\n&nbsp;\n<button class=\"btn btn-warning\" disabled>warning</button>\n&nbsp;\n<button class=\"btn btn-danger\" disabled>danger</button>\n"
 
 /***/ }),
 
@@ -9578,13 +10391,24 @@ var DisabledButtonComponent = /** @class */ (function () {
     DisabledButtonComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-disabled-button',
-            template: __webpack_require__(/*! ./disabled-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.html")
+            template: __webpack_require__(/*! ./disabled-button.component.html */ "./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.html")
         })
     ], DisabledButtonComponent);
     return DisabledButtonComponent;
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.html":
+/*!************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.html ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary\"> \n   <span class=\"fa fa-plus\"></span> \n</button>\n&nbsp;\n<button class=\"btn btn-secondary\"> \n  <span class=\"fa fa-caret-down\"></span> \n</button>\n&nbsp;\n<button class=\"btn btn-tertiary\">\n  <span class=\"fa fa-chevron-down\"></span>\n</button>\n&nbsp;\n<button class=\"btn btn-success\">\n  <span class=\"fa fa-arrow-circle-right\"></span>\n</button>\n&nbsp;\n<button class=\"btn btn-info\"> \n  <span class=\"fa fa-search\"></span>\n</button>\n&nbsp;\n<button class=\"btn btn-warning\">\n  <span class=\"fa fa-expand\"></span>\n</button>\n&nbsp;\n<button class=\"btn btn-danger\"> \n  <span class=\"fa fa-star\"></span>\n</button>"
 
 /***/ }),
 
@@ -9612,13 +10436,24 @@ var IconButtonComponent = /** @class */ (function () {
     IconButtonComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-icon-button',
-            template: __webpack_require__(/*! ./icon-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.html")
+            template: __webpack_require__(/*! ./icon-button.component.html */ "./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.html")
         })
     ], IconButtonComponent);
     return IconButtonComponent;
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.html ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n  <button class=\"btn btn-primary\" [class.loading]=\"primaryPropetyLoading\" (click)=\"primaryPropetyLoading = !primaryPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-secondary\" [class.loading]=\"secondaryPropetyLoading\" (click)=\"secondaryPropetyLoading = !secondaryPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-success\" [class.loading]=\"successPropetyLoading\" (click)=\"successPropetyLoading = !successPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-info\" [class.loading]=\"infoPropetyLoading\" (click)=\"infoPropetyLoading = !infoPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-warning\" [class.loading]=\"warningPropetyLoading\" (click)=\"warningPropetyLoading = !warningPropetyLoading;\">\n    loading\n  </button>\n  &nbsp;\n  <button class=\"btn btn-danger\" [class.loading]=\"dangerPropetyLoading\" (click)=\"dangerPropetyLoading = !dangerPropetyLoading;\">\n    loading\n  </button>\n"
 
 /***/ }),
 
@@ -9663,7 +10498,7 @@ var LoaderButtonComponent = /** @class */ (function () {
     LoaderButtonComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-loader-button',
-            template: __webpack_require__(/*! ./loader-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.html"),
+            template: __webpack_require__(/*! ./loader-button.component.html */ "./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.html"),
             styles: [__webpack_require__(/*! ./loader-button.component.scss */ "./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.scss")]
         })
     ], LoaderButtonComponent);
@@ -9671,6 +10506,17 @@ var LoaderButtonComponent = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-button/sections/size-button/size-button.component.html":
+/*!************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-button/sections/size-button/size-button.component.html ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary btn-lg\">Large</button>\n&nbsp;\n<button class=\"btn btn-primary\">Medium</button>\n&nbsp;\n<button class=\"btn btn-primary btn-sm\">Small</button>\n&nbsp;\n<button class=\"btn btn-primary btn-xs\">Extra small</button>"
 
 /***/ }),
 
@@ -9698,7 +10544,7 @@ var SizeButtonComponent = /** @class */ (function () {
     SizeButtonComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-size-button',
-            template: __webpack_require__(/*! ./size-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/size-button/size-button.component.html"),
+            template: __webpack_require__(/*! ./size-button.component.html */ "./src/app/showcase/components/doc-button/sections/size-button/size-button.component.html"),
         })
     ], SizeButtonComponent);
     return SizeButtonComponent;
@@ -9815,7 +10661,7 @@ var DocChipsComponent = /** @class */ (function () {
                 title: 'Basic',
                 desc: 'Click on options from them',
                 component: _sections_basic_chip_basic_chip_component__WEBPACK_IMPORTED_MODULE_1__["BasicChipComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/basic-chip/basic-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/basic-chip/basic-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/basic-chip/basic-chip.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.ts")
             },
             {
@@ -9823,7 +10669,7 @@ var DocChipsComponent = /** @class */ (function () {
                 title: 'Disable',
                 desc: 'Disable chip',
                 component: _sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_0__["DisableChipComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/disable-chip/disable-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/disable-chip/disable-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/disable-chip/disable-chip.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.ts")
             },
             {
@@ -9831,7 +10677,7 @@ var DocChipsComponent = /** @class */ (function () {
                 title: 'Vertical',
                 desc: 'Vertical chip',
                 component: _sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_4__["VerticalChipComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/vertical-chip/vertical-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/vertical-chip/vertical-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/vertical-chip/vertical-chip.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.ts")
             },
             {
@@ -9868,6 +10714,17 @@ var DocChipsComponent = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-chips [items]=\"dataDummy\" (sendData)=\"onGetData($event)\"></uii-chips>\n"
 
 /***/ }),
 
@@ -9935,7 +10792,7 @@ var BasicChipComponent = /** @class */ (function () {
     BasicChipComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-basic-chip',
-            template: __webpack_require__(/*! ./basic-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html"),
+            template: __webpack_require__(/*! ./basic-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html"),
             styles: [__webpack_require__(/*! ./basic-chip.component.scss */ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -9944,6 +10801,17 @@ var BasicChipComponent = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html":
+/*!*************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-chips [disabled]=\"true\" [items]=\"dataDummy\"></uii-chips>\n"
 
 /***/ }),
 
@@ -9993,7 +10861,7 @@ var DisableChipComponent = /** @class */ (function () {
     DisableChipComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-disable-chip',
-            template: __webpack_require__(/*! ./disable-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html"),
+            template: __webpack_require__(/*! ./disable-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html"),
             styles: [__webpack_require__(/*! ./disable-chip.component.scss */ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -10069,6 +10937,17 @@ var HorizontalChipComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html ***!
+  \***************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-chips [items]=\"dataDummy\"  position=\"vertical\" (sendData)=\"onGetData($event)\"></uii-chips>\n"
+
+/***/ }),
+
 /***/ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.scss":
 /*!***************************************************************************************************!*\
   !*** ./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.scss ***!
@@ -10125,7 +11004,7 @@ var VerticalChipComponent = /** @class */ (function () {
     VerticalChipComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-vertical-chip',
-            template: __webpack_require__(/*! ./vertical-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html"),
+            template: __webpack_require__(/*! ./vertical-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html"),
             styles: [__webpack_require__(/*! ./vertical-chip.component.scss */ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -12423,6 +13302,432 @@ var InformationWithTagHtmlComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/showcase/components/doc-modal/doc-modal.component.html":
+/*!************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-modal/doc-modal.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ugw-component-header\n  [title]=\"title\"\n  [description]=\"description\"\n></ugw-component-header>\n<ugw-section\n  [sections]=\"modalSection\"\n  [apiDocSections]=\"apiDocSection\"\n></ugw-section>\n"
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-modal/doc-modal.component.scss":
+/*!************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-modal/doc-modal.component.scss ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-modal/doc-modal.component.ts":
+/*!**********************************************************************!*\
+  !*** ./src/app/showcase/components/doc-modal/doc-modal.component.ts ***!
+  \**********************************************************************/
+/*! exports provided: DocModalComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocModalComponent", function() { return DocModalComponent; });
+/* harmony import */ var _sections_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sections/confirm-dialog/confirm-dialog.component */ "./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.ts");
+/* harmony import */ var _sections_basic_modal_basic_modal_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sections/basic-modal/basic-modal.component */ "./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _showcase_right_nav_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../showcase-right-nav.service */ "./src/app/showcase/showcase-right-nav.service.ts");
+/* harmony import */ var _sections_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/confirm-dialog2/confirm-dialog2.component */ "./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var DocModalComponent = /** @class */ (function () {
+    function DocModalComponent(rightMenuSvc) {
+        this.rightMenuSvc = rightMenuSvc;
+    }
+    DocModalComponent.prototype.ngOnInit = function () {
+        this.initializeMetaData();
+        this.initializeApiDocumentation();
+        this.initializeSection();
+        this.setRightMenu();
+    };
+    DocModalComponent.prototype.initializeMetaData = function () {
+        this.title = "Modal";
+        this.description =
+            "Use these shorthand utilities to display floating modal components to add dialogs to your site for lightboxes, user notifications, or completely custom content";
+    };
+    DocModalComponent.prototype.initializeApiDocumentation = function () {
+        this.apiDocSection = {
+            title: this.title.toLowerCase(),
+            selector: "pil-infobox",
+            properties: [
+                {
+                    name: "title",
+                    type: "string",
+                    default: "Title",
+                    description: "Set your modal title.",
+                },
+                {
+                    name: "message",
+                    type: "string",
+                    default: "Subtitle",
+                    description: "Set your modal message.",
+                },
+                {
+                    name: "cancleBtnLabel",
+                    type: "string",
+                    default: "Default",
+                    description: "Set your text on cancel button.",
+                },
+                {
+                    name: "confirmBtnLabel",
+                    type: "string",
+                    default: "",
+                    description: "Set your text on confirm button.",
+                },
+            ],
+            events: [
+                {
+                    name: "none",
+                    type: "none",
+                    default: "none",
+                    description: "",
+                },
+            ],
+        };
+    };
+    DocModalComponent.prototype.initializeSection = function () {
+        this.modalSection = [
+            {
+                anchor: "basic",
+                title: "Basic",
+                desc: "This is a basic modal implementation",
+                component: _sections_basic_modal_basic_modal_component__WEBPACK_IMPORTED_MODULE_1__["BasicModalComponent"],
+                markup: __webpack_require__(/*! !raw-loader!./sections/basic-modal/basic-modal.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.html"),
+                typescript: __webpack_require__(/*! !raw-loader!./sections/basic-modal/basic-modal.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.ts"),
+            },
+            {
+                anchor: "confirm",
+                title: "Confirm",
+                desc: "This is a confirm modal dialog implementation",
+                component: _sections_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_0__["ConfirmDialogComponent"],
+                markup: __webpack_require__(/*! !raw-loader!./sections/confirm-dialog/confirm-dialog.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.html"),
+                typescript: __webpack_require__(/*! !raw-loader!./sections/confirm-dialog/confirm-dialog.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.ts"),
+            },
+            {
+                anchor: "confirm2",
+                title: "Confirm 2",
+                desc: "This is a confirm modal 2nd design implementation",
+                component: _sections_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmDialog2Component"],
+                markup: __webpack_require__(/*! !raw-loader!./sections/confirm-dialog2/confirm-dialog2.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.html"),
+                typescript: __webpack_require__(/*! !raw-loader!./sections/confirm-dialog2/confirm-dialog2.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.ts"),
+            },
+        ];
+    };
+    DocModalComponent.prototype.setRightMenu = function () {
+        var apiDocs = [
+            {
+                anchor: "modal-api-docs",
+                title: "API documentation",
+                desc: null,
+                component: null,
+                markup: null,
+                typescript: null,
+            },
+        ];
+        var customRightMenu = this.modalSection.concat(apiDocs);
+        this.rightMenuSvc.setRightMenu(customRightMenu);
+    };
+    DocModalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: "ugw-doc-modal",
+            template: __webpack_require__(/*! ./doc-modal.component.html */ "./src/app/showcase/components/doc-modal/doc-modal.component.html"),
+            styles: [__webpack_require__(/*! ./doc-modal.component.scss */ "./src/app/showcase/components/doc-modal/doc-modal.component.scss")],
+        }),
+        __metadata("design:paramtypes", [_showcase_right_nav_service__WEBPACK_IMPORTED_MODULE_3__["ShowcaseRightNavService"]])
+    ], DocModalComponent);
+    return DocModalComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.scss":
+/*!***********************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.scss ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.ts":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.ts ***!
+  \*********************************************************************************************/
+/*! exports provided: BasicModalComponent, BasicModalExampleComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BasicModalComponent", function() { return BasicModalComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BasicModalExampleComponent", function() { return BasicModalExampleComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var BasicModalComponent = /** @class */ (function () {
+    function BasicModalComponent(modalSvc) {
+        this.modalSvc = modalSvc;
+    }
+    BasicModalComponent.prototype.ngOnInit = function () { };
+    BasicModalComponent.prototype.displayModal = function () {
+        var initialState = {};
+        this.modalRef = this.modalSvc.show(BasicModalExampleComponent, {
+            initialState: initialState,
+            class: "modal-md",
+        });
+    };
+    BasicModalComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "ugw-basic-modal",
+            template: __webpack_require__(/*! ./basic-modal.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.html"),
+            styles: [__webpack_require__(/*! ./basic-modal.component.scss */ "./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.scss")],
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap__WEBPACK_IMPORTED_MODULE_1__["BsModalService"]])
+    ], BasicModalComponent);
+    return BasicModalComponent;
+}());
+
+var BasicModalExampleComponent = /** @class */ (function () {
+    function BasicModalExampleComponent(activeModal) {
+        this.activeModal = activeModal;
+    }
+    BasicModalExampleComponent.prototype.ngOnInit = function () { };
+    BasicModalExampleComponent.prototype.onCloseModal = function () {
+        this.activeModal.hide();
+    };
+    BasicModalExampleComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "ugw-basic-modal-example",
+            template: "\n    <div class=\"modal-header\">\n      <button\n        type=\"button\"\n        class=\"close\"\n        aria-label=\"Close\"\n        (click)=\"activeModal.hide()\"\n      >\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n      <h5 class=\"\">Modal Title</h5>\n    </div>\n    <div class=\"modal-body\">Modal Content</div>\n    <div class=\"modal-footer\">\n      <div class=\"button-action-center\">\n        <button\n          (click)=\"onCloseModal()\"\n          type=\"button\"\n          class=\"btn btn-default\"\n          style=\"margin-bottom: 0px\"\n        >\n          Close\n        </button>\n      </div>\n    </div>\n  ",
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap__WEBPACK_IMPORTED_MODULE_1__["BsModalRef"]])
+    ], BasicModalExampleComponent);
+    return BasicModalExampleComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.scss":
+/*!*****************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.scss ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.ts":
+/*!***************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.ts ***!
+  \***************************************************************************************************/
+/*! exports provided: ConfirmDialogComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmDialogComponent", function() { return ConfirmDialogComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
+/* harmony import */ var projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ConfirmDialogComponent = /** @class */ (function () {
+    function ConfirmDialogComponent(modalSvc) {
+        this.modalSvc = modalSvc;
+    }
+    ConfirmDialogComponent.prototype.ngOnInit = function () { };
+    ConfirmDialogComponent.prototype.displayModal = function () {
+        var modalDialog = this.modalSvc.show(projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_2__["ConfirmdialogComponent"], {
+            class: "modal-alert modal-warning modal-content",
+        });
+        modalDialog.content.showConfirmationModal({
+            title: "Save",
+            message: "Are you sure to confirm this action?",
+            cancelBtnLabel: "No",
+            confirmBtnlabel: "Yes",
+        });
+        modalDialog.content.onClose.subscribe(function (result) { });
+    };
+    ConfirmDialogComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "ugw-confirm-dialog",
+            template: __webpack_require__(/*! ./confirm-dialog.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.html"),
+            styles: [__webpack_require__(/*! ./confirm-dialog.component.scss */ "./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.scss")],
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap__WEBPACK_IMPORTED_MODULE_1__["BsModalService"]])
+    ], ConfirmDialogComponent);
+    return ConfirmDialogComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.scss":
+/*!*******************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.scss ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.ts":
+/*!*****************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.ts ***!
+  \*****************************************************************************************************/
+/*! exports provided: ConfirmDialog2Component */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmDialog2Component", function() { return ConfirmDialog2Component; });
+/* harmony import */ var _projects_uiigateway_pilar_src_lib_components_utilities_danger_dialog2_danger_dialog2_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../../../../../../../projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ngx_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ngx-bootstrap */ "./node_modules/ngx-bootstrap/esm5/ngx-bootstrap.js");
+/* harmony import */ var projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.ts");
+/* harmony import */ var projects_uiigateway_pilar_src_lib_components_utilities_warning_dialog2_warning_dialog2_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.ts");
+/* harmony import */ var projects_uiigateway_pilar_src_lib_components_utilities_success_dialog2_success_dialog2_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var ConfirmDialog2Component = /** @class */ (function () {
+    function ConfirmDialog2Component(modalSvc) {
+        this.modalSvc = modalSvc;
+    }
+    ConfirmDialog2Component.prototype.ngOnInit = function () { };
+    ConfirmDialog2Component.prototype.displaySuccessDialog = function () {
+        var modalDialog = this.modalSvc.show(projects_uiigateway_pilar_src_lib_components_utilities_success_dialog2_success_dialog2_component__WEBPACK_IMPORTED_MODULE_5__["Successdialog2Component"], {
+            class: "modal-alert modal-success2 modal-content",
+        });
+        modalDialog.content.showConfirmationModal({
+            title: "File Successfully Uploaded",
+            message: "Please check status menu to view submission detail updates",
+            confirmBtnlabel: "OK",
+        });
+        modalDialog.content.onClose.subscribe(function (result) {
+        });
+    };
+    ConfirmDialog2Component.prototype.displayConfirmDialog = function () {
+        var modalDialog = this.modalSvc.show(projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_3__["Confirmdialog2Component"], {
+            class: "modal-alert modal-confirm2 modal-content",
+        });
+        modalDialog.content.showConfirmationModal({
+            title: "Save",
+            message: "Are you sure to confirm this action?",
+            cancelBtnLabel: "No",
+            confirmBtnlabel: "Yes",
+        });
+        modalDialog.content.onClose.subscribe(function (result) {
+        });
+    };
+    ConfirmDialog2Component.prototype.displayWarningDialog = function () {
+        var modalDialog = this.modalSvc.show(projects_uiigateway_pilar_src_lib_components_utilities_warning_dialog2_warning_dialog2_component__WEBPACK_IMPORTED_MODULE_4__["Warningdialog2Component"], {
+            class: "modal-alert modal-warning2 modal-content",
+        });
+        modalDialog.content.showConfirmationModal({
+            title: "An Error Occured",
+            message: "Please check your input again",
+            confirmBtnlabel: "OK",
+        });
+        modalDialog.content.onClose.subscribe(function (result) {
+            if (result === true) {
+            }
+            else {
+            }
+        });
+    };
+    ConfirmDialog2Component.prototype.displayDangerDialog = function () {
+        var modalDialog = this.modalSvc.show(_projects_uiigateway_pilar_src_lib_components_utilities_danger_dialog2_danger_dialog2_component__WEBPACK_IMPORTED_MODULE_0__["Dangerdialog2Component"], {
+            class: "modal-alert modal-danger2 modal-content",
+        });
+        modalDialog.content.showConfirmationModal({
+            title: "This Action is Forbidden",
+            message: "Please contact your administrator for further guidance",
+            confirmBtnlabel: "OK",
+        });
+        modalDialog.content.onClose.subscribe(function (result) {
+        });
+    };
+    ConfirmDialog2Component = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: "ugw-confirm-dialog",
+            template: __webpack_require__(/*! ./confirm-dialog2.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.html"),
+            styles: [__webpack_require__(/*! ./confirm-dialog2.component.scss */ "./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.scss")],
+        }),
+        __metadata("design:paramtypes", [ngx_bootstrap__WEBPACK_IMPORTED_MODULE_2__["BsModalService"]])
+    ], ConfirmDialog2Component);
+    return ConfirmDialog2Component;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/showcase/components/doc-pagination/doc-pagination.component.html":
 /*!**********************************************************************************!*\
   !*** ./src/app/showcase/components/doc-pagination/doc-pagination.component.html ***!
@@ -13352,11 +14657,14 @@ module.exports = ""
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocTableComponent", function() { return DocTableComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sections/basic-table/basic-table.component */ "./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.ts");
-/* harmony import */ var _showcase_right_nav_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../showcase-right-nav.service */ "./src/app/showcase/showcase-right-nav.service.ts");
-/* harmony import */ var _sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sections/table-with-checkbox/table-with-checkbox.component */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts");
-/* harmony import */ var _sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/column-definitions/column-definitions-table.component */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts");
+/* harmony import */ var _sections_table_with_custom_action_table_with_custom_action_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sections/table-with-custom-action/table-with-custom-action.component */ "./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.ts");
+/* harmony import */ var _sections_table_with_action_table_with_action_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sections/table-with-action/table-with-action.component */ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts");
+/* harmony import */ var _sections_summary_row_table_summary_row_table_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sections/summary-row-table/summary-row-table.component */ "./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/basic-table/basic-table.component */ "./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.ts");
+/* harmony import */ var _showcase_right_nav_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../showcase-right-nav.service */ "./src/app/showcase/showcase-right-nav.service.ts");
+/* harmony import */ var _sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/table-with-checkbox/table-with-checkbox.component */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts");
+/* harmony import */ var _sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/column-definitions/column-definitions-table.component */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -13366,6 +14674,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
+
 
 
 
@@ -13425,7 +14736,7 @@ var DocTableComponent = /** @class */ (function () {
                 anchor: 'basic',
                 title: 'Basic',
                 desc: 'This is a basic table implementation',
-                component: _sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_1__["BasicTableComponent"],
+                component: _sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_4__["BasicTableComponent"],
                 markup: __webpack_require__(/*! !raw-loader!./sections/basic-table/basic-table.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/basic-table/basic-table.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.ts")
             },
@@ -13433,17 +14744,41 @@ var DocTableComponent = /** @class */ (function () {
                 anchor: 'column-definitions',
                 title: 'Column Definitions',
                 desc: 'Available column definitions of the table.',
-                component: _sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_4__["ColumnDefinitionsTableComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/column-definitions/column-definitions-table.component.html */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html"),
+                component: _sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_7__["ColumnDefinitionsTableComponent"],
+                markup: __webpack_require__(/*! !raw-loader!./sections/column-definitions/column-definitions-table.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/column-definitions/column-definitions-table.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts")
+            },
+            {
+                anchor: 'table-with-action',
+                title: 'Table with action',
+                desc: 'Display the action in the table.',
+                component: _sections_table_with_action_table_with_action_component__WEBPACK_IMPORTED_MODULE_1__["TableWithActionComponent"],
+                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-action/table-with-action.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html"),
+                typescript: __webpack_require__(/*! !raw-loader!./sections/table-with-action/table-with-action.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts")
+            },
+            {
+                anchor: 'table-with-custom-action',
+                title: 'Table with custom action',
+                desc: 'Display the custom action in the table.',
+                component: _sections_table_with_custom_action_table_with_custom_action_component__WEBPACK_IMPORTED_MODULE_0__["TableWithCustomActionComponent"],
+                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-custom-action/table-with-custom-action.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html"),
+                typescript: __webpack_require__(/*! !raw-loader!./sections/table-with-custom-action/table-with-custom-action.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.ts")
             },
             {
                 anchor: 'table-with-checkbox',
                 title: 'Table with checkbox',
                 desc: 'Display the checkbox in the table.',
-                component: _sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_3__["TableWithCheckboxComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-checkbox/table-with-checkbox.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html"),
+                component: _sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_6__["TableWithCheckboxComponent"],
+                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-checkbox/table-with-checkbox.component.html */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/table-with-checkbox/table-with-checkbox.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts")
+            },
+            {
+                anchor: 'table-with-summary',
+                title: 'Table with summary',
+                desc: 'Summary rows at the bottom of the table.',
+                component: _sections_summary_row_table_summary_row_table_component__WEBPACK_IMPORTED_MODULE_2__["SummaryRowTableComponent"],
+                markup: __webpack_require__(/*! !raw-loader!./sections/summary-row-table/summary-row-table.component.html */ "./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.html"),
+                typescript: __webpack_require__(/*! !raw-loader!./sections/summary-row-table/summary-row-table.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.ts")
             },
         ];
     };
@@ -13460,12 +14795,12 @@ var DocTableComponent = /** @class */ (function () {
         this.rightMenuSvc.setRightMenu(customRightMenu);
     };
     DocTableComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
             selector: 'ugw-doc-infobox',
             template: __webpack_require__(/*! ./doc-table.component.html */ "./src/app/showcase/components/doc-table/doc-table.component.html"),
             styles: [__webpack_require__(/*! ./doc-table.component.scss */ "./src/app/showcase/components/doc-table/doc-table.component.scss")]
         }),
-        __metadata("design:paramtypes", [_showcase_right_nav_service__WEBPACK_IMPORTED_MODULE_2__["ShowcaseRightNavService"]])
+        __metadata("design:paramtypes", [_showcase_right_nav_service__WEBPACK_IMPORTED_MODULE_5__["ShowcaseRightNavService"]])
     ], DocTableComponent);
     return DocTableComponent;
 }());
@@ -13621,17 +14956,6 @@ var BasicTableComponent = /** @class */ (function () {
 }());
 
 
-
-/***/ }),
-
-/***/ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html":
-/*!*******************************************************************************************************************!*\
-  !*** ./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html ***!
-  \*******************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionTitle]=\"'Action'\"></uii-table>\n"
 
 /***/ }),
 
@@ -13850,7 +15174,7 @@ var ColumnDefinitionsTableComponent = /** @class */ (function () {
     ColumnDefinitionsTableComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-table-with-checkbox',
-            template: __webpack_require__(/*! ./column-definitions-table.component.html */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html"),
+            template: __webpack_require__(/*! ./column-definitions-table.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.html"),
             styles: [__webpack_require__(/*! ./column-definitions-table.component.scss */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -13859,6 +15183,354 @@ var ColumnDefinitionsTableComponent = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.html":
+/*!***********************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.html ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionColumn]=\"false\"\n  [showSummary]=\"true\"\n  [summaryRows]=\"summaryRows\"\n  (rowsChanged)=\"onRowsChanged($event)\"\n  (selectedRow)=\"onSelectedRowChange($event)\"\n  ></uii-table>\n"
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.scss":
+/*!***********************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.scss ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.ts":
+/*!*********************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.ts ***!
+  \*********************************************************************************************************/
+/*! exports provided: SummaryRowTableComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SummaryRowTableComponent", function() { return SummaryRowTableComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SummaryRowTableComponent = /** @class */ (function () {
+    function SummaryRowTableComponent() {
+        this.rows = [];
+        this.summaryRows = {
+            salary: 0,
+            gender: ''
+        };
+        this.columns = [];
+    }
+    SummaryRowTableComponent.prototype.ngOnInit = function () {
+        this.columns = [
+            {
+                name: 'No',
+                prop: 'number'
+            },
+            {
+                name: 'Name',
+                prop: 'name'
+            },
+            {
+                name: 'Salary',
+                prop: 'salary'
+            },
+            {
+                name: 'Gender',
+                prop: 'gender'
+            },
+        ];
+        this.rows = [
+            {
+                name: 'Marta Mccoy',
+                salary: 31000,
+                gender: 'M'
+            },
+            {
+                name: 'Fanny Holman',
+                salary: 23000,
+                gender: 'F'
+            },
+            {
+                name: 'Latonya Gibson',
+                salary: 22000,
+                gender: 'F'
+            },
+            {
+                name: 'Ines Wiggins',
+                salary: 35000,
+                gender: 'F'
+            },
+            {
+                name: 'Kathrine Irwin',
+                salary: 38000,
+                gender: 'F'
+            },
+            {
+                name: 'Higgins Oneal',
+                salary: 3500,
+                gender: 'M'
+            },
+            {
+                name: 'Russell Duke',
+                salary: 370000,
+                gender: 'M'
+            },
+            {
+                name: 'Sara Quinn',
+                salary: 23000,
+                gender: 'F'
+            },
+            {
+                name: 'Dona Patterson',
+                salary: 32000,
+                gender: 'F'
+            },
+            {
+                name: 'Clarice Keith',
+                salary: 220,
+                gender: 'F'
+            },
+            {
+                name: 'Petersen Maldonado',
+                salary: 200000,
+                gender: 'M'
+            },
+            {
+                name: 'Tonya Colon',
+                salary: 3800,
+                gender: 'M'
+            },
+            {
+                name: 'Ann Bass',
+                salary: 3000,
+                gender: 'F'
+            },
+            {
+                name: 'Cherie Pickett',
+                salary: 2100,
+                gender: 'F'
+            },
+            {
+                name: 'Holland Mcdonald',
+                salary: 28000,
+                gender: 'M'
+            },
+            {
+                name: 'Casey Dudley',
+                salary: 230,
+                gender: 'F'
+            },
+            {
+                name: 'Sophie Slater',
+                salary: 330,
+                gender: 'F'
+            },
+            {
+                name: 'Rhoda Kent',
+                salary: 3200,
+                gender: 'M'
+            },
+            {
+                name: 'Bennett Sheppard',
+                salary: 3200,
+                gender: 'M'
+            },
+            {
+                name: 'Foreman Hood',
+                salary: 250,
+                gender: 'M'
+            }
+        ];
+    };
+    SummaryRowTableComponent.prototype.onRowsChanged = function (rows) {
+        this.summaryRows = {
+            salary: rows.reduce((function (total, number) { return total + number.salary; }), 0),
+            gender: 'Male: ' + rows.filter(function (r) { return r.gender === 'M'; }).length + ', Female: ' + rows.filter(function (r) { return r.gender === 'F'; }).length
+        };
+    };
+    SummaryRowTableComponent.prototype.onSelectedRowChange = function (rows) {
+        console.log(rows);
+    };
+    SummaryRowTableComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'ugw-summary-row-table',
+            template: __webpack_require__(/*! ./summary-row-table.component.html */ "./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.html"),
+            styles: [__webpack_require__(/*! ./summary-row-table.component.scss */ "./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SummaryRowTableComponent);
+    return SummaryRowTableComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.scss":
+/*!***********************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.scss ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts":
+/*!*********************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts ***!
+  \*********************************************************************************************************/
+/*! exports provided: TableWithActionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableWithActionComponent", function() { return TableWithActionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TableWithActionComponent = /** @class */ (function () {
+    function TableWithActionComponent() {
+        this.rows = [];
+        this.columns = [];
+    }
+    TableWithActionComponent.prototype.ngOnInit = function () {
+        this.columns = [
+            {
+                name: 'No',
+                prop: 'number'
+            },
+            {
+                name: 'Name',
+                prop: 'name'
+            },
+            {
+                name: 'Age',
+                prop: 'age'
+            },
+        ];
+        this.rows = [
+            {
+                name: 'Marta Mccoy',
+                age: 31,
+                auth: {
+                    canRead: true,
+                    canUpdate: true,
+                    canPrint: true,
+                }
+            },
+            {
+                name: 'Fanny Holman',
+                age: 23,
+                auth: {
+                    canDelete: true,
+                    canActivate: true,
+                }
+            },
+            {
+                name: 'Latonya Gibson',
+                age: 22,
+                auth: {
+                    canPublish: true,
+                    canValidate: true,
+                }
+            },
+            {
+                name: 'Ines Wiggins',
+                age: 35,
+                auth: {
+                    canExport: true,
+                    canImport: true,
+                }
+            },
+        ];
+    };
+    TableWithActionComponent.prototype.onDetailClicked = function (row) {
+        this.actionSelected = 'detail';
+        this.rowSelected = row;
+    };
+    TableWithActionComponent.prototype.onEditClicked = function (row) {
+        this.actionSelected = 'edit';
+        this.rowSelected = row;
+    };
+    TableWithActionComponent.prototype.onPrintClicked = function (row) {
+        this.actionSelected = 'print';
+        this.rowSelected = row;
+    };
+    TableWithActionComponent.prototype.onDeleteClicked = function (row) {
+        this.actionSelected = 'delete';
+        this.rowSelected = row;
+    };
+    TableWithActionComponent.prototype.onSwitchClicked = function (row) {
+        this.actionSelected = 'switch';
+        this.rowSelected = row;
+    };
+    TableWithActionComponent.prototype.onPublishClicked = function (row) {
+        this.actionSelected = 'publish';
+        this.rowSelected = row;
+    };
+    TableWithActionComponent.prototype.onValidateClicked = function (row) {
+        this.actionSelected = 'validate';
+        this.rowSelected = row;
+    };
+    TableWithActionComponent.prototype.onExportClicked = function (row) {
+        this.actionSelected = 'export';
+        this.rowSelected = row;
+    };
+    TableWithActionComponent.prototype.onImportClicked = function (row) {
+        this.actionSelected = 'import';
+        this.rowSelected = row;
+    };
+    TableWithActionComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'ugw-table-with-action',
+            template: __webpack_require__(/*! ./table-with-action.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html"),
+            styles: [__webpack_require__(/*! ./table-with-action.component.scss */ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TableWithActionComponent);
+    return TableWithActionComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [checkboxColumn]=\"true\"\n  [actionTitle]=\"'Action'\"></uii-table>\n"
 
 /***/ }),
 
@@ -14000,12 +15672,119 @@ var TableWithCheckboxComponent = /** @class */ (function () {
     TableWithCheckboxComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-table-with-checkbox',
-            template: __webpack_require__(/*! ./table-with-checkbox.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html"),
+            template: __webpack_require__(/*! ./table-with-checkbox.component.html */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.html"),
             styles: [__webpack_require__(/*! ./table-with-checkbox.component.scss */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], TableWithCheckboxComponent);
     return TableWithCheckboxComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.scss":
+/*!*************************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.scss ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.ts":
+/*!***********************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.ts ***!
+  \***********************************************************************************************************************/
+/*! exports provided: TableWithCustomActionComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableWithCustomActionComponent", function() { return TableWithCustomActionComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TableWithCustomActionComponent = /** @class */ (function () {
+    function TableWithCustomActionComponent() {
+        this.rows = [];
+        this.columns = [];
+    }
+    TableWithCustomActionComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.columns = [
+            {
+                name: 'No',
+                prop: 'number'
+            },
+            {
+                name: 'Name',
+                prop: 'name'
+            },
+            {
+                name: 'Age',
+                prop: 'age'
+            },
+        ];
+        this.rows = [
+            {
+                name: 'Marta Mccoy',
+                age: 31,
+                additional_action: [
+                    {
+                        icon_class: 'fa fa-file',
+                        tooltip: 'File',
+                        click: function (row) {
+                            _this.actionSelected = 'file';
+                            _this.rowSelected = row;
+                        }
+                    },
+                    {
+                        icon_class: 'fa fa-folder',
+                        tooltip: 'Archive',
+                        click: function (row) {
+                            _this.actionSelected = 'archive';
+                            _this.rowSelected = row;
+                        }
+                    },
+                ]
+            },
+            {
+                name: 'Fanny Holman',
+                age: 23,
+                additional_action: [
+                    {
+                        icon_class: 'fa fa-folder',
+                        tooltip: 'Archive',
+                        click: function (row) {
+                            _this.actionSelected = 'archive';
+                            _this.rowSelected = row;
+                        }
+                    },
+                ]
+            },
+        ];
+    };
+    TableWithCustomActionComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'ugw-table-with-custom-action',
+            template: __webpack_require__(/*! ./table-with-custom-action.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html"),
+            styles: [__webpack_require__(/*! ./table-with-custom-action.component.scss */ "./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TableWithCustomActionComponent);
+    return TableWithCustomActionComponent;
 }());
 
 
@@ -15058,7 +16837,7 @@ var DocTooltipComponent = /** @class */ (function () {
                 title: 'Basic',
                 desc: 'This is a basic tooltip implementation',
                 component: _sections_basic_tooltip_basic_tooltip_component__WEBPACK_IMPORTED_MODULE_2__["BasicTooltipComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/basic-tooltip/basic-tooltip.component.html */ "./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/basic-tooltip/basic-tooltip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/basic-tooltip/basic-tooltip.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.ts")
             },
             {
@@ -15074,7 +16853,7 @@ var DocTooltipComponent = /** @class */ (function () {
                 title: 'Tooltips in Paragraph',
                 desc: 'You can use many tooltips in any paragraph. To differ set the text which having tooltip, you can use <span></span> tags each.',
                 component: _sections_paragraph_tooltip_paragraph_tooltip_component__WEBPACK_IMPORTED_MODULE_4__["ParagraphTooltipComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/paragraph-tooltip/paragraph-tooltip.component.html */ "./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/paragraph-tooltip/paragraph-tooltip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/paragraph-tooltip/paragraph-tooltip.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.ts")
             },
             {
@@ -15122,17 +16901,6 @@ var DocTooltipComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.html":
-/*!*****************************************************************************************************!*\
-  !*** ./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.html ***!
-  \*****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button class=\"btn btn-primary\" uiiTooltip=\"Hi! I am default tooltip\">Tooltip default</button>\n"
-
-/***/ }),
-
 /***/ "./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.scss":
 /*!*****************************************************************************************************!*\
   !*** ./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.scss ***!
@@ -15173,7 +16941,7 @@ var BasicTooltipComponent = /** @class */ (function () {
     BasicTooltipComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-basic-tooltip',
-            template: __webpack_require__(/*! ./basic-tooltip.component.html */ "./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.html"),
+            template: __webpack_require__(/*! ./basic-tooltip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.html"),
             styles: [__webpack_require__(/*! ./basic-tooltip.component.scss */ "./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -15289,17 +17057,6 @@ var DynamicHtmlTooltipComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.html":
-/*!*************************************************************************************************************!*\
-  !*** ./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.html ***!
-  \*************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"panel panel-default\">\n  <div class=\"panel-body\">\n    <p class=\"text-justify\">\n      It is a long established <span uiiTooltip=\"Hello fact!\"><b>fact</b></span> that a reader will be distracted by the readable content of a page when looking at its layout.\n      The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.\n      <br>\n      <span uiiTooltip=\"many, but not all\" tooltipPlacement=\"top\"><b>Many desktop</b></span> publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.\n      <span uiiTooltip=\"various, but not all\" tooltipPlacement=\"left\"><b>Various versions</b></span> have evolved over the years, sometimes by accident, <span uiiTooltip=\"another hint\" tooltipPlacement=\"right\"><b>sometimes on purpose</b></span> (injected humour and the like)\n    </p>\n  </div>\n</div>\n"
-
-/***/ }),
-
 /***/ "./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.scss":
 /*!*************************************************************************************************************!*\
   !*** ./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.scss ***!
@@ -15340,7 +17097,7 @@ var ParagraphTooltipComponent = /** @class */ (function () {
     ParagraphTooltipComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-paragraph-tooltip',
-            template: __webpack_require__(/*! ./paragraph-tooltip.component.html */ "./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.html"),
+            template: __webpack_require__(/*! ./paragraph-tooltip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.html"),
             styles: [__webpack_require__(/*! ./paragraph-tooltip.component.scss */ "./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -16000,119 +17757,132 @@ var ShowcaseDirective = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hljsLanguages", function() { return hljsLanguages; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowcaseModule", function() { return ShowcaseModule; });
-/* harmony import */ var _components_doc_information_sections_information_with_tag_html_information_with_tag_html_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/doc-information/sections/information-with-tag-html/information-with-tag-html.component */ "./src/app/showcase/components/doc-information/sections/information-with-tag-html/information-with-tag-html.component.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var pilar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! pilar */ "./dist/uiigateway/pilar/fesm5/pilar.js");
-/* harmony import */ var ngx_highlightjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-highlightjs */ "./node_modules/ngx-highlightjs/fesm5/ngx-highlightjs.js");
-/* harmony import */ var highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! highlight.js/lib/languages/typescript */ "./node_modules/highlight.js/lib/languages/typescript.js");
-/* harmony import */ var highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! highlight.js/lib/languages/xml */ "./node_modules/highlight.js/lib/languages/xml.js");
-/* harmony import */ var highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! highlight.js/lib/languages/scss */ "./node_modules/highlight.js/lib/languages/scss.js");
-/* harmony import */ var highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _showcase_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./showcase.component */ "./src/app/showcase/showcase.component.ts");
-/* harmony import */ var _showcase_routing__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./showcase.routing */ "./src/app/showcase/showcase.routing.ts");
-/* harmony import */ var _showcase_directive__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./showcase.directive */ "./src/app/showcase/showcase.directive.ts");
-/* harmony import */ var _components_doc_image_upload_sections_hide_delete_image_upload_hide_delete_image_upload_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/doc-image-upload/sections/hide-delete-image-upload/hide-delete-image-upload.component */ "./src/app/showcase/components/doc-image-upload/sections/hide-delete-image-upload/hide-delete-image-upload.component.ts");
-/* harmony import */ var _components_installation_installation_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/installation/installation.component */ "./src/app/showcase/components/installation/installation.component.ts");
-/* harmony import */ var _common_right_sidebar_right_sidebar_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./common/right-sidebar/right-sidebar.component */ "./src/app/showcase/common/right-sidebar/right-sidebar.component.ts");
-/* harmony import */ var _components_doc_pagination_doc_pagination_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/doc-pagination/doc-pagination.component */ "./src/app/showcase/components/doc-pagination/doc-pagination.component.ts");
-/* harmony import */ var _components_get_started_get_started_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/get-started/get-started.component */ "./src/app/showcase/components/get-started/get-started.component.ts");
-/* harmony import */ var _templates_code_section_code_section_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./templates/code-section/code-section.component */ "./src/app/showcase/templates/code-section/code-section.component.ts");
-/* harmony import */ var _templates_docs_api_docs_api_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./templates/docs-api/docs-api.component */ "./src/app/showcase/templates/docs-api/docs-api.component.ts");
-/* harmony import */ var _templates_docs_section_docs_section_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./templates/docs-section/docs-section.component */ "./src/app/showcase/templates/docs-section/docs-section.component.ts");
-/* harmony import */ var _components_doc_pagination_sections_set_page_set_page_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/doc-pagination/sections/set-page/set-page.component */ "./src/app/showcase/components/doc-pagination/sections/set-page/set-page.component.ts");
-/* harmony import */ var _components_doc_pagination_sections_page_change_event_page_change_event_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/doc-pagination/sections/page-change-event/page-change-event.component */ "./src/app/showcase/components/doc-pagination/sections/page-change-event/page-change-event.component.ts");
-/* harmony import */ var _components_doc_pagination_sections_basic_pagination_basic_pagination_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/doc-pagination/sections/basic-pagination/basic-pagination.component */ "./src/app/showcase/components/doc-pagination/sections/basic-pagination/basic-pagination.component.ts");
-/* harmony import */ var _templates_component_header_component_header_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./templates/component-header/component-header.component */ "./src/app/showcase/templates/component-header/component-header.component.ts");
-/* harmony import */ var _common_demo_sidebar_demo_sidebar_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./common/demo-sidebar/demo-sidebar.component */ "./src/app/showcase/common/demo-sidebar/demo-sidebar.component.ts");
-/* harmony import */ var _common_demo_header_demo_header_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./common/demo-header/demo-header.component */ "./src/app/showcase/common/demo-header/demo-header.component.ts");
-/* harmony import */ var _components_doc_tabset_doc_tabset_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/doc-tabset/doc-tabset.component */ "./src/app/showcase/components/doc-tabset/doc-tabset.component.ts");
-/* harmony import */ var _components_doc_tabset_sections_basic_tabset_basic_tabset_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/doc-tabset/sections/basic-tabset/basic-tabset.component */ "./src/app/showcase/components/doc-tabset/sections/basic-tabset/basic-tabset.component.ts");
-/* harmony import */ var _components_doc_tabset_sections_tabset_with_icon_tabset_with_icon_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/doc-tabset/sections/tabset-with-icon/tabset-with-icon.component */ "./src/app/showcase/components/doc-tabset/sections/tabset-with-icon/tabset-with-icon.component.ts");
-/* harmony import */ var _components_doc_tabset_sections_tabset_with_icon_text_tabset_with_icon_text_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/doc-tabset/sections/tabset-with-icon-text/tabset-with-icon-text.component */ "./src/app/showcase/components/doc-tabset/sections/tabset-with-icon-text/tabset-with-icon-text.component.ts");
-/* harmony import */ var _components_doc_tabset_sections_manually_tab_selection_manually_tab_selection_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/doc-tabset/sections/manually-tab-selection/manually-tab-selection.component */ "./src/app/showcase/components/doc-tabset/sections/manually-tab-selection/manually-tab-selection.component.ts");
-/* harmony import */ var _components_doc_tabset_sections_tabset_select_event_tabset_select_event_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/doc-tabset/sections/tabset-select-event/tabset-select-event.component */ "./src/app/showcase/components/doc-tabset/sections/tabset-select-event/tabset-select-event.component.ts");
-/* harmony import */ var _components_doc_tabset_sections_tabset_deselect_event_tabset_deselect_event_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/doc-tabset/sections/tabset-deselect-event/tabset-deselect-event.component */ "./src/app/showcase/components/doc-tabset/sections/tabset-deselect-event/tabset-deselect-event.component.ts");
-/* harmony import */ var _templates_section_section_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./templates/section/section.component */ "./src/app/showcase/templates/section/section.component.ts");
-/* harmony import */ var _common_demo_footer_demo_footer_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./common/demo-footer/demo-footer.component */ "./src/app/showcase/common/demo-footer/demo-footer.component.ts");
-/* harmony import */ var _components_doc_infobox_doc_infobox_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/doc-infobox/doc-infobox.component */ "./src/app/showcase/components/doc-infobox/doc-infobox.component.ts");
-/* harmony import */ var _components_doc_infobox_sections_basic_infobox_basic_infobox_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./components/doc-infobox/sections/basic-infobox/basic-infobox.component */ "./src/app/showcase/components/doc-infobox/sections/basic-infobox/basic-infobox.component.ts");
-/* harmony import */ var _components_doc_infobox_sections_group_infobox_group_infobox_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/doc-infobox/sections/group-infobox/group-infobox.component */ "./src/app/showcase/components/doc-infobox/sections/group-infobox/group-infobox.component.ts");
-/* harmony import */ var _components_doc_toast_doc_toast_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/doc-toast/doc-toast.component */ "./src/app/showcase/components/doc-toast/doc-toast.component.ts");
-/* harmony import */ var _components_doc_toast_sections_basic_toast_basic_toast_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./components/doc-toast/sections/basic-toast/basic-toast.component */ "./src/app/showcase/components/doc-toast/sections/basic-toast/basic-toast.component.ts");
-/* harmony import */ var _components_doc_toast_sections_blank_toast_blank_toast_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./components/doc-toast/sections/blank-toast/blank-toast.component */ "./src/app/showcase/components/doc-toast/sections/blank-toast/blank-toast.component.ts");
-/* harmony import */ var _components_doc_toast_sections_timeout_toast_timeout_toast_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./components/doc-toast/sections/timeout-toast/timeout-toast.component */ "./src/app/showcase/components/doc-toast/sections/timeout-toast/timeout-toast.component.ts");
-/* harmony import */ var _components_doc_information_doc_information_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./components/doc-information/doc-information.component */ "./src/app/showcase/components/doc-information/doc-information.component.ts");
-/* harmony import */ var _components_doc_information_sections_basic_information_basic_information_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./components/doc-information/sections/basic-information/basic-information.component */ "./src/app/showcase/components/doc-information/sections/basic-information/basic-information.component.ts");
-/* harmony import */ var _components_doc_accordion_doc_accordion_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./components/doc-accordion/doc-accordion.component */ "./src/app/showcase/components/doc-accordion/doc-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_basic_accordion_basic_accordion_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./components/doc-accordion/sections/basic-accordion/basic-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/basic-accordion/basic-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_animation_accordion_animation_accordion_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./components/doc-accordion/sections/animation-accordion/animation-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/animation-accordion/animation-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_opening_event_accordion_opening_event_accordion_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./components/doc-accordion/sections/opening-event-accordion/opening-event-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/opening-event-accordion/opening-event-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_disable_accordion_disable_accordion_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./components/doc-accordion/sections/disable-accordion/disable-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/disable-accordion/disable-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_initially_opened_accordion_initially_opened_accordion_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./components/doc-accordion/sections/initially-opened-accordion/initially-opened-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/initially-opened-accordion/initially-opened-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_dynamic_accordion_dynamic_accordion_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./components/doc-accordion/sections/dynamic-accordion/dynamic-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/dynamic-accordion/dynamic-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_dynamic_body_accordion_dynamic_body_accordion_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./components/doc-accordion/sections/dynamic-body-accordion/dynamic-body-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/dynamic-body-accordion/dynamic-body-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_manual_toggle_accordion_manual_toggle_accordion_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./components/doc-accordion/sections/manual-toggle-accordion/manual-toggle-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/manual-toggle-accordion/manual-toggle-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_other_close_accordion_other_close_accordion_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./components/doc-accordion/sections/other-close-accordion/other-close-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/other-close-accordion/other-close-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_custom_html_accordion_custom_html_accordion_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./components/doc-accordion/sections/custom-html-accordion/custom-html-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/custom-html-accordion/custom-html-accordion.component.ts");
-/* harmony import */ var _components_doc_accordion_sections_styling_accordion_styling_accordion_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./components/doc-accordion/sections/styling-accordion/styling-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/styling-accordion/styling-accordion.component.ts");
-/* harmony import */ var _components_under_development_under_development_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./components/under-development/under-development.component */ "./src/app/showcase/components/under-development/under-development.component.ts");
-/* harmony import */ var _components_doc_file_upload_doc_file_upload_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./components/doc-file-upload/doc-file-upload.component */ "./src/app/showcase/components/doc-file-upload/doc-file-upload.component.ts");
-/* harmony import */ var _components_doc_file_upload_sections_basic_file_upload_basic_file_upload_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./components/doc-file-upload/sections/basic-file-upload/basic-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/basic-file-upload/basic-file-upload.component.ts");
-/* harmony import */ var _components_doc_file_upload_sections_type_file_upload_type_file_upload_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./components/doc-file-upload/sections/type-file-upload/type-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/type-file-upload/type-file-upload.component.ts");
-/* harmony import */ var _components_doc_file_upload_sections_size_file_upload_size_file_upload_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./components/doc-file-upload/sections/size-file-upload/size-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/size-file-upload/size-file-upload.component.ts");
-/* harmony import */ var _components_doc_file_upload_sections_multiple_file_upload_multiple_file_upload_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./components/doc-file-upload/sections/multiple-file-upload/multiple-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/multiple-file-upload/multiple-file-upload.component.ts");
-/* harmony import */ var _components_doc_file_upload_sections_events_file_upload_events_file_upload_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./components/doc-file-upload/sections/events-file-upload/events-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/events-file-upload/events-file-upload.component.ts");
-/* harmony import */ var _components_doc_file_upload_sections_prev_position_file_upload_prev_position_file_upload_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./components/doc-file-upload/sections/prev-position-file-upload/prev-position-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/prev-position-file-upload/prev-position-file-upload.component.ts");
-/* harmony import */ var _components_doc_file_upload_sections_set_file_upload_set_file_upload_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./components/doc-file-upload/sections/set-file-upload/set-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/set-file-upload/set-file-upload.component.ts");
-/* harmony import */ var _components_doc_switch_doc_switch_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./components/doc-switch/doc-switch.component */ "./src/app/showcase/components/doc-switch/doc-switch.component.ts");
-/* harmony import */ var _components_doc_switch_sections_basic_switch_basic_switch_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./components/doc-switch/sections/basic-switch/basic-switch.component */ "./src/app/showcase/components/doc-switch/sections/basic-switch/basic-switch.component.ts");
-/* harmony import */ var _components_doc_switch_sections_disabled_switch_disabled_switch_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./components/doc-switch/sections/disabled-switch/disabled-switch.component */ "./src/app/showcase/components/doc-switch/sections/disabled-switch/disabled-switch.component.ts");
-/* harmony import */ var _components_doc_switch_sections_checked_switch_checked_switch_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./components/doc-switch/sections/checked-switch/checked-switch.component */ "./src/app/showcase/components/doc-switch/sections/checked-switch/checked-switch.component.ts");
-/* harmony import */ var _components_doc_switch_sections_changed_switch_changed_switch_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./components/doc-switch/sections/changed-switch/changed-switch.component */ "./src/app/showcase/components/doc-switch/sections/changed-switch/changed-switch.component.ts");
-/* harmony import */ var _components_doc_switch_sections_delayed_switch_delayed_switch_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./components/doc-switch/sections/delayed-switch/delayed-switch.component */ "./src/app/showcase/components/doc-switch/sections/delayed-switch/delayed-switch.component.ts");
-/* harmony import */ var _components_doc_image_upload_sections_basic_image_upload_basic_image_upload_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./components/doc-image-upload/sections/basic-image-upload/basic-image-upload.component */ "./src/app/showcase/components/doc-image-upload/sections/basic-image-upload/basic-image-upload.component.ts");
-/* harmony import */ var _components_doc_toast_sections_pause_onclick_toast_pause_onclick_toast_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./components/doc-toast/sections/pause-onclick-toast/pause-onclick-toast.component */ "./src/app/showcase/components/doc-toast/sections/pause-onclick-toast/pause-onclick-toast.component.ts");
-/* harmony import */ var _components_doc_image_upload_doc_image_upload_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./components/doc-image-upload/doc-image-upload.component */ "./src/app/showcase/components/doc-image-upload/doc-image-upload.component.ts");
-/* harmony import */ var _components_doc_infobox_sections_color_infobox_color_infobox_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./components/doc-infobox/sections/color-infobox/color-infobox.component */ "./src/app/showcase/components/doc-infobox/sections/color-infobox/color-infobox.component.ts");
-/* harmony import */ var _components_doc_form_wizard_doc_form_wizard_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./components/doc-form-wizard/doc-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/doc-form-wizard.component.ts");
-/* harmony import */ var _components_doc_form_wizard_sections_basic_form_wizard_basic_form_wizard_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/basic-form-wizard/basic-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/basic-form-wizard/basic-form-wizard.component.ts");
-/* harmony import */ var _components_doc_form_wizard_sections_many_step_form_wizard_many_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/many-step-form-wizard/many-step-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/many-step-form-wizard/many-step-form-wizard.component.ts");
-/* harmony import */ var _components_doc_form_wizard_sections_emit_event_paginate_change_form_wizard_emit_event_paginate_change_form_wizard_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/emit-event-paginate-change-form-wizard/emit-event-paginate-change-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/emit-event-paginate-change-form-wizard/emit-event-paginate-change-form-wizard.component.ts");
-/* harmony import */ var _components_doc_form_wizard_sections_disabled_submit_form_wizard_disabled_submit_form_wizard_component__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/disabled-submit-form-wizard/disabled-submit-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/disabled-submit-form-wizard/disabled-submit-form-wizard.component.ts");
-/* harmony import */ var _components_doc_form_wizard_sections_disabled_click_step_form_wizard_disabled_click_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/disabled-click-step-form-wizard/disabled-click-step-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/disabled-click-step-form-wizard/disabled-click-step-form-wizard.component.ts");
-/* harmony import */ var _components_doc_form_wizard_sections_custom_pagination_label_form_wizard_custom_pagination_label_form_wizard_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/custom-pagination-label-form-wizard/custom-pagination-label-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/custom-pagination-label-form-wizard/custom-pagination-label-form-wizard.component.ts");
-/* harmony import */ var _components_doc_form_wizard_sections_active_step_option_form_wizard_active_step_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/active-step-option-form-wizard/active-step-option-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/active-step-option-form-wizard/active-step-option-form-wizard.component.ts");
-/* harmony import */ var _components_doc_form_wizard_sections_steps_option_form_wizard_steps_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/steps-option-form-wizard/steps-option-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/steps-option-form-wizard/steps-option-form-wizard.component.ts");
-/* harmony import */ var _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./components/doc-tooltip/doc-tooltip.component */ "./src/app/showcase/components/doc-tooltip/doc-tooltip.component.ts");
-/* harmony import */ var _components_doc_tooltip_sections_basic_tooltip_basic_tooltip_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.ts");
-/* harmony import */ var _components_doc_tooltip_sections_paragraph_tooltip_paragraph_tooltip_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.ts");
-/* harmony import */ var _components_doc_tooltip_sections_placement_tooltip_placement_tooltip_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./components/doc-tooltip/sections/placement-tooltip/placement-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/placement-tooltip/placement-tooltip.component.ts");
-/* harmony import */ var _components_doc_tooltip_sections_dynamic_html_tooltip_dynamic_html_tooltip_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./components/doc-tooltip/sections/dynamic-html-tooltip/dynamic-html-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/dynamic-html-tooltip/dynamic-html-tooltip.component.ts");
-/* harmony import */ var _components_doc_tooltip_sections_disabled_tooltip_disabled_tooltip_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./components/doc-tooltip/sections/disabled-tooltip/disabled-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/disabled-tooltip/disabled-tooltip.component.ts");
-/* harmony import */ var _components_doc_chips_doc_chips_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./components/doc-chips/doc-chips.component */ "./src/app/showcase/components/doc-chips/doc-chips.component.ts");
-/* harmony import */ var _components_doc_chips_sections_basic_chip_basic_chip_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./components/doc-chips/sections/basic-chip/basic-chip.component */ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.ts");
-/* harmony import */ var _components_doc_chips_sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./components/doc-chips/sections/disable-chip/disable-chip.component */ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.ts");
-/* harmony import */ var _components_doc_chips_sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./components/doc-chips/sections/vertical-chip/vertical-chip.component */ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.ts");
-/* harmony import */ var _components_doc_chips_sections_horizontal_chip_horizontal_chip_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./components/doc-chips/sections/horizontal-chip/horizontal-chip.component */ "./src/app/showcase/components/doc-chips/sections/horizontal-chip/horizontal-chip.component.ts");
-/* harmony import */ var _components_doc_button_sections_disabled_button_disabled_button_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./components/doc-button/sections/disabled-button/disabled-button.component */ "./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.ts");
-/* harmony import */ var _components_doc_button_sections_loader_button_loader_button_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./components/doc-button/sections/loader-button/loader-button.component */ "./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.ts");
-/* harmony import */ var _components_doc_button_sections_combination_icon_button_combination_icon_button_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./components/doc-button/sections/combination-icon-button/combination-icon-button.component */ "./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.ts");
-/* harmony import */ var _components_doc_button_sections_icon_button_icon_button_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./components/doc-button/sections/icon-button/icon-button.component */ "./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.ts");
-/* harmony import */ var _components_doc_button_sections_active_button_active_button_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./components/doc-button/sections/active-button/active-button.component */ "./src/app/showcase/components/doc-button/sections/active-button/active-button.component.ts");
-/* harmony import */ var _components_doc_button_sections_block_button_block_button_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./components/doc-button/sections/block-button/block-button.component */ "./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts");
-/* harmony import */ var _components_doc_button_sections_size_button_size_button_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./components/doc-button/sections/size-button/size-button.component */ "./src/app/showcase/components/doc-button/sections/size-button/size-button.component.ts");
-/* harmony import */ var _components_doc_button_sections_basic_button_basic_button_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./components/doc-button/sections/basic-button/basic-button.component */ "./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.ts");
-/* harmony import */ var _components_doc_button_doc_button_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./components/doc-button/doc-button.component */ "./src/app/showcase/components/doc-button/doc-button.component.ts");
-/* harmony import */ var _components_doc_image_upload_sections_labeling_button_image_upload_labeling_button_image_upload_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./components/doc-image-upload/sections/labeling-button-image-upload/labeling-button-image-upload.component */ "./src/app/showcase/components/doc-image-upload/sections/labeling-button-image-upload/labeling-button-image-upload.component.ts");
-/* harmony import */ var _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./components/doc-pilar-font/doc-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.ts");
-/* harmony import */ var _components_doc_pilar_font_sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.ts");
-/* harmony import */ var _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./components/doc-table/doc-table.component */ "./src/app/showcase/components/doc-table/doc-table.component.ts");
-/* harmony import */ var _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./components/doc-table/sections/basic-table/basic-table.component */ "./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.ts");
-/* harmony import */ var _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./components/doc-table/sections/table-with-checkbox/table-with-checkbox.component */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts");
-/* harmony import */ var _components_doc_table_sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./components/doc-table/sections/column-definitions/column-definitions-table.component */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts");
+/* harmony import */ var ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ngx-bootstrap/modal */ "./node_modules/ngx-bootstrap/modal/fesm5/ngx-bootstrap-modal.js");
+/* harmony import */ var _projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog/confirm-dialog.component.ts");
+/* harmony import */ var _components_doc_information_sections_information_with_tag_html_information_with_tag_html_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/doc-information/sections/information-with-tag-html/information-with-tag-html.component */ "./src/app/showcase/components/doc-information/sections/information-with-tag-html/information-with-tag-html.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var pilar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! pilar */ "./dist/uiigateway/pilar/fesm5/pilar.js");
+/* harmony import */ var ngx_highlightjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-highlightjs */ "./node_modules/ngx-highlightjs/fesm5/ngx-highlightjs.js");
+/* harmony import */ var highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! highlight.js/lib/languages/typescript */ "./node_modules/highlight.js/lib/languages/typescript.js");
+/* harmony import */ var highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! highlight.js/lib/languages/xml */ "./node_modules/highlight.js/lib/languages/xml.js");
+/* harmony import */ var highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! highlight.js/lib/languages/scss */ "./node_modules/highlight.js/lib/languages/scss.js");
+/* harmony import */ var highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _showcase_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./showcase.component */ "./src/app/showcase/showcase.component.ts");
+/* harmony import */ var _showcase_routing__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./showcase.routing */ "./src/app/showcase/showcase.routing.ts");
+/* harmony import */ var _showcase_directive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./showcase.directive */ "./src/app/showcase/showcase.directive.ts");
+/* harmony import */ var _components_doc_image_upload_sections_hide_delete_image_upload_hide_delete_image_upload_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/doc-image-upload/sections/hide-delete-image-upload/hide-delete-image-upload.component */ "./src/app/showcase/components/doc-image-upload/sections/hide-delete-image-upload/hide-delete-image-upload.component.ts");
+/* harmony import */ var _components_installation_installation_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/installation/installation.component */ "./src/app/showcase/components/installation/installation.component.ts");
+/* harmony import */ var _common_right_sidebar_right_sidebar_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./common/right-sidebar/right-sidebar.component */ "./src/app/showcase/common/right-sidebar/right-sidebar.component.ts");
+/* harmony import */ var _components_doc_pagination_doc_pagination_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/doc-pagination/doc-pagination.component */ "./src/app/showcase/components/doc-pagination/doc-pagination.component.ts");
+/* harmony import */ var _components_get_started_get_started_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/get-started/get-started.component */ "./src/app/showcase/components/get-started/get-started.component.ts");
+/* harmony import */ var _templates_code_section_code_section_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./templates/code-section/code-section.component */ "./src/app/showcase/templates/code-section/code-section.component.ts");
+/* harmony import */ var _templates_docs_api_docs_api_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./templates/docs-api/docs-api.component */ "./src/app/showcase/templates/docs-api/docs-api.component.ts");
+/* harmony import */ var _templates_docs_section_docs_section_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./templates/docs-section/docs-section.component */ "./src/app/showcase/templates/docs-section/docs-section.component.ts");
+/* harmony import */ var _components_doc_pagination_sections_set_page_set_page_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/doc-pagination/sections/set-page/set-page.component */ "./src/app/showcase/components/doc-pagination/sections/set-page/set-page.component.ts");
+/* harmony import */ var _components_doc_pagination_sections_page_change_event_page_change_event_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/doc-pagination/sections/page-change-event/page-change-event.component */ "./src/app/showcase/components/doc-pagination/sections/page-change-event/page-change-event.component.ts");
+/* harmony import */ var _components_doc_pagination_sections_basic_pagination_basic_pagination_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/doc-pagination/sections/basic-pagination/basic-pagination.component */ "./src/app/showcase/components/doc-pagination/sections/basic-pagination/basic-pagination.component.ts");
+/* harmony import */ var _templates_component_header_component_header_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./templates/component-header/component-header.component */ "./src/app/showcase/templates/component-header/component-header.component.ts");
+/* harmony import */ var _common_demo_sidebar_demo_sidebar_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./common/demo-sidebar/demo-sidebar.component */ "./src/app/showcase/common/demo-sidebar/demo-sidebar.component.ts");
+/* harmony import */ var _common_demo_header_demo_header_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./common/demo-header/demo-header.component */ "./src/app/showcase/common/demo-header/demo-header.component.ts");
+/* harmony import */ var _components_doc_tabset_doc_tabset_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/doc-tabset/doc-tabset.component */ "./src/app/showcase/components/doc-tabset/doc-tabset.component.ts");
+/* harmony import */ var _components_doc_tabset_sections_basic_tabset_basic_tabset_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/doc-tabset/sections/basic-tabset/basic-tabset.component */ "./src/app/showcase/components/doc-tabset/sections/basic-tabset/basic-tabset.component.ts");
+/* harmony import */ var _components_doc_tabset_sections_tabset_with_icon_tabset_with_icon_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./components/doc-tabset/sections/tabset-with-icon/tabset-with-icon.component */ "./src/app/showcase/components/doc-tabset/sections/tabset-with-icon/tabset-with-icon.component.ts");
+/* harmony import */ var _components_doc_tabset_sections_tabset_with_icon_text_tabset_with_icon_text_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./components/doc-tabset/sections/tabset-with-icon-text/tabset-with-icon-text.component */ "./src/app/showcase/components/doc-tabset/sections/tabset-with-icon-text/tabset-with-icon-text.component.ts");
+/* harmony import */ var _components_doc_tabset_sections_manually_tab_selection_manually_tab_selection_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/doc-tabset/sections/manually-tab-selection/manually-tab-selection.component */ "./src/app/showcase/components/doc-tabset/sections/manually-tab-selection/manually-tab-selection.component.ts");
+/* harmony import */ var _components_doc_tabset_sections_tabset_select_event_tabset_select_event_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/doc-tabset/sections/tabset-select-event/tabset-select-event.component */ "./src/app/showcase/components/doc-tabset/sections/tabset-select-event/tabset-select-event.component.ts");
+/* harmony import */ var _components_doc_tabset_sections_tabset_deselect_event_tabset_deselect_event_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/doc-tabset/sections/tabset-deselect-event/tabset-deselect-event.component */ "./src/app/showcase/components/doc-tabset/sections/tabset-deselect-event/tabset-deselect-event.component.ts");
+/* harmony import */ var _templates_section_section_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./templates/section/section.component */ "./src/app/showcase/templates/section/section.component.ts");
+/* harmony import */ var _common_demo_footer_demo_footer_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./common/demo-footer/demo-footer.component */ "./src/app/showcase/common/demo-footer/demo-footer.component.ts");
+/* harmony import */ var _components_doc_infobox_doc_infobox_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./components/doc-infobox/doc-infobox.component */ "./src/app/showcase/components/doc-infobox/doc-infobox.component.ts");
+/* harmony import */ var _components_doc_infobox_sections_basic_infobox_basic_infobox_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./components/doc-infobox/sections/basic-infobox/basic-infobox.component */ "./src/app/showcase/components/doc-infobox/sections/basic-infobox/basic-infobox.component.ts");
+/* harmony import */ var _components_doc_infobox_sections_group_infobox_group_infobox_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./components/doc-infobox/sections/group-infobox/group-infobox.component */ "./src/app/showcase/components/doc-infobox/sections/group-infobox/group-infobox.component.ts");
+/* harmony import */ var _components_doc_toast_doc_toast_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./components/doc-toast/doc-toast.component */ "./src/app/showcase/components/doc-toast/doc-toast.component.ts");
+/* harmony import */ var _components_doc_toast_sections_basic_toast_basic_toast_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./components/doc-toast/sections/basic-toast/basic-toast.component */ "./src/app/showcase/components/doc-toast/sections/basic-toast/basic-toast.component.ts");
+/* harmony import */ var _components_doc_toast_sections_blank_toast_blank_toast_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./components/doc-toast/sections/blank-toast/blank-toast.component */ "./src/app/showcase/components/doc-toast/sections/blank-toast/blank-toast.component.ts");
+/* harmony import */ var _components_doc_toast_sections_timeout_toast_timeout_toast_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./components/doc-toast/sections/timeout-toast/timeout-toast.component */ "./src/app/showcase/components/doc-toast/sections/timeout-toast/timeout-toast.component.ts");
+/* harmony import */ var _components_doc_information_doc_information_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./components/doc-information/doc-information.component */ "./src/app/showcase/components/doc-information/doc-information.component.ts");
+/* harmony import */ var _components_doc_information_sections_basic_information_basic_information_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./components/doc-information/sections/basic-information/basic-information.component */ "./src/app/showcase/components/doc-information/sections/basic-information/basic-information.component.ts");
+/* harmony import */ var _components_doc_accordion_doc_accordion_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./components/doc-accordion/doc-accordion.component */ "./src/app/showcase/components/doc-accordion/doc-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_basic_accordion_basic_accordion_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./components/doc-accordion/sections/basic-accordion/basic-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/basic-accordion/basic-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_animation_accordion_animation_accordion_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./components/doc-accordion/sections/animation-accordion/animation-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/animation-accordion/animation-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_opening_event_accordion_opening_event_accordion_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./components/doc-accordion/sections/opening-event-accordion/opening-event-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/opening-event-accordion/opening-event-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_disable_accordion_disable_accordion_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./components/doc-accordion/sections/disable-accordion/disable-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/disable-accordion/disable-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_initially_opened_accordion_initially_opened_accordion_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./components/doc-accordion/sections/initially-opened-accordion/initially-opened-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/initially-opened-accordion/initially-opened-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_dynamic_accordion_dynamic_accordion_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./components/doc-accordion/sections/dynamic-accordion/dynamic-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/dynamic-accordion/dynamic-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_dynamic_body_accordion_dynamic_body_accordion_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./components/doc-accordion/sections/dynamic-body-accordion/dynamic-body-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/dynamic-body-accordion/dynamic-body-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_manual_toggle_accordion_manual_toggle_accordion_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./components/doc-accordion/sections/manual-toggle-accordion/manual-toggle-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/manual-toggle-accordion/manual-toggle-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_other_close_accordion_other_close_accordion_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./components/doc-accordion/sections/other-close-accordion/other-close-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/other-close-accordion/other-close-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_custom_html_accordion_custom_html_accordion_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./components/doc-accordion/sections/custom-html-accordion/custom-html-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/custom-html-accordion/custom-html-accordion.component.ts");
+/* harmony import */ var _components_doc_accordion_sections_styling_accordion_styling_accordion_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./components/doc-accordion/sections/styling-accordion/styling-accordion.component */ "./src/app/showcase/components/doc-accordion/sections/styling-accordion/styling-accordion.component.ts");
+/* harmony import */ var _components_under_development_under_development_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./components/under-development/under-development.component */ "./src/app/showcase/components/under-development/under-development.component.ts");
+/* harmony import */ var _components_doc_file_upload_doc_file_upload_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./components/doc-file-upload/doc-file-upload.component */ "./src/app/showcase/components/doc-file-upload/doc-file-upload.component.ts");
+/* harmony import */ var _components_doc_file_upload_sections_basic_file_upload_basic_file_upload_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./components/doc-file-upload/sections/basic-file-upload/basic-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/basic-file-upload/basic-file-upload.component.ts");
+/* harmony import */ var _components_doc_file_upload_sections_type_file_upload_type_file_upload_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./components/doc-file-upload/sections/type-file-upload/type-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/type-file-upload/type-file-upload.component.ts");
+/* harmony import */ var _components_doc_file_upload_sections_size_file_upload_size_file_upload_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./components/doc-file-upload/sections/size-file-upload/size-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/size-file-upload/size-file-upload.component.ts");
+/* harmony import */ var _components_doc_file_upload_sections_multiple_file_upload_multiple_file_upload_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./components/doc-file-upload/sections/multiple-file-upload/multiple-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/multiple-file-upload/multiple-file-upload.component.ts");
+/* harmony import */ var _components_doc_file_upload_sections_events_file_upload_events_file_upload_component__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./components/doc-file-upload/sections/events-file-upload/events-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/events-file-upload/events-file-upload.component.ts");
+/* harmony import */ var _components_doc_file_upload_sections_prev_position_file_upload_prev_position_file_upload_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./components/doc-file-upload/sections/prev-position-file-upload/prev-position-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/prev-position-file-upload/prev-position-file-upload.component.ts");
+/* harmony import */ var _components_doc_file_upload_sections_set_file_upload_set_file_upload_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./components/doc-file-upload/sections/set-file-upload/set-file-upload.component */ "./src/app/showcase/components/doc-file-upload/sections/set-file-upload/set-file-upload.component.ts");
+/* harmony import */ var _components_doc_switch_doc_switch_component__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./components/doc-switch/doc-switch.component */ "./src/app/showcase/components/doc-switch/doc-switch.component.ts");
+/* harmony import */ var _components_doc_switch_sections_basic_switch_basic_switch_component__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./components/doc-switch/sections/basic-switch/basic-switch.component */ "./src/app/showcase/components/doc-switch/sections/basic-switch/basic-switch.component.ts");
+/* harmony import */ var _components_doc_switch_sections_disabled_switch_disabled_switch_component__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./components/doc-switch/sections/disabled-switch/disabled-switch.component */ "./src/app/showcase/components/doc-switch/sections/disabled-switch/disabled-switch.component.ts");
+/* harmony import */ var _components_doc_switch_sections_checked_switch_checked_switch_component__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./components/doc-switch/sections/checked-switch/checked-switch.component */ "./src/app/showcase/components/doc-switch/sections/checked-switch/checked-switch.component.ts");
+/* harmony import */ var _components_doc_switch_sections_changed_switch_changed_switch_component__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./components/doc-switch/sections/changed-switch/changed-switch.component */ "./src/app/showcase/components/doc-switch/sections/changed-switch/changed-switch.component.ts");
+/* harmony import */ var _components_doc_switch_sections_delayed_switch_delayed_switch_component__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./components/doc-switch/sections/delayed-switch/delayed-switch.component */ "./src/app/showcase/components/doc-switch/sections/delayed-switch/delayed-switch.component.ts");
+/* harmony import */ var _components_doc_image_upload_sections_basic_image_upload_basic_image_upload_component__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./components/doc-image-upload/sections/basic-image-upload/basic-image-upload.component */ "./src/app/showcase/components/doc-image-upload/sections/basic-image-upload/basic-image-upload.component.ts");
+/* harmony import */ var _components_doc_toast_sections_pause_onclick_toast_pause_onclick_toast_component__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./components/doc-toast/sections/pause-onclick-toast/pause-onclick-toast.component */ "./src/app/showcase/components/doc-toast/sections/pause-onclick-toast/pause-onclick-toast.component.ts");
+/* harmony import */ var _components_doc_image_upload_doc_image_upload_component__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./components/doc-image-upload/doc-image-upload.component */ "./src/app/showcase/components/doc-image-upload/doc-image-upload.component.ts");
+/* harmony import */ var _components_doc_infobox_sections_color_infobox_color_infobox_component__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./components/doc-infobox/sections/color-infobox/color-infobox.component */ "./src/app/showcase/components/doc-infobox/sections/color-infobox/color-infobox.component.ts");
+/* harmony import */ var _components_doc_form_wizard_doc_form_wizard_component__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./components/doc-form-wizard/doc-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/doc-form-wizard.component.ts");
+/* harmony import */ var _components_doc_form_wizard_sections_basic_form_wizard_basic_form_wizard_component__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/basic-form-wizard/basic-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/basic-form-wizard/basic-form-wizard.component.ts");
+/* harmony import */ var _components_doc_form_wizard_sections_many_step_form_wizard_many_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/many-step-form-wizard/many-step-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/many-step-form-wizard/many-step-form-wizard.component.ts");
+/* harmony import */ var _components_doc_form_wizard_sections_emit_event_paginate_change_form_wizard_emit_event_paginate_change_form_wizard_component__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/emit-event-paginate-change-form-wizard/emit-event-paginate-change-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/emit-event-paginate-change-form-wizard/emit-event-paginate-change-form-wizard.component.ts");
+/* harmony import */ var _components_doc_form_wizard_sections_disabled_submit_form_wizard_disabled_submit_form_wizard_component__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/disabled-submit-form-wizard/disabled-submit-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/disabled-submit-form-wizard/disabled-submit-form-wizard.component.ts");
+/* harmony import */ var _components_doc_form_wizard_sections_disabled_click_step_form_wizard_disabled_click_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/disabled-click-step-form-wizard/disabled-click-step-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/disabled-click-step-form-wizard/disabled-click-step-form-wizard.component.ts");
+/* harmony import */ var _components_doc_form_wizard_sections_custom_pagination_label_form_wizard_custom_pagination_label_form_wizard_component__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/custom-pagination-label-form-wizard/custom-pagination-label-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/custom-pagination-label-form-wizard/custom-pagination-label-form-wizard.component.ts");
+/* harmony import */ var _components_doc_form_wizard_sections_active_step_option_form_wizard_active_step_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/active-step-option-form-wizard/active-step-option-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/active-step-option-form-wizard/active-step-option-form-wizard.component.ts");
+/* harmony import */ var _components_doc_form_wizard_sections_steps_option_form_wizard_steps_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./components/doc-form-wizard/sections/steps-option-form-wizard/steps-option-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/sections/steps-option-form-wizard/steps-option-form-wizard.component.ts");
+/* harmony import */ var _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./components/doc-tooltip/doc-tooltip.component */ "./src/app/showcase/components/doc-tooltip/doc-tooltip.component.ts");
+/* harmony import */ var _components_doc_tooltip_sections_basic_tooltip_basic_tooltip_component__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/basic-tooltip/basic-tooltip.component.ts");
+/* harmony import */ var _components_doc_tooltip_sections_paragraph_tooltip_paragraph_tooltip_component__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/paragraph-tooltip/paragraph-tooltip.component.ts");
+/* harmony import */ var _components_doc_tooltip_sections_placement_tooltip_placement_tooltip_component__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./components/doc-tooltip/sections/placement-tooltip/placement-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/placement-tooltip/placement-tooltip.component.ts");
+/* harmony import */ var _components_doc_tooltip_sections_dynamic_html_tooltip_dynamic_html_tooltip_component__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./components/doc-tooltip/sections/dynamic-html-tooltip/dynamic-html-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/dynamic-html-tooltip/dynamic-html-tooltip.component.ts");
+/* harmony import */ var _components_doc_tooltip_sections_disabled_tooltip_disabled_tooltip_component__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./components/doc-tooltip/sections/disabled-tooltip/disabled-tooltip.component */ "./src/app/showcase/components/doc-tooltip/sections/disabled-tooltip/disabled-tooltip.component.ts");
+/* harmony import */ var _components_doc_chips_doc_chips_component__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./components/doc-chips/doc-chips.component */ "./src/app/showcase/components/doc-chips/doc-chips.component.ts");
+/* harmony import */ var _components_doc_chips_sections_basic_chip_basic_chip_component__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./components/doc-chips/sections/basic-chip/basic-chip.component */ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.ts");
+/* harmony import */ var _components_doc_chips_sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./components/doc-chips/sections/disable-chip/disable-chip.component */ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.ts");
+/* harmony import */ var _components_doc_chips_sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./components/doc-chips/sections/vertical-chip/vertical-chip.component */ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.ts");
+/* harmony import */ var _components_doc_chips_sections_horizontal_chip_horizontal_chip_component__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./components/doc-chips/sections/horizontal-chip/horizontal-chip.component */ "./src/app/showcase/components/doc-chips/sections/horizontal-chip/horizontal-chip.component.ts");
+/* harmony import */ var _components_doc_button_sections_disabled_button_disabled_button_component__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./components/doc-button/sections/disabled-button/disabled-button.component */ "./src/app/showcase/components/doc-button/sections/disabled-button/disabled-button.component.ts");
+/* harmony import */ var _components_doc_button_sections_loader_button_loader_button_component__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./components/doc-button/sections/loader-button/loader-button.component */ "./src/app/showcase/components/doc-button/sections/loader-button/loader-button.component.ts");
+/* harmony import */ var _components_doc_button_sections_combination_icon_button_combination_icon_button_component__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./components/doc-button/sections/combination-icon-button/combination-icon-button.component */ "./src/app/showcase/components/doc-button/sections/combination-icon-button/combination-icon-button.component.ts");
+/* harmony import */ var _components_doc_button_sections_icon_button_icon_button_component__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./components/doc-button/sections/icon-button/icon-button.component */ "./src/app/showcase/components/doc-button/sections/icon-button/icon-button.component.ts");
+/* harmony import */ var _components_doc_button_sections_active_button_active_button_component__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./components/doc-button/sections/active-button/active-button.component */ "./src/app/showcase/components/doc-button/sections/active-button/active-button.component.ts");
+/* harmony import */ var _components_doc_button_sections_block_button_block_button_component__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./components/doc-button/sections/block-button/block-button.component */ "./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts");
+/* harmony import */ var _components_doc_button_sections_size_button_size_button_component__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./components/doc-button/sections/size-button/size-button.component */ "./src/app/showcase/components/doc-button/sections/size-button/size-button.component.ts");
+/* harmony import */ var _components_doc_button_sections_basic_button_basic_button_component__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./components/doc-button/sections/basic-button/basic-button.component */ "./src/app/showcase/components/doc-button/sections/basic-button/basic-button.component.ts");
+/* harmony import */ var _components_doc_button_doc_button_component__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./components/doc-button/doc-button.component */ "./src/app/showcase/components/doc-button/doc-button.component.ts");
+/* harmony import */ var _components_doc_image_upload_sections_labeling_button_image_upload_labeling_button_image_upload_component__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./components/doc-image-upload/sections/labeling-button-image-upload/labeling-button-image-upload.component */ "./src/app/showcase/components/doc-image-upload/sections/labeling-button-image-upload/labeling-button-image-upload.component.ts");
+/* harmony import */ var _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./components/doc-pilar-font/doc-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.ts");
+/* harmony import */ var _components_doc_pilar_font_sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/sections/information-pilar-font/information-pilar-font.component.ts");
+/* harmony import */ var _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./components/doc-table/doc-table.component */ "./src/app/showcase/components/doc-table/doc-table.component.ts");
+/* harmony import */ var _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./components/doc-table/sections/basic-table/basic-table.component */ "./src/app/showcase/components/doc-table/sections/basic-table/basic-table.component.ts");
+/* harmony import */ var _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./components/doc-table/sections/table-with-checkbox/table-with-checkbox.component */ "./src/app/showcase/components/doc-table/sections/table-with-checkbox/table-with-checkbox.component.ts");
+/* harmony import */ var _components_doc_table_sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./components/doc-table/sections/column-definitions/column-definitions-table.component */ "./src/app/showcase/components/doc-table/sections/column-definitions/column-definitions-table.component.ts");
+/* harmony import */ var _components_doc_table_sections_table_with_custom_action_table_with_custom_action_component__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./components/doc-table/sections/table-with-custom-action/table-with-custom-action.component */ "./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.ts");
+/* harmony import */ var _components_doc_table_sections_table_with_action_table_with_action_component__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./components/doc-table/sections/table-with-action/table-with-action.component */ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts");
+/* harmony import */ var _components_doc_table_sections_summary_row_table_summary_row_table_component__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./components/doc-table/sections/summary-row-table/summary-row-table.component */ "./src/app/showcase/components/doc-table/sections/summary-row-table/summary-row-table.component.ts");
+/* harmony import */ var _components_doc_modal_doc_modal_component__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./components/doc-modal/doc-modal.component */ "./src/app/showcase/components/doc-modal/doc-modal.component.ts");
+/* harmony import */ var _components_doc_modal_sections_basic_modal_basic_modal_component__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./components/doc-modal/sections/basic-modal/basic-modal.component */ "./src/app/showcase/components/doc-modal/sections/basic-modal/basic-modal.component.ts");
+/* harmony import */ var _components_doc_modal_sections_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ./components/doc-modal/sections/confirm-dialog/confirm-dialog.component */ "./src/app/showcase/components/doc-modal/sections/confirm-dialog/confirm-dialog.component.ts");
+/* harmony import */ var _components_doc_modal_sections_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ./components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component */ "./src/app/showcase/components/doc-modal/sections/confirm-dialog2/confirm-dialog2.component.ts");
+/* harmony import */ var projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/confirm-dialog2/confirm-dialog2.component.ts");
+/* harmony import */ var projects_uiigateway_pilar_src_lib_components_utilities_warning_dialog2_warning_dialog2_component__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/warning-dialog2/warning-dialog2.component.ts");
+/* harmony import */ var projects_uiigateway_pilar_src_lib_components_utilities_success_dialog2_success_dialog2_component__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/success-dialog2/success-dialog2.component.ts");
+/* harmony import */ var projects_uiigateway_pilar_src_lib_components_utilities_danger_dialog2_danger_dialog2_component__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component */ "./projects/uiigateway/pilar/src/lib/components/_utilities/danger-dialog2/danger-dialog2.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16127,13 +17897,26 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 function hljsLanguages() {
     return [
-        { name: 'typescript', func: highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_5___default.a },
-        { name: 'scss', func: highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_7___default.a },
-        { name: 'xml', func: highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_6___default.a }
+        { name: "typescript", func: highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_7___default.a },
+        { name: "scss", func: highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_9___default.a },
+        { name: "xml", func: highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_8___default.a },
     ];
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -16240,195 +18023,221 @@ var ShowcaseModule = /** @class */ (function () {
     function ShowcaseModule() {
     }
     ShowcaseModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
             declarations: [
-                _showcase_component__WEBPACK_IMPORTED_MODULE_8__["ShowcaseComponent"],
-                _common_demo_header_demo_header_component__WEBPACK_IMPORTED_MODULE_24__["DemoHeaderComponent"],
-                _common_demo_sidebar_demo_sidebar_component__WEBPACK_IMPORTED_MODULE_23__["DemoSidebarComponent"],
-                _common_right_sidebar_right_sidebar_component__WEBPACK_IMPORTED_MODULE_13__["RightSidebarComponent"],
-                _components_doc_pagination_doc_pagination_component__WEBPACK_IMPORTED_MODULE_14__["DocPaginationComponent"],
-                _components_doc_pagination_sections_basic_pagination_basic_pagination_component__WEBPACK_IMPORTED_MODULE_21__["BasicPaginationComponent"],
-                _components_doc_image_upload_sections_basic_image_upload_basic_image_upload_component__WEBPACK_IMPORTED_MODULE_70__["BasicImageUploadComponent"],
-                _components_doc_image_upload_sections_hide_delete_image_upload_hide_delete_image_upload_component__WEBPACK_IMPORTED_MODULE_11__["HideDeleteImageUploadComponent"],
-                _components_doc_image_upload_sections_labeling_button_image_upload_labeling_button_image_upload_component__WEBPACK_IMPORTED_MODULE_103__["LabelingButtonImageUploadComponent"],
-                _components_doc_pagination_sections_page_change_event_page_change_event_component__WEBPACK_IMPORTED_MODULE_20__["PageChangeEventComponent"],
-                _components_doc_pagination_sections_set_page_set_page_component__WEBPACK_IMPORTED_MODULE_19__["SetPageComponent"],
-                _components_get_started_get_started_component__WEBPACK_IMPORTED_MODULE_15__["GetStartedComponent"],
-                _templates_code_section_code_section_component__WEBPACK_IMPORTED_MODULE_16__["CodeSectionComponent"],
-                _templates_component_header_component_header_component__WEBPACK_IMPORTED_MODULE_22__["ComponentHeaderComponent"],
-                _templates_docs_api_docs_api_component__WEBPACK_IMPORTED_MODULE_17__["DocsApiComponent"],
-                _components_doc_image_upload_doc_image_upload_component__WEBPACK_IMPORTED_MODULE_72__["DocImageUploadComponent"],
-                _templates_docs_section_docs_section_component__WEBPACK_IMPORTED_MODULE_18__["DocsSectionComponent"],
-                _showcase_directive__WEBPACK_IMPORTED_MODULE_10__["ShowcaseDirective"],
-                _components_doc_tabset_doc_tabset_component__WEBPACK_IMPORTED_MODULE_25__["DocTabsetComponent"],
-                _components_doc_tabset_sections_basic_tabset_basic_tabset_component__WEBPACK_IMPORTED_MODULE_26__["BasicTabsetComponent"],
-                _components_doc_tabset_sections_tabset_with_icon_tabset_with_icon_component__WEBPACK_IMPORTED_MODULE_27__["TabsetWithIconComponent"],
-                _components_doc_tabset_sections_tabset_with_icon_text_tabset_with_icon_text_component__WEBPACK_IMPORTED_MODULE_28__["TabsetWithIconTextComponent"],
-                _components_doc_tabset_sections_manually_tab_selection_manually_tab_selection_component__WEBPACK_IMPORTED_MODULE_29__["ManuallyTabSelectionComponent"],
-                _components_installation_installation_component__WEBPACK_IMPORTED_MODULE_12__["InstallationComponent"],
-                _components_doc_tabset_sections_tabset_select_event_tabset_select_event_component__WEBPACK_IMPORTED_MODULE_30__["TabsetSelectEventComponent"],
-                _components_doc_tabset_sections_tabset_deselect_event_tabset_deselect_event_component__WEBPACK_IMPORTED_MODULE_31__["TabsetDeselectEventComponent"],
-                _templates_section_section_component__WEBPACK_IMPORTED_MODULE_32__["SectionComponent"],
-                _common_demo_footer_demo_footer_component__WEBPACK_IMPORTED_MODULE_33__["DemoFooterComponent"],
-                _components_doc_button_doc_button_component__WEBPACK_IMPORTED_MODULE_102__["DocButtonComponent"],
-                _components_doc_button_sections_size_button_size_button_component__WEBPACK_IMPORTED_MODULE_100__["SizeButtonComponent"],
-                _components_doc_button_sections_block_button_block_button_component__WEBPACK_IMPORTED_MODULE_99__["BlockButtonComponent"],
-                _components_doc_button_sections_basic_button_basic_button_component__WEBPACK_IMPORTED_MODULE_101__["BasicButtonComponent"],
-                _components_doc_button_sections_disabled_button_disabled_button_component__WEBPACK_IMPORTED_MODULE_94__["DisabledButtonComponent"],
-                _components_doc_button_sections_loader_button_loader_button_component__WEBPACK_IMPORTED_MODULE_95__["LoaderButtonComponent"],
-                _components_doc_button_sections_combination_icon_button_combination_icon_button_component__WEBPACK_IMPORTED_MODULE_96__["CombinationIconButtonComponent"],
-                _components_doc_button_sections_icon_button_icon_button_component__WEBPACK_IMPORTED_MODULE_97__["IconButtonComponent"],
-                _components_doc_button_sections_active_button_active_button_component__WEBPACK_IMPORTED_MODULE_98__["ActiveButtonComponent"],
-                _components_doc_infobox_doc_infobox_component__WEBPACK_IMPORTED_MODULE_34__["DocInfoboxComponent"],
-                _components_doc_infobox_sections_basic_infobox_basic_infobox_component__WEBPACK_IMPORTED_MODULE_35__["BasicInfoboxComponent"],
-                _components_doc_infobox_sections_color_infobox_color_infobox_component__WEBPACK_IMPORTED_MODULE_73__["ColorInfoboxComponent"],
-                _components_doc_infobox_sections_group_infobox_group_infobox_component__WEBPACK_IMPORTED_MODULE_36__["GroupInfoboxComponent"],
-                _components_doc_toast_doc_toast_component__WEBPACK_IMPORTED_MODULE_37__["DocToastComponent"],
-                _components_doc_toast_sections_basic_toast_basic_toast_component__WEBPACK_IMPORTED_MODULE_38__["BasicToastComponent"],
-                _components_doc_toast_sections_blank_toast_blank_toast_component__WEBPACK_IMPORTED_MODULE_39__["BlankToastComponent"],
-                _components_doc_toast_sections_timeout_toast_timeout_toast_component__WEBPACK_IMPORTED_MODULE_40__["TimeoutToastComponent"],
-                _components_doc_information_doc_information_component__WEBPACK_IMPORTED_MODULE_41__["DocInformationComponent"],
-                _components_doc_information_sections_basic_information_basic_information_component__WEBPACK_IMPORTED_MODULE_42__["BasicInformationComponent"],
-                _components_doc_information_sections_information_with_tag_html_information_with_tag_html_component__WEBPACK_IMPORTED_MODULE_0__["InformationWithTagHtmlComponent"],
-                _components_doc_accordion_doc_accordion_component__WEBPACK_IMPORTED_MODULE_43__["DocAccordionComponent"],
-                _components_doc_accordion_sections_basic_accordion_basic_accordion_component__WEBPACK_IMPORTED_MODULE_44__["BasicAccordionComponent"],
-                _components_doc_accordion_sections_animation_accordion_animation_accordion_component__WEBPACK_IMPORTED_MODULE_45__["AnimationAccordionComponent"],
-                _components_doc_accordion_sections_opening_event_accordion_opening_event_accordion_component__WEBPACK_IMPORTED_MODULE_46__["OpeningEventAccordionComponent"],
-                _components_doc_accordion_sections_disable_accordion_disable_accordion_component__WEBPACK_IMPORTED_MODULE_47__["DisableAccordionComponent"],
-                _components_doc_accordion_sections_initially_opened_accordion_initially_opened_accordion_component__WEBPACK_IMPORTED_MODULE_48__["InitiallyOpenedAccordionComponent"],
-                _components_doc_accordion_sections_dynamic_accordion_dynamic_accordion_component__WEBPACK_IMPORTED_MODULE_49__["DynamicAccordionComponent"],
-                _components_doc_accordion_sections_dynamic_body_accordion_dynamic_body_accordion_component__WEBPACK_IMPORTED_MODULE_50__["DynamicBodyAccordionComponent"],
-                _components_doc_accordion_sections_manual_toggle_accordion_manual_toggle_accordion_component__WEBPACK_IMPORTED_MODULE_51__["ManualToggleAccordionComponent"],
-                _components_doc_accordion_sections_other_close_accordion_other_close_accordion_component__WEBPACK_IMPORTED_MODULE_52__["OtherCloseAccordionComponent"],
-                _components_doc_accordion_sections_custom_html_accordion_custom_html_accordion_component__WEBPACK_IMPORTED_MODULE_53__["CustomHtmlAccordionComponent"],
-                _components_doc_accordion_sections_styling_accordion_styling_accordion_component__WEBPACK_IMPORTED_MODULE_54__["StylingAccordionComponent"],
-                _components_under_development_under_development_component__WEBPACK_IMPORTED_MODULE_55__["UnderDevelopmentComponent"],
-                _components_doc_file_upload_doc_file_upload_component__WEBPACK_IMPORTED_MODULE_56__["DocFileUploadComponent"],
-                _components_doc_file_upload_sections_basic_file_upload_basic_file_upload_component__WEBPACK_IMPORTED_MODULE_57__["BasicFileUploadComponent"],
-                _components_doc_file_upload_sections_type_file_upload_type_file_upload_component__WEBPACK_IMPORTED_MODULE_58__["TypeFileUploadComponent"],
-                _components_doc_file_upload_sections_size_file_upload_size_file_upload_component__WEBPACK_IMPORTED_MODULE_59__["SizeFileUploadComponent"],
-                _components_doc_file_upload_sections_multiple_file_upload_multiple_file_upload_component__WEBPACK_IMPORTED_MODULE_60__["MultipleFileUploadComponent"],
-                _components_doc_file_upload_sections_events_file_upload_events_file_upload_component__WEBPACK_IMPORTED_MODULE_61__["EventsFileUploadComponent"],
-                _components_doc_file_upload_sections_prev_position_file_upload_prev_position_file_upload_component__WEBPACK_IMPORTED_MODULE_62__["PrevPositionFileUploadComponent"],
-                _components_doc_file_upload_sections_set_file_upload_set_file_upload_component__WEBPACK_IMPORTED_MODULE_63__["SetFileUploadComponent"],
-                _components_doc_switch_doc_switch_component__WEBPACK_IMPORTED_MODULE_64__["DocSwitchComponent"],
-                _components_doc_switch_sections_basic_switch_basic_switch_component__WEBPACK_IMPORTED_MODULE_65__["BasicSwitchComponent"],
-                _components_doc_switch_sections_disabled_switch_disabled_switch_component__WEBPACK_IMPORTED_MODULE_66__["DisabledSwitchComponent"],
-                _components_doc_switch_sections_checked_switch_checked_switch_component__WEBPACK_IMPORTED_MODULE_67__["CheckedSwitchComponent"],
-                _components_doc_switch_sections_changed_switch_changed_switch_component__WEBPACK_IMPORTED_MODULE_68__["ChangedSwitchComponent"],
-                _components_doc_switch_sections_delayed_switch_delayed_switch_component__WEBPACK_IMPORTED_MODULE_69__["DelayedSwitchComponent"],
-                _components_doc_toast_sections_pause_onclick_toast_pause_onclick_toast_component__WEBPACK_IMPORTED_MODULE_71__["PauseOnclickToastComponent"],
-                _components_doc_form_wizard_doc_form_wizard_component__WEBPACK_IMPORTED_MODULE_74__["DocFormWizardComponent"],
-                _components_doc_form_wizard_sections_basic_form_wizard_basic_form_wizard_component__WEBPACK_IMPORTED_MODULE_75__["BasicFormWizardComponent"],
-                _components_doc_form_wizard_sections_many_step_form_wizard_many_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_76__["ManyStepFormWizardComponent"],
-                _components_doc_form_wizard_sections_emit_event_paginate_change_form_wizard_emit_event_paginate_change_form_wizard_component__WEBPACK_IMPORTED_MODULE_77__["EmitEventPaginateChangeFormWizardComponent"],
-                _components_doc_form_wizard_sections_disabled_submit_form_wizard_disabled_submit_form_wizard_component__WEBPACK_IMPORTED_MODULE_78__["DisabledSubmitFormWizardComponent"],
-                _components_doc_form_wizard_sections_disabled_click_step_form_wizard_disabled_click_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_79__["DisabledClickStepFormWizardComponent"],
-                _components_doc_form_wizard_sections_custom_pagination_label_form_wizard_custom_pagination_label_form_wizard_component__WEBPACK_IMPORTED_MODULE_80__["CustomPaginationLabelFormWizardComponent"],
-                _components_doc_form_wizard_sections_active_step_option_form_wizard_active_step_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_81__["ActiveStepOptionFormWizardComponent"],
-                _components_doc_form_wizard_sections_steps_option_form_wizard_steps_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_82__["StepsOptionFormWizardComponent"],
-                _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_83__["DocTooltipComponent"],
-                _components_doc_tooltip_sections_basic_tooltip_basic_tooltip_component__WEBPACK_IMPORTED_MODULE_84__["BasicTooltipComponent"],
-                _components_doc_tooltip_sections_paragraph_tooltip_paragraph_tooltip_component__WEBPACK_IMPORTED_MODULE_85__["ParagraphTooltipComponent"],
-                _components_doc_tooltip_sections_placement_tooltip_placement_tooltip_component__WEBPACK_IMPORTED_MODULE_86__["PlacementTooltipComponent"],
-                _components_doc_tooltip_sections_dynamic_html_tooltip_dynamic_html_tooltip_component__WEBPACK_IMPORTED_MODULE_87__["DynamicHtmlTooltipComponent"],
-                _components_doc_tooltip_sections_disabled_tooltip_disabled_tooltip_component__WEBPACK_IMPORTED_MODULE_88__["DisabledTooltipComponent"],
-                _components_doc_chips_doc_chips_component__WEBPACK_IMPORTED_MODULE_89__["DocChipsComponent"],
-                _components_doc_chips_sections_basic_chip_basic_chip_component__WEBPACK_IMPORTED_MODULE_90__["BasicChipComponent"],
-                _components_doc_chips_sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_91__["DisableChipComponent"],
-                _components_doc_chips_sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_92__["VerticalChipComponent"],
-                _components_doc_chips_sections_horizontal_chip_horizontal_chip_component__WEBPACK_IMPORTED_MODULE_93__["HorizontalChipComponent"],
-                _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_104__["DocPilarFontComponent"],
-                _components_doc_pilar_font_sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_105__["InformationPilarFontComponent"],
-                _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_106__["DocTableComponent"],
-                _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_107__["BasicTableComponent"],
-                _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_108__["TableWithCheckboxComponent"],
-                _components_doc_table_sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_109__["ColumnDefinitionsTableComponent"]
+                _showcase_component__WEBPACK_IMPORTED_MODULE_10__["ShowcaseComponent"],
+                _common_demo_header_demo_header_component__WEBPACK_IMPORTED_MODULE_26__["DemoHeaderComponent"],
+                _common_demo_sidebar_demo_sidebar_component__WEBPACK_IMPORTED_MODULE_25__["DemoSidebarComponent"],
+                _common_right_sidebar_right_sidebar_component__WEBPACK_IMPORTED_MODULE_15__["RightSidebarComponent"],
+                _components_doc_pagination_doc_pagination_component__WEBPACK_IMPORTED_MODULE_16__["DocPaginationComponent"],
+                _components_doc_pagination_sections_basic_pagination_basic_pagination_component__WEBPACK_IMPORTED_MODULE_23__["BasicPaginationComponent"],
+                _components_doc_image_upload_sections_basic_image_upload_basic_image_upload_component__WEBPACK_IMPORTED_MODULE_72__["BasicImageUploadComponent"],
+                _components_doc_image_upload_sections_hide_delete_image_upload_hide_delete_image_upload_component__WEBPACK_IMPORTED_MODULE_13__["HideDeleteImageUploadComponent"],
+                _components_doc_image_upload_sections_labeling_button_image_upload_labeling_button_image_upload_component__WEBPACK_IMPORTED_MODULE_105__["LabelingButtonImageUploadComponent"],
+                _components_doc_pagination_sections_page_change_event_page_change_event_component__WEBPACK_IMPORTED_MODULE_22__["PageChangeEventComponent"],
+                _components_doc_pagination_sections_set_page_set_page_component__WEBPACK_IMPORTED_MODULE_21__["SetPageComponent"],
+                _components_get_started_get_started_component__WEBPACK_IMPORTED_MODULE_17__["GetStartedComponent"],
+                _templates_code_section_code_section_component__WEBPACK_IMPORTED_MODULE_18__["CodeSectionComponent"],
+                _templates_component_header_component_header_component__WEBPACK_IMPORTED_MODULE_24__["ComponentHeaderComponent"],
+                _templates_docs_api_docs_api_component__WEBPACK_IMPORTED_MODULE_19__["DocsApiComponent"],
+                _components_doc_image_upload_doc_image_upload_component__WEBPACK_IMPORTED_MODULE_74__["DocImageUploadComponent"],
+                _templates_docs_section_docs_section_component__WEBPACK_IMPORTED_MODULE_20__["DocsSectionComponent"],
+                _showcase_directive__WEBPACK_IMPORTED_MODULE_12__["ShowcaseDirective"],
+                _components_doc_tabset_doc_tabset_component__WEBPACK_IMPORTED_MODULE_27__["DocTabsetComponent"],
+                _components_doc_tabset_sections_basic_tabset_basic_tabset_component__WEBPACK_IMPORTED_MODULE_28__["BasicTabsetComponent"],
+                _components_doc_tabset_sections_tabset_with_icon_tabset_with_icon_component__WEBPACK_IMPORTED_MODULE_29__["TabsetWithIconComponent"],
+                _components_doc_tabset_sections_tabset_with_icon_text_tabset_with_icon_text_component__WEBPACK_IMPORTED_MODULE_30__["TabsetWithIconTextComponent"],
+                _components_doc_tabset_sections_manually_tab_selection_manually_tab_selection_component__WEBPACK_IMPORTED_MODULE_31__["ManuallyTabSelectionComponent"],
+                _components_installation_installation_component__WEBPACK_IMPORTED_MODULE_14__["InstallationComponent"],
+                _components_doc_tabset_sections_tabset_select_event_tabset_select_event_component__WEBPACK_IMPORTED_MODULE_32__["TabsetSelectEventComponent"],
+                _components_doc_tabset_sections_tabset_deselect_event_tabset_deselect_event_component__WEBPACK_IMPORTED_MODULE_33__["TabsetDeselectEventComponent"],
+                _templates_section_section_component__WEBPACK_IMPORTED_MODULE_34__["SectionComponent"],
+                _common_demo_footer_demo_footer_component__WEBPACK_IMPORTED_MODULE_35__["DemoFooterComponent"],
+                _components_doc_button_doc_button_component__WEBPACK_IMPORTED_MODULE_104__["DocButtonComponent"],
+                _components_doc_button_sections_size_button_size_button_component__WEBPACK_IMPORTED_MODULE_102__["SizeButtonComponent"],
+                _components_doc_button_sections_block_button_block_button_component__WEBPACK_IMPORTED_MODULE_101__["BlockButtonComponent"],
+                _components_doc_button_sections_basic_button_basic_button_component__WEBPACK_IMPORTED_MODULE_103__["BasicButtonComponent"],
+                _components_doc_button_sections_disabled_button_disabled_button_component__WEBPACK_IMPORTED_MODULE_96__["DisabledButtonComponent"],
+                _components_doc_button_sections_loader_button_loader_button_component__WEBPACK_IMPORTED_MODULE_97__["LoaderButtonComponent"],
+                _components_doc_button_sections_combination_icon_button_combination_icon_button_component__WEBPACK_IMPORTED_MODULE_98__["CombinationIconButtonComponent"],
+                _components_doc_button_sections_icon_button_icon_button_component__WEBPACK_IMPORTED_MODULE_99__["IconButtonComponent"],
+                _components_doc_button_sections_active_button_active_button_component__WEBPACK_IMPORTED_MODULE_100__["ActiveButtonComponent"],
+                _components_doc_infobox_doc_infobox_component__WEBPACK_IMPORTED_MODULE_36__["DocInfoboxComponent"],
+                _components_doc_infobox_sections_basic_infobox_basic_infobox_component__WEBPACK_IMPORTED_MODULE_37__["BasicInfoboxComponent"],
+                _components_doc_infobox_sections_color_infobox_color_infobox_component__WEBPACK_IMPORTED_MODULE_75__["ColorInfoboxComponent"],
+                _components_doc_infobox_sections_group_infobox_group_infobox_component__WEBPACK_IMPORTED_MODULE_38__["GroupInfoboxComponent"],
+                _components_doc_toast_doc_toast_component__WEBPACK_IMPORTED_MODULE_39__["DocToastComponent"],
+                _components_doc_toast_sections_basic_toast_basic_toast_component__WEBPACK_IMPORTED_MODULE_40__["BasicToastComponent"],
+                _components_doc_toast_sections_blank_toast_blank_toast_component__WEBPACK_IMPORTED_MODULE_41__["BlankToastComponent"],
+                _components_doc_toast_sections_timeout_toast_timeout_toast_component__WEBPACK_IMPORTED_MODULE_42__["TimeoutToastComponent"],
+                _components_doc_information_doc_information_component__WEBPACK_IMPORTED_MODULE_43__["DocInformationComponent"],
+                _components_doc_information_sections_basic_information_basic_information_component__WEBPACK_IMPORTED_MODULE_44__["BasicInformationComponent"],
+                _components_doc_information_sections_information_with_tag_html_information_with_tag_html_component__WEBPACK_IMPORTED_MODULE_2__["InformationWithTagHtmlComponent"],
+                _components_doc_accordion_doc_accordion_component__WEBPACK_IMPORTED_MODULE_45__["DocAccordionComponent"],
+                _components_doc_accordion_sections_basic_accordion_basic_accordion_component__WEBPACK_IMPORTED_MODULE_46__["BasicAccordionComponent"],
+                _components_doc_accordion_sections_animation_accordion_animation_accordion_component__WEBPACK_IMPORTED_MODULE_47__["AnimationAccordionComponent"],
+                _components_doc_accordion_sections_opening_event_accordion_opening_event_accordion_component__WEBPACK_IMPORTED_MODULE_48__["OpeningEventAccordionComponent"],
+                _components_doc_accordion_sections_disable_accordion_disable_accordion_component__WEBPACK_IMPORTED_MODULE_49__["DisableAccordionComponent"],
+                _components_doc_accordion_sections_initially_opened_accordion_initially_opened_accordion_component__WEBPACK_IMPORTED_MODULE_50__["InitiallyOpenedAccordionComponent"],
+                _components_doc_accordion_sections_dynamic_accordion_dynamic_accordion_component__WEBPACK_IMPORTED_MODULE_51__["DynamicAccordionComponent"],
+                _components_doc_accordion_sections_dynamic_body_accordion_dynamic_body_accordion_component__WEBPACK_IMPORTED_MODULE_52__["DynamicBodyAccordionComponent"],
+                _components_doc_accordion_sections_manual_toggle_accordion_manual_toggle_accordion_component__WEBPACK_IMPORTED_MODULE_53__["ManualToggleAccordionComponent"],
+                _components_doc_accordion_sections_other_close_accordion_other_close_accordion_component__WEBPACK_IMPORTED_MODULE_54__["OtherCloseAccordionComponent"],
+                _components_doc_accordion_sections_custom_html_accordion_custom_html_accordion_component__WEBPACK_IMPORTED_MODULE_55__["CustomHtmlAccordionComponent"],
+                _components_doc_accordion_sections_styling_accordion_styling_accordion_component__WEBPACK_IMPORTED_MODULE_56__["StylingAccordionComponent"],
+                _components_under_development_under_development_component__WEBPACK_IMPORTED_MODULE_57__["UnderDevelopmentComponent"],
+                _components_doc_file_upload_doc_file_upload_component__WEBPACK_IMPORTED_MODULE_58__["DocFileUploadComponent"],
+                _components_doc_file_upload_sections_basic_file_upload_basic_file_upload_component__WEBPACK_IMPORTED_MODULE_59__["BasicFileUploadComponent"],
+                _components_doc_file_upload_sections_type_file_upload_type_file_upload_component__WEBPACK_IMPORTED_MODULE_60__["TypeFileUploadComponent"],
+                _components_doc_file_upload_sections_size_file_upload_size_file_upload_component__WEBPACK_IMPORTED_MODULE_61__["SizeFileUploadComponent"],
+                _components_doc_file_upload_sections_multiple_file_upload_multiple_file_upload_component__WEBPACK_IMPORTED_MODULE_62__["MultipleFileUploadComponent"],
+                _components_doc_file_upload_sections_events_file_upload_events_file_upload_component__WEBPACK_IMPORTED_MODULE_63__["EventsFileUploadComponent"],
+                _components_doc_file_upload_sections_prev_position_file_upload_prev_position_file_upload_component__WEBPACK_IMPORTED_MODULE_64__["PrevPositionFileUploadComponent"],
+                _components_doc_file_upload_sections_set_file_upload_set_file_upload_component__WEBPACK_IMPORTED_MODULE_65__["SetFileUploadComponent"],
+                _components_doc_switch_doc_switch_component__WEBPACK_IMPORTED_MODULE_66__["DocSwitchComponent"],
+                _components_doc_switch_sections_basic_switch_basic_switch_component__WEBPACK_IMPORTED_MODULE_67__["BasicSwitchComponent"],
+                _components_doc_switch_sections_disabled_switch_disabled_switch_component__WEBPACK_IMPORTED_MODULE_68__["DisabledSwitchComponent"],
+                _components_doc_switch_sections_checked_switch_checked_switch_component__WEBPACK_IMPORTED_MODULE_69__["CheckedSwitchComponent"],
+                _components_doc_switch_sections_changed_switch_changed_switch_component__WEBPACK_IMPORTED_MODULE_70__["ChangedSwitchComponent"],
+                _components_doc_switch_sections_delayed_switch_delayed_switch_component__WEBPACK_IMPORTED_MODULE_71__["DelayedSwitchComponent"],
+                _components_doc_toast_sections_pause_onclick_toast_pause_onclick_toast_component__WEBPACK_IMPORTED_MODULE_73__["PauseOnclickToastComponent"],
+                _components_doc_form_wizard_doc_form_wizard_component__WEBPACK_IMPORTED_MODULE_76__["DocFormWizardComponent"],
+                _components_doc_form_wizard_sections_basic_form_wizard_basic_form_wizard_component__WEBPACK_IMPORTED_MODULE_77__["BasicFormWizardComponent"],
+                _components_doc_form_wizard_sections_many_step_form_wizard_many_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_78__["ManyStepFormWizardComponent"],
+                _components_doc_form_wizard_sections_emit_event_paginate_change_form_wizard_emit_event_paginate_change_form_wizard_component__WEBPACK_IMPORTED_MODULE_79__["EmitEventPaginateChangeFormWizardComponent"],
+                _components_doc_form_wizard_sections_disabled_submit_form_wizard_disabled_submit_form_wizard_component__WEBPACK_IMPORTED_MODULE_80__["DisabledSubmitFormWizardComponent"],
+                _components_doc_form_wizard_sections_disabled_click_step_form_wizard_disabled_click_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_81__["DisabledClickStepFormWizardComponent"],
+                _components_doc_form_wizard_sections_custom_pagination_label_form_wizard_custom_pagination_label_form_wizard_component__WEBPACK_IMPORTED_MODULE_82__["CustomPaginationLabelFormWizardComponent"],
+                _components_doc_form_wizard_sections_active_step_option_form_wizard_active_step_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_83__["ActiveStepOptionFormWizardComponent"],
+                _components_doc_form_wizard_sections_steps_option_form_wizard_steps_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_84__["StepsOptionFormWizardComponent"],
+                _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_85__["DocTooltipComponent"],
+                _components_doc_tooltip_sections_basic_tooltip_basic_tooltip_component__WEBPACK_IMPORTED_MODULE_86__["BasicTooltipComponent"],
+                _components_doc_tooltip_sections_paragraph_tooltip_paragraph_tooltip_component__WEBPACK_IMPORTED_MODULE_87__["ParagraphTooltipComponent"],
+                _components_doc_tooltip_sections_placement_tooltip_placement_tooltip_component__WEBPACK_IMPORTED_MODULE_88__["PlacementTooltipComponent"],
+                _components_doc_tooltip_sections_dynamic_html_tooltip_dynamic_html_tooltip_component__WEBPACK_IMPORTED_MODULE_89__["DynamicHtmlTooltipComponent"],
+                _components_doc_tooltip_sections_disabled_tooltip_disabled_tooltip_component__WEBPACK_IMPORTED_MODULE_90__["DisabledTooltipComponent"],
+                _components_doc_chips_doc_chips_component__WEBPACK_IMPORTED_MODULE_91__["DocChipsComponent"],
+                _components_doc_chips_sections_basic_chip_basic_chip_component__WEBPACK_IMPORTED_MODULE_92__["BasicChipComponent"],
+                _components_doc_chips_sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_93__["DisableChipComponent"],
+                _components_doc_chips_sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_94__["VerticalChipComponent"],
+                _components_doc_chips_sections_horizontal_chip_horizontal_chip_component__WEBPACK_IMPORTED_MODULE_95__["HorizontalChipComponent"],
+                _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_106__["DocPilarFontComponent"],
+                _components_doc_pilar_font_sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_107__["InformationPilarFontComponent"],
+                _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_108__["DocTableComponent"],
+                _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_109__["BasicTableComponent"],
+                _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_110__["TableWithCheckboxComponent"],
+                _components_doc_table_sections_table_with_action_table_with_action_component__WEBPACK_IMPORTED_MODULE_113__["TableWithActionComponent"],
+                _components_doc_table_sections_table_with_custom_action_table_with_custom_action_component__WEBPACK_IMPORTED_MODULE_112__["TableWithCustomActionComponent"],
+                _components_doc_table_sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_111__["ColumnDefinitionsTableComponent"],
+                _components_doc_table_sections_summary_row_table_summary_row_table_component__WEBPACK_IMPORTED_MODULE_114__["SummaryRowTableComponent"],
+                _components_doc_modal_doc_modal_component__WEBPACK_IMPORTED_MODULE_115__["DocModalComponent"],
+                _components_doc_modal_sections_basic_modal_basic_modal_component__WEBPACK_IMPORTED_MODULE_116__["BasicModalComponent"],
+                _components_doc_modal_sections_basic_modal_basic_modal_component__WEBPACK_IMPORTED_MODULE_116__["BasicModalExampleComponent"],
+                _components_doc_modal_sections_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_117__["ConfirmDialogComponent"],
+                _projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_1__["ConfirmdialogComponent"],
+                _components_doc_modal_sections_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_118__["ConfirmDialog2Component"],
+                projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_119__["Confirmdialog2Component"],
+                projects_uiigateway_pilar_src_lib_components_utilities_warning_dialog2_warning_dialog2_component__WEBPACK_IMPORTED_MODULE_120__["Warningdialog2Component"],
+                projects_uiigateway_pilar_src_lib_components_utilities_success_dialog2_success_dialog2_component__WEBPACK_IMPORTED_MODULE_121__["Successdialog2Component"],
+                projects_uiigateway_pilar_src_lib_components_utilities_danger_dialog2_danger_dialog2_component__WEBPACK_IMPORTED_MODULE_122__["Dangerdialog2Component"]
             ],
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-                ngx_highlightjs__WEBPACK_IMPORTED_MODULE_4__["HighlightModule"].forRoot({
-                    languages: hljsLanguages
+                _angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"],
+                ngx_highlightjs__WEBPACK_IMPORTED_MODULE_6__["HighlightModule"].forRoot({
+                    languages: hljsLanguages,
                 }),
-                pilar__WEBPACK_IMPORTED_MODULE_3__["PilarModule"],
-                _showcase_routing__WEBPACK_IMPORTED_MODULE_9__["ShowcaseRoutes"]
+                pilar__WEBPACK_IMPORTED_MODULE_5__["PilarModule"],
+                _showcase_routing__WEBPACK_IMPORTED_MODULE_11__["ShowcaseRoutes"],
             ],
             entryComponents: [
-                _components_doc_pagination_sections_basic_pagination_basic_pagination_component__WEBPACK_IMPORTED_MODULE_21__["BasicPaginationComponent"],
-                _components_doc_pagination_sections_page_change_event_page_change_event_component__WEBPACK_IMPORTED_MODULE_20__["PageChangeEventComponent"],
-                _components_doc_pagination_sections_set_page_set_page_component__WEBPACK_IMPORTED_MODULE_19__["SetPageComponent"],
-                _components_doc_tabset_sections_basic_tabset_basic_tabset_component__WEBPACK_IMPORTED_MODULE_26__["BasicTabsetComponent"],
-                _components_doc_tabset_sections_tabset_with_icon_tabset_with_icon_component__WEBPACK_IMPORTED_MODULE_27__["TabsetWithIconComponent"],
-                _components_doc_tabset_sections_tabset_with_icon_text_tabset_with_icon_text_component__WEBPACK_IMPORTED_MODULE_28__["TabsetWithIconTextComponent"],
-                _components_doc_tabset_sections_manually_tab_selection_manually_tab_selection_component__WEBPACK_IMPORTED_MODULE_29__["ManuallyTabSelectionComponent"],
-                _components_doc_tabset_sections_tabset_select_event_tabset_select_event_component__WEBPACK_IMPORTED_MODULE_30__["TabsetSelectEventComponent"],
-                _components_doc_tabset_sections_tabset_deselect_event_tabset_deselect_event_component__WEBPACK_IMPORTED_MODULE_31__["TabsetDeselectEventComponent"],
-                _components_doc_infobox_sections_basic_infobox_basic_infobox_component__WEBPACK_IMPORTED_MODULE_35__["BasicInfoboxComponent"],
-                _components_doc_infobox_sections_color_infobox_color_infobox_component__WEBPACK_IMPORTED_MODULE_73__["ColorInfoboxComponent"],
-                _components_doc_infobox_sections_group_infobox_group_infobox_component__WEBPACK_IMPORTED_MODULE_36__["GroupInfoboxComponent"],
-                _components_doc_toast_sections_basic_toast_basic_toast_component__WEBPACK_IMPORTED_MODULE_38__["BasicToastComponent"],
-                _components_doc_toast_sections_blank_toast_blank_toast_component__WEBPACK_IMPORTED_MODULE_39__["BlankToastComponent"],
-                _components_doc_toast_sections_timeout_toast_timeout_toast_component__WEBPACK_IMPORTED_MODULE_40__["TimeoutToastComponent"],
-                _components_doc_toast_sections_pause_onclick_toast_pause_onclick_toast_component__WEBPACK_IMPORTED_MODULE_71__["PauseOnclickToastComponent"],
-                _components_doc_information_sections_basic_information_basic_information_component__WEBPACK_IMPORTED_MODULE_42__["BasicInformationComponent"],
-                _components_doc_information_sections_information_with_tag_html_information_with_tag_html_component__WEBPACK_IMPORTED_MODULE_0__["InformationWithTagHtmlComponent"],
-                _components_doc_accordion_sections_basic_accordion_basic_accordion_component__WEBPACK_IMPORTED_MODULE_44__["BasicAccordionComponent"],
-                _components_doc_accordion_sections_animation_accordion_animation_accordion_component__WEBPACK_IMPORTED_MODULE_45__["AnimationAccordionComponent"],
-                _components_doc_accordion_sections_opening_event_accordion_opening_event_accordion_component__WEBPACK_IMPORTED_MODULE_46__["OpeningEventAccordionComponent"],
-                _components_doc_accordion_sections_disable_accordion_disable_accordion_component__WEBPACK_IMPORTED_MODULE_47__["DisableAccordionComponent"],
-                _components_doc_accordion_sections_initially_opened_accordion_initially_opened_accordion_component__WEBPACK_IMPORTED_MODULE_48__["InitiallyOpenedAccordionComponent"],
-                _components_doc_accordion_sections_dynamic_accordion_dynamic_accordion_component__WEBPACK_IMPORTED_MODULE_49__["DynamicAccordionComponent"],
-                _components_doc_accordion_sections_dynamic_body_accordion_dynamic_body_accordion_component__WEBPACK_IMPORTED_MODULE_50__["DynamicBodyAccordionComponent"],
-                _components_doc_accordion_sections_manual_toggle_accordion_manual_toggle_accordion_component__WEBPACK_IMPORTED_MODULE_51__["ManualToggleAccordionComponent"],
-                _components_doc_accordion_sections_other_close_accordion_other_close_accordion_component__WEBPACK_IMPORTED_MODULE_52__["OtherCloseAccordionComponent"],
-                _components_doc_accordion_sections_custom_html_accordion_custom_html_accordion_component__WEBPACK_IMPORTED_MODULE_53__["CustomHtmlAccordionComponent"],
-                _components_doc_accordion_sections_styling_accordion_styling_accordion_component__WEBPACK_IMPORTED_MODULE_54__["StylingAccordionComponent"],
-                _components_doc_button_sections_block_button_block_button_component__WEBPACK_IMPORTED_MODULE_99__["BlockButtonComponent"],
-                _components_doc_button_sections_disabled_button_disabled_button_component__WEBPACK_IMPORTED_MODULE_94__["DisabledButtonComponent"],
-                _components_doc_button_sections_basic_button_basic_button_component__WEBPACK_IMPORTED_MODULE_101__["BasicButtonComponent"],
-                _components_doc_button_sections_loader_button_loader_button_component__WEBPACK_IMPORTED_MODULE_95__["LoaderButtonComponent"],
-                _components_doc_button_sections_combination_icon_button_combination_icon_button_component__WEBPACK_IMPORTED_MODULE_96__["CombinationIconButtonComponent"],
-                _components_doc_button_sections_icon_button_icon_button_component__WEBPACK_IMPORTED_MODULE_97__["IconButtonComponent"],
-                _components_doc_button_sections_active_button_active_button_component__WEBPACK_IMPORTED_MODULE_98__["ActiveButtonComponent"],
-                _components_doc_button_sections_size_button_size_button_component__WEBPACK_IMPORTED_MODULE_100__["SizeButtonComponent"],
-                _components_doc_file_upload_sections_basic_file_upload_basic_file_upload_component__WEBPACK_IMPORTED_MODULE_57__["BasicFileUploadComponent"],
-                _components_doc_image_upload_sections_hide_delete_image_upload_hide_delete_image_upload_component__WEBPACK_IMPORTED_MODULE_11__["HideDeleteImageUploadComponent"],
-                _components_doc_image_upload_sections_labeling_button_image_upload_labeling_button_image_upload_component__WEBPACK_IMPORTED_MODULE_103__["LabelingButtonImageUploadComponent"],
-                _components_doc_image_upload_sections_basic_image_upload_basic_image_upload_component__WEBPACK_IMPORTED_MODULE_70__["BasicImageUploadComponent"],
-                _components_doc_file_upload_sections_type_file_upload_type_file_upload_component__WEBPACK_IMPORTED_MODULE_58__["TypeFileUploadComponent"],
-                _components_doc_file_upload_sections_size_file_upload_size_file_upload_component__WEBPACK_IMPORTED_MODULE_59__["SizeFileUploadComponent"],
-                _components_doc_file_upload_sections_multiple_file_upload_multiple_file_upload_component__WEBPACK_IMPORTED_MODULE_60__["MultipleFileUploadComponent"],
-                _components_doc_file_upload_sections_events_file_upload_events_file_upload_component__WEBPACK_IMPORTED_MODULE_61__["EventsFileUploadComponent"],
-                _components_doc_file_upload_sections_prev_position_file_upload_prev_position_file_upload_component__WEBPACK_IMPORTED_MODULE_62__["PrevPositionFileUploadComponent"],
-                _components_doc_file_upload_sections_set_file_upload_set_file_upload_component__WEBPACK_IMPORTED_MODULE_63__["SetFileUploadComponent"],
-                _components_doc_switch_sections_basic_switch_basic_switch_component__WEBPACK_IMPORTED_MODULE_65__["BasicSwitchComponent"],
-                _components_doc_switch_sections_disabled_switch_disabled_switch_component__WEBPACK_IMPORTED_MODULE_66__["DisabledSwitchComponent"],
-                _components_doc_switch_sections_checked_switch_checked_switch_component__WEBPACK_IMPORTED_MODULE_67__["CheckedSwitchComponent"],
-                _components_doc_switch_sections_changed_switch_changed_switch_component__WEBPACK_IMPORTED_MODULE_68__["ChangedSwitchComponent"],
-                _components_doc_switch_sections_delayed_switch_delayed_switch_component__WEBPACK_IMPORTED_MODULE_69__["DelayedSwitchComponent"],
-                _components_doc_form_wizard_sections_basic_form_wizard_basic_form_wizard_component__WEBPACK_IMPORTED_MODULE_75__["BasicFormWizardComponent"],
-                _components_doc_form_wizard_sections_many_step_form_wizard_many_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_76__["ManyStepFormWizardComponent"],
-                _components_doc_form_wizard_sections_emit_event_paginate_change_form_wizard_emit_event_paginate_change_form_wizard_component__WEBPACK_IMPORTED_MODULE_77__["EmitEventPaginateChangeFormWizardComponent"],
-                _components_doc_form_wizard_sections_disabled_submit_form_wizard_disabled_submit_form_wizard_component__WEBPACK_IMPORTED_MODULE_78__["DisabledSubmitFormWizardComponent"],
-                _components_doc_form_wizard_sections_disabled_click_step_form_wizard_disabled_click_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_79__["DisabledClickStepFormWizardComponent"],
-                _components_doc_form_wizard_sections_custom_pagination_label_form_wizard_custom_pagination_label_form_wizard_component__WEBPACK_IMPORTED_MODULE_80__["CustomPaginationLabelFormWizardComponent"],
-                _components_doc_form_wizard_sections_active_step_option_form_wizard_active_step_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_81__["ActiveStepOptionFormWizardComponent"],
-                _components_doc_form_wizard_sections_steps_option_form_wizard_steps_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_82__["StepsOptionFormWizardComponent"],
-                _components_doc_tooltip_sections_basic_tooltip_basic_tooltip_component__WEBPACK_IMPORTED_MODULE_84__["BasicTooltipComponent"],
-                _components_doc_tooltip_sections_paragraph_tooltip_paragraph_tooltip_component__WEBPACK_IMPORTED_MODULE_85__["ParagraphTooltipComponent"],
-                _components_doc_tooltip_sections_placement_tooltip_placement_tooltip_component__WEBPACK_IMPORTED_MODULE_86__["PlacementTooltipComponent"],
-                _components_doc_tooltip_sections_dynamic_html_tooltip_dynamic_html_tooltip_component__WEBPACK_IMPORTED_MODULE_87__["DynamicHtmlTooltipComponent"],
-                _components_doc_tooltip_sections_disabled_tooltip_disabled_tooltip_component__WEBPACK_IMPORTED_MODULE_88__["DisabledTooltipComponent"],
-                _components_doc_chips_sections_basic_chip_basic_chip_component__WEBPACK_IMPORTED_MODULE_90__["BasicChipComponent"],
-                _components_doc_chips_sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_91__["DisableChipComponent"],
-                _components_doc_chips_sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_92__["VerticalChipComponent"],
-                _components_doc_chips_sections_horizontal_chip_horizontal_chip_component__WEBPACK_IMPORTED_MODULE_93__["HorizontalChipComponent"],
-                _components_doc_pilar_font_sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_105__["InformationPilarFontComponent"],
-                _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_106__["DocTableComponent"],
-                _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_107__["BasicTableComponent"],
-                _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_108__["TableWithCheckboxComponent"],
-                _components_doc_table_sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_109__["ColumnDefinitionsTableComponent"]
+                _components_doc_pagination_sections_basic_pagination_basic_pagination_component__WEBPACK_IMPORTED_MODULE_23__["BasicPaginationComponent"],
+                _components_doc_pagination_sections_page_change_event_page_change_event_component__WEBPACK_IMPORTED_MODULE_22__["PageChangeEventComponent"],
+                _components_doc_pagination_sections_set_page_set_page_component__WEBPACK_IMPORTED_MODULE_21__["SetPageComponent"],
+                _components_doc_tabset_sections_basic_tabset_basic_tabset_component__WEBPACK_IMPORTED_MODULE_28__["BasicTabsetComponent"],
+                _components_doc_tabset_sections_tabset_with_icon_tabset_with_icon_component__WEBPACK_IMPORTED_MODULE_29__["TabsetWithIconComponent"],
+                _components_doc_tabset_sections_tabset_with_icon_text_tabset_with_icon_text_component__WEBPACK_IMPORTED_MODULE_30__["TabsetWithIconTextComponent"],
+                _components_doc_tabset_sections_manually_tab_selection_manually_tab_selection_component__WEBPACK_IMPORTED_MODULE_31__["ManuallyTabSelectionComponent"],
+                _components_doc_tabset_sections_tabset_select_event_tabset_select_event_component__WEBPACK_IMPORTED_MODULE_32__["TabsetSelectEventComponent"],
+                _components_doc_tabset_sections_tabset_deselect_event_tabset_deselect_event_component__WEBPACK_IMPORTED_MODULE_33__["TabsetDeselectEventComponent"],
+                _components_doc_infobox_sections_basic_infobox_basic_infobox_component__WEBPACK_IMPORTED_MODULE_37__["BasicInfoboxComponent"],
+                _components_doc_infobox_sections_color_infobox_color_infobox_component__WEBPACK_IMPORTED_MODULE_75__["ColorInfoboxComponent"],
+                _components_doc_infobox_sections_group_infobox_group_infobox_component__WEBPACK_IMPORTED_MODULE_38__["GroupInfoboxComponent"],
+                _components_doc_toast_sections_basic_toast_basic_toast_component__WEBPACK_IMPORTED_MODULE_40__["BasicToastComponent"],
+                _components_doc_toast_sections_blank_toast_blank_toast_component__WEBPACK_IMPORTED_MODULE_41__["BlankToastComponent"],
+                _components_doc_toast_sections_timeout_toast_timeout_toast_component__WEBPACK_IMPORTED_MODULE_42__["TimeoutToastComponent"],
+                _components_doc_toast_sections_pause_onclick_toast_pause_onclick_toast_component__WEBPACK_IMPORTED_MODULE_73__["PauseOnclickToastComponent"],
+                _components_doc_information_sections_basic_information_basic_information_component__WEBPACK_IMPORTED_MODULE_44__["BasicInformationComponent"],
+                _components_doc_information_sections_information_with_tag_html_information_with_tag_html_component__WEBPACK_IMPORTED_MODULE_2__["InformationWithTagHtmlComponent"],
+                _components_doc_accordion_sections_basic_accordion_basic_accordion_component__WEBPACK_IMPORTED_MODULE_46__["BasicAccordionComponent"],
+                _components_doc_accordion_sections_animation_accordion_animation_accordion_component__WEBPACK_IMPORTED_MODULE_47__["AnimationAccordionComponent"],
+                _components_doc_accordion_sections_opening_event_accordion_opening_event_accordion_component__WEBPACK_IMPORTED_MODULE_48__["OpeningEventAccordionComponent"],
+                _components_doc_accordion_sections_disable_accordion_disable_accordion_component__WEBPACK_IMPORTED_MODULE_49__["DisableAccordionComponent"],
+                _components_doc_accordion_sections_initially_opened_accordion_initially_opened_accordion_component__WEBPACK_IMPORTED_MODULE_50__["InitiallyOpenedAccordionComponent"],
+                _components_doc_accordion_sections_dynamic_accordion_dynamic_accordion_component__WEBPACK_IMPORTED_MODULE_51__["DynamicAccordionComponent"],
+                _components_doc_accordion_sections_dynamic_body_accordion_dynamic_body_accordion_component__WEBPACK_IMPORTED_MODULE_52__["DynamicBodyAccordionComponent"],
+                _components_doc_accordion_sections_manual_toggle_accordion_manual_toggle_accordion_component__WEBPACK_IMPORTED_MODULE_53__["ManualToggleAccordionComponent"],
+                _components_doc_accordion_sections_other_close_accordion_other_close_accordion_component__WEBPACK_IMPORTED_MODULE_54__["OtherCloseAccordionComponent"],
+                _components_doc_accordion_sections_custom_html_accordion_custom_html_accordion_component__WEBPACK_IMPORTED_MODULE_55__["CustomHtmlAccordionComponent"],
+                _components_doc_accordion_sections_styling_accordion_styling_accordion_component__WEBPACK_IMPORTED_MODULE_56__["StylingAccordionComponent"],
+                _components_doc_button_sections_block_button_block_button_component__WEBPACK_IMPORTED_MODULE_101__["BlockButtonComponent"],
+                _components_doc_button_sections_disabled_button_disabled_button_component__WEBPACK_IMPORTED_MODULE_96__["DisabledButtonComponent"],
+                _components_doc_button_sections_basic_button_basic_button_component__WEBPACK_IMPORTED_MODULE_103__["BasicButtonComponent"],
+                _components_doc_button_sections_loader_button_loader_button_component__WEBPACK_IMPORTED_MODULE_97__["LoaderButtonComponent"],
+                _components_doc_button_sections_combination_icon_button_combination_icon_button_component__WEBPACK_IMPORTED_MODULE_98__["CombinationIconButtonComponent"],
+                _components_doc_button_sections_icon_button_icon_button_component__WEBPACK_IMPORTED_MODULE_99__["IconButtonComponent"],
+                _components_doc_button_sections_active_button_active_button_component__WEBPACK_IMPORTED_MODULE_100__["ActiveButtonComponent"],
+                _components_doc_button_sections_size_button_size_button_component__WEBPACK_IMPORTED_MODULE_102__["SizeButtonComponent"],
+                _components_doc_file_upload_sections_basic_file_upload_basic_file_upload_component__WEBPACK_IMPORTED_MODULE_59__["BasicFileUploadComponent"],
+                _components_doc_image_upload_sections_hide_delete_image_upload_hide_delete_image_upload_component__WEBPACK_IMPORTED_MODULE_13__["HideDeleteImageUploadComponent"],
+                _components_doc_image_upload_sections_labeling_button_image_upload_labeling_button_image_upload_component__WEBPACK_IMPORTED_MODULE_105__["LabelingButtonImageUploadComponent"],
+                _components_doc_image_upload_sections_basic_image_upload_basic_image_upload_component__WEBPACK_IMPORTED_MODULE_72__["BasicImageUploadComponent"],
+                _components_doc_file_upload_sections_type_file_upload_type_file_upload_component__WEBPACK_IMPORTED_MODULE_60__["TypeFileUploadComponent"],
+                _components_doc_file_upload_sections_size_file_upload_size_file_upload_component__WEBPACK_IMPORTED_MODULE_61__["SizeFileUploadComponent"],
+                _components_doc_file_upload_sections_multiple_file_upload_multiple_file_upload_component__WEBPACK_IMPORTED_MODULE_62__["MultipleFileUploadComponent"],
+                _components_doc_file_upload_sections_events_file_upload_events_file_upload_component__WEBPACK_IMPORTED_MODULE_63__["EventsFileUploadComponent"],
+                _components_doc_file_upload_sections_prev_position_file_upload_prev_position_file_upload_component__WEBPACK_IMPORTED_MODULE_64__["PrevPositionFileUploadComponent"],
+                _components_doc_file_upload_sections_set_file_upload_set_file_upload_component__WEBPACK_IMPORTED_MODULE_65__["SetFileUploadComponent"],
+                _components_doc_switch_sections_basic_switch_basic_switch_component__WEBPACK_IMPORTED_MODULE_67__["BasicSwitchComponent"],
+                _components_doc_switch_sections_disabled_switch_disabled_switch_component__WEBPACK_IMPORTED_MODULE_68__["DisabledSwitchComponent"],
+                _components_doc_switch_sections_checked_switch_checked_switch_component__WEBPACK_IMPORTED_MODULE_69__["CheckedSwitchComponent"],
+                _components_doc_switch_sections_changed_switch_changed_switch_component__WEBPACK_IMPORTED_MODULE_70__["ChangedSwitchComponent"],
+                _components_doc_switch_sections_delayed_switch_delayed_switch_component__WEBPACK_IMPORTED_MODULE_71__["DelayedSwitchComponent"],
+                _components_doc_form_wizard_sections_basic_form_wizard_basic_form_wizard_component__WEBPACK_IMPORTED_MODULE_77__["BasicFormWizardComponent"],
+                _components_doc_form_wizard_sections_many_step_form_wizard_many_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_78__["ManyStepFormWizardComponent"],
+                _components_doc_form_wizard_sections_emit_event_paginate_change_form_wizard_emit_event_paginate_change_form_wizard_component__WEBPACK_IMPORTED_MODULE_79__["EmitEventPaginateChangeFormWizardComponent"],
+                _components_doc_form_wizard_sections_disabled_submit_form_wizard_disabled_submit_form_wizard_component__WEBPACK_IMPORTED_MODULE_80__["DisabledSubmitFormWizardComponent"],
+                _components_doc_form_wizard_sections_disabled_click_step_form_wizard_disabled_click_step_form_wizard_component__WEBPACK_IMPORTED_MODULE_81__["DisabledClickStepFormWizardComponent"],
+                _components_doc_form_wizard_sections_custom_pagination_label_form_wizard_custom_pagination_label_form_wizard_component__WEBPACK_IMPORTED_MODULE_82__["CustomPaginationLabelFormWizardComponent"],
+                _components_doc_form_wizard_sections_active_step_option_form_wizard_active_step_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_83__["ActiveStepOptionFormWizardComponent"],
+                _components_doc_form_wizard_sections_steps_option_form_wizard_steps_option_form_wizard_component__WEBPACK_IMPORTED_MODULE_84__["StepsOptionFormWizardComponent"],
+                _components_doc_tooltip_sections_basic_tooltip_basic_tooltip_component__WEBPACK_IMPORTED_MODULE_86__["BasicTooltipComponent"],
+                _components_doc_tooltip_sections_paragraph_tooltip_paragraph_tooltip_component__WEBPACK_IMPORTED_MODULE_87__["ParagraphTooltipComponent"],
+                _components_doc_tooltip_sections_placement_tooltip_placement_tooltip_component__WEBPACK_IMPORTED_MODULE_88__["PlacementTooltipComponent"],
+                _components_doc_tooltip_sections_dynamic_html_tooltip_dynamic_html_tooltip_component__WEBPACK_IMPORTED_MODULE_89__["DynamicHtmlTooltipComponent"],
+                _components_doc_tooltip_sections_disabled_tooltip_disabled_tooltip_component__WEBPACK_IMPORTED_MODULE_90__["DisabledTooltipComponent"],
+                _components_doc_chips_sections_basic_chip_basic_chip_component__WEBPACK_IMPORTED_MODULE_92__["BasicChipComponent"],
+                _components_doc_chips_sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_93__["DisableChipComponent"],
+                _components_doc_chips_sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_94__["VerticalChipComponent"],
+                _components_doc_chips_sections_horizontal_chip_horizontal_chip_component__WEBPACK_IMPORTED_MODULE_95__["HorizontalChipComponent"],
+                _components_doc_pilar_font_sections_information_pilar_font_information_pilar_font_component__WEBPACK_IMPORTED_MODULE_107__["InformationPilarFontComponent"],
+                _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_108__["DocTableComponent"],
+                _components_doc_table_sections_basic_table_basic_table_component__WEBPACK_IMPORTED_MODULE_109__["BasicTableComponent"],
+                _components_doc_table_sections_table_with_checkbox_table_with_checkbox_component__WEBPACK_IMPORTED_MODULE_110__["TableWithCheckboxComponent"],
+                _components_doc_table_sections_table_with_action_table_with_action_component__WEBPACK_IMPORTED_MODULE_113__["TableWithActionComponent"],
+                _components_doc_table_sections_table_with_custom_action_table_with_custom_action_component__WEBPACK_IMPORTED_MODULE_112__["TableWithCustomActionComponent"],
+                _components_doc_table_sections_column_definitions_column_definitions_table_component__WEBPACK_IMPORTED_MODULE_111__["ColumnDefinitionsTableComponent"],
+                _components_doc_table_sections_summary_row_table_summary_row_table_component__WEBPACK_IMPORTED_MODULE_114__["SummaryRowTableComponent"],
+                _components_doc_modal_sections_basic_modal_basic_modal_component__WEBPACK_IMPORTED_MODULE_116__["BasicModalComponent"],
+                _components_doc_modal_sections_basic_modal_basic_modal_component__WEBPACK_IMPORTED_MODULE_116__["BasicModalExampleComponent"],
+                _components_doc_modal_sections_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_117__["ConfirmDialogComponent"],
+                _projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog_confirm_dialog_component__WEBPACK_IMPORTED_MODULE_1__["ConfirmdialogComponent"],
+                _components_doc_modal_sections_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_118__["ConfirmDialog2Component"],
+                projects_uiigateway_pilar_src_lib_components_utilities_confirm_dialog2_confirm_dialog2_component__WEBPACK_IMPORTED_MODULE_119__["Confirmdialog2Component"],
+                projects_uiigateway_pilar_src_lib_components_utilities_warning_dialog2_warning_dialog2_component__WEBPACK_IMPORTED_MODULE_120__["Warningdialog2Component"],
+                projects_uiigateway_pilar_src_lib_components_utilities_success_dialog2_success_dialog2_component__WEBPACK_IMPORTED_MODULE_121__["Successdialog2Component"],
+                projects_uiigateway_pilar_src_lib_components_utilities_danger_dialog2_danger_dialog2_component__WEBPACK_IMPORTED_MODULE_122__["Dangerdialog2Component"]
             ],
+            providers: [ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_0__["BsModalRef"]],
         })
     ], ShowcaseModule);
     return ShowcaseModule;
@@ -16448,25 +18257,27 @@ var ShowcaseModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowcaseRoutes", function() { return ShowcaseRoutes; });
-/* harmony import */ var _components_doc_chips_doc_chips_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/doc-chips/doc-chips.component */ "./src/app/showcase/components/doc-chips/doc-chips.component.ts");
-/* harmony import */ var _components_doc_button_doc_button_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/doc-button/doc-button.component */ "./src/app/showcase/components/doc-button/doc-button.component.ts");
-/* harmony import */ var _components_doc_form_wizard_doc_form_wizard_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/doc-form-wizard/doc-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/doc-form-wizard.component.ts");
-/* harmony import */ var _components_doc_image_upload_doc_image_upload_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/doc-image-upload/doc-image-upload.component */ "./src/app/showcase/components/doc-image-upload/doc-image-upload.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _showcase_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./showcase.component */ "./src/app/showcase/showcase.component.ts");
-/* harmony import */ var _components_installation_installation_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/installation/installation.component */ "./src/app/showcase/components/installation/installation.component.ts");
-/* harmony import */ var _components_doc_pagination_doc_pagination_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/doc-pagination/doc-pagination.component */ "./src/app/showcase/components/doc-pagination/doc-pagination.component.ts");
-/* harmony import */ var _components_doc_tabset_doc_tabset_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/doc-tabset/doc-tabset.component */ "./src/app/showcase/components/doc-tabset/doc-tabset.component.ts");
-/* harmony import */ var _components_doc_infobox_doc_infobox_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/doc-infobox/doc-infobox.component */ "./src/app/showcase/components/doc-infobox/doc-infobox.component.ts");
-/* harmony import */ var _components_doc_toast_doc_toast_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/doc-toast/doc-toast.component */ "./src/app/showcase/components/doc-toast/doc-toast.component.ts");
-/* harmony import */ var _components_doc_information_doc_information_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/doc-information/doc-information.component */ "./src/app/showcase/components/doc-information/doc-information.component.ts");
-/* harmony import */ var _components_doc_accordion_doc_accordion_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/doc-accordion/doc-accordion.component */ "./src/app/showcase/components/doc-accordion/doc-accordion.component.ts");
-/* harmony import */ var _components_under_development_under_development_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/under-development/under-development.component */ "./src/app/showcase/components/under-development/under-development.component.ts");
-/* harmony import */ var _components_doc_file_upload_doc_file_upload_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/doc-file-upload/doc-file-upload.component */ "./src/app/showcase/components/doc-file-upload/doc-file-upload.component.ts");
-/* harmony import */ var _components_doc_switch_doc_switch_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/doc-switch/doc-switch.component */ "./src/app/showcase/components/doc-switch/doc-switch.component.ts");
-/* harmony import */ var _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/doc-pilar-font/doc-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.ts");
-/* harmony import */ var _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/doc-tooltip/doc-tooltip.component */ "./src/app/showcase/components/doc-tooltip/doc-tooltip.component.ts");
-/* harmony import */ var _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/doc-table/doc-table.component */ "./src/app/showcase/components/doc-table/doc-table.component.ts");
+/* harmony import */ var _components_doc_modal_doc_modal_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/doc-modal/doc-modal.component */ "./src/app/showcase/components/doc-modal/doc-modal.component.ts");
+/* harmony import */ var _components_doc_chips_doc_chips_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/doc-chips/doc-chips.component */ "./src/app/showcase/components/doc-chips/doc-chips.component.ts");
+/* harmony import */ var _components_doc_button_doc_button_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/doc-button/doc-button.component */ "./src/app/showcase/components/doc-button/doc-button.component.ts");
+/* harmony import */ var _components_doc_form_wizard_doc_form_wizard_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/doc-form-wizard/doc-form-wizard.component */ "./src/app/showcase/components/doc-form-wizard/doc-form-wizard.component.ts");
+/* harmony import */ var _components_doc_image_upload_doc_image_upload_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/doc-image-upload/doc-image-upload.component */ "./src/app/showcase/components/doc-image-upload/doc-image-upload.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _showcase_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./showcase.component */ "./src/app/showcase/showcase.component.ts");
+/* harmony import */ var _components_installation_installation_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/installation/installation.component */ "./src/app/showcase/components/installation/installation.component.ts");
+/* harmony import */ var _components_doc_pagination_doc_pagination_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/doc-pagination/doc-pagination.component */ "./src/app/showcase/components/doc-pagination/doc-pagination.component.ts");
+/* harmony import */ var _components_doc_tabset_doc_tabset_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/doc-tabset/doc-tabset.component */ "./src/app/showcase/components/doc-tabset/doc-tabset.component.ts");
+/* harmony import */ var _components_doc_infobox_doc_infobox_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/doc-infobox/doc-infobox.component */ "./src/app/showcase/components/doc-infobox/doc-infobox.component.ts");
+/* harmony import */ var _components_doc_toast_doc_toast_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/doc-toast/doc-toast.component */ "./src/app/showcase/components/doc-toast/doc-toast.component.ts");
+/* harmony import */ var _components_doc_information_doc_information_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/doc-information/doc-information.component */ "./src/app/showcase/components/doc-information/doc-information.component.ts");
+/* harmony import */ var _components_doc_accordion_doc_accordion_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/doc-accordion/doc-accordion.component */ "./src/app/showcase/components/doc-accordion/doc-accordion.component.ts");
+/* harmony import */ var _components_under_development_under_development_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/under-development/under-development.component */ "./src/app/showcase/components/under-development/under-development.component.ts");
+/* harmony import */ var _components_doc_file_upload_doc_file_upload_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/doc-file-upload/doc-file-upload.component */ "./src/app/showcase/components/doc-file-upload/doc-file-upload.component.ts");
+/* harmony import */ var _components_doc_switch_doc_switch_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/doc-switch/doc-switch.component */ "./src/app/showcase/components/doc-switch/doc-switch.component.ts");
+/* harmony import */ var _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/doc-pilar-font/doc-pilar-font.component */ "./src/app/showcase/components/doc-pilar-font/doc-pilar-font.component.ts");
+/* harmony import */ var _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/doc-tooltip/doc-tooltip.component */ "./src/app/showcase/components/doc-tooltip/doc-tooltip.component.ts");
+/* harmony import */ var _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/doc-table/doc-table.component */ "./src/app/showcase/components/doc-table/doc-table.component.ts");
+
 
 
 
@@ -16488,86 +18299,90 @@ __webpack_require__.r(__webpack_exports__);
 
 var routes = [
     {
-        path: '',
-        component: _showcase_component__WEBPACK_IMPORTED_MODULE_5__["ShowcaseComponent"],
+        path: "",
+        component: _showcase_component__WEBPACK_IMPORTED_MODULE_6__["ShowcaseComponent"],
         children: [
             {
-                path: '',
-                component: _components_installation_installation_component__WEBPACK_IMPORTED_MODULE_6__["InstallationComponent"]
+                path: "",
+                component: _components_installation_installation_component__WEBPACK_IMPORTED_MODULE_7__["InstallationComponent"],
             },
             {
-                path: 'cooming-soon',
-                component: _components_under_development_under_development_component__WEBPACK_IMPORTED_MODULE_13__["UnderDevelopmentComponent"]
+                path: "cooming-soon",
+                component: _components_under_development_under_development_component__WEBPACK_IMPORTED_MODULE_14__["UnderDevelopmentComponent"],
             },
             {
-                path: 'file-upload',
-                component: _components_doc_file_upload_doc_file_upload_component__WEBPACK_IMPORTED_MODULE_14__["DocFileUploadComponent"]
+                path: "file-upload",
+                component: _components_doc_file_upload_doc_file_upload_component__WEBPACK_IMPORTED_MODULE_15__["DocFileUploadComponent"],
             },
             {
-                path: 'form-wizard',
-                component: _components_doc_form_wizard_doc_form_wizard_component__WEBPACK_IMPORTED_MODULE_2__["DocFormWizardComponent"]
+                path: "form-wizard",
+                component: _components_doc_form_wizard_doc_form_wizard_component__WEBPACK_IMPORTED_MODULE_3__["DocFormWizardComponent"],
             },
             {
-                path: 'image-upload',
-                component: _components_doc_image_upload_doc_image_upload_component__WEBPACK_IMPORTED_MODULE_3__["DocImageUploadComponent"]
+                path: "image-upload",
+                component: _components_doc_image_upload_doc_image_upload_component__WEBPACK_IMPORTED_MODULE_4__["DocImageUploadComponent"],
             },
             {
-                path: 'accordion',
-                component: _components_doc_accordion_doc_accordion_component__WEBPACK_IMPORTED_MODULE_12__["DocAccordionComponent"]
+                path: "accordion",
+                component: _components_doc_accordion_doc_accordion_component__WEBPACK_IMPORTED_MODULE_13__["DocAccordionComponent"],
             },
             {
-                path: 'button',
-                component: _components_doc_button_doc_button_component__WEBPACK_IMPORTED_MODULE_1__["DocButtonComponent"]
+                path: "button",
+                component: _components_doc_button_doc_button_component__WEBPACK_IMPORTED_MODULE_2__["DocButtonComponent"],
             },
             {
-                path: 'infobox',
-                component: _components_doc_infobox_doc_infobox_component__WEBPACK_IMPORTED_MODULE_9__["DocInfoboxComponent"]
+                path: "infobox",
+                component: _components_doc_infobox_doc_infobox_component__WEBPACK_IMPORTED_MODULE_10__["DocInfoboxComponent"],
             },
             {
-                path: 'information',
-                component: _components_doc_information_doc_information_component__WEBPACK_IMPORTED_MODULE_11__["DocInformationComponent"]
+                path: "information",
+                component: _components_doc_information_doc_information_component__WEBPACK_IMPORTED_MODULE_12__["DocInformationComponent"],
             },
             {
-                path: 'toast',
-                component: _components_doc_toast_doc_toast_component__WEBPACK_IMPORTED_MODULE_10__["DocToastComponent"]
+                path: "toast",
+                component: _components_doc_toast_doc_toast_component__WEBPACK_IMPORTED_MODULE_11__["DocToastComponent"],
             },
             {
-                path: 'installation',
-                redirectTo: ''
+                path: "installation",
+                redirectTo: "",
             },
             {
-                path: 'pagination',
-                component: _components_doc_pagination_doc_pagination_component__WEBPACK_IMPORTED_MODULE_7__["DocPaginationComponent"]
+                path: "pagination",
+                component: _components_doc_pagination_doc_pagination_component__WEBPACK_IMPORTED_MODULE_8__["DocPaginationComponent"],
             },
             {
-                path: 'pilar-font',
-                component: _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_16__["DocPilarFontComponent"]
+                path: "pilar-font",
+                component: _components_doc_pilar_font_doc_pilar_font_component__WEBPACK_IMPORTED_MODULE_17__["DocPilarFontComponent"],
             },
             {
-                path: 'tabset',
-                component: _components_doc_tabset_doc_tabset_component__WEBPACK_IMPORTED_MODULE_8__["DocTabsetComponent"]
+                path: "tabset",
+                component: _components_doc_tabset_doc_tabset_component__WEBPACK_IMPORTED_MODULE_9__["DocTabsetComponent"],
             },
             {
-                path: 'table',
-                component: _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_18__["DocTableComponent"]
+                path: "table",
+                component: _components_doc_table_doc_table_component__WEBPACK_IMPORTED_MODULE_19__["DocTableComponent"],
             },
             {
-                path: 'tooltip',
-                component: _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_17__["DocTooltipComponent"]
+                path: "tooltip",
+                component: _components_doc_tooltip_doc_tooltip_component__WEBPACK_IMPORTED_MODULE_18__["DocTooltipComponent"],
             },
             {
-                path: 'chips',
-                component: _components_doc_chips_doc_chips_component__WEBPACK_IMPORTED_MODULE_0__["DocChipsComponent"]
+                path: "chips",
+                component: _components_doc_chips_doc_chips_component__WEBPACK_IMPORTED_MODULE_1__["DocChipsComponent"],
             },
             {
-                path: 'switch',
-                component: _components_doc_switch_doc_switch_component__WEBPACK_IMPORTED_MODULE_15__["DocSwitchComponent"]
-            }
-        ]
+                path: "switch",
+                component: _components_doc_switch_doc_switch_component__WEBPACK_IMPORTED_MODULE_16__["DocSwitchComponent"],
+            },
+            {
+                path: "modal",
+                component: _components_doc_modal_doc_modal_component__WEBPACK_IMPORTED_MODULE_0__["DocModalComponent"],
+            },
+        ],
     },
-    { path: '**', redirectTo: 'cooming-soon' },
+    { path: "**", redirectTo: "cooming-soon" },
 ];
-var ShowcaseRoutes = _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes);
+var ShowcaseRoutes = _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forChild(routes);
 
 
 /***/ }),
@@ -16975,7 +18790,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/bsi-luthfianggy/pilar/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/bsi-luthfianggy/lib-uii-gateway-pilar-angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })
