@@ -7424,6 +7424,17 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-chips [items]=\"dataDummy\"  position=\"vertical\" (sendData)=\"onGetData($event)\"></uii-chips>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.ts":
 /*!***************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.ts ***!
@@ -8591,32 +8602,21 @@ var Warningdialog2Component = /** @class */ (function () {
   !*** ./src/$$_lazy_route_resource lazy namespace object ***!
   \**********************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var map = {
-	"./showcase/showcase.module": [
-		"./src/app/showcase/showcase.module.ts"
-	]
-};
-function webpackAsyncContext(req) {
-	var ids = map[req];
-	if(!ids) {
-		return Promise.resolve().then(function() {
-			var e = new Error("Cannot find module '" + req + "'");
-			e.code = 'MODULE_NOT_FOUND';
-			throw e;
-		});
-	}
-	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
-		var id = ids[0];
-		return __webpack_require__(id);
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncaught exception popping up in devtools
+	return Promise.resolve().then(function() {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
 	});
 }
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-webpackAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
-module.exports = webpackAsyncContext;
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
@@ -8745,10 +8745,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 
 var routes = [
-    {
-        path: '',
-        loadChildren: './showcase/showcase.module#ShowcaseModule'
-    },
+    // {
+    //   path: '',
+    //   loadChildren: './showcase/showcase.module#ShowcaseModule'
+    // },
     { path: '**', redirectTo: '' },
 ];
 var AppRoutes = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(routes);
@@ -10677,7 +10677,7 @@ var DocChipsComponent = /** @class */ (function () {
                 title: 'Vertical',
                 desc: 'Vertical chip',
                 component: _sections_vertical_chip_vertical_chip_component__WEBPACK_IMPORTED_MODULE_4__["VerticalChipComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/vertical-chip/vertical-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/vertical-chip/vertical-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/vertical-chip/vertical-chip.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.ts")
             },
             {
@@ -10937,17 +10937,6 @@ var HorizontalChipComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html":
-/*!***************************************************************************************************!*\
-  !*** ./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html ***!
-  \***************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<uii-chips [items]=\"dataDummy\"  position=\"vertical\" (sendData)=\"onGetData($event)\"></uii-chips>\n"
-
-/***/ }),
-
 /***/ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.scss":
 /*!***************************************************************************************************!*\
   !*** ./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.scss ***!
@@ -11004,7 +10993,7 @@ var VerticalChipComponent = /** @class */ (function () {
     VerticalChipComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-vertical-chip',
-            template: __webpack_require__(/*! ./vertical-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html"),
+            template: __webpack_require__(/*! ./vertical-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.html"),
             styles: [__webpack_require__(/*! ./vertical-chip.component.scss */ "./src/app/showcase/components/doc-chips/sections/vertical-chip/vertical-chip.component.scss")]
         }),
         __metadata("design:paramtypes", [])
