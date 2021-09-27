@@ -539,6 +539,13 @@ var ClientTableComponent = /** @class */ (function () {
          * @return {?}
          */
         function (data) {
+            data.forEach((/**
+             * @param {?} element
+             * @return {?}
+             */
+            function (element) {
+                element['has_checkbox'] = (element.hasOwnProperty('has_checkbox') ? element['has_checkbox'] : true);
+            }));
             this._rowsCollection = data;
             this._rowsTemp = data;
             this.page.totalElements = data.length;
@@ -808,14 +815,14 @@ var ClientTableComponent = /** @class */ (function () {
                      * @return {?}
                      */
                     function (row) {
-                        row.isSelected = true;
+                        row.isSelected = row.data['has_checkbox'];
                     }))
                     : this.getDataOfCurrentPage(this._rowsTemp).forEach((/**
                      * @param {?} row
                      * @return {?}
                      */
                     function (row) {
-                        _this._selectedRows[row.number - 1].isSelected = true;
+                        _this._selectedRows[row.number - 1].isSelected = row['has_checkbox'];
                     }));
             }
         }
@@ -858,14 +865,14 @@ var ClientTableComponent = /** @class */ (function () {
                  * @return {?}
                  */
                 function (row) {
-                    row.isSelected = true;
+                    row.isSelected = row.data['has_checkbox'];
                 }))
                 : this.getDataOfCurrentPage(this._rowsTemp).forEach((/**
                  * @param {?} row
                  * @return {?}
                  */
                 function (row) {
-                    _this._selectedRows[row.number - 1].isSelected = true;
+                    _this._selectedRows[row.number - 1].isSelected = row['has_checkbox'];
                 }));
         }
         else {
@@ -1119,7 +1126,7 @@ var ClientTableComponent = /** @class */ (function () {
     ClientTableComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-client-table',
-                    template: "<uii-table-filter\n  *ngIf=\"_limitOptions || searchOptions\"\n  [limitOptions]=\"_limitOptions\"\n  [selectedLimit]=\"selectedLimit\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          id=\"aba\"\n          class=\"gateway-rcb-select\"\n          [checked]=\"_isAllRowsSelected\"\n          (change)=\"onRowSelect('multiple', $event)\"/>\n        <label for=\"aba\" class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div\n      *ngFor=\"let column of _columns; let idx = index;\"\n      class=\"header-cell\"\n      [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"column.prop === 'number'; else notNumber\"\n        class=\"cell\">{{ column.name }}</span>\n      <ng-template #notNumber>\n        <span\n          *ngIf=\"!column.hasOwnProperty('header-type')\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n        >{{ column.name }}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n          [innerHTML]=\"column.name\"></span>\n      </ng-template>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{ actionTitle }}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"_limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    [selectedLimit]=\"selectedLimit\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumn($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let row of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"_selectedRows[row.number - 1].isSelected\"\n          (change)=\"onRowSelect('single', $event, row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"radio\"\n          name=\"mtable-radio-item\"\n          [attr.id]=\"'mitem-'+ i\"\n          [checked]=\"row.flag_aktif === '1'\"\n          (change)=\"onRadioSelect(row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label radio-label\"></label>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"checkbox\"\n            [checked]=\"_selectedRows[row.number - 1].isSelected\"\n            (change)=\"onRowSelect('single', $event, row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label\"></label>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"radio\"\n            name=\"table-radio-item\"\n            [attr.id]=\"'item-'+ i\"\n            [checked]=\"row.flag_aktif === '1'\"\n            (change)=\"onRadioSelect(row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label radio-label\"></label>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div\n          class=\"data-cell\"\n          [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n          [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') &&\n            column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{ column.name }}</span>\n            <span\n              *ngIf=\"column.hasOwnProperty('header-type') &&\n                column['header-type'] === 'html'\"\n              [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span\n                *ngIf=\"column.type === 'label'\"\n                class=\"cell-label\"\n                [ngClass]=\"row.class\"\n              >{{ row[column.prop.toString()] }}</span>\n              <span\n                *ngIf=\"column.type === 'labelv2'\"\n                class=\"cell-label\"\n                [ngClass]=\"getClassFromItem(row[column.prop.toString()])\"\n              >{{ getValueFromItem(row[column.prop.toString()]) }}</span>\n              <span\n                *ngIf=\"column.type === 'html'\"\n                class=\"cell-html\"\n                [innerHTML]=\"row[column.prop.toString()]\"></span>\n              <span\n                *ngIf=\"column.type === 'date' && !column.format\"\n              >{{ row[column.prop.toString()] | date: 'dd MMMM y' }}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input\n                  [type]=\"column.inputType\"\n                  [maxlength]=\"column.inputMaxLength\"\n                  class=\"table-input-text\"\n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"row[column.prop.toString()]\"\n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <div class=\"gateway-rcb\">\n                  <input\n                    type=\"radio\"\n                    [attr.name]=\"'radio-' + i\"\n                    [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                    [checked]=\"row[column.prop] === 1\"\n                    (change)=\"onInputRadioChange(i, column.prop)\"\n                    class=\"gateway-rcb-select\"/>\n                  <label class=\"gateway-rcb-label radio-label\"></label>\n                </div>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span class=\"cell\">{{ row[column.prop.toString()] }}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div\n        class=\"data-cell data-cell-action\"\n        [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n        *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{ actionTitle }}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"row\"\n              [auth]=\"row.auth\"\n              [additionalAction]=\"row.additional_action\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row-container\" *ngIf=\"showSummary && _summaryRows && !(_rowsTemp === undefined || _rowsTemp.length === 0)\">\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\"></div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" *ngIf=\"colIdx === 0\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header summary-total-header\" *ngIf=\"colIdx === 0\"></div>\n          <div class=\"table-small-content\" *ngIf=\"colIdx === 0\">\n            <span class=\"cell\">\n              <strong>Total</strong>\n            </span>\n          </div>\n        </div>\n        <div class=\"data-cell\" *ngIf=\"column.prop.toString() !== 'number'\" [class.hide-in-mobile]=\"!{}.hasOwnProperty.call(_summaryRows, column.prop.toString())\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header\" *ngIf=\"{}.hasOwnProperty.call(_summaryRows, column.prop.toString())\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\" *ngIf=\"{}.hasOwnProperty.call(_summaryRows, column.prop.toString())\">\n            <span class=\"cell\">\n              <strong>{{ _summaryRows[column.prop.toString()] }}</strong>\n            </span>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span></span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <div class=\"cell-action\"></div>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div\n  class=\"gateway-empty-data\"\n  *ngIf=\"_rows.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"_footerInfo\"\n  [paginationOptions]=\"_paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [page]=\"page\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>\n"
+                    template: "<uii-table-filter\n  *ngIf=\"_limitOptions || searchOptions\"\n  [limitOptions]=\"_limitOptions\"\n  [selectedLimit]=\"selectedLimit\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"checkbox\"\n          id=\"aba\"\n          class=\"gateway-rcb-select\"\n          [checked]=\"_isAllRowsSelected\"\n          (change)=\"onRowSelect('multiple', $event)\"/>\n        <label for=\"aba\" class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div\n      *ngFor=\"let column of _columns; let idx = index;\"\n      class=\"header-cell\"\n      [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"column.prop === 'number'; else notNumber\"\n        class=\"cell\">{{ column.name }}</span>\n      <ng-template #notNumber>\n        <span\n          *ngIf=\"!column.hasOwnProperty('header-type')\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n        >{{ column.name }}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell\"\n          (click)=\"sortTableColumn(column)\"\n          [ngClass]=\"{\n            'icon-up': column._sort === 'asc',\n            'icon-down': column._sort === 'desc',\n            'order-able': getColumnOrderable(column)\n          }\"\n          [innerHTML]=\"column.name\"></span>\n      </ng-template>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{ actionTitle }}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"_limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    [selectedLimit]=\"selectedLimit\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumn($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let row of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\" *ngIf=\"row.has_checkbox\">\n        <input\n          type=\"checkbox\"\n          [checked]=\"_selectedRows[row.number - 1].isSelected\"\n          (change)=\"onRowSelect('single', $event, row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label\"></label>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input\n          type=\"radio\"\n          name=\"mtable-radio-item\"\n          [attr.id]=\"'mitem-'+ i\"\n          [checked]=\"row.flag_aktif === '1'\"\n          (change)=\"onRadioSelect(row)\"\n          class=\"gateway-rcb-select\"/>\n        <label class=\"gateway-rcb-label radio-label\"></label>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\" *ngIf=\"row.has_checkbox\">\n          <input\n            type=\"checkbox\"\n            [checked]=\"_selectedRows[row.number - 1].isSelected\"\n            (change)=\"onRowSelect('single', $event, row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label\"></label>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input\n            type=\"radio\"\n            name=\"table-radio-item\"\n            [attr.id]=\"'item-'+ i\"\n            [checked]=\"row.flag_aktif === '1'\"\n            (change)=\"onRadioSelect(row)\"\n            class=\"gateway-rcb-select\"/>\n          <label class=\"gateway-rcb-label radio-label\"></label>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div\n          class=\"data-cell\"\n          [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n          [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') &&\n            column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{ column.name }}</span>\n            <span\n              *ngIf=\"column.hasOwnProperty('header-type') &&\n                column['header-type'] === 'html'\"\n              [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span\n                *ngIf=\"column.type === 'label'\"\n                class=\"cell-label\"\n                [ngClass]=\"row.class\"\n              >{{ row[column.prop.toString()] }}</span>\n              <span\n                *ngIf=\"column.type === 'labelv2'\"\n                class=\"cell-label\"\n                [ngClass]=\"getClassFromItem(row[column.prop.toString()])\"\n              >{{ getValueFromItem(row[column.prop.toString()]) }}</span>\n              <span\n                *ngIf=\"column.type === 'html'\"\n                class=\"cell-html\"\n                [innerHTML]=\"row[column.prop.toString()]\"></span>\n              <span\n                *ngIf=\"column.type === 'date' && !column.format\"\n              >{{ row[column.prop.toString()] | date: 'dd MMMM y' }}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input\n                  [type]=\"column.inputType\"\n                  [maxlength]=\"column.inputMaxLength\"\n                  class=\"table-input-text\"\n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"row[column.prop.toString()]\"\n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <div class=\"gateway-rcb\">\n                  <input\n                    type=\"radio\"\n                    [attr.name]=\"'radio-' + i\"\n                    [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                    [checked]=\"row[column.prop] === 1\"\n                    (change)=\"onInputRadioChange(i, column.prop)\"\n                    class=\"gateway-rcb-select\"/>\n                  <label class=\"gateway-rcb-label radio-label\"></label>\n                </div>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span class=\"cell\">{{ row[column.prop.toString()] }}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div\n        class=\"data-cell data-cell-action\"\n        [ngClass]=\"(actionColumn && row.hasAuth) ? 'inaction' : 'outaction'\"\n        *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{ actionTitle }}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"row\"\n              [auth]=\"row.auth\"\n              [additionalAction]=\"row.additional_action\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row-container\" *ngIf=\"showSummary && _summaryRows && !(_rowsTemp === undefined || _rowsTemp.length === 0)\">\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\"></div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" *ngIf=\"colIdx === 0\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header summary-total-header\" *ngIf=\"colIdx === 0\"></div>\n          <div class=\"table-small-content\" *ngIf=\"colIdx === 0\">\n            <span class=\"cell\">\n              <strong>Total</strong>\n            </span>\n          </div>\n        </div>\n        <div class=\"data-cell\" *ngIf=\"column.prop.toString() !== 'number'\" [class.hide-in-mobile]=\"!{}.hasOwnProperty.call(_summaryRows, column.prop.toString())\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header\" *ngIf=\"{}.hasOwnProperty.call(_summaryRows, column.prop.toString())\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\" *ngIf=\"{}.hasOwnProperty.call(_summaryRows, column.prop.toString())\">\n            <span class=\"cell\">\n              <strong>{{ _summaryRows[column.prop.toString()] }}</strong>\n            </span>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span></span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <div class=\"cell-action\"></div>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div\n  class=\"gateway-empty-data\"\n  *ngIf=\"_rows.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"_footerInfo\"\n  [paginationOptions]=\"_paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [page]=\"page\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>\n"
                 }] }
     ];
     /** @nocollapse */
@@ -2386,6 +2393,13 @@ var ServerTableComponent = /** @class */ (function () {
          */
         function (data) {
             if (data) {
+                data.forEach((/**
+                 * @param {?} element
+                 * @return {?}
+                 */
+                function (element) {
+                    element['has_checkbox'] = (element.hasOwnProperty('has_checkbox') ? element['has_checkbox'] : true);
+                }));
                 this._rows = this.setDataNumber(data);
                 this._rowsCollection = data;
             }
@@ -2596,7 +2610,11 @@ var ServerTableComponent = /** @class */ (function () {
      */
     function (type, $event, data) {
         if ($event.target.checked) {
-            (type === 'single') ? this._selectedRows.push(data) : this._selectedRows = this._rowsCollection;
+            (type === 'single') ? this._selectedRows.push(data) : this._selectedRows = this._rowsCollection.filter((/**
+             * @param {?} row
+             * @return {?}
+             */
+            function (row) { return row['has_checkbox']; }));
         }
         else {
             this._selectedRows = (type === 'single') ? this._selectedRows.filter((/**
@@ -2618,7 +2636,11 @@ var ServerTableComponent = /** @class */ (function () {
     function ($event) {
         if ($event.target.checked) {
             this._isAllRowsSelected = true;
-            this._selectedRows = this._rowsCollection;
+            this._selectedRows = this._rowsCollection.filter((/**
+             * @param {?} row
+             * @return {?}
+             */
+            function (row) { return row['has_checkbox']; }));
         }
         else {
             this._isAllRowsSelected = false;
@@ -2772,7 +2794,7 @@ var ServerTableComponent = /** @class */ (function () {
     ServerTableComponent.decorators = [
         { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"], args: [{
                     selector: 'uii-server-table',
-                    template: "<uii-table-filter\n  *ngIf=\"limitOptions || searchOptions\"\n  [limitOptions]=\"limitOptions\"\n  [selectedLimit]=\"selectedLimit\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"checkbox\" id=\"aba\" class=\"gateway-rcb-select\" [checked]=\"_isAllRowsSelected\" (change)=\"_isAllRowsSelected = !_isAllRowsSelected; onRowSelect('multiple', $event)\"/>\n        <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div *ngFor=\"let column of _columns; let idx = index;\" class=\"header-cell\" [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"!column.hasOwnProperty('header-type')\"\n        class=\"cell order-able\"\n        (click)=\"sortTableColumn(column, idx)\"\n        [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\">{{column.name}}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell order-able\"\n          (click)=\"sortTableColumn(column, idx)\"\n          [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\" [innerHTML]=\"column.name\"></span>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{actionTitle}}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    [selectedLimit]=\"selectedLimit\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumnMobile($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let item of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"checkbox\" [checked]=\"_isAllRowsSelected\" (change)=\"onRowSelect('single', $event, item)\" class=\"gateway-rcb-select\" />\n        <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"radio\" name=\"mtable-radio-item\" [attr.id]=\"'mitem-'+ i\" [checked]=\"item.flag_aktif === '1'\" (change)=\"onRadioSelect(item)\" class=\"gateway-rcb-select\" />\n        <p class=\"gateway-rcb-label radio-label\"></p>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\">\n          <input type=\"checkbox\" [checked]=\"_isAllRowsSelected\" (change)=\"onRowSelect('single', $event, item)\" class=\"gateway-rcb-select\" />\n          <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input type=\"radio\" name=\"table-radio-item\" [attr.id]=\"'item-'+ i\" [checked]=\"item.flag_aktif === '1'\" (change)=\"onRadioSelect(item)\" class=\"gateway-rcb-select\" />\n          <p class=\"gateway-rcb-label radio-label\"></p>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\" [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') && column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span *ngIf=\"column.type === 'label'\" class=\"cell-label\" [ngClass]=\"item.class\">{{item[column.prop.toString()]}}</span>\n              <span *ngIf=\"column.type === 'html'\" class=\"cell-html\" [innerHTML]=\"item[column.prop.toString()]\"></span>\n              <span *ngIf=\"column.type === 'date' && !column.format\">{{item[column.prop.toString()] | date: 'dd MMMM y'}}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input \n                  type=\"{{column.inputType}}\"\n                  maxlength=\"{{column.inputMaxLength}}\"\n                  class=\"table-input-text\" \n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"item[column.prop.toString()]\" \n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <form>\n                  <div class=\"gateway-rcb\">\n                    <input type=\"radio\" \n                      [attr.name]=\"'radio-' + i\"\n                      [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                      [checked]=\"item[column.prop] === 1\"\n                      (change)=\"onInputRadioChange(i, column.prop)\"\n                      class=\"gateway-rcb-select\" />\n                    <p class=\"gateway-rcb-label radio-label\"></p>\n                  </div>\n                </form>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span>{{item[column.prop.toString()]}}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{actionTitle}}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"item\"\n              [auth]=\"item.auth\"\n              [additionalAction]=\"item.additional_action\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row-container\" *ngIf=\"showSummary\">\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\"></div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" *ngIf=\"colIdx === 0\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header summary-total-header\" *ngIf=\"colIdx === 0\"></div>\n          <div class=\"table-small-content\" *ngIf=\"colIdx === 0\">\n            <span class=\"cell\">\n              <strong>Total</strong>\n            </span>\n          </div>\n        </div>\n        <div class=\"data-cell\" *ngIf=\"column.prop.toString() !== 'number'\" [class.hide-in-mobile]=\"!summaryRows.hasOwnProperty(column.prop.toString())\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header\" *ngIf=\"summaryRows.hasOwnProperty(column.prop.toString())\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\" *ngIf=\"summaryRows.hasOwnProperty(column.prop.toString())\">\n            <span class=\"cell\">\n              <strong>{{ summaryRows[column.prop.toString()] }}</strong>\n            </span>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span></span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <div class=\"cell-action\"></div>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"gateway-empty-data\" *ngIf=\"_rowsCollection === undefined || _rowsCollection.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"footerInfo\"\n  [paginationOptions]=\"paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [page]=\"page\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>"
+                    template: "<uii-table-filter\n  *ngIf=\"limitOptions || searchOptions\"\n  [limitOptions]=\"limitOptions\"\n  [selectedLimit]=\"selectedLimit\"\n  [searchOptions]=\"searchOptions\"\n  (limitChanged)=\"onLimitChange($event)\"\n  (searchChanged)=\"onSearchChange($event)\">\n</uii-table-filter>\n<div class=\"gateway-table\">\n  <div class=\"gateway-table-header\">\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"checkbox\" id=\"aba\" class=\"gateway-rcb-select\" [checked]=\"_isAllRowsSelected\" (change)=\"_isAllRowsSelected = !_isAllRowsSelected; onRowSelect('multiple', $event)\"/>\n        <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n      </div>\n    </div>\n    <div class=\"header-cell cell-radio-checkbox\" *ngIf=\"radioColumn\"></div>\n    <div *ngFor=\"let column of _columns; let idx = index;\" class=\"header-cell\" [class.cell-number]=\"column.prop === 'number'\">\n      <span\n        *ngIf=\"!column.hasOwnProperty('header-type')\"\n        class=\"cell order-able\"\n        (click)=\"sortTableColumn(column, idx)\"\n        [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\">{{column.name}}</span>\n        <span\n          *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\"\n          class=\"cell order-able\"\n          (click)=\"sortTableColumn(column, idx)\"\n          [ngClass]=\"(column.sort === 'asc') ? 'icon-up' : column.sort === 'desc' ? 'icon-down' : ''\" [innerHTML]=\"column.name\"></span>\n    </div>\n    <div *ngIf=\"actionColumn\" class=\"header-cell cell-action\">\n      <span>{{actionTitle}}</span>\n    </div>\n  </div>\n  <uii-mobile-filter\n    [checkboxColumn]=\"checkboxColumn\"\n    [columns]=\"_columns\"\n    [isAllRowsSelected]=\"_isAllRowsSelected\"\n    [limitOptions]=\"limitOptions\"\n    [searchOptions]=\"searchOptions\"\n    [selectedLimit]=\"selectedLimit\"\n    (limitChanged)=\"onLimitChange($event)\"\n    (searchChanged)=\"onSearchChange($event)\"\n    (allRowsOnMobileSelected)=\"onRowSelectMobile($event)\"\n    (columnSorted)=\"sortTableColumnMobile($event)\">\n  </uii-mobile-filter>\n  <div *ngFor=\"let item of _rows; let i = index\" class=\"row-container\">\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"checkboxColumn\">\n      <div class=\"gateway-rcb\" *ngIf=\"item.has_checkbox\">\n        <input type=\"checkbox\" [checked]=\"_isAllRowsSelected\" (change)=\"onRowSelect('single', $event, item)\" class=\"gateway-rcb-select\" />\n        <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n      </div>\n    </div>\n    <div class=\"cell-radio-checkbox-mobile\" *ngIf=\"radioColumn\">\n      <div class=\"gateway-rcb\">\n        <input type=\"radio\" name=\"mtable-radio-item\" [attr.id]=\"'mitem-'+ i\" [checked]=\"item.flag_aktif === '1'\" (change)=\"onRadioSelect(item)\" class=\"gateway-rcb-select\" />\n        <p class=\"gateway-rcb-label radio-label\"></p>\n      </div>\n    </div>\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\" *ngIf=\"item.has_checkbox\">\n          <input type=\"checkbox\" [checked]=\"_isAllRowsSelected\" (change)=\"onRowSelect('single', $event, item)\" class=\"gateway-rcb-select\" />\n          <p for=\"aba\" class=\"gateway-rcb-label\"></p>\n        </div>\n      </div>\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"radioColumn\">\n        <div class=\"gateway-rcb\">\n          <input type=\"radio\" name=\"table-radio-item\" [attr.id]=\"'item-'+ i\" [checked]=\"item.flag_aktif === '1'\" (change)=\"onRadioSelect(item)\" class=\"gateway-rcb-select\" />\n          <p class=\"gateway-rcb-label radio-label\"></p>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\" [class.hide-in-mobile]=\"column.hasOwnProperty('hide_in_mobile') && column.hide_in_mobile\">\n          <div class=\"mobile-view-header\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\">\n            <ng-container *ngIf=\"column.hasOwnProperty('type')\">\n              <span *ngIf=\"column.type === 'label'\" class=\"cell-label\" [ngClass]=\"item.class\">{{item[column.prop.toString()]}}</span>\n              <span *ngIf=\"column.type === 'html'\" class=\"cell-html\" [innerHTML]=\"item[column.prop.toString()]\"></span>\n              <span *ngIf=\"column.type === 'date' && !column.format\">{{item[column.prop.toString()] | date: 'dd MMMM y'}}</span>\n              <span *ngIf=\"column.type === 'input-text'\">\n                <input \n                  type=\"{{column.inputType}}\"\n                  maxlength=\"{{column.inputMaxLength}}\"\n                  class=\"table-input-text\" \n                  [class.uppercase]=\"column.textUppercase\"\n                  [class.lowercase]=\"column.textLowercase\"\n                  [(ngModel)]=\"item[column.prop.toString()]\" \n                  (change)=\"onInputTextChange(i, column.name)\">\n              </span>\n              <span *ngIf=\"column.type === 'input-radio'\">\n                <form>\n                  <div class=\"gateway-rcb\">\n                    <input type=\"radio\" \n                      [attr.name]=\"'radio-' + i\"\n                      [attr.id]=\"'radio-' + i + '-' + colIdx\"\n                      [checked]=\"item[column.prop] === 1\"\n                      (change)=\"onInputRadioChange(i, column.prop)\"\n                      class=\"gateway-rcb-select\" />\n                    <p class=\"gateway-rcb-label radio-label\"></p>\n                  </div>\n                </form>\n              </span>\n            </ng-container>\n            <ng-container *ngIf=\"!column.hasOwnProperty('type')\">\n              <span>{{item[column.prop.toString()]}}</span>\n            </ng-container>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn && item.hasAuth) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span>{{actionTitle}}</span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <uii-table-action\n              [index]=\"i\"\n              [item]=\"item\"\n              [auth]=\"item.auth\"\n              [additionalAction]=\"item.additional_action\"\n              [actionInValidation]=\"actionInValidation\"\n              (emitAction)=\"mapActions($event)\">\n            </uii-table-action>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class=\"row-container\" *ngIf=\"showSummary\">\n    <div class=\"gateway-table-data\">\n      <div class=\"data-cell cell-radio-checkbox\" *ngIf=\"checkboxColumn\">\n        <div class=\"gateway-rcb\"></div>\n      </div>\n      <ng-container *ngFor=\"let column of _columns; let colIdx = index\">\n        <div class=\"data-cell\" *ngIf=\"colIdx === 0\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header summary-total-header\" *ngIf=\"colIdx === 0\"></div>\n          <div class=\"table-small-content\" *ngIf=\"colIdx === 0\">\n            <span class=\"cell\">\n              <strong>Total</strong>\n            </span>\n          </div>\n        </div>\n        <div class=\"data-cell\" *ngIf=\"column.prop.toString() !== 'number'\" [class.hide-in-mobile]=\"!summaryRows.hasOwnProperty(column.prop.toString())\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\">\n          <div class=\"mobile-view-header\" *ngIf=\"summaryRows.hasOwnProperty(column.prop.toString())\">\n            <span *ngIf=\"!column.hasOwnProperty('header-type')\">{{column.name}}</span>\n            <span *ngIf=\"column.hasOwnProperty('header-type') && column['header-type'] === 'html'\" [innerHTML]=\"column.name\"></span>\n          </div>\n          <div class=\"table-small-content\" *ngIf=\"summaryRows.hasOwnProperty(column.prop.toString())\">\n            <span class=\"cell\">\n              <strong>{{ summaryRows[column.prop.toString()] }}</strong>\n            </span>\n          </div>\n        </div>\n      </ng-container>\n      <div class=\"data-cell data-cell-action\" [ngClass]=\"(actionColumn) ? 'inaction' : 'outaction'\" *ngIf=\"actionColumn\">\n        <div class=\"mobile-view-header\"><span></span></div>\n        <div class=\"table-small-content\">\n          <span>\n            <div class=\"cell-action\"></div>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"gateway-empty-data\" *ngIf=\"_rowsCollection === undefined || _rowsCollection.length === 0\">\n  <span>Tidak ada data yang ditampilkan</span>\n</div>\n<uii-table-footer\n  [footerInfo]=\"footerInfo\"\n  [paginationOptions]=\"paginationOptions\"\n  [totalElements]=\"page.totalElements\"\n  [page]=\"page\"\n  [startPage]=\"getStartPage(page)\"\n  [endPage]=\"getEndPage(page)\"\n  (pageChanged)=\"onPageChange($event)\">\n</uii-table-footer>"
                 }] }
     ];
     /** @nocollapse */
@@ -6989,6 +7011,11 @@ var PilarModule = /** @class */ (function () {
      * @return {?}
      */
     function () {
+        /** @type {?} */
+        var win = (typeof window !== 'undefined' && window) || ({});
+        if (typeof win !== 'undefined') {
+            win.__theme = 'bs3';
+        }
         return {
             ngModule: PilarModule,
             providers: [
@@ -7116,7 +7143,15 @@ var PilarModule = /** @class */ (function () {
                         Successdialog2Component,
                         Dangerdialog2Component
                     ],
-                    entryComponents: [ConfirmdialogComponent, Confirmdialog2Component, Warningdialog2Component, Successdialog2Component, Dangerdialog2Component, ToastComponent, TooltipComponent],
+                    entryComponents: [
+                        ConfirmdialogComponent,
+                        Confirmdialog2Component,
+                        Warningdialog2Component,
+                        Successdialog2Component,
+                        Dangerdialog2Component,
+                        ToastComponent,
+                        TooltipComponent
+                    ],
                 },] }
     ];
     return PilarModule;
@@ -7314,6 +7349,17 @@ module.exports = "import { Component } from '@angular/core';\n\n@Component({\n  
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html ***!
+  \****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<button class=\"btn btn-primary  btn-block\"> primary</button>\n<button class=\"btn btn-secondary  btn-block\"> secondary</button>\n<button class=\"btn btn-tertiary btn-block\"> tertiary</button>\n<button class=\"btn btn-success btn-block\"> success</button>\n<button class=\"btn btn-info btn-block\"> info</button>\n<button class=\"btn btn-warning btn-block\"> warning</button> \n<button class=\"btn btn-danger btn-block\"> danger</button>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts":
 /*!**************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts ***!
@@ -7380,6 +7426,17 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html":
+/*!***********************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html ***!
+  \***********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-chips [items]=\"dataDummy\" (sendData)=\"onGetData($event)\"></uii-chips>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.ts":
 /*!*********************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.ts ***!
@@ -7388,6 +7445,17 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 /***/ (function(module, exports) {
 
 module.exports = "import { Component, OnInit, EventEmitter, Output } from '@angular/core';\n\n@Component({\n  selector: 'ugw-basic-chip',\n  templateUrl: './basic-chip.component.html',\n  styleUrls: ['./basic-chip.component.scss']\n})\nexport class BasicChipComponent implements OnInit {\n\n  dataDummy: Array<any> = [\n    {\n      label: 'Item 1 & Item 2',\n      value: 'item1_and_item2'\n    },\n    {\n      label: 'Item 2',\n      value: 'item_2'\n    },\n    {\n      label: 'Item 3',\n      value: 'item_3'\n    },\n    {\n      label: 'Item 4',\n      value: 'item_4'\n    },\n    {\n      label: 'Item 5',\n      value: 'item_5'\n    },\n  ];\n  constructor() {\n  }\n\n  ngOnInit() {\n  }\n\n  onGetData($event) {\n  }\n\n}\n"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html":
+/*!***************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html ***!
+  \***************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-chips [disabled]=\"true\" [items]=\"dataDummy\"></uii-chips>\n"
 
 /***/ }),
 
@@ -7897,17 +7965,6 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html":
-/*!*************************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html ***!
-  \*************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionTitle]=\"'Action'\"\n  (detailClicked)=\"onDetailClicked($event)\"\n  (editClicked)=\"onEditClicked($event)\"\n  (printClicked)=\"onPrintClicked($event)\"\n  (deleteClicked)=\"onDeleteClicked($event)\"\n  (switchChanged)=\"onSwitchClicked($event)\"\n  (publishClicked)=\"onPublishClicked($event)\"\n  (validateClicked)=\"onValidateClicked($event)\"\n  (exportClicked)=\"onExportClicked($event)\"\n  (importClicked)=\"onImportClicked($event)\"\n  ></uii-table>\n\n  Action clicked : {{ actionSelected }}<br>\n  Row selected : {{ rowSelected | json }}<br>\n"
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts ***!
@@ -7926,18 +7983,7 @@ module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Compone
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-table-with-checkbox',\n  templateUrl: './table-with-checkbox.component.html',\n  styleUrls: ['./table-with-checkbox.component.scss']\n})\nexport class TableWithCheckboxComponent implements OnInit {\n\n  rows: Array<any> = [];\n  columns: Array<any> = [];\n\n  constructor() { }\n\n  ngOnInit() {\n    this.columns = [\n      {\n        name: 'No',\n        prop: 'number'\n      },\n      {\n        name: 'Name',\n        prop: 'name'\n      },\n      {\n        name: 'Age',\n        prop: 'age'\n      },\n    ];\n\n    this.rows = [\n      {\n        name: 'Marta Mccoy',\n        age: 31\n      },\n      {\n        name: 'Fanny Holman',\n        age: 23\n      },\n      {\n        name: 'Latonya Gibson',\n        age: 22\n      },\n      {\n        name: 'Ines Wiggins',\n        age: 35\n      },\n      {\n        name: 'Kathrine Irwin',\n        age: 38\n      },\n      {\n        name: 'Higgins Oneal',\n        age: 35\n      },\n      {\n        name: 'Russell Duke',\n        age: 37\n      },\n      {\n        name: 'Sara Quinn',\n        age: 23\n      },\n      {\n        name: 'Dona Patterson',\n        age: 32\n      },\n      {\n        name: 'Clarice Keith',\n        age: 22\n      },\n      {\n        name: 'Petersen Maldonado',\n        age: 20\n      },\n      {\n        name: 'Tonya Colon',\n        age: 38\n      },\n      {\n        name: 'Ann Bass',\n        age: 30\n      },\n      {\n        name: 'Cherie Pickett',\n        age: 21\n      },\n      {\n        name: 'Holland Mcdonald',\n        age: 28\n      },\n      {\n        name: 'Casey Dudley',\n        age: 23\n      },\n      {\n        name: 'Sophie Slater',\n        age: 33\n      },\n      {\n        name: 'Rhoda Kent',\n        age: 32\n      },\n      {\n        name: 'Bennett Sheppard',\n        age: 32\n      },\n      {\n        name: 'Foreman Hood',\n        age: 25\n      }\n    ];\n  }\n\n}\n"
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html":
-/*!***************************************************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html ***!
-  \***************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionTitle]=\"'Action'\"></uii-table>\n\n  Action clicked : {{ actionSelected }}<br>\n  Row selected : {{ rowSelected | json }}<br>\n  \n"
+module.exports = "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'ugw-table-with-checkbox',\n  templateUrl: './table-with-checkbox.component.html',\n  styleUrls: ['./table-with-checkbox.component.scss']\n})\nexport class TableWithCheckboxComponent implements OnInit {\n\n  rows: Array<any> = [];\n  columns: Array<any> = [];\n  rowSelected: Array<any> = [];\n\n  constructor() { }\n\n  ngOnInit() {\n    this.columns = [\n      {\n        name: 'No',\n        prop: 'number'\n      },\n      {\n        name: 'Name',\n        prop: 'name'\n      },\n      {\n        name: 'Age',\n        prop: 'age'\n      },\n    ];\n\n    this.rows = [\n      {\n        name: 'Marta Mccoy',\n        age: 31,\n        has_checkbox: false\n      },\n      {\n        name: 'Fanny Holman',\n        age: 23\n      },\n      {\n        name: 'Latonya Gibson',\n        age: 22,\n        has_checkbox: false\n      },\n      {\n        name: 'Ines Wiggins',\n        age: 35\n      },\n      {\n        name: 'Kathrine Irwin',\n        age: 38\n      },\n      {\n        name: 'Higgins Oneal',\n        age: 35\n      },\n      {\n        name: 'Russell Duke',\n        age: 37\n      },\n      {\n        name: 'Sara Quinn',\n        age: 23\n      },\n      {\n        name: 'Dona Patterson',\n        age: 32\n      },\n      {\n        name: 'Clarice Keith',\n        age: 22\n      },\n      {\n        name: 'Petersen Maldonado',\n        age: 20\n      },\n      {\n        name: 'Tonya Colon',\n        age: 38\n      },\n      {\n        name: 'Ann Bass',\n        age: 30\n      },\n      {\n        name: 'Cherie Pickett',\n        age: 21\n      },\n      {\n        name: 'Holland Mcdonald',\n        age: 28\n      },\n      {\n        name: 'Casey Dudley',\n        age: 23\n      },\n      {\n        name: 'Sophie Slater',\n        age: 33\n      },\n      {\n        name: 'Rhoda Kent',\n        age: 32\n      },\n      {\n        name: 'Bennett Sheppard',\n        age: 32\n      },\n      {\n        name: 'Foreman Hood',\n        age: 25\n      }\n    ];\n  }\n\n  onRowSelected($event) {\n    this.rowSelected = $event;\n  }\n\n}\n"
 
 /***/ }),
 
@@ -8826,7 +8872,7 @@ var DemoFooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"demo-nav\" [class.scroled]=\"isTop\" [class.header-mobile]=\"_showSidebar\">\n  <div id=\"demo-humberger\" (click)=\"onHumbergerButtonClick()\">\n    <div [class.anim-plus]=\"_showSidebar\"></div>\n    <div [style.display]=\"_showSidebar ? 'none' : 'block'\"></div>\n    <div [class.anim-minus]=\"_showSidebar\"></div>\n  </div>\n  <div id=\"demo-brand\">\n    <a [routerLink]=\"['/']\">\n      <img src=\"assets/images/pilar-logo.png\" [class.scroled]=\"isTop\"/>\n    </a>\n  </div>\n  <div id=\"demo-icon\">\n    <ul>\n      <li>\n        <a href=\"https://stackoverflow.com/\" target=\"_blank\">\n          <i class=\"fa fa-stack-overflow\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>\n        <a href=\"https://gitlab-cloud.uii.ac.id/uii-gateway/frontend/lib-uii-gateway-pilar-angular\" target=\"_blank\">\n          <i class=\"fa fa-gitlab\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>v1.11.15</li>\n    </ul>\n  </div>\n</div>\n"
+module.exports = "<div class=\"demo-nav\" [class.scroled]=\"isTop\" [class.header-mobile]=\"_showSidebar\">\n  <div id=\"demo-humberger\" (click)=\"onHumbergerButtonClick()\">\n    <div [class.anim-plus]=\"_showSidebar\"></div>\n    <div [style.display]=\"_showSidebar ? 'none' : 'block'\"></div>\n    <div [class.anim-minus]=\"_showSidebar\"></div>\n  </div>\n  <div id=\"demo-brand\">\n    <a [routerLink]=\"['/']\">\n      <img src=\"assets/images/pilar-logo.png\" [class.scroled]=\"isTop\"/>\n    </a>\n  </div>\n  <div id=\"demo-icon\">\n    <ul>\n      <li>\n        <a href=\"https://stackoverflow.com/\" target=\"_blank\">\n          <i class=\"fa fa-stack-overflow\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>\n        <a href=\"https://gitlab-cloud.uii.ac.id/uii-gateway/frontend/lib-uii-gateway-pilar-angular\" target=\"_blank\">\n          <i class=\"fa fa-gitlab\" aria-hidden=\"true\"></i>\n        </a>\n      </li>\n      <li>v1.11.19</li>\n    </ul>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -10144,7 +10190,7 @@ var DocButtonComponent = /** @class */ (function () {
                 title: 'Block',
                 desc: 'Block buttom.',
                 component: _sections_block_button_block_button_component__WEBPACK_IMPORTED_MODULE_4__["BlockButtonComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/block-button/block-button.component.html */ "./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/block-button/block-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/block-button/block-button.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts")
             }
         ];
@@ -10266,17 +10312,6 @@ var BasicButtonComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html":
-/*!**************************************************************************************************!*\
-  !*** ./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<button class=\"btn btn-primary  btn-block\"> primary</button>\n<button class=\"btn btn-secondary  btn-block\"> secondary</button>\n<button class=\"btn btn-tertiary btn-block\"> tertiary</button>\n<button class=\"btn btn-success btn-block\"> success</button>\n<button class=\"btn btn-info btn-block\"> info</button>\n<button class=\"btn btn-warning btn-block\"> warning</button> \n<button class=\"btn btn-danger btn-block\"> danger</button>\n"
-
-/***/ }),
-
 /***/ "./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts":
 /*!************************************************************************************************!*\
   !*** ./src/app/showcase/components/doc-button/sections/block-button/block-button.component.ts ***!
@@ -10301,7 +10336,7 @@ var BlockButtonComponent = /** @class */ (function () {
     BlockButtonComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-block-button',
-            template: __webpack_require__(/*! ./block-button.component.html */ "./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html"),
+            template: __webpack_require__(/*! ./block-button.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-button/sections/block-button/block-button.component.html"),
         })
     ], BlockButtonComponent);
     return BlockButtonComponent;
@@ -10661,7 +10696,7 @@ var DocChipsComponent = /** @class */ (function () {
                 title: 'Basic',
                 desc: 'Click on options from them',
                 component: _sections_basic_chip_basic_chip_component__WEBPACK_IMPORTED_MODULE_1__["BasicChipComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/basic-chip/basic-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/basic-chip/basic-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/basic-chip/basic-chip.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.ts")
             },
             {
@@ -10669,7 +10704,7 @@ var DocChipsComponent = /** @class */ (function () {
                 title: 'Disable',
                 desc: 'Disable chip',
                 component: _sections_disable_chip_disable_chip_component__WEBPACK_IMPORTED_MODULE_0__["DisableChipComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/disable-chip/disable-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/disable-chip/disable-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/disable-chip/disable-chip.component.ts */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.ts")
             },
             {
@@ -10714,17 +10749,6 @@ var DocChipsComponent = /** @class */ (function () {
 }());
 
 
-
-/***/ }),
-
-/***/ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html":
-/*!*********************************************************************************************!*\
-  !*** ./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<uii-chips [items]=\"dataDummy\" (sendData)=\"onGetData($event)\"></uii-chips>\n"
 
 /***/ }),
 
@@ -10792,7 +10816,7 @@ var BasicChipComponent = /** @class */ (function () {
     BasicChipComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-basic-chip',
-            template: __webpack_require__(/*! ./basic-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html"),
+            template: __webpack_require__(/*! ./basic-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.html"),
             styles: [__webpack_require__(/*! ./basic-chip.component.scss */ "./src/app/showcase/components/doc-chips/sections/basic-chip/basic-chip.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -10801,17 +10825,6 @@ var BasicChipComponent = /** @class */ (function () {
 }());
 
 
-
-/***/ }),
-
-/***/ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html":
-/*!*************************************************************************************************!*\
-  !*** ./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html ***!
-  \*************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<uii-chips [disabled]=\"true\" [items]=\"dataDummy\"></uii-chips>\n"
 
 /***/ }),
 
@@ -10861,7 +10874,7 @@ var DisableChipComponent = /** @class */ (function () {
     DisableChipComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-disable-chip',
-            template: __webpack_require__(/*! ./disable-chip.component.html */ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html"),
+            template: __webpack_require__(/*! ./disable-chip.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.html"),
             styles: [__webpack_require__(/*! ./disable-chip.component.scss */ "./src/app/showcase/components/doc-chips/sections/disable-chip/disable-chip.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -14700,7 +14713,7 @@ var DocTableComponent = /** @class */ (function () {
                     name: 'rows',
                     type: 'array',
                     default: '[]',
-                    description: 'The list of data that needs to display in the table.'
+                    description: 'The list of data that needs to display in the table. You can set "has_checkbox" to false in properties to remove checkbox when checkboxColumn is true'
                 },
                 {
                     name: 'isAllCheckbox',
@@ -14742,7 +14755,7 @@ var DocTableComponent = /** @class */ (function () {
                 title: 'Table with action',
                 desc: 'Display the action in the table.',
                 component: _sections_table_with_action_table_with_action_component__WEBPACK_IMPORTED_MODULE_1__["TableWithActionComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-action/table-with-action.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-action/table-with-action.component.html */ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/table-with-action/table-with-action.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.ts")
             },
             {
@@ -14750,7 +14763,7 @@ var DocTableComponent = /** @class */ (function () {
                 title: 'Table with custom action',
                 desc: 'Display the custom action in the table.',
                 component: _sections_table_with_custom_action_table_with_custom_action_component__WEBPACK_IMPORTED_MODULE_0__["TableWithCustomActionComponent"],
-                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-custom-action/table-with-custom-action.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html"),
+                markup: __webpack_require__(/*! !raw-loader!./sections/table-with-custom-action/table-with-custom-action.component.html */ "./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html"),
                 typescript: __webpack_require__(/*! !raw-loader!./sections/table-with-custom-action/table-with-custom-action.component */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.ts")
             },
             {
@@ -15373,6 +15386,17 @@ var SummaryRowTableComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html":
+/*!***********************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html ***!
+  \***********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionTitle]=\"'Action'\"\n  (detailClicked)=\"onDetailClicked($event)\"\n  (editClicked)=\"onEditClicked($event)\"\n  (printClicked)=\"onPrintClicked($event)\"\n  (deleteClicked)=\"onDeleteClicked($event)\"\n  (switchChanged)=\"onSwitchClicked($event)\"\n  (publishClicked)=\"onPublishClicked($event)\"\n  (validateClicked)=\"onValidateClicked($event)\"\n  (exportClicked)=\"onExportClicked($event)\"\n  (importClicked)=\"onImportClicked($event)\"\n  ></uii-table>\n\n  Action clicked : {{ actionSelected }}<br>\n  Row selected : {{ rowSelected | json }}<br>\n"
+
+/***/ }),
+
 /***/ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.scss":
 /*!***********************************************************************************************************!*\
   !*** ./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.scss ***!
@@ -15500,7 +15524,7 @@ var TableWithActionComponent = /** @class */ (function () {
     TableWithActionComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-table-with-action',
-            template: __webpack_require__(/*! ./table-with-action.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html"),
+            template: __webpack_require__(/*! ./table-with-action.component.html */ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.html"),
             styles: [__webpack_require__(/*! ./table-with-action.component.scss */ "./src/app/showcase/components/doc-table/sections/table-with-action/table-with-action.component.scss")]
         }),
         __metadata("design:paramtypes", [])
@@ -15519,7 +15543,7 @@ var TableWithActionComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [checkboxColumn]=\"true\"\n  [actionTitle]=\"'Action'\"></uii-table>\n"
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [checkboxColumn]=\"true\"\n  (selectedRow)=\"onRowSelected($event)\"\n  [actionTitle]=\"'Action'\"></uii-table>\n\n  Row selected : <br>{{ rowSelected | json }}<br>\n"
 
 /***/ }),
 
@@ -15559,6 +15583,7 @@ var TableWithCheckboxComponent = /** @class */ (function () {
     function TableWithCheckboxComponent() {
         this.rows = [];
         this.columns = [];
+        this.rowSelected = [];
     }
     TableWithCheckboxComponent.prototype.ngOnInit = function () {
         this.columns = [
@@ -15578,7 +15603,8 @@ var TableWithCheckboxComponent = /** @class */ (function () {
         this.rows = [
             {
                 name: 'Marta Mccoy',
-                age: 31
+                age: 31,
+                has_checkbox: false
             },
             {
                 name: 'Fanny Holman',
@@ -15586,7 +15612,8 @@ var TableWithCheckboxComponent = /** @class */ (function () {
             },
             {
                 name: 'Latonya Gibson',
-                age: 22
+                age: 22,
+                has_checkbox: false
             },
             {
                 name: 'Ines Wiggins',
@@ -15658,6 +15685,9 @@ var TableWithCheckboxComponent = /** @class */ (function () {
             }
         ];
     };
+    TableWithCheckboxComponent.prototype.onRowSelected = function ($event) {
+        this.rowSelected = $event;
+    };
     TableWithCheckboxComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-table-with-checkbox',
@@ -15670,6 +15700,17 @@ var TableWithCheckboxComponent = /** @class */ (function () {
 }());
 
 
+
+/***/ }),
+
+/***/ "./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html":
+/*!*************************************************************************************************************************!*\
+  !*** ./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<uii-table\n  [rows]=\"rows\"\n  [columns]=\"columns\"\n  [actionTitle]=\"'Action'\"></uii-table>\n\n  Action clicked : {{ actionSelected }}<br>\n  Row selected : {{ rowSelected | json }}<br>\n  \n"
 
 /***/ }),
 
@@ -15768,7 +15809,7 @@ var TableWithCustomActionComponent = /** @class */ (function () {
     TableWithCustomActionComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'ugw-table-with-custom-action',
-            template: __webpack_require__(/*! ./table-with-custom-action.component.html */ "./node_modules/raw-loader/index.js!./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html"),
+            template: __webpack_require__(/*! ./table-with-custom-action.component.html */ "./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.html"),
             styles: [__webpack_require__(/*! ./table-with-custom-action.component.scss */ "./src/app/showcase/components/doc-table/sections/table-with-custom-action/table-with-custom-action.component.scss")]
         }),
         __metadata("design:paramtypes", [])
